@@ -100,7 +100,7 @@ body.freeze{width: 100%; height: 100%; overflow: hidden;}
 .works article .boxes a{display: flex; flex-wrap: wrap; width: 50%; align-items: center; height: 30vw; position: relative; color: #fff; position: relative; overflow: hidden;}
 .works article .boxes a::after{content: ''; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: #222; opacity: 0; transition: 0.2s; z-index: 1;}
 .works article .boxes a:hover::after{opacity: 0.9;}
-.works article .boxes a .bg{position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url(../../images/work_sk.PNG) no-repeat 50% 50% / cover; transition: 0.5s;}
+.works article .boxes a .bg{position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url(../../images/work_sk.png) no-repeat 50% 50% / cover; transition: 0.5s;}
 .works article .boxes a:hover .bg{width: 110%; height: 110%;}
 .works article .boxes a.woongjin .bg{background-image: url(../../images/work_woongjin.png);}
 .works article .boxes a.kiturami .bg{background-image: url(../../images/work_kiturami.png);}
