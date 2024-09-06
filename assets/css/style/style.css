@@ -64,7 +64,7 @@ body.freeze{width: 100%; height: 100%; overflow: hidden;}
 }
 
 
-/**** 메인페이지 ****/
+/**** 메인, work 페이지 ****/
 .main_hero{background: url(../../images/hero.jpg) no-repeat 20% 30% / 110%; padding-top: 5vw; text-align: center; padding-bottom: 80px; position: relative;}
 .main_hero .hero_tit{font-weight: 400; font-size: 18vw; letter-spacing: -0.1em; color: #1400ff; position: absolute; left: 50%; top: 30%; transform: translate(-50%);}
 .main_hero .hero_tit p{transition: opacity 0.2s; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap;}
@@ -92,7 +92,7 @@ body.freeze{width: 100%; height: 100%; overflow: hidden;}
 .main_overview{padding-bottom: 300px; background: url(../../images/sphere.png) no-repeat right 20px bottom 120px / 40vw;}
 .main_overview p{margin-top: 24px; font-weight: 400;}
 
-.works{padding-bottom: 240px;}
+.works{padding-bottom: 300px;}
 .works article:nth-of-type(1){margin-top: 24px;}
 .works article{margin-top: 160px;}
 .works article h4{}
@@ -105,12 +105,36 @@ body.freeze{width: 100%; height: 100%; overflow: hidden;}
 .works article .boxes a.woongjin .bg{background-image: url(../../images/work_woongjin.png);}
 .works article .boxes a.kiturami .bg{background-image: url(../../images/work_kiturami.png);}
 .works article .boxes a.ratis .bg{background-image: url(../../images/work_ratis.png);}
+.works article .boxes a.ratis_edu .bg{background-image: url(../../images/work_ratis_edu.png);}
+.works article .boxes a.starbucks .bg{background-image: url(../../images/work_starbucks.jpg);}
+.works article .boxes a.yanadoo .bg{background-image: url(../../images/work_yanadoo.jpg);}
+.works article .boxes a.theclozet .bg{background-image: url(../../images/work_theclozet.jpg);}
+.works article .boxes a.eyes .bg{background-image: url(../../images/work_eyes.jpg);}
+.works article .boxes a.osulloc .bg{background-image: url(../../images/work_osulloc.jpg);}
+.works article .boxes a.coco .bg{background-image: url(../../images/work_coco.jpg);}
+.works article .boxes a.tomato_pc .bg{background-image: url(../../images/work_tomato_pc.jpg);}
+.works article .boxes a.tomato_mob .bg{background-image: url(../../images/work_tomato_mob.jpg);}
+.works article .boxes a.ne_pc .bg{background-image: url(../../images/work_ne_pc.jpg);}
+.works article .boxes a.ne_mob .bg{background-image: url(../../images/work_ne_mob.jpg);}
+.works article .boxes a.story_mob .bg{background-image: url(../../images/work_story_mob.jpg);}
+.works article .boxes a.doosan .bg{background-image: url(../../images/work_doosan.jpg);}
+.works article .boxes a.jinjja_pc .bg{background-image: url(../../images/work_jinjja_pc.jpg);}
+.works article .boxes a.jinjja_mob .bg{background-image: url(../../images/work_jinjja_mob.jpg);}
+.works article .boxes a.joongang .bg{background-image: url(../../images/work_joongang.jpg);}
 .works article .boxes a.psc .bg{background-image: url(../../images/work_psc.png);}
 .works article .boxes a.aground .bg{background-image: url(../../images/work_aground.png);}
+.works article .boxes a.saengcl .bg{background-image: url(../../images/work_saengcl.jpg);}
+
 .works article .boxes a.small_img .bg{background: url(../../images/book_01.png) no-repeat 50% 50% / auto 80%;}
+.works article .boxes a.small_img.book_happy .bg{background: url(../../images/book_02.png) no-repeat 50% 50% / auto 80%;}
 .works article .boxes a.cafe .bg{background-image: url(../../images/work_cafe.png);}
+.works article .boxes a.jsoft .bg{background-image: url(../../images/J_soft_logo.jpg);}
+
 .works article .boxes a.making_logo .bg{background-image: url(../../images/work_logo.png);}
 .works article .boxes a.blog .bg{background-image: url(../../images/work_blog.png);}
+.works article .boxes a.plan .bg{background-image: url(../../images/work_ai_plan.png);}
+.works article .boxes a.prompt .bg{background-image: url(../../images/work_ai_prompt.png);}
+.works article .boxes a.summary .bg{background-image: url(../../images/work_ai_summary.png);}
 
 .works article .boxes a span{display: block; text-align: center; width: 100%; position: relative; z-index: 2;}
 .works article .boxes a .txt{opacity: 0; transition: 1s;}
@@ -125,8 +149,6 @@ body.freeze{width: 100%; height: 100%; overflow: hidden;}
 .main_contact{padding-bottom: 200px;}
 .main_contact article{margin-top: 20px;}
 
-
-/**** work 페이지 ****/
 .work_title{padding: 120px 20px 160px;}
 .work_title p{font-size: 30px; font-weight: 400; color: #1400ff; line-height: 1.2;}
 
