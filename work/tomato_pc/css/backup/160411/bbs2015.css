@@ -1,0 +1,655 @@
+@charset "euc-kr";
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : bbs.css
+ * Desc      : table page layout 
+ * Created   : 2012/07/17
+ * Updated   : 
+ ------------------------------------------------------------ */
+ 
+ /* 리스트 테이블 */
+.board_listW {
+	clear:both;
+	width:100%;
+}
+table.board-list {
+    margin-top:10px;
+    width:100%;
+}
+table.board-list th.bg_datatable3 {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable3.gif') repeat-x left top;
+}
+table.board-list th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable.gif') repeat-x left top;
+    padding:10px 0 9px;
+	color:#393939;
+	line-height:17px;
+}
+
+table.th_bg2 th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable2.gif') repeat-x left top !important;
+}
+
+
+table.board-list td {
+    border-bottom: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+    padding:11px 0 9px;
+    text-align: center;
+}
+.contents table.lin_no td {
+	border-right:none;
+}
+table.board-list td.subject {
+    text-align:left;
+	padding-left:20px;
+	padding-right:10px;
+	word-break:break-all;
+	white-space:-moz-pre-wrap;
+}
+table.board-list td.subject a {
+	line-height:14px; padding-right:10px;
+}
+table.board-list td img {
+    vertical-align:middle;
+}
+table.board-list td div.faq {
+    background: url('http://pic.neungyule.com/netoeic/ico/icon_re.gif') no-repeat scroll left 1px;
+    padding-left:45px;
+	margin-left:12px;
+	text-align:left;
+}
+table.board-list td.subject .icon_file {
+	background:url('http://pic.neungyule.com/netoeic/ico/icon_note.gif') no-repeat left center;
+	padding-left:15px;
+	line-height:14px;
+}
+table.board-list td.inform a {
+	font-weight:bold;
+	color:#b50047;
+}
+
+
+
+/* 2013.09.25 list2 추가 */
+table.board-list2 {
+    margin-top:10px;
+    width:100%;
+}
+table.board-list2 th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable.gif') repeat-x left top;
+    padding:10px 0 9px;
+	color:#393939;
+	line-height:17px;
+}
+
+table.th_bg2 th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable2.gif') repeat-x left top !important;
+}
+
+
+table.board-list2 td {
+    border-bottom: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+    padding:11px 0 9px;
+    text-align: center;
+}
+.contents table.lin_no td {
+	border-right:none;
+}
+table.board-list2 td.subject {
+    text-align:left;
+	padding-left:20px;
+	padding-right:10px;
+}
+table.board-list2 td.subject a {
+	line-height:14px; padding-right:10px;
+}
+table.board-list2 td img {
+    vertical-align:middle;
+}
+table.board-list2 td div.faq {
+    background: url('http://pic.neungyule.com/netoeic/ico/icon_re.gif') no-repeat scroll left 1px;
+    padding-left:45px;
+	margin-left:12px;
+	text-align:left;
+}
+table.board-list2 td.subject .icon_file {
+	background:url('http://pic.neungyule.com/netoeic/ico/icon_note.gif') no-repeat left center;
+	padding-left:15px;
+	line-height:14px;
+}
+table.board-list2 td.inform a {
+	font-weight:bold;
+	color:#b50047;
+}
+
+
+
+
+/* 뷰페이지 */
+.board-view {
+    border-top:3px solid #666666;
+    margin-top:10px;
+    width:100%;
+	border-collapse:inherit !important;
+}
+
+.board-view th {
+    background:#e4e4e4;
+    border-bottom:1px solid #d9d9d9;
+	border-right:1px solid #d9d9d9;
+    color: #393939;
+    padding:7px 10px;
+    text-align:center;
+}
+
+.board-view td {
+    border-bottom: 1px solid #d9d9d9;
+    line-height: 20px;
+    padding: 5px 10px 5px 10px;
+    vertical-align: top;
+}
+.board-view td.file a {
+	color:#b50047;
+}
+.board-view th.cont {
+    padding: 60px 0 64px 20px;
+}
+.board-view .reply td {
+	background:#eeeeee;
+	padding:10px;
+}
+.board-view .reply td .faq .faq_replyW {
+	display:block;
+	height:27px;
+	padding-left:44px;
+	background:url('http://pic.neungyule.com/netoeic/ico/icon_re2.gif') no-repeat left 3px;
+	color:#b50047;
+}
+.board-view .reply td .faq p {
+	padding-left:16px;
+}
+
+
+
+.board-view th.last, .board-view tr.last th, .board-view tr.last td {
+    border-bottom: 1px solid #ACACAC;
+}
+
+.board-view th.last, .board-view tr.last th, .board-view tr.last td {
+    border-bottom: 1px solid #ACACAC;
+}
+.board-view td.event {
+	padding:20px;
+}
+
+
+
+
+/* 페이징 */
+.paging {
+	overflow:hidden;
+	text-align:center;
+	padding-top:40px;
+	width:100%;
+	height:13px;
+	line-height:11px;
+}
+.paging img {
+	*vertical-align:middle;
+}
+
+.paging a {
+	padding:0px 2px;
+	color:#666666;
+}
+.paging a.prev {
+	padding:0px 7px 0px 0px;
+}
+.paging a.next {
+	padding:0px 0px 0px 7px;
+}
+
+.paging strong {
+	color:#b50047;
+}
+ 
+.pagingN {
+	overflow:hidden;
+	text-align:center;
+	padding-top:30px;
+	width:100%;
+	height:14px;
+	line-height:14px;
+}
+.pagingN img {
+	*vertical-align:middle;
+}
+
+.paging a {
+	padding:0px 2px;
+	color:#666666;
+}
+.pagingN a.prev {
+	padding:0px 7px 0px 0px;
+}
+.pagingN a.next {
+	padding:0px 0px 0px 7px;
+}
+
+.pagingN strong {
+	color:#618dbf;
+} 
+ 
+
+
+
+/* 데이터 테이블 */
+table.board-table {
+    margin-top:10px;
+    width:100%;
+}
+table.board-table th {
+	background:#e4e4e4;
+    padding:9px 0 8px;
+	color:#393939;
+	border:1px solid #b7b7b7;
+	border-left:none;
+}
+table.board-table td {
+    border-bottom: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+    padding:8px 5px 8px 7px;
+}
+
+table.board-table .line_t {
+	border-top:1px solid #b7b7b7;
+}
+table.board-table td.tc {
+    text-align:center;
+}
+table.board-table td img {
+    vertical-align:middle;
+}
+
+table.board-table tfoot td {
+	color:#FFF;
+	background:#666666;
+	border-right: 1px solid #b7b7b7;	
+}
+
+table.table-st2 {border-collapse:inherit;}
+table.table-st2 th {
+	background:#efefef;
+    padding:8px 0 7px;
+	color:#666666;
+	border:1px solid #d9d9d9;
+	border-right:none;
+	border-bottom:none;
+}
+table.table-st2 .line_r {
+	border-right:1px solid #d9d9d9;
+}
+table.table-st2 .line_b {
+	border-bottom:1px solid #d9d9d9;
+}
+
+table.table-st2 td {
+  border:1px solid #d9d9d9;
+	border-right:none;
+	border-bottom:none;
+   padding:8px 5px 8px 7px;
+}
+
+
+
+/* 강좌 로드맵 테이블 */
+
+table.load-map th {
+	background:#fff;
+	font-size:14px;
+	padding:0px;
+	border:1px solid #d9d9d9;
+}
+table.load-map th span {
+	display:block;
+	padding:6px 0 8px;
+	width:100%;
+}
+table.load-map th.t_th01 span {background:#393939; color:#fff; border-top:4px solid #393939;}
+table.load-map th.t_th02 span {color:#7a8f1c; border-top:4px solid #7a8f1c;}
+table.load-map th.t_th03 span {color:#e5015a; border-top:4px solid #e5015a;}
+table.load-map th.t_th04 span {color:#00afb4; border-top:4px solid #00afb4;}
+table.load-map th.t_th05 span {color:#d43c95; border-top:4px solid #d43c95;}
+table.load-map th.t_th06 span {color:#debf24; border-top:4px solid #debf24;}
+table.load-map th.t_th07 span {color:#debf24; border-top:4px solid #debf24;}
+
+table.load-map td {
+	text-align:center;
+    border-left:1px solid #d9d9d9;
+	border-right:1px solid #d9d9d9;
+	border-bottom:1px solid #fff;
+	font-size:12px;
+	padding:0px;
+}
+table.load-map td a:link {
+	display:block;
+	width:100%;
+	padding:8px 0px;
+	color:#393939;
+}
+table.load-map td a:hover {
+	color:#b00049;
+}
+table.load-map tbody th {
+	background:#c2c2c2;
+    padding:8px 5px 8px 7px;
+}
+table.load-map td.tc {
+    text-align:center;
+}
+table.load-map td img {
+    vertical-align:middle;
+}
+table.load-map .last td, table.load-map .last th {
+   border-bottom:1px solid #d9d9d9;
+}
+
+
+/* 댓글 리스트 */
+
+table.comment-list {
+    margin-top:10px;
+    width:100%;
+}
+
+table.comment-list td {
+    border-bottom: 1px solid #d9d9d9;
+    padding:11px 0 9px;
+    text-align: center;
+}
+table.comment-list td.subject {
+    text-align:left;
+	padding-left:10px;
+}
+table.comment-list td.subject a {
+	line-height:14px; padding-right:10px;
+}
+table.comment-list td img {
+    vertical-align:middle;
+}
+
+/* 우편번호 찾기 테이블 */
+table.highway-table {
+	border-bottom:1px solid #d9d9d9;
+}
+table.highway-table thead tr th {font-size:11px; background:#FFF; border:none; border-bottom:1px solid #d9d9d9;}
+table.highway-table thead tr th.th01 {width:80px !important;}
+table.highway-table thead tr th.th02 {width:60px !important;}
+table.highway-table thead tr th.th03 {width:127px !important;}
+table.highway-table thead tr th.th04 {width:134px !important;}
+table.highway-table thead tr th.th05 {width:134px !important;}
+
+table.highway-table th {
+	font-size:11px; background:#FFF; border:none; border-bottom:1px solid #d9d9d9;
+}
+
+table.highway-table td {
+	text-align:center;
+    border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #d9d9d9;
+	font-size:12px;
+	padding:5px;
+}
+table.highway-table td a:link {
+	display:block;
+	width:100%;
+	padding:8px 0px;
+	color:#393939;
+}
+table.highway-table td a:hover {
+	color:#b00049;
+}
+table.highway-table tbody th {
+	background:#c2c2c2;
+    padding:8px 5px 8px 7px;
+}
+table.highway-table td.tc {
+    text-align:center;
+}
+table.highway-table td img {
+    vertical-align:middle;
+}
+
+/*  인풋 파일첨부 스타일 */ 
+.file_addW { position:relative; overflow:hidden;}
+.file_addW .input {float:left;}
+.file_wrap {margin-left:10px; width:72px; height:22px;}
+/* .file_wrap {margin-left:10px; width:72px; height:22px; background:url(../../img/btn/bt_file_add.gif) no-repeat left top;} */
+.file_add { filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity:0; opacity:0; width:72px; height:22px;}
+
+
+.view_txt {padding:20px !important;}
+
+
+
+/* 3일 무료체험 테이블 */
+table.bbs_3d {
+    width:790px;
+	
+}
+table.bbs_3d th {
+	background:#e4e4e4;
+    padding:9px 0 8px;
+	color:#393939;
+	border:1px solid #b7b7b7;
+	border-left:none;
+}
+table.bbs_3d td {
+    border-bottom: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+    padding:8px 5px 8px 7px;
+}
+table.bbs td.tc {
+    text-align:center;
+}
+table.bbs_3d td img {
+    vertical-align:middle;
+}
+
+table.bbs_3d tfoot td {
+	color:#FFF;
+	background:#666666;
+	border-right: 1px solid #b7b7b7;	
+}
+
+table.bbs2_3d {border-collapse:inherit;width:790px;}
+table.bbs2_3d th {
+	background:#efefef;
+    padding:8px 0 7px;
+	color:#666666;
+	border:1px solid #d9d9d9;
+	border-right:none;
+	border-bottom:none;
+}
+table.bbs2_3d .line_r {
+	border-right:1px solid #d9d9d9;
+}
+table.bbs2_3d .line_b {
+	border-bottom:1px solid #d9d9d9;
+}
+table.bbs2_3d td {
+  border:1px solid #d9d9d9;
+	border-right:none;
+	border-bottom:none;
+   padding:8px 5px 8px 7px;
+}
+
+/* 2015 추가 */
+table.board_listN th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable4.gif') repeat-x left top;
+    padding:10px 5px 9px;
+	color:#393939;
+	line-height:17px;
+	border-top:2px solid #6088d5;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	font-size:13px
+}
+table.board_listN td {
+	padding:10px 5px 9px;
+	border-bottom:1px solid #eeeeee;
+	text-align:center
+}
+table.board_listN2 th {
+	background:#edf2f6;
+    padding:10px 5px 9px;
+	color:#393939;
+	line-height:17px;
+	border-top:2px solid #6088d5;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	font-size:13px
+}
+table.board_listN2 td {
+	padding:10px 5px 9px;
+	border-bottom:1px solid #d0d7dd;
+	border-left:1px solid #d0d7dd;
+	border-right:1px solid #d0d7dd;
+	text-align:center
+}
+table.board_listN3 th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable5.gif') repeat-x left top;
+    padding:10px 5px 9px;
+	color:#000;
+	line-height:27px;
+	border-top:2px solid #224c90;
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	border-bottom:1px solid #d7d7d7;
+	font-size:12px
+}
+table.board_listN3 td {
+	padding:13px 5px 12px;
+	border-bottom:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	text-align:center
+}
+table.board_listN3 td:first-child {border-left:1px solid #d7d7d7}
+table.board_listN3 .best {background:#f2f7ff;font-weight:bold;color:#224c90}
+table.board_listN3 .best a {color:#224c90}
+
+table.board_listWN th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable4.gif') repeat-x left top;
+    padding:10px 20px 9px;
+	line-height:17px;
+	border-top:2px solid #6088d5;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	color:#0f3173;
+	font-size:13px;
+	text-align:left
+}
+table.board_listWN td {
+	padding:10px 20px 9px;
+	line-height:20px;
+	text-align:justify;
+	border-bottom:1px solid #d1d1d1
+}
+table.board_listWN td.re_tit {background:#edf2f6;border-left:1px solid #d1d1d1;border-right:1px solid #d1d1d1}
+table.board_listWN td.re_tit > span {padding-left:12px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowBlue.png') no-repeat left 50%;color:#0f3173;font-size:13px;font-weight:bold}
+
+table.board_listWN2 {
+	border-top:2px solid #224c90;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;}
+table.board_listWN2 th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable5.gif') repeat-x left top;
+    padding:10px 20px 9px;
+	line-height:27px;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	color:#224c90;
+	font-size:13px;
+	text-align:left
+}
+table.board_listWN2 td {
+	padding:10px 20px 9px;
+	line-height:20px;
+	text-align:justify;
+	border-left:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+}
+table.board_listWN2 .re_tit {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable5.gif') repeat-x left top;
+    padding:10px 20px 9px;
+	line-height:27px;}
+table.board_listWN2 .re_tit > span {padding-left:12px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowBlue.png') no-repeat left 50%;color:#0f3173;font-size:13px;font-weight:bold}
+table.bdt_no {border-top:none}
+table.tc th,
+table.tc td {text-align:center !important}
+
+/* pink style */
+table.board_listNp th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable4.gif') repeat-x left top;
+    padding:10px 5px 9px;
+	color:#9c0054;
+	line-height:17px;
+	border-top:2px solid #d03287;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	font-size:13px
+}
+table.board_listNp td {
+	padding:10px 5px 9px;
+	border-bottom:1px solid #eeeeee;
+	text-align:center
+}
+
+table.board_listN2p th {
+	background:#f6edf4;
+    padding:10px 5px 9px;
+	color:#d03287;
+	line-height:17px;
+	border-top:2px solid #d03287;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	font-size:13px
+}
+table.board_listN2p td {
+	padding:10px 5px 9px;
+	border-bottom:1px solid #d0d7dd;
+	border-left:1px solid #d0d7dd;
+	border-right:1px solid #d0d7dd;
+	text-align:center
+}
+
+table.board_listWNp th {
+	background: url('http://pic.neungyule.com/netoeic/common/bg_datatable4.gif') repeat-x left top;
+    padding:10px 20px 9px;
+	line-height:17px;
+	border-top:2px solid #d03287;
+	border-left:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	color:#9c0054;
+	font-size:13px;
+	text-align:left
+}
+table.board_listWNp td {
+	padding:10px 20px 9px;
+	line-height:20px;
+	text-align:justify;
+	border-bottom:1px solid #d1d1d1
+}
+table.board_listWNp td.re_tit {background:#f6edf4;border-left:1px solid #d1d1d1;border-right:1px solid #d1d1d1}
+table.board_listWNp td.re_tit > span {padding-left:12px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowPink2.png') no-repeat left 50%;color:#d03287;font-size:13px;font-weight:bold}

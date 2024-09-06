@@ -1,0 +1,111 @@
+@charset "euc-kr";
+/********************* 능률 공통 CSS ***************************/
+
+body{/*#left_nav*/position:relative; /* #left_nav ie7*/*overflow:hidden;} /*좌측토글메뉴바 때문에 넣음*/
+
+
+/*상단 회색 메뉴바*/
+#header_top {width:100%;height:35px;background:url('http://pic.neungyule.com/gnb/gnb_bg.png'); background-repeat:repeat-x;}
+#header_top .wrap {position:relative;width:1000px;margin:0 auto;text-align:right}
+#header_top .wrap > a img {border:0;padding:0 12px;background:url('http://pic.neungyule.com/gnb/gnb_v_line.png') no-repeat right 0;}
+.brand_wrap {position:absolute; left:0; border:10px solid #696969;}
+.brand_wrap .brand_list li {float:left; border-right:1px solid #e7e7e7;}
+.brand_wrap .brand_list li.top { border-bottom:1px solid #e7e7e7;}
+.brand_wrap .brand_list li.last {border-right:0;}
+#header_top img {vertical-align:top !important;}
+
+.mt10 {margin-top:10px !important;}
+.bg_no {background-image:none !important;}
+
+/*좌측 토글 메뉴바*/
+#left_nav{ width:126px; border-right:2px solid #333; position:absolute; left:0; top:0; bottom:0; z-index:500; background:#fff; /*IE7*/*height:9999em;}
+#left_nav h1{}
+#left_nav .login{}
+#left_nav .menu{}
+#left_nav .menu > li{}
+#left_nav .menu > li > a{ display:block; height:40px; text-indent:-9999px; overflow:hidden;}
+#left_nav .menu > li > a.menu1{background:url(http://pic.neungyule.com/nemiddle/main/left_menu1.jpg);}
+#left_nav .menu > li > a.menu1:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu1_on.jpg);}
+#left_nav .menu > li.on > a.menu1{background:url(http://pic.neungyule.com/nemiddle/main/left_menu1_on.jpg);}
+#left_nav .menu > li > a.menu2{background:url(http://pic.neungyule.com/nemiddle/main/left_menu2.jpg);}
+#left_nav .menu > li > a.menu2:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu2_on.jpg);}
+#left_nav .menu > li.on > a.menu2{background:url(http://pic.neungyule.com/nemiddle/main/left_menu2_on.jpg);}
+#left_nav .menu > li > a.menu3{background:url(http://pic.neungyule.com/nemiddle/main/left_menu3.jpg);}
+#left_nav .menu > li > a.menu3:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu3_on.jpg);}
+#left_nav .menu > li.on > a.menu3{background:url(http://pic.neungyule.com/nemiddle/main/left_menu3_on.jpg);}
+#left_nav .menu > li > a.menu4{background:url(http://pic.neungyule.com/nemiddle/main/left_menu4.jpg);}
+#left_nav .menu > li > a.menu4:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu4_on.jpg);}
+#left_nav .menu > li.on > a.menu4{background:url(http://pic.neungyule.com/nemiddle/main/left_menu4_on.jpg);}
+#left_nav .menu > li > a.menu5{background:url(http://pic.neungyule.com/nemiddle/main/left_menu5.jpg);}
+#left_nav .menu > li > a.menu5:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu5_on.jpg);}
+#left_nav .menu > li.on > a.menu5{background:url(http://pic.neungyule.com/nemiddle/main/left_menu5_on.jpg);}
+#left_nav .menu > li > a.menu6{background:url(http://pic.neungyule.com/nemiddle/main/left_menu6.jpg);}
+#left_nav .menu > li > a.menu6:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu6_on.jpg);}
+#left_nav .menu > li.on > a.menu6{background:url(http://pic.neungyule.com/nemiddle/main/left_menu6_on.jpg);}
+#left_nav .menu > li > a.menu7{background:url(http://pic.neungyule.com/nemiddle/main/left_menu7.jpg);}
+#left_nav .menu > li > a.menu7:hover{background:url(http://pic.neungyule.com/nemiddle/main/left_menu7_on.jpg);}
+#left_nav .menu > li.on > a.menu7{background:url(http://pic.neungyule.com/nemiddle/main/left_menu7_on.jpg);}
+#left_nav .menu > li .submenu{background:#e5005a; display:none;}
+#left_nav .menu > li .submenu.bg_orange{background:#fdab01;}
+#left_nav .menu > li .submenu.bg_purple{background:#c556de;}
+#left_nav .menu > li .submenu.bg_green{background:#92dc49;}
+#left_nav .menu > li .submenu.bg_beige{background:#d5b572;}
+#left_nav .menu > li .submenu > li{height:30px; position:relative;}
+#left_nav .menu > li .submenu > li > a{font-size:12px; color:#222; line-height:30px; padding-left:8px;}
+#left_nav .menu > li .submenu > li:hover > a{color:#fff; font-weight:bold;}
+#left_nav .menu > li .submenu > li .course{ display:none; width:115px; padding:7px; background:#222; border:1px solid #121212; position:absolute; left:126px; top:0; z-index:1100;}
+#left_nav .menu > li .submenu > li:hover .course{ display:block;}
+#left_nav .menu > li .submenu > li .course li{ height:28px;}
+#left_nav .menu > li .submenu > li .course li a{font-size:12px; color:#999; line-height:28px;}
+#left_nav .menu > li .submenu > li .course li a:hover{color:#ff0064;}
+#left_nav .menu > li .submenu.bg_orange > li .course li a:hover{color:#fdab01;}
+#left_nav .menu > li .submenu.bg_purple > li .course li a:hover{color:#c556de;}
+#left_nav .bnr{}
+#left_nav .bnr{ padding-left:13px; padding-top:12px;}
+#left_nav_toggle{position:absolute; left:128px; top:325px; z-index:1000;}
+#left_nav_toggle a{ display:block; width:30px; height:166px; background:url(http://pic.neungyule.com/nemiddle/main/toggle_gnb_btn_on.png); text-indent:-9999px; overflow:hidden;}
+#left_nav_toggle a.open{background-image:url(http://pic.neungyule.com/nemiddle/main/toggle_gnb_btn.png);}
+
+
+/* footer */
+.footer_wrap {clear:both;width:100%;background:#393939;padding:40px 0;margin-top:50px;bottom:0px;min-width:1050px;}
+footer {position:relative;width:1000px;margin:0 auto;}
+footer .footer_logo {position:absolute;top:0px;left:0;}
+footer .footer_navi {overflow:hidden;padding-left:115px;margin-bottom:20px}
+footer .footer_navi li {float:left;height:14px;line-height:14px;margin-right:30px;}
+footer .familySite {position:absolute;top:0;right:0;}
+footer .address_wrap {padding-left:115px;}
+
+
+/*footer내에 적용되는 것들*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+.footer_wrap{
+	font-size:12px;
+	color: #656565;
+	line-height:140%;
+	font-family:NanumGothic, "나눔고딕", 'Nanum Gothic', dotum,'돋움',gulim,'굴림', Tahoma, sans-serif;
+}
+.footer_wrap a:link {text-decoration:none; color: #666666; }
+
+.address_wrap {width:100%; overflow:hidden;}
+.address_wrap div.scroll01 {border-bottom: 1px solid #d9d9d9; overflow-x:hidden; overflow-y:auto; height:130px;}
+.address_wrap p.txt {padding:9px 0px; text-align:center; font-weight:bold; color:#393939; border-top:2px solid #d9d9d9; border-bottom:2px solid #d9d9d9;}
+.address_wrap .box-line { border-bottom:1px solid #d9d9d9; margin-bottom:10px;}
+.address_wrap .box-line .result-list {height:165px; overflow-y:scroll; overflow-x:hidden; padding:8px 0px;}
+.address_wrap .box-line .result-list li {width:100%;}
+.address_wrap .box-line .result-list li a {display:block; line-height:20px; padding:3px 8px; color:#666666;}
+.address_wrap .box-line .result-list li a span { margin-right:30px;}
+.address_wrap .box-line .result-list li a:hover { background:#ebebeb;}
+
+.hide{display:none}
+.select {font-family:NanumGothic, Dotum, Tahoma, sans-serif; color:#666666; font-size:1em; vertical-align:middle; padding-bottom:1px; background-color:#ffffff; border:1px solid #dedede; *vertical-align:-3px; _vertical-align:-2px;}
+
+/* 단과상세 내 강사소개 */
+.lec_content .lec_thrBox {overflow:hidden;margin:20px 0 0 20px;border:10px solid #ececee}
+.lec_content .in_thrBox {overflow:hidden;position:relative;min-height:243px;border:1px solid #dadada !important;}
+.lec_content .in_thrBox .area_photo {position:absolute;top:0;left:0;width:224px;height:243px}
+.lec_content .in_thrBox .area_txt {padding:20px 0 20px 20px;min-height:203px;margin-left:230px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lec_thrTxt.gif') repeat-y left 0;}
+.lec_content .in_thrBox .area_txt .txt {margin:20px 0;line-height:20px;}
+
+
+

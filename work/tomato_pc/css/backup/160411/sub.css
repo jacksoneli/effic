@@ -1,0 +1,830 @@
+@charset "utf-8";
+
+/* header */
+#sTop_menu {width:100%;min-width:1000px;height:30px;background:#fbfbfb;}
+#sTop_menu .gnb {position:relative;width:1000px;margin:0 auto;}
+#sTop_menu .gnb_l {float:left;}
+#sTop_menu .gnb_r {float:right;}
+#sTop_menu .gnb ul li {float:left;margin-left:-1px;}
+#sTop_menu .txt {position:relative;width:1000px;margin:0 auto;}
+#sTop_menu .txt p {position:absolute;top:8px;left:170px;*top:-22px;width:615px;height:16px;padding-left:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_bubble.png') no-repeat 0 0;font-weight:bold;line-height:16px;color:#333}
+#sTop_menu .logo {position:relative;width:1000px;margin:0 auto;z-index:100}
+#sTop_menu .logo h1 {position:absolute;top:60px;left:20px;width:120px;height:50px;}
+
+.uer_info {overflow:hidden;height:30px;font-weight:bold;line-height:30px;}
+.uer_info p {float:left;padding:0 10px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray2.gif') no-repeat right 10px;}
+.uer_info .user {display:inline-block;padding-left:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_bubbleP.png') no-repeat 0 7px;}
+.uer_info input {*margin-left:-5px;border:none;background:none;cursor:pointer;vertical-align:middle;font-weight:bold;}
+
+/* container */
+#sub_wrap {position:relative;width:1000px;margin:30px auto 50px;}
+#sub_menu {overflow:hidden;float:left;width:210px;margin-top:-58px;}
+#sub_cont {overflow:hidden;folat:left;width:790px;}
+
+.snb_tit {width:170px;height:70px;padding:46px 20px 0 0;background:url('http://pic.neungyule.com/netoeic/sub/bg_snbTit.gif') no-repeat 0 0;font-size:20px;color:#fff;text-align:right;font-weight:bold;}
+.snb {width:183px;margin-top:-1px;border:1px solid #d9d9d9;border-top:none !important}
+.snb > li {padding-left:15px;border-bottom:1px solid #ededed;font-weight:bold;font-size:14px;line-height:36px;}
+.snb > li > a {display:block;margin-right:10px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_gray.png') no-repeat right 50%;}
+.snb > li > a:hover,
+.snb > li.on > a,
+.snb > li.on > a:link,
+.snb > li.on > a:visited  {color:#1d39a7 !important;margin-right:10px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_blue.png') no-repeat right 50%;}
+.snb .depth3 {margin-left:-15px;padding-left:15px;background:#f4f4f4;}
+.snb .depth3 li {margin:0px;font-size:12px;font-weight:normal}
+.snb .depth3 li a:hover,
+.snb .depth3 li.on > a:link,
+.snb .depth3 li.on > a:visited {color:#5c6ec0 !important}
+
+.sub_txtTit {height:33px;padding:15px 0 0 15px;margin:12px 0 20px;background:url('http://pic.neungyule.com/netoeic/sub/bg_sub_txtTit.gif') repeat-x 0 0;border:1px solid #d9d9d9;}
+.sub_txtTit .txt_tit {padding-left:15px;background:url('http://pic.neungyule.com/netoeic/ico/bul_arrowR.gif') no-repeat 0 2px;font-size:14px;font-weight:bold}
+
+/* 강좌상세 */
+#lec_nav {width:100%;min-width:1000px;height:45px;background:#4659ac url('http://pic.neungyule.com/netoeic/lecture/bg_lecNav.gif') no-repeat 50% 0;}
+#lec_nav .wrap {width:1000px;margin:0 auto;}
+#lec_nav .wrap ul {overflow:hidden;margin-left:150px;}
+#lec_nav .wrap ul li {float:left;font-size:13px;font-weight:bold;padding:0 15px;line-height:45px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray.gif') no-repeat left 50%;}
+#lec_nav .wrap ul li:first-child {background:none}
+#lec_nav .wrap ul li a {color:#fff !important}
+#lec_nav .wrap ul li.on a,
+#lec_nav .wrap ul li a:hover {color:#56f5ff !important}
+#lec_left {height:auto;float:left;width:360px;z-index:999}
+#lec_right {width:620px;float:right;}
+
+.lec_infoBox {overflow:hidden;width:318px;padding:20px;border:1px solid #d9d9d9;line-height:18px}
+.lec_infoBox h1 {font-size:18px;font-weight:bold;}
+.lec_infoBox .info_thrName {display:inline-block;margin-top:15px;padding-right:6px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray2.gif') no-repeat right 50%;color:#5c6cbd;}
+.lec_infoBox .info_thrName img {vertical-align:middle}
+/* pop */
+.lec_layPop {width:330px;height:340px;border:2px solid #5f86d3;background:#fff !important}
+.lec_layPop .pop_top {height:46px;padding:0 20px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lecPop_blue.gif') repeat-x 0 0;color:#fff;font-size:14px;font-weight:bold;line-height:46px;}
+.lec_layPop .pop_top a {color:#fff !important;}
+.lec_layPop .pop_cont {overflow-y:auto;height:270px;padding:0 20px 20px;}
+.lec_layPop .pop_cont > div {padding:20px 0;border-top:1px solid #eeeeee}
+.lec_layPop .pop_cont > div:first-child {border:none;}
+.lec_layPop .pop_cont .bookInfo .txt_rBul {padding-right:10px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray3.gif') no-repeat right 0;}
+.lec_layPop .pop_cont .otherLec li {padding:10px 0 10px 10px;border-top:1px solid #eeeeee;background:url('http://pic.neungyule.com/netoeic/ico/bul_gray.gif') no-repeat left 50%;}
+.lec_layPop .pop_cont .otherLec li:first-child {border:none;}
+
+.lec_infoBox .btn_mvView {overflow:hidden;margin:15px 0;}
+.lec_infoBox .btn_mvView li {float:left;margin-left:2px;margin-bottom:2px}
+.lec_infoTxt {width:100%;}
+.lec_infoTxt table th {padding:5px;color:#465fc5;font-size:14px;font-weight:bold;text-align:left;vertical-align:top;border-bottom:1px solid #e6e6e6;}
+.lec_infoTxt table th span {padding-left:10px;background:url('http://pic.neungyule.com/netoeic/ico/bul_gray.gif') no-repeat 0 50%;}
+.lec_infoTxt table td {padding:5px;text-align:left;line-height:20px;vertical-align:top;border-bottom:1px solid #e6e6e6;}
+
+.fixed_container {width:318px;padding:0 20px 20px;border:1px solid #d9d9d9;background:#fff;z-index:999}
+.lec_orderTxt {margin:0 -20px;}
+.lec_orderTxt li {line-height:20px;background:#ececed;}
+.lec_orderTxt li.bb_btm {border-bottom:1px solid #d9d9d9;}
+.lec_orderTxt li > div {padding:5px 0;margin:0 20px;border-bottom:1px solid #d9d9d9;}
+.lec_orderTxt .mv_txt {padding-left:25px;background:url('http://pic.neungyule.com/netoeic/ico/ico_mvPlay.png') no-repeat 0 50%;font-weight:bold}
+.lec_orderTxt .book_txt {padding-left:25px;background:url('http://pic.neungyule.com/netoeic/ico/ico_book.png') no-repeat 0 50%;}
+.lec_orderTxt .total {overflow:hidden;padding:15px 0;margin:0 20px;border-bottom:1px solid #d9d9d9;background:none !important}
+.lec_orderTxt .choice_type {padding:12px 0;text-align:center;font-weight:bold;border-bottom:1px dashed #d9d9d9}
+.lec_orderTxt .choice_type > label {margin:0 10px;}
+.lec_orderTxt .price_total {font-size:15px;font-weight:bold;text-align:right}
+.fixed_container .bnr {margin:20px -20px 0;padding-top:20px;border-top:1px solid #d9d9d9;text-align:center}
+input.btn_lecCourse {width:150px;height:68px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_courseB.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCart {width:150px;height:68px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_cartB.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCourse2 {width:110px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_course.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCart2 {width:110px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_cart.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCourse3 {width:90px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_course2.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCart3 {width:90px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_cart2.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCourse4 {width:123px;height:58px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_courseB2.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCart4 {width:123px;height:58px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_cartB2.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCourse5 {width:120px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_course3.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_lecCart5 {width:120px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_cart3.png') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart {width:35px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heart.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart.on {width:35px;height:35px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heartOn.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart2 {width:62px;height:58px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heart2.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart2.on {width:62px;height:58px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heartOn2.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart3 {width:77px;height:53px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heart3.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+input.btn_heart3.on {width:77px;height:53px;overflow:hidden;background:url('http://pic.neungyule.com/netoeic/btn/btn_heartOn3.jpg') no-repeat 0 0;text-indent:-9999px;border:none;none;cursor:pointer}
+
+/* 연계교재
+.lec_connectionTit {overflow:hidden;margin:30px -20px 0;padding:15px 20px 0;border-top:1px solid #d9d9d9;}
+.lec_connectionInfo {height:180px;overflow-y:scroll;}
+.lec_connectionInfo ul {padding:0 15px;background:#f7f7f7;}
+.lec_connectionInfo ul li {overflow:hidden;padding:15px 0;border-bottom:1px solid #e6e6e6}
+.lec_connectionInfo ul li:last-child {border:none}
+.lec_connectionInfo ul li .img_thr {float:left;width:80px}
+.lec_connectionInfo ul li .txt {float:right;width:170px;}*/
+
+.lec_rightBnr  {position:relative}
+.lec_rightBnr .lec_newReivew {position:absolute;top:195px;left:30px;}
+.lec_rightBnr .reivew {width:570px;height:64px;position:relative;overflow:hidden;}
+.lec_rightBnr .reivew ul {width:560px;height:60px;position:absolute;top:0px;left:0px;padding:0;margin:0;overflow:hidden;}
+.lec_rightBnr .reivew ul li {width:560px;height:13px;list-style:none;line-height:19px;}
+.lec_rightBnr .reivew ul li > p {width:440px;padding-left:10px;float:left;font-weight:bold;background:url('http://pic.neungyule.com/netoeic/ico/bul_blue.gif') no-repeat 0 50%;}
+.lec_rightBnr .reivew ul li > p a {color:#465fc5 !important}
+.lec_rightBnr .reivew ul li > span {float:right;}
+/* 강사소개 */
+.lec_content .lec_thrBox {overflow:hidden;margin:20px 0 0 20px;border:10px solid #ececee}
+.lec_content .in_thrBox {overflow:hidden;position:relative;min-height:243px;border:1px solid #dadada !important;}
+.lec_content .in_thrBox .area_photo {position:absolute;top:0;left:0;width:224px;height:243px}
+.lec_content .in_thrBox .area_txt {padding:20px 0 20px 20px;min-height:203px;margin-left:230px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lec_thrTxt.gif') repeat-y left 0;}
+.lec_content .in_thrBox .area_txt .txt {margin:20px 0;line-height:20px;}
+
+/* 토단비 서브메인 */
+.todanbi_main .area_t {position:relative;height:360px;padding:5px;border:1px solid #bdbdbd;background:url('http://pic.neungyule.com/netoeic/todanbi/bg_m_top.gif') repeat;}
+.todanbi_main .area_t .btn_jindan {position:absolute;top:30px;left:815px;}
+.todanbi_main .area_t .m_tab {overflow:hidden;}
+.todanbi_main .area_t .m_tab li {position:relative;float:left;margin-bottom:5px}
+.todanbi_main .area_t .m_tab li.ml_20 {margin-left:-20px}
+.todanbi_main .area_t .m_tab .h_img  {display:none;position:absolute;top:0;left:0;}
+.todanbi_main .area_t .m_tab li:hover .h_img {display:block}
+.todanbi_main .area_m > .box_gray2 {overflow:hidden;padding:15px;}
+.todanbi_main .area_m .box_gray2 > div {float:left}
+.todanbi_main .area_m .cont_l {width:300px;}
+.todanbi_main .area_m .cont_c {width:400px;}
+.todanbi_main .area_m .cont_c .mark {overflow:hidden;margin:10px 0;}
+.todanbi_main .area_m .cont_c .mark li {float:left;margin-right:1px;}
+.todanbi_main .area_m .cont_r {width:230px;}
+.todanbi_main .area_m .cont_r .price_box {padding:10px;border:1px solid #e5e5e5;background:#f7f7f7}
+.todanbi_main .area_m .cont_r .price_box li {height:30px;line-height:30px;border-bottom:1px solid #e5e5e5;}
+.todanbi_main .area_m .cont_r .price_box .total {overflow:hidden;font-size:13px;font-weight:bold;height:25px;line-height:30px;}
+.jindan_layer {position:relative;z-index:1;text-align:justify}
+.jindan_layer .info {position:absolute;top:12px;left:-15px;width:170px;padding:15px;border:3px solid #3f54ab;background:#fff;z-index:20}
+.jindan_layer .arrow {position:absolute;top:2px;left:80px;z-index:30}
+
+/* 토단비 강좌상세 */
+.lec_detail {overflow:hidden;padding-bottom:40px;}
+.lec_detail .cont {overflow:hidden;padding:15px 0 0 15px}
+.lec_detail .cont p {margin-bottom:10px;line-height:15px}
+.lec_detail .cont .txt_impact {margin-bottom:5px;font-weight:bold;font-size:13px;color:#6088d5;}
+.lec_detail .cont ul li {line-height:18px}
+.lec_detail .cont img {margin-bottom:10px;}
+
+/* 150629 : 내강의실 알바몬 이벤트*/
+.albamon_cheer_txt {width:650px;height:35px;padding-left:140px;margin:-25px 0 20px;background:url('http://pic.neungyule.com/netoeic/common/bg_cheer_txt.jpg') no-repeat 0 0;}
+.albamon_cheer_txt .wrap {width:640px;height:35px;position:relative;overflow:hidden;}
+.albamon_cheer_txt .wrap ul {width:620px;height:18px;position:absolute;top:10px;left:10px;padding:0;margin:0;overflow:hidden;}
+.albamon_cheer_txt .wrap ul li {overflow:hidden}
+.albamon_cheer_txt .wrap ul li p.fl {width:510px;height:18px;line-height:18px;vertical-align:middle; text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+/* 150724 : 내강의실 토단비카페*/
+.todanbiCafe {}
+.todanbiCafe .wListBox {clear:both;border:1px solid #dcd9d6;background:#f7f7f7}
+.todanbiCafe .wListBox li {height:30px;padding:0 15px;line-height:30px;border-top:1px solid #dcd9d6}
+.todanbiCafe .wListBox li:first-child {border:none}
+
+/* 2015 토졸코개편 */
+.re_tojolko {position:relative;width:100%;min-width:1000px;height:auto;margin:0 auto;}
+.re_tojolko .section1 {overflow:hidden;position:relative;height:643px;background:#000}
+.re_tojolko .section1 .bg {display:none; width:100%; height:643px;position:absolute; top:0; left:0;}
+.re_tojolko .section1 .wrap {position:relative;width:800px;margin:0 auto;position:absolute;top:50px;left:50%;margin-left:-400px}
+.re_tojolko .section2 {height:293px;background:url('http://pic.neungyule.com/netoeic/tojolko/bg_tojolko2.gif') repeat-x left top;}
+.re_tojolko .section2 .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section_tb {height:100%;background:#fff}
+.re_tojolko .section_tb .wrap {position:relative;width:1000px;margin:70px auto;text-align:center}
+.re_tojolko .section_tb table th {font-size:14px !important;color:#0f3173 !important}
+.re_tojolko .section_tb table td {border-left:1px solid #dddddd;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;}
+.re_tojolko .section_tb table .tl {text-align:left !important}
+.re_tojolko .section3 {height:100%;background:#e3e3e3}
+.re_tojolko .section3 .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section4 {height:100%;background:url('http://pic.neungyule.com/netoeic/tojolko/bg_tojolko4.gif') repeat 0 0;}
+.re_tojolko .section4 .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section5 {height:100%;background:url('http://pic.neungyule.com/netoeic/tojolko/bg_tojolko5.gif') repeat 0 0; }
+.re_tojolko .section5 .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section5 .slidingArea {position:absolute; bottom:25px; left:130px; overflow:hidden;width:760px;height:292px;}
+.re_tojolko .section5 .slidingArea .slidingBox {overflow:hidden;width:750px;height:210px;}
+.re_tojolko .section5 .slidingArea .slidingBox ul {width:9999px; position:relative;left:0;}
+.re_tojolko .section5 .slidingArea .slidingBox li {float:left;width:760px;}
+.re_tojolko .section5 .slidingArea .slidingBox li .icon {float:left;width:195px;height:210px;margin-right:45px;}
+.re_tojolko .section5 .slidingArea .slidingBox li .txt {padding:15px 20px 0 0;font-size:16px;color:#fff;line-height:23px;text-align:justify}
+.re_tojolko .section6 {height:100%;padding:70px 0 300px;background:url('http://pic.neungyule.com/netoeic/tojolko/bg_tojolko6.gif') repeat 0 0; }
+.re_tojolko .section6 .wrap {position:relative;width:1000px;margin:0 auto;text-align:center}
+.re_tojolko .section_mv {height:100%;background:#28426f;}
+.re_tojolko .section_mv .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section_mv .slidingArea3 {position:absolute; bottom:-40px; left:-5px;overflow:hidden;width:850px;height:530px;margin:10px 0 0 80px}
+.re_tojolko .section_mv .slidingArea3 .slidingBox3 {overflow:hidden;width:850px;height:100%; }
+.re_tojolko .section_mv .slidingArea3 .slidingBox3 ul {width:9999px; position:relative; left:0;}
+.re_tojolko .section_mv .slidingArea3 .slidingBox3 li {float:left;width:882px;}
+.re_tojolko .section_mv .tabArea {position:absolute;bottom:500px;left:-5px;}
+.re_tojolko .section_mv .tabArea ul {width:1000px;overflow:hidden;margin-left:45px}
+.re_tojolko .section_mv .tabArea ul li {float:left;padding:0 5px;background:url('http://pic.neungyule.com/netoeic/todanbi/20150703/bul_line.gif') no-repeat left 50%;}
+.re_tojolko .section_mv .tabArea ul li:first-child {background:none;}
+.re_tojolko .section9 {height:100%;background:url('http://pic.neungyule.com/netoeic/tojolko/bg_tojolko4.gif') repeat 0 0;}
+.re_tojolko .section9 .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section_bd {height:100%;background:#e3e3e3;padding-bottom:80px;}
+.re_tojolko .section_bd .wrap {position:relative;width:1000px;margin:0 auto;}
+.re_tojolko .section_bd .tab {width:850px;margin:30px auto 0; overflow:hidden;}
+.re_tojolko .section_bd .tab li {float:left;}
+.re_tojolko .section_bd .tab_con {width:850px; min-height:520px; margin:0 auto; padding:20px 0; background:#fff; overflow:hidden; }
+.re_tojolko .section_bd .notice {width:850px;margin:20px auto 0;}
+.re_tojolko .section_bd .btn {overflow:hidden}
+.re_tojolko .section_bd .btn li {float:left;margin-left:34px}
+.re_tojolko .section_bd .btn li:first-child {margin-left:0}
+.re_tojolko .section7 {height:100%;background:#fee8db}
+.re_tojolko .section7 .wrap {width:1000px;margin:0 auto;position:relative; }
+.re_tojolko .section7 .tabArea {position:absolute;top:-250px;left:0;width:1000px;height:250px}
+.re_tojolko .section7 .tabArea li {float:left;width:25%;height:250px;overflow:hidden; }
+.re_tojolko .section7 .slidingBox2 li img {width:100%}
+.re_tojolko .section7 .btn_area a {position:absolute;left:0;top:45%;}
+.re_tojolko .section7 .btn_area .btn_prev {left:-7%;}
+.re_tojolko .section7 .btn_area .btn_next {left:102%;}
+
+/*---------- 고도화 : 2015-10-22 -------------*/
+.sub_tit_bar {width:100%;border-bottom:1px solid #cccccc;}
+.sub_tit_bar h1 {width:200px;height:60px;margin-bottom:-1px;font-size:26px;font-weight:bold;color:#000;border-bottom:2px solid #393939;line-height:60px;}
+.tab_area {overflow:hidden;}
+.tab_area ul li {float:left}
+.bg_tab {overflow:hidden;height:40px;*padding-bottom:20px}
+.bg_tab li {width:125px;height:30px;padding-top:10px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlue.gif') no-repeat 0 0;text-align:center;cursor:pointer}
+.bg_tab li:hover,
+.bg_tab li.on {background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlue_on.gif') no-repeat 0 0;}
+.bg_tab li:hover a,
+.bg_tab li.on a {color:#fff;font-weight:bold}
+.bg_tabB {overflow:hidden;height:40px;*padding-bottom:20px}
+.bg_tabB li {width:395px;height:30px;padding-top:10px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueB.gif') no-repeat 0 0;text-align:center;cursor:pointer}
+.bg_tabB li:hover,
+.bg_tabB li.on {background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueB_on.gif') no-repeat 0 0;}
+.bg_tabB li:hover a,
+.bg_tabB li.on a {color:#fff;font-weight:bold}
+.bg_tabS {overflow:hidden;height:40px;*padding-bottom:20px}
+.bg_tabS li {width:110px;height:30px;padding-top:10px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueS.gif') no-repeat 0 0;text-align:center;cursor:pointer}
+.bg_tabS li:hover,
+.bg_tabS li.on {background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueS_on.gif') no-repeat 0 0;}
+.bg_tabS li:hover a,
+.bg_tabS li.on a {color:#fff;font-weight:bold}
+.bg_tabM {overflow:hidden;height:40px;*padding-bottom:20px}
+.bg_tabM li {width:300px;height:30px;padding-top:10px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueM.gif') no-repeat 0 0;text-align:center;cursor:pointer}
+.bg_tabM li:hover,
+.bg_tabM li.on {background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlueM_on.gif') no-repeat 0 0;}
+.bg_tabM li:hover a,
+.bg_tabM li.on a {color:#fff;font-weight:bold}
+.bg_tab4 {overflow:hidden;height:40px;*padding-bottom:20px}
+.bg_tab4 li {width:197px;height:30px;padding-top:10px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlue4.gif') no-repeat 0 0;text-align:center;cursor:pointer}
+.bg_tab4 li:hover,
+.bg_tab4 li.on {background:url('http://pic.neungyule.com/netoeic/lecture/bg_tabBlue4_on.gif') no-repeat 0 0;}
+.bg_tab4 li:hover a,
+.bg_tab4 li.on a {color:#fff;font-weight:bold}
+
+/* 내 강의실 */
+.myLec_main {}
+.myLec_main h1 {height:60px;padding-left:30px;line-height:60px;background:#617cdb;color:#fff;font-size:18px}
+.myLec_main h1 > span {display:inline-block;padding-left:35px;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec6.png') no-repeat 0 50%;}
+.myLec_main .timeline {position:relative;padding:20px 0 60px 40px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_timeline_m.gif') repeat-y 0 0;}
+.myLec_main .timeline li {width:385px;margin-top:-10px}
+.myLec_main .timeline li:first-child {margin:0}
+.myLec_main .timeline li.left {background:url('http://pic.neungyule.com/netoeic/ico/ico_timeline_l.png') no-repeat right 50%;}
+.myLec_main .timeline li.right {padding-left:70px;margin-left:332px;background:url('http://pic.neungyule.com/netoeic/ico/ico_timeline_r.png') no-repeat left 50%;}
+.myLec_main .timeline li > div {width:315px;}
+.myLec_main .timeline li .box {padding:10px 15px;border:1px solid #dedede}
+.myLec_main .timeline .btnMore {position:absolute;bottom:0;left:50%;margin-left:-25px}
+.myLec_main .txt_cheer {height:30px;padding:0 20px;line-height:30px;background:#617cdb;color:#fff;}
+.myLec_main .txt_cheer a {color:#fff;}
+.myLec_main .c_tit {overflow:hidden;height:58px;padding-right:15px;line-height:58px;border:1px solid #dedede;background:#f4f3f3;font-size:20px;}
+.myLec_main .c_tit .ico1 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec1.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico2 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec2.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico3 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec3.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico4 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec4.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico5 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec5.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico6 {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec6.png') no-repeat 15px 50%;}
+.myLec_main .c_tit .ico7 {display:inline-block;float:left;width:60px;height:58px;margin-right:15px;border-right:1px solid #dedede;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec7.png') no-repeat 15px 50%;}
+.myLec_main .cont_box {overflow:hidden;position:relative;padding:20px;border:1px solid #dedede;border-top:none}
+.myLec_main .cont_box .box {padding:15px;border:1px solid #eeeeee;background:#fafafa}
+.myLec_main .cont_box .myBook_list {overflow:hidden;padding-top:20px}
+.myLec_main .cont_box .myBook_list li {float:left;width:124px;margin-left:30px;text-align:center}
+.myLec_main .cont_box .myBook_list li:first-child {margin-left:5px;}
+.myLec_main .cont_box .bookImg {position:relative;width:123px;height:156px;padding:1px 0 0 1px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_bookImg.gif') no-repeat 0 0;}
+.myLec_main .cont_box .bookImg .mark {position:absolute;top:0;right:10px;}
+.myLec_main .cont_box .bookTit {overflow:hidden;height:32px;}
+.myLec_main .cont_box .btnMore {position:absolute;top:-1px;right:-1px}
+.myLec_main .cont_box .list_box {width:100%;border:1px solid #eeeeee;background:#fafafa}
+.myLec_main .cont_box .list_box li {overflow:hidden;padding:8px 15px;border-top:1px solid #eeeeee}
+.myLec_main .cont_box .list_box li:first-child {border-top:none}
+.myLec_main .cont_box .list_box.board li p {float:left}
+.myLec_main .cont_box .list_box.board li p.ellipsis {max-width:310px;margin-right:5px}
+.myLec_main .cont_box .list_box li .num {width:13px;height:13px;display:inline-block;margin-right:10px;background:url('http://pic.neungyule.com/netoeic/ico/ico_redC.gif') no-repeat 0 50%;color:#fff;text-align:center;line-height:13px;font-weight:bold;font-size:10px;vertical-align:middle}
+.myLec_main .cont_box .list_box .list_q {padding-left:40px;background:url('http://pic.neungyule.com/netoeic/lecture/mark_q.png') no-repeat 0 50%;}
+.myLec_main .cont_box .pg_box {width:100%;height:19px;border:1px solid #dedede;background:#f4f3f3;line-height:19px;font-size:11px;text-align:center}
+.myLec_main .cont_box .pg_box img {vertical-align:middle}
+.my_graph {width:400px;position:absolute;bottom:15px;right:15px;}
+.my_graph .g_off {width:400px;height:20px;position:relative;background:url('http://pic.neungyule.com/netoeic/lecture/bg_myl_graph.gif') no-repeat 0 0;}
+.my_graph .g_on {width:400px;height:20px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_blue.gif') repeat-x 0 0}
+.my_graph .myl_num_l {position:absolute;bottom:0;right:-2px;width:64px;height:43px;padding:7px 0 0 5px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_l.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:center}
+.my_graph .myl_num_r {position:absolute;bottom:0;right:-67px;width:64px;height:43px;padding:7px 5px 0 0px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_r.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:center}
+.my_graph .g_on_m {width:400px;height:20px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_mint.gif') repeat-x 0 0;color:#fff;text-align:center}
+.my_graph .g_on_p {width:400px;height:20px;position:absolute;top:0;right:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_pple.gif') repeat-x 0 0;color:#fff;text-align:center}
+.my_graph .myl_tday {position:absolute;bottom:0;width:45px;height:43px;padding:7px 0 0 5px;margin-left:-2px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_s.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:left}
+
+.tit_boxBlue {position:relative;}
+.tit_boxBlue .c_tit {overflow:hidden;height:60px;padding-right:15px;line-height:60px;background:#617cdb;font-size:20px;color:#fff}
+.tit_boxBlue .c_tit.gray {background:#6d6d6d}
+.tit_boxBlue .c_tit.gray .ico {border-right:1px solid #868585}
+.tit_boxBlue .ico {display:inline-block;float:left;width:50px;height:58px;margin-right:15px;border-right:1px solid #8ca3f3;background:url('http://pic.neungyule.com/netoeic/ico/ico_mlec8.png') no-repeat 15px 50%;}
+.tit_boxBlue .box {padding:20px 30px 25px;border:1px solid #dadada;border-top:none}
+.tit_boxBlue .box ul li {font-size:13px;font-weight:bold;line-height:20px}
+.tit_boxBlue .box .g_box {position:relative;width:365px;height:98px;border:1px solid #eeeeee;background:#fafafa}
+.tit_boxBlue p.text_line {z-index:10}
+.tit_boxBlue .layer_pop {position:absolute;left:225px;width:510px;height:auto;padding:20px 10px;border:1px solid #d9d9d9;background:#fff;z-index:1000}
+.tit_boxBlue .layer_pop .txt_box {padding:15px;border:1px solid #eeeeee;background:#fafafa}
+.tit_boxBlue .layer_pop .arrow {position:absolute;top:-14px;left:45px;}
+.tit_boxBlue .layer_pop .btn {position:absolute;top:15px;right:15px;}
+.tit_boxGray {overflow:hidden;height:40px;padding:0 20px;line-height:40px;border:1px solid #dadada;background:#fafafa}
+.tit_boxGray > p {padding-left:15px;background:url('http://pic.neungyule.com/netoeic/ico/bul_arrowRblue.gif') no-repeat 0 50%;font-size:14px;font-weight:bold}
+.my_graph2 {width:300px;position:absolute;bottom:25px;left:35px;}
+.my_graph2 .g_off {width:300px;height:20px;position:relative;background:url('http://pic.neungyule.com/netoeic/lecture/bg_myl_graph.gif') no-repeat 0 0;}
+.my_graph2 .myl_tday {position:absolute;bottom:0;width:45px;height:43px;padding:7px 0 0 5px;margin-left:-2px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_s.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:left}
+.my_graph2 .g_on_m {width:400px;height:20px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_mint.gif') repeat-x 0 0;color:#fff;text-align:center}
+.my_graph2 .g_on_p {width:400px;height:20px;position:absolute;top:0;right:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_pple.gif') repeat-x 0 0;color:#fff;text-align:center}
+.my_graph3 {width:230px;margin:35px auto 0;}
+.my_graph3 .g_off {width:228px;height:20px;position:relative;background:url('http://pic.neungyule.com/netoeic/lecture/bg_myl_graph.gif') no-repeat 0 0;border-left:1px solid #d8d8d8;border-right:1px solid #d8d8d8}
+.my_graph3 .g_on {width:230px;height:20px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/lecture/graph_blue.gif') repeat-x 0 0}
+.my_graph3 .myl_num_l {position:absolute;bottom:0;right:-2px;width:64px;height:43px;padding:7px 0 0 5px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_l.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:center}
+.my_graph3 .myl_num_r {position:absolute;bottom:0;right:-67px;width:64px;height:43px;padding:7px 5px 0 0px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_flag_r.png') no-repeat 0 0;font-size:11px;color:#fff;text-align:center}
+
+.sGraph_box {overflow:hidden;padding:20px 25px;border:1px solid #dadada;}
+.sGraph_box > div {float:left;margin-left:20px;}
+.sGraph_box > div:first-child {margin:0}
+.sGraph_box > div .box {height:120px;padding:15px 0;border:1px solid #eeeeee;background:#fafafa;text-align:center}
+.sGraph_box > div .box .c_graph {overflow:hidden;position:relative;width:100px;height:101px;margin:0 auto;}
+.sGraph_box > div .box .c_graph .txt {position:absolute;top:42px;left:50%;margin-left:-27px;width:55px;font-size:17px;text-align:center}
+.sGraph_box > div .box .test_list {padding-top:10px}
+.sGraph_box > div .box .test_list li {width:76px;display:inline-block;zoom:1;*display:inline;margin-left:13px;font-size:13px;}
+.sGraph_box > div .box .test_list li:first-child {margin:0}
+.sGraph_box > div .box .test_list li p {width:76px;height:43px;padding-top:23px;margin:10px auto 0;background:url('http://pic.neungyule.com/netoeic/lecture/bg_pple_po.png') no-repeat 0 0;text-align:center;color:#fff;font-size:15px;font-weight:bold;}
+
+.myLec_point .srch_box .period_list {overflow:hidden}
+.myLec_point .srch_box .period_list li {float:left;width:33px;height:18px;margin:0 1px;line-height:18px;text-align:center;border:1px solid #d9d9d9;cursor:pointer;font-size:11px}
+.myLec_point .srch_box .period_list li:hover,
+.myLec_point .srch_box .period_list li.on {background:#224c90}
+.myLec_point .srch_box .period_list li:hover a,
+.myLec_point .srch_box .period_list li.on a {color:#fff}
+.notice_box {overflow:hidden;padding:25px;border:1px solid #dedede;color:#393939}
+.notice_box .notice_tit {height:21px;padding-left:20px;background:url('http://pic.neungyule.com/netoeic/ico/ico_notice.gif') no-repeat 0 50%;font-size:15px;font-weight:bold;line-height:21px;}
+.notice_box ul li {line-height:18px;}
+.srch_box {height:20px;padding:9px 30px;border:1px solid #e5e5e5;background:#f7f7f7;line-height:20px;}
+.in_grayBox {padding:10px 20px;border:1px solid #eeeeee;background:#fafafa;}
+.blue_box {padding:10px;background:#617cdb;color:#fff}
+
+/* 강좌상세 토단비 토졸코 오픽훅 */
+#lec_navRe {width:100%;min-width:1000px;}
+#lec_navRe .nav_todanbi {background:#4659ac;height:45px;line-height:45px}
+#lec_navRe .nav_todanbi .tit {padding-right:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_mint.png') no-repeat 43px 50%;font-size:14px !important}
+#lec_navRe .nav_todanbi .tit a {color:#56f5ff !important;}
+#lec_navRe .nav_tojolko {background:#289b15;height:45px}
+#lec_navRe .nav_tojolko .tit {padding-right:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_grn.png') no-repeat 135px 50%;color:#c4ffb8;font-size:14px !important}
+#lec_navRe .nav_tojolko .notice {height:23px;width:360px;padding-left:15px;margin-top:10px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_tjk.png') no-repeat 0 0;line-height:23px;color:#289b15;font-weight:bold;}
+#lec_navRe .nav_opic {overflow:hidden;background:#e7007c;height:63px;padding-top:4px;}
+#lec_navRe .nav_opic ul li {line-height:30px !important}
+#lec_navRe .nav_opic .tit {padding-right:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_pink.png') no-repeat 43px 50%;font-size:14px !important}
+#lec_navRe .nav_opic .tit a {color:#ffd1ea !important}
+#lec_navRe .nav_opic .t_tit {display:inline-block;height:23px;padding-left:4px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_p_l.gif') no-repeat 0 0;line-height:23px}
+#lec_navRe .nav_opic .t_tit .bg {display:inline-block;height:23px;padding-right:9px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_p_r.gif') no-repeat right 0;line-height:23px}
+#lec_navRe .nav_opic .t_tit .bg2 {display:inline-block;height:23px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_p_m.gif') repeat-x 0 0;line-height:23px;color:#e7007c}
+#lec_navRe .nav_free {background:#0e2a8e;height:45px;}
+#lec_navRe .nav_free .tit {padding-right:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_sblue.png') no-repeat 65px 50%;font-size:14px !important;color:#dfe6ff}
+#lec_navRe .nav_free .notice {height:23px;width:265px;padding-left:16px;margin-top:10px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_free.png') no-repeat 0 0;line-height:23px;color:#0e2a8e;font-weight:bold;}
+#lec_navRe .nav_free .notice2 {height:23px;width:390px;padding-left:16px;background:url('http://pic.neungyule.com/netoeic/sub/bg_noticeB_free2.png') no-repeat 0 0;line-height:23px;color:#0e2a8e;font-weight:bold;}
+#lec_navRe .nav_free .txt {width:65px;height:15px;color:#dfe6ff;line-height:45px;font-size:13px;}
+
+#lec_navRe .wrap {position:relative;width:1000px;margin:0 auto;}
+#lec_navRe .wrap ul {overflow:hidden;}
+#lec_navRe .wrap ul li {float:left;font-size:13px;font-weight:bold;padding:0 15px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray.gif') no-repeat left 50%;}
+#lec_navRe .wrap ul li:first-child {background:none}
+#lec_navRe .wrap ul li a {color:#fff !important}
+#lec_navRe .wrap ul li.on a,
+#lec_navRe .wrap ul li a:hover {color:#56f5ff !important}
+#lec_left {height:auto;float:left;width:360px;z-index:999}
+#lec_right {width:620px;float:right;}
+
+.page_on {position:relative;width:1000px;margin:0 auto;}
+.page_on .on_bar {position:absolute;top:0}
+
+/* 오픽훅 패키지 */
+.opic_tit {overflow:hidden}
+.opic_tit .txt_box {height:24px;padding-left:12px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lec_txt_l.jpg') no-repeat left 1px;line-height:22px;}
+.opic_tit .txt_box span.bg {display:inline-block;padding:0 30px 0 10px;border:1px solid #dddddd;border-left:none}
+.opic_main .dday_time {position:relative;width:1000px;height:294px}
+.opic_main .dday_time .txt {position:absolute;width:1000px;text-align:center;color:#ff0f8c;font-weight:bold;font-size:25px}
+.opic_main .dday_time .num {width:39px;height:45px;position:absolute;font-size:30px;font-weight:bold;color:#fff;line-height:45px;}
+.opic_main .pkg_box {float:left;width:292px;height:auto;padding:20px;margin-left:-1px;border:1px solid #e0e0e0}
+.opic_main .pkg_box:first-child {margin:0 !important}
+.opic_main .pkg_box .pkg_tit {font-size:18px;font-weight:bold;line-height:22px}
+.opic_main .pkg_box .sale_info {position:relative;width:290px;height:142px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_opic_cont.jpg') no-repeat 0 0;}
+.opic_main .pkg_box .sale_info .info1 {position:absolute;top:8px;left:37px;font-size:17px;font-weight:bold;color:#fff;line-height:18px}
+.opic_main .pkg_box .sale_info .info2 {position:absolute;top:23px;right:70px;font-size:15px;font-weight:bold;color:#999999}
+.opic_main .pkg_box .sale_info .info3 {position:absolute;top:48px;right:70px;font-size:20px;font-weight:bold;color:#e41585}
+.opic_main .pkg_box .sale_info .info4 {position:absolute;top:96px;left:30px;font-size:17px;font-weight:bold;color:#fff}
+.opic_main .pkg_box .sale_info .info5 {position:absolute;top:96px;right:30px;font-size:17px;font-weight:bold;color:#fff}
+.opic_main .ico_list {overflow:hidden}
+.opic_main .ico_list li {float:left;margin:0 1px 3px 1px}
+.opic_main .btn_mvView {overflow:hidden}
+.opic_main .btn_mvView li {float:left}
+.opic_main table.tb_info {text-align:left;}
+.opic_main table.tb_info th {padding:10px 0;vertical-align:top;font-size:13px;font-weight:bold;}
+.opic_main table.tb_info td {padding:10px 0;}
+.opic_main table.tb_info .bb_line {border-bottom:1px solid #e6e6e6}
+.opic_main .tchr_list li {float:left;padding:0 10px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray2.gif') no-repeat left 50%;}
+.opic_main .product_box {padding:10px 20px;border:1px solid #e0e0e0;background:#f7f7f7}
+.opic_main .product_box > ul {overflow:hidden;padding:10px 0;border-bottom:1px solid #e0e0e0;}
+.opic_main .product_box > ul li {line-height:23px}
+.opic_main .product_box .tt_price {overflow:hidden;padding:10px 0 10px 10px;font-size:14px;font-weight:bold}
+.opic_main .product_box .tt_price > span {display:inline-block;}
+.opic_main .pkg_box.wide {width:448px;margin-bottom:30px}
+.opic_main .text_num {position:absolute;top:160px;left:50%;margin-left:-30px;width:60px;text-align:center;font-size:18px;font-weight:bold}
+
+.lec_infoBox .info_opicName {display:inline-block;width:74px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray2.gif') no-repeat right 50%;text-align:center}
+.lec_infoBox .info_opicName img {vertical-align:middle}
+
+.lec_rightBnr  {position:relative}
+.lec_rightBnr .opic_time .num {position:absolute;top:83px;display:inline-block;height:53px;line-height:53px;color:#fff;font-size:33px;font-weight:bold}
+.lec_rightBnr .opic_time .num > span {display:inline-block;width:45px;height:53px;}
+.lec_rightBnr .opic_newReview {position:absolute;bottom:13px;*bottom:15px;left:30px;}
+.lec_rightBnr .opic_newReview .opic_review {overflow:hidden;position:absolute;top:5px;*top:0;left:25px;width:560px;height:15px;line-height:15px}
+.lec_rightBnr .opic_newReview .opic_review .slide {overflow:hidden}
+.lec_rightBnr .opic_newReview .opic_review .ellipsis {width:420px;font-weight:bold;}
+
+.lec_rightBnr .opic_newReview2 {position:absolute;height:60px;bottom:18px;left:30px;}
+.lec_rightBnr .opic_review2 {width:570px;height:55px;position:relative;overflow:hidden;}
+.lec_rightBnr .opic_review2 .slide {width:560px;height:18px;list-style:none;line-height:18px;}
+.lec_rightBnr .opic_review2 .slide p.fl {width:440px;padding-left:10px;float:left;font-weight:bold;background:url('http://pic.neungyule.com/netoeic/ico/bul_blue.gif') no-repeat 0 50%;}
+
+.lec_tit {padding-left:22px;background:url('http://pic.neungyule.com/netoeic/ico/bul_lec_tit.png') no-repeat 0 50%;font-size:17px;font-weight:bold;color:#000}
+
+/* 오픽훅 main top */
+.opic_top {width:100%;min-width:1000px;height:auto;}
+.opic_top .section1 {position:relative;height:4795px;background:#000;border-bottom:3px solid #ff0085}
+.opic_top .section1 .wrap {width:1400px;margin:0 auto;position:absolute;top:0;left:50%;margin-left:-700px}
+.opic_top .section2 {position:relative;height:100%;background:#000;}
+.opic_top .section2 .wrap {position:relative;width:1400px;margin:0 auto;left:50%;margin-left:-700px}
+.opic_top .section2 .data_list {}
+.opic_top .section2 .data_list li {}
+.opic_top .section2 .data_list .tArea {cursor:pointer;}
+.opic_top .section2 .data_list .tArea .btn {display:block;}
+.opic_top .section2 .data_list .aArea {height:auto;}
+.opic_top .section3 {position:relative;height:639px;background:#000;}
+.opic_top .section3 .wrap {width:1400px;margin:0 auto;position:absolute;top:0;left:50%;margin-left:-700px}
+.opic_top .section3 .slidingArea2 {position:absolute; top:210px; left:240px; overflow:hidden;width:435px;height:245px;}
+.opic_top .section3 .slidingArea2 .slidingBox2 {overflow:hidden;width:435px;height:245px; }
+.opic_top .section3 .slidingArea2 .slidingBox2 ul {width:9999px; position:relative; left:0;}
+.opic_top .section3 .slidingArea2 .slidingBox2 li {float:left;width:435px;}
+.opic_top .section3 .slidingArea2 .slidingBox2 li > img {margin-right:10px}
+.opic_top .section3 .tabArea {position:absolute;bottom:127px;left:410px;}
+.opic_top .section3 .tabArea ul li {float:left;margin:0 3px}
+.opic_top .section4 {position:relative;min-height:61px;background:#2f3031 url('../img/lecture/opic/opic_bg_notice.gif') repeat-x 0 top;}
+.opic_top .section4 .wrap {position:relative;width:1000px;margin:0 auto;}
+.opic_top .section4 .cont {height:330px;padding:20px 0;color:#fff;background:#2f3031}
+.opic_top .section4 .cont p.ttxt {font-weight:bold;font-size:14px;margin:10px 0;}
+.opic_top .section4 .cont p > a {color:#fff;}
+.opic_top .section4 .cont p > a:hover {text-decoration:underline}
+
+/* 단과강좌 */
+.sp_bnrArea {position:relative}
+.sp_bnrArea .roll_bnr {position:absolute;top:20px;left:20px;overflow:hidden;width:622px;height:160px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_sp_tBnr.png') no-repeat 0 0}
+.sp_bnrArea .roll_bnr p.btn {position:absolute;bottom:10px;right:60px;z-index:5;}
+.sp_bnrArea .roll_bnr p.btn > a {padding-left:5px}
+.sp_bnrArea .roll_bnr .banner li {position:relative;}
+.sp_bnrArea .roll_bnr .banner li a > img {margin:1px}
+.sp_bnrArea .roll_bnr .banner li .txt {overflow:hidden;position:absolute;top:0px;left:320px;width:260px;font-weight:bold;font-size:14px}
+.sp_bnrArea .roll_bnr .banner li .txt .tit {overflow:hidden;height:40px;font-size:18px;color:#0e2a8e;line-height:20px;text-align:justify}
+.sp_tab ul {overflow:hidden}
+.sp_tab ul li {float:left}
+.sp_cont .box_gray {padding:10px 30px;border:1px solid #e5e5e5;background:#f7f7f7}
+.sp_cont .ico_list {overflow:hidden}
+.sp_cont .ico_list li {float:left;margin-right:2px}
+.sp_cont .spLec_tit {font-size:16px;font-weight:bold;line-height:18px}
+
+table.tb_loadMap {width:1000px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lec_loadMap.gif') no-repeat 0 0;border-bottom:1px solid #a7b7d3;}
+table.tb_loadMap th {height:50px;text-align:center;color:#fff;font-weight:bold;font-size:14px}
+table.tb_loadMap td {padding:10px 5px 9px;border-bottom:1px dashed #a7b7d3;border-right:1px solid #bbbbbb;text-align:center}
+table.tb_loadMap td.tit {background:#e7edff;color:#334373;font-size:14px}
+table.tb_loadMap td.bg_blue {background:#d5e0ff;}
+table.tb_loadMap td.bg_blue a {color:#0e2a8e !important}
+
+/* pop */
+.lec_layPopN {width:100%;height:auto;border:2px solid #5f86d3;background:#fff !important}
+.lec_layPopN .pop_top {height:46px;padding:0 20px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_lecPop_blue.gif') repeat-x 0 0;color:#fff;font-size:14px;font-weight:bold;line-height:46px;}
+.lec_layPopN .pop_top a {color:#fff !important;}
+.lec_layPopN .pop_cont {overflow-y:auto;max-height:210px;padding:0 20px 20px;}
+.lec_layPopN .pop_cont > div {padding:20px 0;border-top:1px solid #eeeeee}
+.lec_layPopN .pop_cont > div:first-child {border:none;}
+.lec_layPopN .pop_cont .bookInfo .txt_rBul {padding-right:10px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray3.gif') no-repeat right 0;}
+.lec_layPopN .pop_cont .otherLec li {padding:10px 0 10px 10px;border-top:1px solid #eeeeee;background:url('http://pic.neungyule.com/netoeic/ico/bul_gray.gif') no-repeat left 50%;}
+.lec_layPopN .pop_cont .otherLec li:first-child {border:none;}
+.lec_layPopN .pop_cont .info_list li {line-height:19px}
+
+/* 무료강좌 */
+.free_core .txt_day {position:absolute;top:40px;left:50%;margin-left:-300px;width:600px;text-align:center;font-size:30px;font-weight:bold;color:#fff;height:31px;line-height:30px}
+.free_core .txt_day .t_mint {color:#1bbc9b}
+.free_core .reply_box {position:relative;width:740px;height:62px;padding:15px 0 0 50px;background:url('http://pic.neungyule.com/netoeic/free/bg_free_core_reply.gif') no-repeat 0 0;}
+.free_core .reply_box .btn {position:absolute;top:15px;right:35px}
+.free_core .reply_list {width:768px;height:auto;padding:0 11px;margin-bottom:-3px;background:url('http://pic.neungyule.com/netoeic/free/bg_free_core_reply2.gif') repeat-y 0 0;}
+.free_core .reply_list .wrap {padding:10px 10px 30px;background:#fff;}
+.free_core .reviewArea {position:relative}
+.free_core .review_roll {position:absolute;height:80px;bottom:9px;left:292px;}
+.free_core .review {width:530px;height:80px;position:relative;overflow:hidden;}
+.free_core .review .slide {width:455px;padding:0 15px 0 10px;height:26px;list-style:none;line-height:25px;color:#fff;border-bottom:1px solid #323a49}
+.free_core .review .slide p.fl {width:340px;padding-left:10px;float:left;font-weight:bold;}
+.free_core .review .slide a {color:#fff}
+.free_core .review .slide a:hover {text-decoration:underline}
+.free_core .mvlayer_pop {position:absolute;left:50%;top:40%;width:790px;height:444px;margin:-120px 0 0 -395px;background:#fff; z-index:20;}
+.free_core .mvlayer_pop .closeBtn {position:absolute;top:-30px;right:30px}
+.dimmed {position:absolute; top:0; left:0; width:100%; height:100%;background:url('http://pic.neungyule.com/netoeic/popup/0820_pop_bg.png') repeat;z-index:10;}
+
+.zero_lec {overflow:hidden}
+.zero_lec .lec_left {float:left;width:520px;}
+.zero_lec .lec_left .mv_b {position:relative;width:518px;height:291px;margin-bottom:13px;border:1px solid #dcdcdc}
+.zero_lec .lec_left .mv_b .t_pic {position:absolute;top:15px;left:0;}
+.zero_lec .lec_left .mv_b .mv_txt {position:absolute;top:165px;left:20px;width:480px;color:#fff;font-size:16px}
+.zero_lec .lec_left .mv_b .mv_txt .mv_tit {height:23px;font-size:22px;font-weight:bold;line-height:23px;}
+.zero_lec .lec_left .mv_b .mv_txt .cate_p {padding-left:5px;border-left:4px solid #e7007c;font-size:14px;font-weight:bold}
+.zero_lec .lec_left .mv_b .mv_txt .cate_g {padding-left:5px;border-left:4px solid #289b15;font-size:14px;font-weight:bold}
+.zero_lec .lec_left .mv_b .mv_txt .cate_b {padding-left:5px;border-left:4px solid #4154a6;font-size:14px;font-weight:bold}
+.zero_lec .lec_left .mv_b .bg {width:520px;height:293px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/main/bg_filter.png') repeat 0 0}
+.zero_lec .lec_left .mv_s_list {overflow:hidden}
+.zero_lec .lec_left .mv_s_list li {position:relative;float:left;margin-left:11px;border:1px solid #dcdcdc;cursor:pointer}
+.zero_lec .lec_left .mv_s_list li:first-child {margin:0}
+.zero_lec .lec_left .mv_s_list li .mv_txt {position:absolute;top:0;left:0;width:144px;height:73px;padding:10px;text-align:center;color:#fff;background:url('http://pic.neungyule.com/netoeic/main/bg_filter.png') no-repeat 0 0;}
+.zero_lec .lec_left .mv_s_list li .on_txt {display:none}
+.zero_lec .lec_left .mv_s_list li .cate {padding-left:5px;text-align:left}
+.zero_lec .lec_left .mv_s_list li.mv_s_pink .cate {border-left:4px solid #e7007c;}
+.zero_lec .lec_left .mv_s_list li.mv_s_grn .cate {border-left:4px solid #289b15;}
+.zero_lec .lec_left .mv_s_list li.mv_s_blue .cate {border-left:4px solid #4154a6;}
+.zero_lec .lec_left .mv_s_list li:hover .mv_txt {display:none}
+.zero_lec .lec_left .mv_s_list li.mv_s_pink:hover .on_txt {display:block;position:absolute;top:0;left:0;width:144px;height:73px;padding:10px;text-align:left;color:#ea86bc;background:url('http://pic.neungyule.com/netoeic/free/bg_f_pink.png') no-repeat 0 0;}
+.zero_lec .lec_left .mv_s_list li.mv_s_grn:hover .on_txt {display:block;position:absolute;top:0;left:0;width:144px;height:73px;padding:10px;text-align:left;color:#54b244;background:url('http://pic.neungyule.com/netoeic/free/bg_f_grn.png') no-repeat 0 0;}
+.zero_lec .lec_left .mv_s_list li.mv_s_blue:hover .on_txt {display:block;position:absolute;top:0;left:0;width:144px;height:73px;padding:10px;text-align:left;color:#7e8fd9;background:url('http://pic.neungyule.com/netoeic/free/bg_f_blue.png') no-repeat 0 0;}
+.zero_lec .lec_left .mv_s_list li .on_txt .ellipsis {color:#fff !important;font-size:13px !important}
+.zero_lec .lec_right {float:right;width:250px;}
+.zero_lec .lec_right .best5_list {border:1px solid #bbbbbb}
+.zero_lec .lec_right .best5_list li {position:relative;width:248px;height:79px;border-top:1px solid #bbbbbb}
+.zero_lec .lec_right .best5_list li:first-child {border-top:none}
+.zero_lec .lec_right .best5_list li .no {position:absolute;top:0;left:7px}
+.zero_lec .lec_right .best5_list li .txt {position:absolute;top:15px;right:15px;width:115px;}
+.zero_lec .lec_right .best5_list li .txt .l_tit {overflow:hidden;height:32px;}
+.zero_lec .zero_stit {overflow:hidden;border-bottom:1px solid #dddddd;font-weight:bold;}
+.zero_lec .zero_stit .t_txt {width:107px;height:35px;line-height:35px;font-size:16px;color:#000;text-align:left}
+.zero_lec .zero_stit .m_txt {padding-top:10px;font-size:13px;}
+.zero_lec .zero_stit.blue .t_txt {border-bottom:3px solid #4154a6;}
+.zero_lec .zero_stit.blue .m_txt a {color:#4154a6}
+.zero_lec .zero_stit.grn .t_txt {border-bottom:3px solid #289b15;}
+.zero_lec .zero_stit.grn .m_txt a {color:#289b15}
+.zero_lec .zero_stit.pink .t_txt {border-bottom:3px solid #e7007c;}
+.zero_lec .zero_stit.pink .m_txt a {color:#e7007c}
+.zero_lec .lecinfo_tb .lecTit {width:570px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;text-align:left}
+/* 영상 썸네일 리스트 */
+.slides_container {width:790px;display:none;height:204px}
+.slides_container div.slide {width:1000px;height:204px;display:block;}
+.slides_container .thum {position:relative;float:left;width:188px;height:202px;margin-left:10px;cursor:pointer;border:1px solid #d6d6d6}
+.slides_container .thum:first-child {margin:0}
+.slides_container .thum .play_btn {position:absolute;top:0;left:0;width:188px;height:72px;padding-top:33px;background:url('http://pic.neungyule.com/netoeic/main/bg_filter.png') no-repeat 0 0;text-align:center}
+.slides_container .txtBox {height:66px;padding:15px;border-top:1px solid #d6d6d6}
+.pagination {width:790px;height:16px;text-align:center;margin-top:2px;*padding-top:14px}
+@-moz-document url-prefix(){.pagination {width:790px;height:16px;text-align:center;margin-top:11px}}
+@media screen and (-webkit-min-device-pixel-ratio:0) {.pagination {width:790px;height:16px;text-align:center;margin-top:11px}}
+.pagination span {display:inline-block;width:11px;height:11px;margin:0 4px}
+#slides .pagination span a {display:inline-block;width:13px;height:13px;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll.png') no-repeat 0 0;font-size:0}
+#slides .pagination .current a {display:inline-block;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll_b_on.png') no-repeat 0 0;}
+#slides .prev {display:block;width:6px;height:16px;position:absolute;top:220px;left:275px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowLblue.png') no-repeat 0 0;text-indent:-9999px}
+#slides .next {display:block;width:6px;height:16px;position:absolute;top:220px;right:275px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowRblue.png') no-repeat 0 0;text-indent:-9999px}
+#slides2 .pagination span a {display:inline-block;width:13px;height:13px;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll.png') no-repeat 0 0;font-size:0}
+#slides2 .pagination .current a {display:inline-block;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll_g_on.png') no-repeat 0 0;}
+#slides2 .prev {display:block;width:6px;height:16px;position:absolute;top:220px;left:350px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowLgrn.png') no-repeat 0 0;text-indent:-9999px}
+#slides2 .next {display:block;width:6px;height:16px;position:absolute;top:220px;right:350px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowRgrn.png') no-repeat 0 0;text-indent:-9999px}
+#slides3 .pagination span a {display:inline-block;width:13px;height:13px;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll.png') no-repeat 0 0;font-size:0}
+#slides3 .pagination .current a {display:inline-block;background:url('http://pic.neungyule.com/netoeic/btn/btn_roll_p_on.png') no-repeat 0 0;}
+#slides3 .prev {display:block;width:6px;height:16px;position:absolute;top:220px;left:335px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowLpink.png') no-repeat 0 0;text-indent:-9999px}
+#slides3 .next {display:block;width:6px;height:16px;position:absolute;top:220px;right:335px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowRpink.png') no-repeat 0 0;text-indent:-9999px}
+
+table.lecinfo_tb {border:1px solid #dbdbdb}
+table.lecinfo_tb th {height:62px;background:#f4f4f4;font-size:20px;border-bottom:1px solid #dbdbdb;border-right:1px solid #dbdbdb}
+table.lecinfo_tb th p {line-height:31px;}
+table.lecinfo_tb td {height:45px;padding-left:20px;border-left:1px solid #dbdbdb;line-height:45px;font-size:15px}
+table.lecinfo_tb td:first-child {border-left:none}
+table.lecinfo_tb td.tit {padding:0;text-align:center;color:#4154a6}
+
+.slides_container2 {position:relative;width:790px}
+.slides_container2 .slide {overflow:hidden;width:710px;height:154px;margin:0 auto}
+.slides_container2 .thum {position:relative;float:left;width:132px;height:152px;margin-left:10px;cursor:pointer;border:1px solid #d6d6d6}
+.slides_container2 .thum:first-child {margin:0}
+.slides_container2 .thum:hover,
+.slides_container2 .thum.on {border:1px solid #4154a6}
+.slides_container2 .thum .play_btn {overflow:hidden;position:absolute;top:0;left:0;width:132px;height:53px;padding-top:20px;background:url('http://pic.neungyule.com/netoeic/main/bg_filter.png') no-repeat 0 0;text-align:center}
+.slides_container2 .txtBox {height:58px;padding:10px;border-top:1px solid #d6d6d6}
+.slides_container2 .prev {display:block;width:20px;height:59px;position:absolute;top:50px;left:0px;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowL_off.png') no-repeat 0 0;text-indent:-9999px;cursor:pointer}
+.slides_container2 .next {display:block;width:20px;height:59px;position:absolute;top:50px;right:0;background:url('http://pic.neungyule.com/netoeic/ico/ico_arrowR_off.png') no-repeat 0 0;text-indent:-9999px;cursor:pointer}
+
+/* 나의 교재 */
+.book_box {float:left;width:345px;height:265px;padding:20px;margin-bottom:15px;border:1px solid #e4e4e4;background:#f9f9f9}
+.book_box .in_bookT {padding-bottom:20px;}
+.book_box .in_bookT .fl img {border:1px solid #e4e4e4;}
+.book_box .in_bookT .day_b {width:90px;height:21px;padding:0 12px;line-height:21px;background:#425bc2;color:#fff;font-size:11px}
+.book_box .in_bookT .day_p {width:90px;height:21px;padding:0 12px;line-height:21px;background:#d71d70;color:#fff;font-size:11px}
+.book_box .in_bookT .book_tit {overflow:hidden;height:35px;font-size:16px;font-weight:bold;line-height:18px}
+.book_box .in_bookT .book_txt {overflow:hidden;height:50px;}
+.book_box .in_bookB {padding-top:15px;border-top:1px solid #e4e4e4;}
+.book_box .in_bookB .b_src {height:13px;padding-left:15px;font-size:13px;font-weight:bold;background:url('http://pic.neungyule.com/netoeic/ico/bul_arrowRblue.gif') no-repeat 0 50%;}
+.book_box .in_bookB .btn_list {overflow:hidden}
+.book_box .in_bookB .btn_list li {float:left;margin:0 15px 5px 0}
+
+/* 장바구니 */
+.reLec_box {width:318px;padding:3px;float:left;margin:0 0 10px 10px;border:1px solid #d9d9d9}
+.reLec_box .reLec_tit {overflow:hidden;height:32px;padding:0 20px;margin:12px 0;text-align:justify}
+.reLec_box .reLec_price {overflow:hidden;padding:8px 15px;background:#ebebeb;}
+.reLec_box .reLec_price .fl {font-size:20px;font-weight:bold;color:#435ebf;line-height:20px}
+.cpSrch_area {overflow:hidden}
+.cpSrch_area > div {float:left}
+.cpSrch_area .in_box {border:1px solid #d7d7d7;text-align:center;}
+.cpSrch_area .in_box .tit {height:50px;padding-top:20px;margin:0 !important;background:#eeeff1;line-height:29px;font-size:17px;border-bottom:1px solid #d7d7d7;}
+.cpSrch_area .in_box .txt {height:110px;font-size:17px;font-weight:bold}
+table.tt_price_tb {border:4px solid #617cdb}
+table.tt_price_tb th {height:30px;background:#f6f6f6;line-height:30px;border-left:1px solid #d7d7d7}
+table.tt_price_tb td {height:70px;border-left:1px solid #d7d7d7;text-align:center}
+table.tt_price_tb2 {border-top:1px solid #d7d7d7;border-right:1px solid #d7d7d7}
+table.tt_price_tb2 td {padding:20px 15px;border-left:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;text-align:center}
+table.tt_price_tb2 td > ul li {line-height:18px}
+table.tt_price_tb2 td .t_price {height:25px;font-size:25px;font-weight:bold;color:#e7007c;line-height:25px;}
+
+/* 교재-북몰 */
+#sliderBook {width:790px;height:260px;}
+.book_area .book_top .slide_list {position:relative;width:790px;height:260px;overflow:hidden;}
+.book_area .book_top .slide_list .in_slide {width:790px;height:260px;background:url('http://pic.neungyule.com/netoeic/sub/bg_book_top.png') repeat 0 0;}
+.book_area .book_top .slide_list .bookTxt {position:absolute;top:20px;right:20px;width:545px;}
+.book_area .book_top .slide_list .bookImg {position:absolute;top:20px;left:25px;width:173px;height:219px;border:1px solid #e0e0e2}
+.book_area .book_top .slide_list .bookImg p.cate {position:absolute;top:0;right:0;height:25px;padding:0 10px;line-height:25px;background:#000;color:#fff}
+.book_area .book_top .thumImg {position:absolute;top:180px;right:60px;width:160px;height:45px;cursor:pointer}
+.book_area .book_top .thumImg .w {position:absolute;width:35px;height:45px;}
+.book_area .book_top .thumImg .pav:hover .w{position:absolute;width:31px;height:41px;border:2px solid #000;}
+.book_area .book_top .thumImg .pdn .w,.book_area .book_top .thumImg .pav .w {width:31px;height:41px;border:2px solid #000;}
+.book_area .book_top .thumImg .c {width:31px;height:41px;border:2px solid #000;filter:alpha(opacity=45);opacity:.45;transition:opacity .6s;-moz-transition:opacity .6s;-webkit-transition:opacity .6s;-o-transition: opacity .6s;}
+.book_area .book_top .thumImg .p:hover .c,.book_area .book_top .thumImg .pav .c {width:31px;height:41px;border:2px solid #000;filter:alpha(opacity=0);opacity:0;}
+.book_area .book_top .thumImg .p:hover .c {width:31px;height:41px;border:2px solid #000;transition:none;-moz-transition:none;-webkit-transition:none;-o-transition:none;}
+.book_area .book_top .slide_list .bg_filter {width:475px;height:127px;padding:25px 35px;background:url('http://pic.neungyule.com/netoeic/main/bg_filter2.png') repeat 0 0;}
+.book_area .book_top .slide_list p.cate {position:absolute;top:0;right:0;height:25px;padding:0 10px;line-height:25px;background:#000;color:#fff}
+.book_area .book_top .slide_list p.ellipsis {height:22px;font-size:20px;font-weight:bold;color:#fff;line-height:23px}
+.book_area .book_top .slide_list .mark_list {overflow:hidden}
+.book_area .book_top .slide_list .mark_list .span {margin-right:5px}
+.book_area .book_top .slide_list .info_txt {overflow:hidden;height:32px;color:#cbcbcd;text-align:justify}
+.book_area .book_top .slide_list .price {height:44px;padding-left:40px;background:#ffffff;line-height:44px;}
+.book_area .bookImg {position:relative;}
+.book_area .bookImg p.book_deco1 {width:9px;height:100%;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/sub/book_deco1.png') repeat-y 0 0;}
+.book_area .bookImg p.book_deco2 {width:58px;height:100%;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/sub/book_deco2.png') repeat-y 0 0;}
+
+.book_area .book_sTit {border-bottom:1px solid #dddddd}
+.book_area .book_sTit p.tit {padding:10px 0;margin:0 !important;font-size:15px;border-bottom:3px solid #4154a6}
+.book_area .book_box2 {float:left;width:186px;height:426px;margin:20px 0 20px 15px;}
+.book_area .book_box2 .in_box2 {width:166px;height:373px;padding:15px 9px;border:1px solid #e4e4e4;background:#f9f9f9}
+.book_area .book_box2 .in_box2 .tit {overflow:hidden;height:32px;margin-top:0 !important}
+.book_area .book_box2 .in_box2 .price {padding:10px;border-top:1px solid #e4e4e4;}
+.book_area .book_box2 .in_box2 .bookImg img {border:1px solid #e4e4e4;}
+.book_area .book_box2 .in_box2 .review p {overflow:hidden;height:60px;padding-left:10px;line-height:20px;text-indent:25px;background:url('http://pic.neungyule.com/netoeic/ico/ico_pple.png') no-repeat 5px 0;}
+.book_area .starArea .star_off {width:71px;height:12px;position:relative;background:url('http://pic.neungyule.com/netoeic/sub/star_off.png') no-repeat 0 0;}
+.book_area .starArea .star_on {width:71px;height:12px;position:absolute;top:0;left:0;background:url('http://pic.neungyule.com/netoeic/sub/star_on_p.png') no-repeat 0 0;}
+.book_area .book_btm {}
+.book_area .book_btm p.tit {padding:10px 0;margin:0 !important;font-size:15px;border-bottom:3px solid #4154a6}
+.book_area .book_btm .in_box {width:385px;height:318px;border:1px solid #e4e4e4;}
+.book_area .book_info {position:relative;padding:25px 20px 0 20px}
+.book_area .book_info > li{float:left;margin-left:20px}
+.book_area .book_info > li:first-child {margin-left:0}
+.book_area .book_info > li > a {display:inline-block}
+.book_area .book_info > li > a img {width:100px;height:127px;}
+.book_area .book_info > li > a:hover {width:96px;height:123px;border:2px solid #0021b0}
+.book_area .book_info > li > a:hover img {width:96px;height:123px;}
+.book_area .book_info .cont {clear:both;position:absolute;top:165px;left:-1px;width:357px;height:135px;padding:20px 15px 0 15px;background:url('http://pic.neungyule.com/netoeic/sub/bg_book_info.jpg') no-repeat 0 0;}
+.book_area .book_info .cont p.ellipsis {font-size:16px;font-weight:bold;color:#4154a6}
+.book_area .book_info .cont .infoTxt {overflow:hidden;height:33px;margin-bottom:33px;line-height:17px}
+.book_area .book_info .cont p.ellipsis.tag {font-size:11px;font-weight:normal;color:#939393}
+.book_area .book_btm .bookD_list li {height:35px;padding:0 15px;border-top:1px solid #e4e4e4;line-height:36px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis}
+.book_area .book_btm .bookD_list li:first-child {border-top:none}
+.book_area .book_btm .tagBox {width:345px;height:58px;padding:18px 20px 22px;margin-bottom:12px}
+.book_area .book_btm .tagBox p {overflow:hidden;height:58px;line-height:20px}
+.book_area .book_btm .tagBox p a {margin-right:5px}
+
+table.bookSrch_tb {border-bottom:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+table.bookSrch_tb td {padding:10px;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;background:#f7f7f7}
+table.bookSrch_tb td ul li {float:left;min-width:40px;margin:5px 20px 5px 0;white-space:nowrap;}
+table.bookSrch_tb.min td {padding:5px 0;font-size:11px;text-align:center}
+table.bLine_tb {}
+table.bLine_tb td {padding:8px;border-bottom:1px solid #e5e5e5;}
+table.bLine_tb td > p {padding-left:10px;background:url('http://pic.neungyule.com/netoeic/ico/bul_gray.gif') no-repeat 0 50%;}
+table.in_tb {background:#fff;border-bottom:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+table.in_tb td {padding:10px 30px;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;}
+
+.bul_b {padding-left:15px;background:url('http://pic.neungyule.com/netoeic/ico/bul_arrowRblue.gif') no-repeat 0 50%;}
+
+.book_area .sort_list {overflow:hidden}
+.book_area .sort_list li {float:left;width:auto;height:18px;padding:0 5px;margin-right:5px;line-height:18px;text-align:center;border:1px solid #d9d9d9;background:#f7f7f7;cursor:pointer;font-size:11px}
+.book_area .sort_list li:hover,
+.book_area .sort_list li.on {background:#224c90}
+.book_area .sort_list li:hover a,
+.book_area .sort_list li.on a {color:#fff}
+.book_area .book_box3 {height:245px;padding:15px;margin-bottom:25px;border:1px solid #e4e4e4;}
+.book_area .book_box3 > div {display:inline-block;margin-left:13px;*margin-left:12px;vertical-align:top;zoom:1; *display:inline;}
+.book_area .book_box3 > div:first-child {margin-left:0}
+.book_area .book_box3 .img {border:1px solid #e0e0e0}
+.book_area .book_box3 .openDay {width:117px;height:21px;background:url('http://pic.neungyule.com/netoeic/lecture/bg_blue_box.gif') no-repeat 0 0;line-height:21px;color:#fff;text-align:center}
+.book_area .book_box3 .txtBox {padding:14px;border:1px solid #e4e4e4;background:#f3f3f3}
+.book_area .book_box3 .txtBox .tit {overflow:hidden;height:38px;margin:0 0 10px 0 !important;font-size:18px;font-weight:normal;line-height:20px}
+.book_area .book_box3 .tagBox {overflow:hidden;height:34px;}
+.book_area .layer_pop {z-index:1000 !important;zoom:1;}
+.book_area .layer_pop .txt_box {padding:0 !important}
+.book_area .layer_pop .online_list li {overflow:hidden;height:40px;padding:5px 10px;border-top:1px solid #e4e4e4;line-height:40px;}
+.book_area .layer_pop .online_list li:first-child {border-top:none}
+.book_area .layer_pop .online_list li img {vertical-align:middle}
+.book_area .book_box4 {padding:15px;border:1px solid #e4e4e4;}
+.book_area .book_box5 {padding:20px;border:1px solid #e4e4e4;background:#fafafa}
+.book_area .book_box5 p {line-height:20px;text-align:justify}
+.book_area .tLec_box {width:363px;height:74px;padding:10px;border:1px solid #e4e4e4;}
+.book_area .tLec_box p.txt {overflow:hidden;height:34px;}
+.book_area .data_list li {border-top:1px solid #e3e2e2;}
+.book_area .data_list li:first-child {border-top:none}
+.book_area .data_list .tArea {overflow:hidden;height:38px;line-height:38px;cursor:pointer}
+.book_area .data_list .tArea .btn {display:block;float:left;height:6px;margin:15px 8px 0 0}
+.book_area .data_list .tArea > p {height:38px;line-height:38px;}
+.book_area .data_list .aArea {height:auto;display:none;padding-bottom:20px}
+
+/* 교재 가이드 */
+.book_guide {}
+.book_guide ul.book_list {overflow:hidden;padding:8px 5px;border:1px solid #84889d;}
+.book_guide ul.book_list li {display:inline-block;width:116px;height:195px;zoom:1;*display:inline;vertical-align:top}
+.book_guide ul.book_list li p.book {width:116px;height:145px;margin-bottom:7px;background:url('http://pic.neungyule.com/netoeic/sub/book/book_guide_bg1.gif') no-repeat left top;text-align:left}
+.book_guide ul.book_list li p.book img {width:112px;height:141px}
+.book_guide ul.book_list li p.txt {font-size:11px;line-height:12px;text-align:center;letter-spacing:-1px}
+.book_guide ul.book_list li.wide {display:inline-block;width:160px;height:160px;zoom:1;*display:inline;vertical-align:top}
+.book_guide ul.book_list li.wide p.book {width:160px;height:107px;margin-bottom:7px;background:url('http://pic.neungyule.com/netoeic/sub/book/book_guide_bg2.gif') no-repeat left top;text-align:left}
+.book_guide ul.book_list li.wide p.book img {width:156px;height:103px}
+.book_guide .topBtn {width:85px;height:35px;position:absolute;top:0;right:0;}
+
+/* 토익보험 */
+.toeicBohum {width:100%;min-width:1000px;height:auto;margin:0 auto;background:#eaeaea}
+.toeicBohum.topArea {width:100%;min-width:1000px;height:auto;margin:0 auto;background:#eaeaea url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_bg_topN.gif') no-repeat 50% top;}
+.toeicBohum .wrap {position:relative;width:1000px;margin:0 auto;z-index:1}
+.toeicBohum .wrap .time > p {position:absolute;top:115px;width:104px;height:98px;line-height:98px;text-align:center;font-size:55px;color:#fff;font-weight:bold}
+.toeicBohum .wrap .num > p {position:absolute;left:650px;width:51px;height:36px;font-size:35px;font-weight:bold;color:#fff;line-height:36px;text-align:right;letter-spacing:3px}
+.toeicBohum .wrap .slidingArea {position:absolute;bottom:70px;left:63px;overflow:hidden;width:881px;height:216px;}
+.toeicBohum .wrap .slidingArea .slidingBox {overflow:hidden;width:881px;height:216px;}
+.toeicBohum .wrap .slidingArea .slidingBox ul {width:9999px;position:relative;left:0;}
+.toeicBohum .wrap .slidingArea .slidingBox li {float:left;width:881px;}
+.toeicBohum .wrap .reviewTab {overflow:hidden;width:865px;margin:0 auto 100px}
+.toeicBohum .wrap .reviewTab .rvCont > ul {overflow:hidden;margin-bottom:30px}
+.toeicBohum .wrap .reviewTab .rvCont > ul li {position:relative;float:left;width:279px;height:139px;margin:8px 3px}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv1 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img1.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv2 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img2.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv3 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img3.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv4 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img4.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv5 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img5.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv6 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img6.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv7 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img7.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv8 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img8.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont > ul li.rv9 {width:114px;height:104px;padding:20px 15px 15px 150px;background:url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_img9.gif') no-repeat 0 0;}
+.toeicBohum .wrap .reviewTab .rvCont.rvCont1 li {border:1px solid #74ccdc;border-top:4px solid #74ccdc}
+.toeicBohum .wrap .reviewTab .rvCont.rvCont2 li {border:1px solid #75c4ae;border-top:4px solid #75c4ae}
+.toeicBohum .wrap .reviewTab .rvCont.rvCont3 li {border:1px solid #e092e3;border-top:4px solid #e092e3}
+.toeicBohum .wrap .reviewTab .rvCont.rvCont4 li {border:1px solid #967dca;border-top:4px solid #967dca}
+.toeicBohum .wrap .reviewTab .rvCont > ul li .rvId {position:absolute;bottom:10px;right:10px;}
+.toeicBohum_notice {width:100%;min-width:1000px;height:auto;margin:0 auto;background:#fff url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_bg_notice.gif') repeat-x left top;}
+.toeicBohum_notice .wrap {position:relative;width:1000px;margin:0 auto;}
+
+/* 토클 강사진 */
+.tc_teacher {overflow:hidden}
+.tc_teacher .thrBox {overflow:hidden;width:440px;height:172px;padding:20px;margin-bottom:40px;background:url('http://pic.neungyule.com/netoeic/teacher/bg_tcThr_box.gif') no-repeat 0 0}
+.tc_teacher .thrBox .thr_img {float:left;width:170px;}
+.tc_teacher .thrBox .thr_img img {border:1px solid #d9d9d9}
+.tc_teacher .thrBox .thr_info {float:right;width:230px;}
+.tc_teacher .thrBox .thr_info > p {margin-bottom:15px;font-size:14px;font-weight:bold;line-height:20px}
+.tc_teacher .thrBox .thr_info > p.txt {overflow:hidden;height:40px;}
+.tc_teacher .thrBox .thr_info span.name {font-size:24px;color:#224c90}
+.tc_teacher .viewTop {position:relative;height:495px;margin-bottom:60px;border:1px solid #cccccc;border-top:none}
+.tc_teacher .viewTop .thr_l {width:296px;height:455px;position:absolute;top:20px;left:20px}
+.tc_teacher .viewTop .thr_l > img {border:1px solid #d9d9d9;border-bottom:none}
+.tc_teacher .viewTop .thr_l .btn_list {width:296px;height:29px}
+.tc_teacher .viewTop .thr_l .btn_list a {float:left}
+.tc_teacher .viewTop .thr_l .info {height:110px;padding:10px 18px;border:1px solid #d9d9d9;border-top:none;background:url('http://pic.neungyule.com/netoeic/teacher/bg_tcThr_box2.gif') repeat 0 0;text-align:center}
+.tc_teacher .viewTop .thr_l .info p {font-size:14px;font-weight:bold;line-height:20px}
+.tc_teacher .viewTop .thr_l .info p.name {height:50px;margin-bottom:10px;border-bottom:1px solid #d9d9d9;line-height:50px;}
+.tc_teacher .viewTop .thr_l .info p.name > span {font-size:24px;color:#224c90}
+.tc_teacher .viewTop .thr_r {width:640px;height:455px;position:absolute;top:20px;right:20px}
+.tc_teacher .viewTop .thr_r .roll_bnr {position:absolute;top:0;left:0;overflow:hidden;width:640px;height:377px;}
+.tc_teacher .viewTop .thr_r .roll_bnr p.btn {position:absolute;bottom:10px;left:45%;z-index:5;}
+.tc_teacher .viewTop .thr_r .roll_bnr p.btn > a {padding-left:5px}
+.tc_teacher .viewTop .thr_r .banner li > img {width:640px;height:377px} 
+.tc_teacher .viewTop .thr_r .noticeBox {width:638px;height:76px;position:absolute;bottom:0;left:0;border:1px solid #d9d9d9;background:#f8f8f8}
+.tc_teacher .viewTop .thr_r .noticeBox .tit {width:140px;height:40px !important;padding-top:26px;margin:5px 0!important;font-size:20px;text-align:center;border-right:1px solid #d9d9d9}
+.tc_teacher .viewTop .thr_r .noticeBox .txt {width:450px;padding:15px 20px;}
+.tc_teacher .viewTop .thr_r .noticeBox .txt > p {font-size:13px;line-height:23px}
+
+/* 고객센터 */
+.csCenter {margin-top:30px}
+.csCenter p.tit {padding:10px 0;margin:0 !important;font-size:15px;border-bottom:3px solid #4154a6}
+.csCenter .cont_m {overflow:hidden}
+.csCenter .cont_m > div {width:387px;position:relative}
+.csCenter .cont_m ul.notice {border:1px solid #e4e4e4}
+.csCenter .cont_m ul.notice li {overflow:hidden;height:34px;*height:30px;padding:0 15px;line-height:34px;border-top:1px solid #e4e4e4}
+.csCenter .cont_m ul.notice li:first-child {border-top:none}
+.csCenter .cont_m ul.notice li p.fl {width:280px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.csCenter .cont_m .btn {position:absolute;top:10px;right:0}
+.csCenter .cont_m ul.tab_area {overflow:hidden;position:absolute;top:39px;left:0}
+.csCenter .cont_m ul.tab_area li {float:left}
+.csCenter .cont_m .srchBox {position:absolute;top:7px;right:0}
+.csCenter .cont_m .tab_cont {margin-top:3px}
+.csCenter .cont_m .tab_cont .notice {height:244px;padding-top:35px;}
+.csCenter .cont_m .tab_cont .notice span.no {display:inline-block;width:15px;height:15px;padding:1px 0 0 2px;margin-right:10px;background:url('http://pic.neungyule.com/netoeic/common/bg_blueBox.gif') no-repeat 0 0;color:#fff;line-height:15px;}
+.csCenter .cont_m .tab_cont .cateBox {overflow:hidden;width:355px;height:205px;padding:60px 15px 14px;border:1px solid #e4e4e4;}
+.csCenter .cont_m .tab_cont .cateBox ul {}
+.csCenter .cont_m .tab_cont .cateBox ul li {margin-top:12px}
+.csCenter .cont_m .tab_cont .cateBox ul:first-child {padding-right:17px;border-right:1px solid #e4e4e4}
+.csCenter ul.csGuide_btn {overflow:hidden}
+.csCenter ul.csGuide_btn li {float:left;padding-top:25px;margin-left:-1px}
+.csCenter ul.csGuide_btn li:first-child {margin:0}

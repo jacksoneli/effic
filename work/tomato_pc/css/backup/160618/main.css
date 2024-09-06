@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+#neIndex {font-size:0;left:0;line-height:0;position:absolute;top:-30px;width:100%;z-index:999999;}
+#neIndex a:active, #neIndex a:focus {display:block;width:100%;height:30px;font-size:13px;background-color:#333;border:medium none;color:#fff;position:absolute;top:30px;left:0;text-align:center;line-height:30px;}
+
+.uer_info {overflow:hidden;height:30px;font-weight:bold;line-height:30px;}
+.uer_info p {float:left;padding:0 10px;background:url('http://pic.neungyule.com/netoeic/ico/line_gray2.gif') no-repeat right 10px;}
+.uer_info .user {display:inline-block;padding-left:30px;background:url('http://pic.neungyule.com/netoeic/ico/ico_bubbleP.png') no-repeat 0 7px;}
+.uer_info input {*margin-left:-5px;border:none;background:none;cursor:pointer;vertical-align:middle;font-weight:bold;}
+
+/* top banner */
+.area_topBnr {width:100%;height:auto;min-width:1000px;}
+.area_topBnr .wrap {position:relative;width:1000px;margin:0 auto;}
+
+/* contents */
+.inner_contop .section1 {position:relative;height:448px;background:url('http://pic.neungyule.com/netoeic/main/bg_m_topBnr.gif') repeat-x 0 0;}
+.inner_contop .section1 .wrap {position:relative;width:1000px;margin:0 auto;}
+.inner_contop .section1 .main_rol {position:relative;overflow:hidden;width:1000px;height:447px;}
+.inner_contop .section1 .rollbtn {position:absolute;top:20px;left:340px;z-index:5;}
+.inner_contop .section1 .rollbtn div {float:left;margin-left:5px}
+.inner_contop .section1 .rollbtn div a {margin-left:5px}
+.inner_contop .section1 .aside {position:absolute;top:20px;right:0;}
+.inner_contop .section1 .main_rol2 {position:relative;overflow:hidden;width:285px;height:261px;}
+.inner_contop .section1 .main_rol2 p {position:absolute;top:10px;right:10px;z-index:5;}
+
+.inner_conmid .section1 {height:100px;background:#4658ab}
+.inner_conmid .section1 .wrap {position:relative;width:980px;margin:0 auto;}
+.inner_conmid .section1 .wrap h3 {float:left;padding-right:25px;margin-right:25px;background:url('http://pic.neungyule.com/netoeic/main/line_blue.gif') no-repeat right 0;}
+.inner_conmid .section1 .wrap ul li {float:left;margin-right:20px;}
+.inner_conmid .section2 {background:#eeeeee url('http://pic.neungyule.com/netoeic/main/bg_m_mv.gif') no-repeat 50% 0;}
+.inner_conmid .section2 h3 {height:45px;padding-top:18px;background:url('http://pic.neungyule.com/netoeic/main/bg_m_section2.gif') no-repeat 50% 0;text-align:center}
+.inner_conmid .section2 .wrap {position:relative;width:980px;margin:0 auto;text-align:center;}
+.inner_conmid .section2 .wrap .btn_toggle {position:absolute;left:50%;margin-left:-13px;bottom:0;margin-bottom:-10px}
+.inner_conmid .section2 .wrap .mvCont {padding:30px 0;}
+.inner_conmid .section3 {overflow:hidden;position:relative;width:980px;margin:30px auto;}
+.inner_conmid .section3 h3 {margin-bottom:13px;}
+.inner_conmid .section3 .cont_l {position:relative;float:left;width:290px;}
+.inner_conmid .section3 .cont_l .txt {width:290px;height:17px;background:url('http://pic.neungyule.com/netoeic/main/bg_boxGray3.jpg') repeat 0 0;text-align:center;line-height:18px;color:#fff;font-size:11px}
+.inner_conmid .section3 .cont_l ul li {overflow:hidden;padding:7px 9px;border-top:1px solid #ebebeb}
+.inner_conmid .section3 .cont_l ul li.btm_line {border-bottom:1px solid #ebebeb}
+.inner_conmid .section3 .cont_l ul li .ico_face {margin-right:15px;}
+.inner_conmid .section3 .cont_l ul li .txt_review {overflow:hidden;height:35px;line-height:17px;text-align:justify}
+.inner_conmid .section3 .cont_l .area_btnPage {position:absolute;top:0;right:10px;}
+.inner_conmid .section3 .cont_c {position:relative;float:left;width:340px;}
+.inner_conmid .section3 .cont_c .area_tab {position:absolute;top:30px;left:0;height:35px}
+.inner_conmid .section3 .cont_c .area_tabCont {padding-top:29px;}
+.inner_conmid .section3 .cont_c .area_tabCont .lec_list ol li p {float:left;overflow:hidden;width:320px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;line-height:20px}
+.inner_conmid .section3 .cont_c .area_tabCont .lec_list ol li .ico_rank {margin:3px 5px 0 0;}
+.inner_conmid .section3 .cont_r {position:relative;float:left;width:280px;}
+.inner_conmid .section3 .cont_r .box_gray {padding:10px 8px}
+.inner_conmid .section3 .cont_r .txt {width:170px;padding-left:10px;background:url('http://pic.neungyule.com/netoeic/main/line_gray.gif') no-repeat 0 3px;}
+.main_lineBnr {height:110px;background:#f0f0f0 url('http://pic.neungyule.com/netoeic/main/bg_m_lineBnr.gif') repeat-x 0 0;}
+.main_lineBnr .wrap {position:relative;width:1000px;margin:0 auto;}
+
+.inner_conbtm {overflow:hidden;position:relative;width:980px;margin:30px auto;}
+.inner_conbtm .section1 .area_tab {height:35px}
+.inner_conbtm .section1 .area_tabCont {overflow:hidden;}
+.inner_conbtm .section1 .area_tabCont li {float:left;margin:0 0 10px 9px;}
+.inner_conbtm .section1 .area_tabCont .mv_thum {position:relative;}
+.inner_conbtm .section1 .area_tabCont .mv_thum p {overflow:hidden;bottom:0;width:366px;height:35px;padding:5px 10px;line-height:18px}
+.inner_conbtm .section1 .area_tabCont .mv_thum p.line1 {height:30px;padding:5px 10px;line-height:30px;font-size:15px;font-weight:bold}
+.inner_conbtm .section1 .area_tabCont .review_thum {position:relative}
+.inner_conbtm .section1 .area_tabCont .review_thum .box_filter {bottom:0;width:168px;height:125px;padding:30px 10px;font-size:20px;font-weight:bold;}
+.inner_conbtm .section1 .area_tabCont .review_thum .txt_review {overflow:hidden;height:50px;margin-bottom:10px;font-size:13px;font-weight:normal;}
+.inner_conbtm .section1 .area_tabCont .txt_box {width:168px;height:160px;padding:25px 10px 0;text-align:center;color:#fff !important;}
+.inner_conbtm .section1 .area_tabCont .txt_box strong {display:block;margin-bottom:15px;font-size:15px;line-height:20px;}
+.inner_conbtm .section1 .area_tabCont .txt_box .txt {overflow:hidden;height:72px;line-height:18px}
+.inner_conbtm .section1 .area_tabCont .txt_box a {color:#fff !important;}
+.inner_conbtm .section1 .area_tabCont .box_bgGray {background:url('http://pic.neungyule.com/netoeic/main/bg_boxGray.gif') no-repeat 0 0;}
+.inner_conbtm .section1 .area_tabCont .box_bgBlue {background:url('http://pic.neungyule.com/netoeic/main/bg_boxBlue.gif') no-repeat 0 0;}
+.inner_conbtm .section1 .area_tabCont .box_bgMint {background:url('http://pic.neungyule.com/netoeic/main/bg_boxMint.gif') no-repeat 0 0;}
+.inner_conbtm .section1 .area_tabCont .box_bgGreen {background:url('http://pic.neungyule.com/netoeic/main/bg_boxGreen.gif') no-repeat 0 0;}
+.inner_conbtm .section1 .area_tabCont .box_gray {width:186px;height:183px;}
+.inner_conbtm .section1 .area_tabCont .box_gray .txt {overflow:hidden;height:45px;padding:10px;line-height:18px;}
+.inner_conbtm .section1 .area_tabCont .box_gray .txt strong {display:block}
+.inner_conbtm .section1 .info_thr li {position:relative;width:188px;float:left;margin-left:10px}
+.inner_conbtm .section1 .info_thr li p {bottom:0;width:158px;height:85px;padding:10px 15px;font-size:15px;line-height:17px;text-align:justify}
+.inner_conbtm .section1 .info_thr li p span {display:block;}
+.inner_conbtm .section1 .info_thr li p .thr_name {position:absolute;bottom:10px;font-size:16px;}
+.inner_conbtm .section2 .cont_l {overflow:hidden;position:relative;float:left;width:320px;height:132px;padding:20px;border-right:none}
+.inner_conbtm .section2 .cont_l ul li {overflow:hidden;width:300px;padding-left:10px;background:url('http://pic.neungyule.com/netoeic/ico/bul_gray.gif') no-repeat 0 10px;line-height:25px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis}
+.inner_conbtm .section2 .cont_l .btn_noticeMore {position:absolute;top:20px;right:20px;}
+.inner_conbtm .section2 .cont_r {overflow:hidden;position:relative;height:152px;padding:10px;}
+
+/* 150625 알바몬 이벤트 */
+.albamon .wrap {position:relative;margin:0 auto;text-align:left !important}
+.albamon .wrap .title {width:800px;height:57px;padding-top:6px;margin-left:90px;background:url('http://pic.neungyule.com/netoeic/main/bg_m_section2.gif') no-repeat 50% 0;font-size:16px;color:#000;}
+.albamon .wrap .title p {padding:18px 0 0 10px;}
+.albamon .wrap .btn_toggle {position:absolute;left:50%;margin-left:-13px;bottom:0;margin-bottom:-10px}
+.albamon .wrap .mvCont {padding:30px 0 10px !important;}
+.albamon .cheer_list {width:700px;min-height:470px;margin:0 auto}
+.albamon .cheer_list li {position:relative;margin-bottom:5px;text-align:left;color:#fff}
+.albamon .cheer_list li.blue {padding-left:20px;}
+.albamon .cheer_list li.blue .txt {width:582px;height:40px;padding:25px 60px 25px 40px;background:url('http://pic.neungyule.com/netoeic/main/bg_bubbleB.png') no-repeat 0 0;}
+.albamon .cheer_list li.pink .txt {width:582px;height:40px;padding:25px 40px 25px 60px;background:url('http://pic.neungyule.com/netoeic/main/bg_bubbleP.png') no-repeat 0 0;}
+.albamon .cheer_list li.blue .writer {overflow:hidden;position:absolute;top:0;right:-80px;width:72px;height:21px;padding:56px 3px 0 3px;background:url('http://pic.neungyule.com/netoeic/main/bg_writerB.png') no-repeat 0 0;}
+.albamon .cheer_list li.pink .writer {overflow:hidden;position:absolute;top:0;left:-80px;width:72px;height:21px;padding:56px 3px 0 3px;background:url('http://pic.neungyule.com/netoeic/main/bg_writerP.png') no-repeat 0 0;}
+.albamon .cheer_list li p.txt a {overflow:hidden;display:inline-block;width:580px;height:40px;color:#fff;font-size:15px;line-height:20px;}
+.albamon .paging .prev {position:absolute;top:285px;left:0;}
+.albamon .paging .next {position:absolute;top:285px;right:0;}

@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+/***** 공통 레이아웃 *****/
+/*폰트 관련*/
+.pink{color: #ff5293;}
+.orange{color: #ff663d;}
+
+/*소제목*/
+.info_title{margin-bottom: 8px; color: #333; font-size: 18px; font-weight: bold; padding-left: 14px; background: url(../images/my_class/title_ico.png) no-repeat 1px 5px;}
+
+/*체크박스와 해당 텍스트*/
+.chk_btn,
+.all_chk{display: inline-block; line-height: 19px; padding-top: 2px; padding-left: 24px; font-size: 14px; color: #333; background: url(../images/util/chk.jpg) no-repeat 0 2px;}
+.chk_btn.on,
+.all_chk.on{background-image: url(../images/util/chk_on.jpg);}
+
+/*라디오버튼과 해당 텍스트*/
+.radio_btn{display: inline-block; line-height: 22px; padding-left: 24px; font-size: 18px; color: #333; background: url(../images/util/chk.jpg) no-repeat 0 5px; padding-top: 2px;}
+.radio_btn.on{background-image: url(../images/util/radio_on.jpg);}
+
+/*thead 회색 테이블(내강의실)*/
+.table_gray_head{width: 100%; text-align: center; color: #333; margin-bottom: 100px;}
+.table_gray_head thead tr th{border:1px solid #ddd; border-top: 2px solid #333; height: 39px; background: #eee; font-size: 14px}
+.table_gray_head tbody{}
+.table_gray_head tbody tr{}
+.table_gray_head tbody tr td{font-size: 20px; border:1px solid #ddd; height: 59px}
+.table_gray_head tbody tr td.left{text-align: left; padding-left: 20px}
+
+/*주문조회 테이블*/
+.table_gray_head.order{margin-bottom: 300px;}
+.table_gray_head.order thead tr th{color: #666; font-size: 12px;}
+.table_gray_head.order tbody tr td{height: 69px; font-size: 14px; color: #333;}
+.table_gray_head.order tbody tr td.order_title,
+.table_gray_head.order tbody tr td.order_title a{font-size: 18px; font-weight: bold;}
+.table_gray_head.order tbody tr td s{font-size: 18px; color: #333;}
+
+.write_table.order{margin-bottom: 300px;;}
+.write_table.order td b{font-weight: bold; font-size: 14px; color: #333; margin-left: 5px;}
+
+/*장바구니 테이블*/
+.table_gray_head tr.gray_bg{}
+.table_gray_head tr.gray_bg td{background: #f6f6f6; color: #333; font-size: 18px !important; text-align: right; padding-right: 20px;}
+.table_gray_head tr.gray_bg td.total_price{font-weight: bold; color: #08c1e9; font-size: 24px;}
+.write_table.payment{}
+.write_table.payment tr{}
+.write_table.payment tr td{}
+.write_table.payment tr td.way{height: 79px; text-align: center;}
+.write_table.payment tr td.way a{margin: 0 30px;}
+.write_table.payment tr td.agree{ font-size: 13px;}
+.write_table.payment tr td.total_box p{text-align: center;}
+.write_table.payment tr td.total_box p.title{margin-top: 18px; color: #333;  font-size: 18px; font-weight: bold; margin-bottom: 12px;}
+.write_table.payment tr td.total_box p.total_price{font-size: 40px; font-weight: bold; color: #18c4e9; margin-bottom: 17px;}
+
+/*일반(공지)게시판 테이블*/
+.bbs_table{width: 100%; border-top: 3px solid #333; color: #666; font-size: 12px; text-align: center; margin-bottom: 30px;}
+.bbs_table thead{color: #333;}
+.bbs_table thead tr th{height: 39px; border:1px solid #ddd;}
+.bbs_table tbody tr td{height: 39px; border:1px solid #ddd;}
+.bbs_table tbody tr td.pink{font-weight: bold;}
+.bbs_table tbody tr td .title{display: block; width: 520px; padding-left: 10px; text-align: left; color: #333;}
+.bbs_table.cs tbody tr td .title{width: 448px;}
+
+/*게시판 selct 영역*/
+.select_cont{margin-bottom: 10px;}
+.select_cont select{width: 171px; height: 30px; border: 1px solid #ccc; background: #f6f6f6; font-size: 12px; color: #666; font-weight: bold;}
+
+/*글쓰기 테이블*/
+.write_table{width: 100%; border-top: 3px solid #333; font-size: 12px;}
+.write_table tr{}
+.write_table tr td{border:1px solid #ddd; color: #666; height: 31px; padding: 4px; position: relative;}
+.write_table tr td.title{background: #f6f6f6; text-align: center; color: #999;}
+.write_table tr td input{background: #f6f6f6;  width: 100%; height: 30px; box-sizing: border-box; padding-left: 10px; border: 1px solid #ccc;}
+.write_table tr td select{background: #f6f6f6;  border: 1px solid #ccc; width: 158px; height: 28px;}
+.write_table tr td textarea{background: #f6f6f6; width: 100%; height: 90px; border: 1px solid #ccc;}
+.write_btn{text-align: center; margin-top: 20px; position: relative;}
+
+/*게시글 보기*/
+.read_table{font-size: 12px; width: 100%;}
+.read_table thead{}
+.read_table thead tr{}
+.read_table thead tr th{height: 59px; color: #333; border: 1px solid #ddd; border-top: 3px solid #333; font-weight: bold; text-align: left; position: relative; padding-left: 20px;}
+.read_table thead tr th span{ position: absolute; right: 20px; color: #999;}
+.read_table tbody{}
+.read_table tbody tr{}
+.read_table tbody tr td{border: 1px solid #ddd; color: #666; height: 39px; padding-left: 10px; box-sizing: border-box;}
+.read_table tbody tr td.title{background: #f6f6f6; color: #999; text-align: center; padding: 0;}
+.read_table tbody tr td.gray{color: #999;}
+.read_table tbody tr td.reply_title{background: #333; position: relative;}
+.read_table tbody tr td.reply_title span{font-weight: bold; color: #fff; position: absolute; right: 10px;}
+.read_table tbody tr td .read{padding: 20px; padding-left: 0; color: #666; line-height: 24px;}
+
+/*수강후기 리스트*/
+.rev_list{border-top:3px solid #333; text-align: left; margin-bottom: 30px;}
+.rev_list li{ padding: 17px 18px 20px 131px; border-bottom: 1px solid #ddd; position: relative;}
+.rev_list li .user_box{width: 131px; height: 100%; position: absolute; left:0; top:17px;}
+.rev_list li .user_box .star_area{}
+.rev_list li .user_box .category{position: absolute; left:0; bottom:70px; font-size: 12px; width: 105px; font-weight: bold;}
+.rev_list li .user_box .user{position: absolute; left:0; bottom:36px; font-size: 12px; width: 105px;}
+.rev_list li .user_box .user .name{color: #666; margin-bottom: 4px;}
+.rev_list li .user_box .user .date{color: #999;}
+.rev_list li .user_box .user .date p{float: left;}
+.rev_list li .user_box .user .date span{float: right;}
+.rev_list li .content{border-left: 1px solid #ddd; padding-left: 25px;}
+.rev_list li .content h5{font-weight: bold; color: #333; font-size: 14px; margin-bottom: 12px; position: relative;}
+.rev_list li .content h5 a{color: #333;}
+.rev_list li .content h5 a.btn{position: absolute; right:-15px; top:0;}
+.rev_list li .content h5 a.btn.edit{right:7px;}
+.rev_list li .content p{color: #666; font-size: 12px; line-height: 24px;}
+.rev_list li .content p a{color: #666;}
+.rev_btn_area{margin-bottom: 27px; text-align: right;}
+.rev_paging{font-size: 13px; margin-bottom: 30px; text-align: center;}
+.rev_paging a{color: #666; margin-right: 8px;}
+.rev_paging a.space{margin-right: 0;}
+.rev_paging a img{position: relative; top:3px;}
+.rev_paging span{color: #18c4e9; margin-right: 8px;}
+.rev_search_area{width: 412px; margin: 0 auto;}
+.rev_search_area select{width: 104px; height: 30px; background: #fff; color: #666; font-size: 12px; border:1px solid #ccc; float: left; margin-right: 1px;}
+.rev_search_area input{width: 214px; padding-left: 10px; height: 28px; border:1px solid #ccc; background: #f6f6f6; float: left; margin-right: 2px;}
+.rev_search_area button{float: left;}
+
+
+/***** 서브페이지 *****/
+/*내강의실*/
+.my_class{margin-bottom: 100px;}
+.my_class .title_bar{height: 110px; margin-bottom: 30PX; background: url(../images/my_class/title.jpg) no-repeat center top #333; text-indent: -9999px; overflow: hidden;}
+.my_class .wrap{width: 1000px; margin: 0 auto;}
+.my_class .wrap .left_menu{width: 180px; float: left;}
+.my_class .wrap .left_menu h4{}
+.my_class .wrap .left_menu ul{margin-bottom: 13px; border-top: 1px solid #999; font-weight: bold}
+.my_class .wrap .left_menu ul li{}
+.my_class .wrap .left_menu ul li a{display: block; line-height: 39px; border-bottom: 1px solid #ddd; color: #666; font-size: 14px; text-align: center;}
+.my_class .wrap .left_menu ul li a.on{background: url(../images/my_class/menu_on_bg.jpg) no-repeat center center; color: #fff; font-weight: bold;}
+.my_class .wrap .cont{width: 800px; float: right;}
+
+.my_class .wrap .cont .empty{height: 230px; padding-top: 48px; background: #eee; text-align: center; margin-bottom: 25px;}
+.my_class .wrap .cont .title_bnr{position: relative; margin-bottom: 20px;}
+.my_class .wrap .cont .title_bnr p{position: absolute; font-size: 14px; font-weight: bold; color: #fff; left:540px; top:40px; letter-spacing: -0.5px}
+.my_class .wrap .cont .btn_bnr{margin-bottom: 20px;}
+
+.my_class .wrap .cont .lec_list{font-family: 맑은 고딕, '맑은 고딕', MalgunGothic; color: #333}
+.my_class .wrap .cont .lec_list dl{}
+.my_class .wrap .cont .lec_list dl dt{ position: relative;margin-bottom: 10px; cursor: pointer}
+.my_class .wrap .cont .lec_list dl dt .status{ position: absolute; right:27px; top:15px}
+.my_class .wrap .cont .lec_list dl dd{ display: none;}
+.my_class .wrap .cont .lec_list dl dd table{margin-bottom: 19px; width: 100%;}
+.my_class .wrap .cont .lec_list dl dd table tr{ border: 1px solid #e0e0e0}
+.my_class .wrap .cont .lec_list dl dd table tr td{height: 39px; font-size: 16px; text-align: center;}
+.my_class .wrap .cont .lec_list dl dd table tr td.number{width:86px; background: #eee;}
+.my_class .wrap .cont .lec_list dl dd table tr td.title{text-align: left; text-indent: 20px;}
+.my_class .wrap .cont .lec_list dl dd table tr td.title.ot{color: #18c4e9; font-weight: bold; font-size: 18px}
+.my_class .wrap .cont .lec_list dl dd table tr td.btn{width: 86px;}
+.my_class .wrap .cont .lec_list dl dd table tr td.big_btn{width: 156px;}
+.my_class .wrap .cont .lec_list dl dd h5{padding-left: 18px; font-size: 20px; font-weight: bold; background: url(../images/lecture/real/lec_title_bg.jpg) no-repeat 1px 8px; margin-bottom: 12px;}
+
+/*장바구니*/
+.my_class .title_bar.cart{background-image: url(../images/my_class/title_cart.jpg);}
+.my_class .my_cart{}
+.my_class .my_cart .wrap{width: 1000px; margin: 0 auto;}
+
+/*학습플레이어*/
+.lec_player{width: 1043px}
+.lec_player .header{font-size: 0; background: #333;}
+.lec_player .cont{background: #333}
+.lec_player .cont .mov_area{float: left; width: 720px}
+.lec_player .cont .mov_area iframe{width: 720px; height: 405px}
+.lec_player .cont .mov_area .status{text-align:center; line-height: 39px}
+.lec_player .cont .mov_area .status button{margin: 7px 9px 0;}
+.lec_player .cont .mov_area .status button.prev{float: left;}
+.lec_player .cont .mov_area .status button.next{float: right;}
+.lec_player .cont .mov_area .status .title_wrap{color: #fff; font-size: 14px}
+.lec_player .cont .mov_area .status .title_wrap span{color: #18c4e9;}
+.lec_player .cont .list_area{float: left; width:323px}
+.lec_player .cont .list_area h5{color: #fff; line-height: 40px; border-bottom: 1px solid #484848; font-size: 14px; font-weight: bold; text-align: center; background: #292929;}
+.lec_player .cont .list_area dl{height: 403px; overflow-y: scroll; overflow-x:hidden; font-weight: bold; background: #292929; font-size: 12px;
+		/*ie 스크롤바*/
+scrollbar-face-color:#3e3e3e; 
+scrollbar-shadow-color:#3e3e3e; 
+scrollbar-track-color:#0e0e0e; 
+scrollbar-arrow-color:#afafaf;
+}
+.lec_player .cont .list_area dl dt{padding-left: 12px; color: #18c4e9; border-bottom: 1px solid #3f3f3f; line-height: 39px;}
+.lec_player .cont .list_area dl dd{}
+.lec_player .cont .list_area dl dd table{width: 100%;}
+.lec_player .cont .list_area dl dd table tr{}
+.lec_player .cont .list_area dl dd table tr td{color: #fff; border-bottom: 1px solid #3f3f3f; height: 39px;}
+.lec_player .cont .list_area dl dd table tr td.num{width: 48px; text-align: center;}
+.lec_player .cont .list_area dl dd table tr td.title a{ display: block; width: 125px;}
+.lec_player .cont .list_area dl dd table tr td.btn{width: 64px; text-align: center;}
+
+/*고객센터*/
+.my_class .title_bar.notice{background-image: url(../images/my_class/title_notice.jpg);}
+.my_class .cont .tit_area{margin-bottom: 27px;}
+
+/*자주하는질문*/
+.faq{ border: 1px solid #ddd; border-top: 3px solid #333; margin-bottom: 30px;}
+.faq li{border-bottom: 1px solid #ddd;}
+.faq li div{padding: 18px; padding-left: 63px; background: url(../images/my_class/question.png) no-repeat 19px 15px; color: #333; line-height: 24px;}
+.faq li div.answer{background-image: url(../images/my_class/answer.png); border-top: 1px solid #ddd; background-color: #f6f6f6; color: #666;}
+
+
+/*강의안내-리얼영어*/
+.real_eng{}
+.real_eng .con1{height: 575px; position: relative; background: url(../images/lecture/real/con1_bg.jpg) no-repeat center top}
+.real_eng .con1 iframe{width: 492px; height: 277px; position: absolute; left: 50%; margin-left: -4px; top:273px;}
+.real_eng .con2{text-align: center; margin-bottom: 50px}
+.real_eng .con3{background: url(../images/main/con2_bg.jpg); text-align: center;}
+.real_eng .con4{text-align: center;}
+.real_eng .con5{margin-bottom: 50px;}
+.real_eng .con5 .wrap{width: 1000px; margin: 0 auto}
+.real_eng .con5 .wrap .tabs_box{width: 213px; float: left;}
+.real_eng .con5 .wrap .tabs_box .title{float: left}
+.real_eng .con5 .wrap .tabs_box .tabs_area{float: left}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li a{ display: block; width: 213px; height: 106px; background: url(../images/lecture/real/tab1.jpg); text-indent: -9999px; overflow: hidden;}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li a.tab2{background-image: url(../images/lecture/real/tab2.jpg);}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li a.tab3{background-image: url(../images/lecture/real/tab3.jpg)}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab1{background-image: url(../images/lecture/real/tab1_on.jpg);}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab2{background-image: url(../images/lecture/real/tab2_on.jpg);}
+.real_eng .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab3{background-image: url(../images/lecture/real/tab3_on.jpg);}
+.real_eng .con5 .wrap .mov_area{float: left}
+.real_eng .con5 .wrap .mov_area .conts iframe{width: 780px; height: 436px}
+.real_eng .con6{margin-bottom: 50px; text-align: center;}
+.real_eng .con6 .title{margin-bottom: 21px;}
+.real_eng .con6 .teacher {margin-bottom: 50px;}
+.real_eng .con6 .leader {margin-bottom: 50px;}
+.real_eng .con7{text-align: center;}
+.real_eng .con7 .wrap{width: 1000px; margin: 0 auto; padding: 43px 0 30px;}
+.real_eng .lec_list{width: 1000px; margin: 0 auto; font-family: 맑은 고딕, '맑은 고딕', MalgunGothic; color: #333; padding-bottom: 100px}
+.real_eng .lec_list .tit_area{text-align: center; margin-bottom: 34px;}
+.real_eng .lec_list dl{}
+.real_eng .lec_list dl dt{ position: relative;margin-bottom: 10px; cursor: pointer}
+.real_eng .lec_list dl dt .status{ position: absolute; right:27px; top:15px}
+.real_eng .lec_list dl dd{ display: none;}
+.real_eng .lec_list dl dd table{margin-bottom: 19px; width: 100%;}
+.real_eng .lec_list dl dd table tr{ border: 1px solid #e0e0e0}
+.real_eng .lec_list dl dd table tr td{height: 39px; font-size: 16px; text-align: center;}
+.real_eng .lec_list dl dd table tr td.number{width:86px; background: #eee;}
+.real_eng .lec_list dl dd table tr td.title{text-align: left; text-indent: 20px;}
+.real_eng .lec_list dl dd table tr td.title.ot{color: #18c4e9; font-weight: bold; font-size: 18px}
+.real_eng .lec_list dl dd table tr td.btn{width: 94px;}
+.real_eng .lec_list dl dd table tr td.btn a{}
+.real_eng .lec_list dl dd h5{padding-left: 18px; font-size: 20px; font-weight: bold; background: url(../images/lecture/real/lec_title_bg.jpg) no-repeat 1px 8px; margin-bottom: 12px;}
+
+/*강의안내-기초회화*/
+.real_eng.talk .con1{background-image: url(../images/lecture/talk/con1_bg.jpg);}
+.real_eng.talk .con1 iframe{margin-left: 5px;}
+.real_eng.talk .con5 .title_area{text-align: center; margin-bottom: 27px;}
+.real_eng.talk .con5 .wrap .tabs_box .title{position: relative; top:106px;}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li a.tab1{background: url(../images/lecture/talk/tab1.jpg); position: relative; bottom:118px;}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li a.tab2{background-image: url(../images/lecture/talk/tab2.jpg);}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li a.tab3{background-image: url(../images/lecture/talk/tab3.jpg)}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab1{background-image: url(../images/lecture/talk/tab1_on.jpg);}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab2{background-image: url(../images/lecture/talk/tab2_on.jpg);}
+.real_eng.talk .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab3{background-image: url(../images/lecture/talk/tab3_on.jpg);}
+.real_eng.talk .con5 .wrap .mov_area{float: left}
+.real_eng.talk .lec_list dl dd{display: block;}
+
+/*강의안내-발음및문법*/
+.real_eng.pronounce .con1{background-image: url(../images/lecture/pronounce/con1_bg.jpg);}
+.real_eng.pronounce .con1 iframe{margin-left: 5px;}
+.real_eng.pronounce .con5 .title_area{text-align: center; margin-bottom: 15px;}
+.real_eng.pronounce .con5 .vid{height: 594px;background: url(../images/lecture/pronounce/vid_bg.jpg) no-repeat center;}
+.real_eng.pronounce .con5 .vid .wrap{text-align: center; padding-top: 22px; width: 1100px;}
+.real_eng.pronounce .con5 .vid .wrap iframe{display: inline-block; width: 481px; height: 269px; margin: 0 16px 9px;}
+.real_eng.pronounce .teacher{margin-bottom: 57px;}
+.real_eng.pronounce .teacher .upper{height: 407px; text-align: center; position: relative;}
+.real_eng.pronounce .teacher .upper img{position: absolute; left:50%; margin-left: -500px;}
+.real_eng.pronounce .teacher .lower{height: 110px; background: url(../images/main/con2_bg.jpg)}
+.real_eng.pronounce .lec_list dl dd{display: block;}
+
+/*강의안내-콩글리쉬클리닉*/
+.real_eng.konglish .con1{background-image: url(../images/lecture/konglish/con1_bg.jpg);}
+.real_eng.konglish .con1 iframe{margin-left: 5px;}
+.real_eng.konglish .con5 .title_area{text-align: center; margin-bottom: 27px;}
+.real_eng.konglish .con5 .wrap .tabs_box .title{position: relative; top:106px;}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li a.tab1{background: url(../images/lecture/konglish/tab1.jpg); position: relative; bottom:118px;}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li a.tab2{background-image: url(../images/lecture/konglish/tab2.jpg);}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li a.tab3{background-image: url(../images/lecture/konglish/tab3.jpg)}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab1{background-image: url(../images/lecture/konglish/tab1_on.jpg);}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab2{background-image: url(../images/lecture/konglish/tab2_on.jpg);}
+.real_eng.konglish .con5 .wrap .tabs_box .tabs_area .tabs li.on a.tab3{background-image: url(../images/lecture/konglish/tab3_on.jpg);}
+.real_eng.konglish .con5 .wrap .mov_area{float: left}
+.real_eng.konglish .lec_list dl dd{display: block;}
+
+/*강사소개*/
+.teacher_intro{margin-bottom: 62px; min-width: 1400px}
+.teacher_intro .cont{height: 642px; background: url(../images/teacher/t1_bg.jpg) no-repeat center top; position: relative;}
+.teacher_intro .cont.teacher2{background-image: url(../images/teacher/t2_bg.jpg)}
+.teacher_intro .cont.teacher3{background-image: url(../images/teacher/t3_bg.jpg)}
+.teacher_intro .cont iframe{position: absolute; left: 50%; margin-left: -496px; top:300px; width: 534px; height: 301px}
+.teacher_intro .btns{ padding: 18px 0; background: #333; text-align: center;}
+.study_leader{margin-bottom: 100px}
+.study_leader .cont{height: 1072px; background: url(../images/teacher/leader_bg.jpg) no-repeat center top}
+.study_leader .cont .wrap{text-align: center; width: 1099px; margin: 0 auto; padding-top: 420px}
+.study_leader .cont .wrap iframe{width: 489px; height: 274px; display: inline-block; margin: 0 9px 50px}
+.study_leader .intro{padding: 48px 0; text-align: center; background: #333;}
+
+/*수강신청 - 프리패스*/
+.reg_freepass{}
+.reg_freepass .con1{height: 653px; text-indent: -9999px; overflow: hidden; background: url(../images/register/free_pass/con1_bg.jpg) no-repeat center #18c4e9;}
+.reg_freepass .con2{text-align: center; background: #333;}
+.reg_freepass .con3{text-align: center; position: relative;}
+.reg_freepass .con3 p{position: absolute; left:50%; margin-left: -370px; top:600px; font-size: 42px; font-weight: bold; color: #18c4e9; text-align: right; width: 140px;}
+.reg_freepass .con3 .btn{margin: 33px 0 58px;}
+.reg_freepass .con4{text-align: center; background: url(../images/register/free_pass/con4_bg.jpg) no-repeat center #eee; padding: 131px 0 56px;}
+.reg_freepass .con5{text-align: center; background: #18c4e9;}
+.reg_freepass .con6{text-align: center;}
+.reg_freepass .con7{text-align: center; background: url(../images/main/con2_bg.jpg);}
+.reg_freepass .con7 iframe{display: inline-block; width: 1000px; height: 563px;}
+.reg_freepass .con8{text-align: center;}
+.reg_freepass .con9{text-align: center;}
+.reg_freepass .con10{text-align: center;}
+.reg_freepass .con10 .rev_wrap{width: 1000px; margin: 0 auto; padding-bottom: 50px;}
+.reg_freepass .con11{text-align: center; background: #18c4e9;}
+.reg_freepass .con11 .btn{padding-bottom: 34px;}
+.reg_freepass .con12{margin: 55px 0 100px;}
+.reg_freepass .con12 dl{width:1000px; box-sizing: border-box; padding: 32px 24px; border: 3px solid #eee; margin: 0 auto;}
+.reg_freepass .con12 dl dt{padding-bottom: 14px; border-bottom:1px dotted #6a6a6a; margin-bottom: 20px;}
+.reg_freepass .con12 dl dd{}
+.reg_freepass .con12 dl dd.left{width: 464px; float: left;}
+.reg_freepass .con12 dl dd.right{width: 415px;  float: right;}
+.reg_freepass .con12 dl dd h6{color:#0b0b0b; font-size: 13px; font-weight: normal; margin-bottom: 20px;}
+.reg_freepass .con12 dl dd p{color: #666; font-size: 13px; line-height: 22px;}
+
+/*리얼수강후기*/
+.rev_real{text-align: center;}
+.rev_real .tit{margin-top: 38px;}
+.rev_real .con{height: 572px; position: relative; background: url(../images/review/real_con1_bg.jpg) no-repeat center;}
+.rev_real .con.con2{height: 602px;  background: url(../images/review/real_con2_bg.jpg) no-repeat center;}
+.rev_real .con.con3{height: 608px;  background: url(../images/review/real_con3_bg.jpg) no-repeat center;}
+.rev_real .con iframe{position:absolute; left: 50%; margin-left: -10px; top: 237px; width: 509px; height: 287px;}
+.rev_real .con.con2 iframe{margin-left: -489px; top: 282px; }
+.rev_real .con.con3 iframe{margin-left: -10px; top: 271px;}
+.rev_real .btn{margin: 39px 0 128px;}
+
+/*수강후기 게시판*/
+.rev_bbs{ margin-bottom: 100px;}
+.rev_bbs .tit{text-align: center; margin: 38px 0 54px;}
+.rev_bbs .wrap{width: 1000px; margin: 0 auto;}
+.rev_bbs .wrap .tabs{margin-bottom: 10px;}
+.rev_bbs .wrap .tabs li{float: left; margin-right: 1px;}
+.rev_bbs .wrap .tabs li a{ display: block; width: 198px; height: 51px; text-indent: -9999px; overflow: hidden; background: url(../images/review/bbs_tab1.jpg)}
+.rev_bbs .wrap .tabs li a.tab2{background-image:url(../images/review/bbs_tab2.jpg);}
+.rev_bbs .wrap .tabs li a.tab3{background-image:url(../images/review/bbs_tab3.jpg);}
+.rev_bbs .wrap .tabs li a.tab4{background-image:url(../images/review/bbs_tab4.jpg);}
+.rev_bbs .wrap .tabs li a.tab5{background-image:url(../images/review/bbs_tab5.jpg);}
+.rev_bbs .wrap .tabs li.on a{background: url(../images/review/bbs_tab1_on.jpg);}
+.rev_bbs .wrap .tabs li.on a.tab2{background: url(../images/review/bbs_tab2_on.jpg);}
+.rev_bbs .wrap .tabs li.on a.tab3{background: url(../images/review/bbs_tab3_on.jpg);}
+.rev_bbs .wrap .tabs li.on a.tab4{background: url(../images/review/bbs_tab4_on.jpg);}
+.rev_bbs .wrap .tabs li.on a.tab5{background: url(../images/review/bbs_tab5_on.jpg);}
+.rev_bbs .wrap .conts{text-align: center;}
+
+/****유틸 페이지*****/
+.util{}
+.util .wrap{width: 1000px; margin: 0 auto; border-top: 3px solid #333;}
+
+/*로그인*/
+.my_class .title_bar.login{background-image: url(../images/util/login_tit.jpg);}
+.util .wrap .login{}
+.util .wrap .login .logo{margin-top: 33px; margin-bottom: 29px; text-align: center;}
+.util .wrap .login .input_area{margin-left: 317px;}
+.util .wrap .login .input_area table{text-align: left; margin-bottom: 10px;}
+.util .wrap .login .input_area table tr{}
+.util .wrap .login .input_area table tr td{height: 33px;}
+.util .wrap .login .input_area table tr td.title{width: 67px; color: #adadad; font-size: 14px; font-weight: bold;}
+.util .wrap .login .input_area table tr td.box{width: 199px;}
+.util .wrap .login .input_area table tr td.box input{width: 190px; padding-left: 4px; height:28px; border: 1px solid #ccc; background: #eee;}
+.util .wrap .login .input_area table tr td.btn{}
+.util .wrap .login .input_area .chk{margin-left: 66px; margin-bottom: 41px;}
+.util .wrap .login .input_area .chk a{margin-right: 20px;}
+.util .wrap .login .box_area{}
+.util .wrap .login .box_area .box{width: 486px; height: 104px; padding-top: 24px; border:3px solid #eee; float: left; text-align: center;}
+.util .wrap .login .box_area .box .tit{margin-bottom: 14px;}
+
+/*아이디 비밀번호 찾기*/
+.my_class .title_bar.search_id{background-image: url(../images/util/idpw_tit.jpg);}
+.util .wrap .id_box{width: 936px; margin-top: 30px;margin-bottom: 216px; height: 259px;  border: 3px solid #eee; padding: 23px 28px 0;}
+.util .wrap .id_box.left{float: left; width: 436px;}
+.util .wrap .id_box.right{float: right; width: 436px;}
+.util .wrap .id_box h5{margin-bottom: 16px;}
+.util .wrap .id_box .cont_area{padding: 20px 0; border-top:1px dotted #6a6a6a; border-bottom:1px dotted #6a6a6a; text-align: center;}
+.util .wrap .id_box .cont_area table{display: inline-block; text-align: left;}
+.util .wrap .id_box .cont_area table tr{}
+.util .wrap .id_box .cont_area table tr td{height: 38px; color: #666;}
+.util .wrap .id_box .cont_area table tr td.tit{color: #999; font-weight: bold;}
+.util .wrap .id_box .cont_area table tr td input{width: 161px; padding-left: 10px; height: 28px; border: 1px solid #ccc; background: #eee; color: #333; font-size: 14px; font-weight: bold;}
+.util .wrap .id_box .cont_area table tr td select{width: 75px; height: 28px; border: 1px solid #ccc; background: #eee; color: #333; font-size: 14px; font-weight: bold; margin-right: 5px; margin-left: 12px;}
+.util .wrap .id_box .btn{margin-top: 18px; text-align: center;}
+
+.util .wrap .id_box .id_result{margin: 47px 0; text-align: center; color: #333; font-size: 14px;}
+.util .wrap .id_box .id_result span{color: #08c1e9;}
+
+/*회원가입 1 (약관동의)*/
+.title_bar.signup_tit{background-image: url(../images/util/signup_tit.jpg)}
+.signup{margin-top: 37px;}
+.signup h5{text-align: center; margin-bottom: 46px;}
+.signup dl{border:3px solid #eee; padding: 26px 26px 0; margin-bottom: 20px;}
+.signup dl dt{margin-bottom: 15px;}
+.signup dl dd{}
+.signup dl dd .policy_box{border: 1px solid #d0d0d0; padding: 20px; overflow-y: scroll; height: 230px; margin-bottom: 9px; color: #adadad; font-size: 12px; font-family: Dotum, '돋움', 돋움;}
+.signup .chk_area{margin-bottom: 20px; text-align: right;}
+.signup .chk_area.all{text-align: center; margin-bottom: 42px;}
+.signup .btn{text-align: center;}
+
+/*회원가입 2 (정보입력)*/
+.sign_up_info{width: 100%; font-size: 14px; font-weight: bold; color: #999; margin-bottom: 40px;}
+.sign_up_info thead{border-top: 3px solid #eee; border-bottom: 1px solid #ddd;}
+.sign_up_info thead tr{}
+.sign_up_info thead tr th{height: 37px; color: #ff5293; text-align: left;}
+.sign_up_info thead tr th img{margin-right: 2px;}
+.sign_up_info tbody{}
+.sign_up_info tbody tr{}
+.sign_up_info tbody tr td{height: 40px; border-bottom: 1px solid #ddd; position: relative; padding: 4px 0;}
+.sign_up_info tbody tr td.title{width: 146px;}
+.sign_up_info tbody tr td.title img{margin-right: 10px;}
+.sign_up_info tbody tr td input{width: 237px; padding-left: 10px; height: 28px; border:1px solid #ccc; background: #eee; margin-right: 10px; display: inline-block; color: #333;}
+.sign_up_info tbody tr td button{position: absolute;}
+.sign_up_info tbody tr td select{width: 120px; height: 28px; border: 1px solid #ccc; background: #eee;}
+.sign_up_info tbody tr td a{color: #999;}
+.sign_up_info tbody tr td .notice{margin-top: 6px;}
+.sign_up_info tbody tr td span{color: #333;}
+.signup .btn{position: relative;}
+.signup .btn .withdraw{position: absolute; right:0;}
+
+/*회원가입 3 가입완료*/
+.signup .done{ text-align: center; padding: 35px 0 45px; border-top:3px solid #eee; border-bottom:3px solid #eee; margin-bottom: 40px;}
+.signup .bnr_area{margin-top: 46px;}
+
+/*회원정보수정*/
+.title_bar.edit_tit{background-image: url(../images/my_class/title_edit.jpg);}

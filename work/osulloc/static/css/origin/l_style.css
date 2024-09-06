@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+		/* common */
+		* {margin:0; padding:0;vertical-align:top;font-size:12px;color:#333;letter-spacing:-0.5px}
+		
+		/* web */
+		.layer_wrap.Lpoint_popup {width:452px;position:relative;box-sizing:border-box;border:1px solid #ddd;padding-bottom:26px;font-family: 'Noto Sans KR', sans-serif; font-size: 1.2em;/*position: absolute;*/}
+		/*.layer_wrap.Lpoint_popup .inner_wrap {width:390px;margin-left:31px;}*/
+		.layer_wrap.Lpoint_popup .inner_wrap .L_logo {width:72px;height:13px;margin-top:29px;}
+		.layer_wrap.Lpoint_popup .inner_wrap .L_close {width:17px;height:17px;position:absolute;right:29px;top:25px;}
+		.layer_wrap.Lpoint_popup .inner_wrap ul {margin-top:17px;list-style:none;}
+		.layer_wrap.Lpoint_popup .inner_wrap ul li {line-height:20px;background:url("http://www.osulloc.com/kr/ko/static/images/mypage/Lpoint_dot.jpg") 0 10px no-repeat;padding-left:6px;list-style:none;}
+		.layer_wrap.Lpoint_popup .inner_wrap ul li a {font-weight: bold}
+		.layer_wrap.Lpoint_popup .inner_wrap ul li p.sub_text {color:#727272;}
+		.layer_wrap.Lpoint_popup .inner_wrap .policy {height:42px;line-height:42px;font-size:13px;text-align:center;color:#555;border-top: 1px solid #cecece;margin-top: 15px; padding-bottom: 0; }
+		.layer_wrap.Lpoint_popup .inner_wrap .policy input[type="checkbox"]	{width:18px;height:18px;/*margin-top:13px;*/margin-right: 5px;}
+		.layer_wrap.Lpoint_popup .inner_wrap textarea {width:100%;height:71px;border-color:#cecece;resize:none;padding:17px 15px;box-sizing:border-box;}
+		.layer_wrap.Lpoint_popup .inner_wrap input.btn {width:100%;height:42px;background:#000;color:#fff;border:none;margin-top:35px;}
+		.layer_wrap.Lpoint_popup .inner_wrap .user_ponit {width:100%;height:49px;line-height:49px;text-align:center;border-top:1px solid #cecece;margin-top:15px;/*display:none;*/}
+		.layer_wrap.Lpoint_popup .inner_wrap .user_ponit input[type="radio"]{width:20px;height:20px;/*margin-top:16px;*/margin-right: 5px;}
+		.layer_wrap.Lpoint_popup .inner_wrap .user_ponit input.ml20 {margin-left:20px}
+		.layer_wrap.Lpoint_popup .inner_wrap .online_pw	{width:100%;height:52px;line-height:52px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;color:#555;}
+		.Lpoint_popup .online_pw span:first-child {width:36.1%;color:#000;display: inline-block;background-color:#f2f2f2;text-align:center;}	
+		.Lpoint_popup .online_pw span:last-child {width:63.9%;display: inline-block;overflow: hidden}	
+		.Lpoint_popup .online_pw input {width:96%;height:34px;border:1px solid #e5e5e5;overflow: hidden;margin:8px;}
+		.Lpoint_popup .online_pw input::placeholder {font-size:12px;color: 727272;padding-left:10px;}
+
+		
+		@media screen and (max-width: 460px) {
+			.layer_wrap.Lpoint_popup {width:100%;border:0px solid #ddd;}
+			/*.layer_wrap.Lpoint_popup .inner_wrap {width:86.7%;}*/
+			.layer_wrap.Lpoint_popup .inner_wrap .policy {height:54px;line-height:54px;font-size:13px;text-align:center;border-bottom:1px solid #ddd;margin-top:14px;}
+			.layer_wrap.Lpoint_popup .inner_wrap .user_ponit {display:block;}
+			.layer_wrap.Lpoint_popup .inner_wrap .online_pw	{display:block;}
+			.layer_wrap.Lpoint_popup .inner_wrap .policy input[type="checkbox"] {margin-top: 0; vertical-align: middle}
+
+		}

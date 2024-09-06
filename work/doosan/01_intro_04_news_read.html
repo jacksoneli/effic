@@ -1,0 +1,266 @@
+<?
+include_once('class/config.php');
+
+// Request
+$no	  = $_REQUEST['no'];
+$bidx = $_REQUEST['bidx'];
+
+// 자료 검색
+$SQL = "SELECT * FROM {$TABLE_INFO['board']} WHERE bidx = '{$bidx}'";
+$res1 = mysql_query($SQL, $DB_CONNECT); MgErrorMsg($res1);
+if ($res1){
+	$view = mysql_fetch_array($res1);
+	$view['nohtml_content'] = nl2br($view['content']);
+	$regdate = MgDateFormat($view['wdate'], 1);
+}
+
+// 파일 검색
+$SQL = "SELECT COUNT(*) cnt FROM {$TABLE_INFO['bfile']} WHERE bidx = '{$bidx}'";
+$res6 = mysql_fetch_array(mysql_query($SQL, $DB_CONNECT));
+
+$SQL = "SELECT * FROM {$TABLE_INFO['bfile']} WHERE bidx = '{$bidx}'	ORDER BY bfidx";
+$res2 = mysql_query($SQL, $DB_CONNECT); MgErrorMsg($res2);
+
+// 이전글
+$SQL = "SELECT * FROM {$TABLE_INFO['board']} WHERE bidx > '{$bidx}' AND site='{$site}' AND cate='b1' AND type<>'N' ORDER BY bidx ASC  LIMIT 1";
+$res3 = mysql_query($SQL, $DB_CONNECT); MgErrorMsg($res3);
+if ($res3)
+	$prev = mysql_fetch_array($res3);
+
+// 다음글
+$SQL = "SELECT * FROM {$TABLE_INFO['board']} WHERE bidx < '{$bidx}' AND site='{$site}' AND cate='b1' AND type<>'N' ORDER BY bidx DESC LIMIT 1";
+$res4 = mysql_query($SQL, $DB_CONNECT); MgErrorMsg($res4);
+if ($res4)
+	$next = mysql_fetch_array($res4);
+
+// 조회수 증가
+$SQL = "UPDATE {$TABLE_INFO['board']} SET hits=hits+1 WHERE bidx = '{$bidx}'";
+$res5 = mysql_query($SQL, $DB_CONNECT); MgErrorMsg($res5);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>두산 위브 더 제니스</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-custom.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.dotdotdot.min.js"></script>
+	
+	<script>
+		//hover
+		(function($){
+			$(document).ready(function(){
+				$(".jpg_over").mouseenter(function() {
+					$(this).attr("src",$(this).attr("src").replace(/.jpg/,'_on.jpg'));
+				});
+
+				$(".jpg_over").mouseleave(function() {
+					$(this).attr("src",$(this).attr("src").replace(/_on.jpg/,'.jpg'));
+				});
+				$(".png_over").mouseenter(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(".png_over").attr("src",function(i,val){
+							if(!$(this).parent().hasClass('On')){
+								return val.replace(/_on.png/,'.png');
+							}
+						});
+						$(this).attr("src",$(this).attr("src").replace(/.png/,'_on.png'));
+					}
+				});
+
+				$(".png_over").mouseleave(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(this).attr("src",$(this).attr("src").replace(/_on.png/,'.png'));
+					}
+				});
+			});
+		})(jQuery)
+	</script>
+</head>
+<body>
+
+<div id="upper_line">
+	<div class="middle"></div>
+</div>
+
+<div id="header">
+	<div class="wrap cf">
+		<h1 id="logo"><a href="index.html"><img src="images/main/logo.jpg" alt="메인 로고"></a></h1>
+		<div id="upper">
+			<a href="index.html"><img src="images/main/upper1.jpg" alt="HOME"></a>
+			<a href="01_intro_05_way.html"><img src="images/main/upper2.jpg" alt="찾아오시는 길"></a>
+<!--			<a href="07_util_01_sitemap.html"><img src="images/main/upper3.jpg" alt="사이트맵"></a>-->
+			<a href="#n" onclick="alert('준비중입니다.');"><img src="images/main/upper4.jpg" alt="CHECK LIST"></a>
+		</div> 
+		<ul id="gnb">
+			<li></li><!--lnb와의 idx를 맞추기 위해 넣은 것(비어둬야함)-->
+			<li><a href="01_intro_01_summary.html">프로젝트 소개</a></li>
+			<li><a class="a2" href="02_premium_01_location.html">프리미엄</a></li>
+			<li><a class="a3" href="03_features_01_arrange.html">단지특장점</a></li>
+			<li><a class="a4" href="04_interior_01_model.html">인테리어</a></li>
+			<li><a class="a5" href="05_household_01_67.html">세대정보</a></li>
+			<li><a class="a6" href="06_guide_02_calendar.html">분양안내</a></li>
+		</ul>	
+	</div>
+</div>
+
+<div id="lnb">
+	<div class="wrap cf">
+		<img class="bnr" src="images/main/lnb_bnr.jpg" alt="">
+		<ul class="first">
+			<li><a class="a1_1" href="01_intro_01_summary.html"><img class="jpg_over" src="images/main/lnb11.jpg" alt=""></a></li>
+<!--			<li><a class="a1_2" href="01_intro_02_company.html"><img class="jpg_over" src="images/main/lnb12.jpg" alt=""></a></li>-->
+			<li><a class="a1_3" href="01_intro_03_brand.html"><img class="jpg_over" src="images/main/lnb13.jpg" alt=""></a></li>
+			<li><a class="a1_4" href="01_intro_04_news.html"><img class="jpg_over" src="images/main/lnb14.jpg" alt=""></a></li>
+			<li><a class="a1_5" href="01_intro_05_way.html"><img class="jpg_over" src="images/main/lnb15.jpg" alt=""></a></li>			
+		</ul>
+		<ul>
+			<li><a href="02_premium_01_location.html" class="a2_1"><img class="jpg_over" src="images/main/lnb21.jpg" alt=""></a></li>
+			<li><a href="02_premium_02_environment.html" class="a2_2"><img class="jpg_over" src="images/main/lnb22.jpg" alt=""></a></li>
+<!--			<li><a href="02_premium_03_convenience.html" class="a2_3"><img class="jpg_over" src="images/main/lnb23.jpg" alt=""></a></li>-->
+			<li><a href="02_premium_04_value.html" class="a2_4"><img class="jpg_over" src="images/main/lnb24.jpg" alt=""></a></li>		
+		</ul>
+		<ul>
+			<li><a href="03_features_01_arrange.html" class="a3_1"><img class="jpg_over" src="images/main/lnb31.jpg" alt=""></a></li>
+<!--			<li><a href="03_features_02_plan.html" class="a3_2"><img class="jpg_over" src="images/main/lnb32.jpg" alt=""></a></li>-->
+			<li><a href="03_features_03_facilities.html" class="a3_3"><img class="jpg_over" src="images/main/lnb33.jpg" alt=""></a></li>
+			<li><a href="03_features_04_community.html" class="a3_4"><img class="jpg_over" src="images/main/lnb34.jpg" alt=""></a></li>
+			<li><a href="03_features_05_system.html" class="a3_5"><img class="jpg_over" src="images/main/lnb35.jpg" alt=""></a></li>			
+		</ul>	
+		<ul>
+			<li><a href="04_interior_01_model.html" class="a4_1"><img class="jpg_over" src="images/main/lnb41.jpg" alt=""></a></li>
+			<li><a href="04_interior_02_livingroom.html" class="a4_2"><img class="jpg_over" src="images/main/lnb42.jpg" alt=""></a></li>
+			<li><a href="04_interior_03_bedroom.html" class="a4_3"><img class="jpg_over" src="images/main/lnb43.jpg" alt=""></a></li>
+			<li><a href="04_interior_04_kitchen.html" class="a4_4"><img class="jpg_over" src="images/main/lnb44.jpg" alt=""></a></li>
+			<li><a href="04_interior_05_bathroom.html" class="a4_5"><img class="jpg_over" src="images/main/lnb45.jpg" alt=""></a></li>
+		</ul>	
+		<ul>
+			<li><a href="05_household_01_67.html" class="a5_1"><img class="jpg_over" src="images/main/lnb51.jpg" alt=""></a></li>
+			<li><a href="05_household_02_77a.html" class="a5_2"><img class="jpg_over" src="images/main/lnb52.jpg" alt=""></a></li>
+			<li><a href="05_household_03_77b.html" class="a5_3"><img class="jpg_over" src="images/main/lnb53.jpg" alt=""></a></li>
+			<li><a href="05_household_04_84.html" class="a5_4"><img class="jpg_over" src="images/main/lnb54.jpg" alt=""></a></li>
+		</ul>	
+		<ul class="last">
+			<li><a href="mojip.pdf" target="_blank" class="a6_1"><img class="jpg_over" src="images/main/lnb61.jpg" alt=""></a></li>
+			<li><a href="06_guide_02_calendar.html" class="a6_2"><img class="jpg_over" src="images/main/lnb62.jpg" alt=""></a></li>
+			<li><a href="06_guide_03_subscription.html" class="a6_3"><img class="jpg_over" src="images/main/lnb63.jpg" alt=""></a></li>
+			<li><a href="06_guide_04_interest.html" class="a6_4"><img class="jpg_over" src="images/main/lnb64.jpg" alt=""></a></li>
+		</ul>		
+	</div>
+</div>
+
+<script type="text/javascript">
+//nlb 열고 접기
+$("#gnb, #lnb").mouseover(function(){
+    $("#lnb").stop().slideDown();
+}); 
+$("#gnb, #lnb").mouseleave(function(){
+    $("#lnb").stop().slideUp();
+}); 
+
+//lnb에 마우스오버시 해당 gnb 활성
+$(document).ready(function(){
+	$("#lnb ul, #gnb li").on({
+		mouseover : function() {
+			var idx = $(this).index();
+			$("#gnb li").eq(idx).find('a').addClass('on'); 
+		},
+		mouseleave : function() {
+			var idx = $(this).index();				
+			$("#gnb li").eq(idx).find('a').removeClass('on'); 
+		}
+	});
+});	
+</script>
+
+<div class="sub_upper"></div>
+
+<div class="sub">
+	<div class="wrap">
+		<img class="page0104_tit" src="images/sub/01_04.jpg" alt="">
+		<div class="read">
+			<div class="tit_area">
+				<h4><?=$view['subject']?></h4>
+				<div class="date">작성일자 : <?=$regdate?></div>
+			</div>
+			<div class="cont_area">
+				<div class="pic">
+					<!-- <img src="images/sub/temp_news.jpg" alt=""> -->
+				</div>
+				<div class="cont"><?=str_replace('src="/userfiles/images/', 'src="http://megawatt.kwcom.xyz/userfiles/images/', $view['content']);?></div>
+			</div>
+<?
+if ($res6[cnt]>0){
+?>
+			<div class="file">
+				<span>첨부파일 : </span>
+<?
+if ($res2){
+	$i = 0;
+	while($row2 = mysql_fetch_array($res2)){
+		if ($i!=0) echo ', ';
+?>
+				<a href='http://megawatt.kwcom.xyz/modules/board/download.php?route=board&files=<?=$row2['files']?>&filename=<?=$row2['filename']?>'><?=$row2['filename']?>【<?=MgGetByte($row2['filesize'])?>】</a>
+<?
+	$i++;
+	}
+}
+?>
+			</div>
+<?
+}
+?>
+			<div class="btn" style="margin-top:30px;">
+				<a href="01_intro_04_news.html?Page=<?=$Page?>"><img src="images/sub/to_list.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+//말줄임표 처리	
+$(function(){
+	$(".dotdot").dotdotdot();	
+});
+</script>	
+
+<ul id="qmenu">
+	<li><img src="images/sub/q1.png" alt=""></li>
+	<li><a href="01_intro_05_way.html"><img class="png_over" src="images/sub/q2.png" alt=""></a></li>
+	<li><a href="04_interior_01_model.html"><img class="png_over" src="images/sub/q3.png" alt=""></a></li>
+	<li><a href="mojip.pdf" target="_blank"><img class="png_over" src="images/sub/q4.png" alt=""></a></li>
+	<li><a href="06_guide_04_interest.html"><img class="png_over" src="images/sub/q5.png" alt=""></a></li>
+	<li><a class="top" href="#upper_line"><img src="images/sub/q6.png" alt=""></a></li>
+</ul>
+<script type="text/javascript">
+// top으로 부드럽게 이동 
+$(document).ready(function(e) {
+	$("#qmenu .top").bind("click", function (e) {
+		var tg = $(this).attr("href");
+		var to = 0;
+
+		if(tg == "#") {
+				to = 0;
+		} else {
+				to = $(tg).offset().top; 
+		}
+
+		$("html, body").animate({
+				scrollTop : to
+		},300);
+
+		return false;
+	});
+});
+</script>  
+<!--// 퀵메뉴 -->
+
+<div id="footer">
+	<div class="wrap"><img src="images/main/footer.jpg" alt=""></div>
+</div>
+
+</body>
+</html>

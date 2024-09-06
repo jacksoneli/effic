@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>진짜녀석들</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name='HandheldFriendly' content='True'>
+<meta name='MobileOptimized' content='320'>
+<meta name='format-detection' content='telephone=no'>
+<meta http-equiv='cleartype' content='on'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"> 
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script src="js/froogaloop2.min.js"></script>
+</head>
+<body>
+
+<!--좌측 토글 메뉴바 시작-->
+<div id="dim">
+	<a class="close_nav" href="#n"><img src="images/side_close.png" alt=""></a>
+</div>
+<div id="side_nav">
+	<a style="margin:10px 0 15px;" href="#n"><img src="images/side_bnr.jpg" alt=""></a>
+	<a style="margin-bottom:10px;" href="#n"><img src="images/login.jpg" alt=""></a>
+	<a style="margin-bottom:15px;" href="#n"><img src="images/signup.jpg" alt=""></a>
+	<img src="images/cs_title.jpg" alt="">
+	<a style="margin-bottom:5px;" href="#n"><img src="images/side1.jpg" alt=""></a>
+	<a style="margin-bottom:5px;" href="#n"><img src="images/side2.jpg" alt=""></a>
+	<a style="margin-bottom:15px;" href="#n"><img src="images/side3.jpg" alt=""></a>
+	<img src="images/side_sns.jpg" alt="" usemap="#side_map">
+	<map name="side_map" id="side_map">
+		<area shape="rect" coords="0,13,53,71" href="#n" alt="" />
+		<area shape="rect" coords="55,13,111,71" href="#n" alt="" />
+		<area shape="rect" coords="111,13,165,71" href="#n" alt="" />
+	</map>	
+</div>
+<script type="text/javascript">
+//사이드 메뉴바
+$(function(){
+	$('.menu_btn').click(function(){
+		$('#dim, #side_nav').addClass('on');
+		$('.close_nav').show();
+	});
+	$('.close_nav').click(function(){
+		$('#dim, #side_nav').removeClass('on');
+		$('.close_nav').hide();
+	});	
+});
+</script>
+<!--좌측 토글 메뉴바 끝-->
+
+<div id="header" class="cf">
+	<a class="left menu_btn" style="width:20%;" href="#n"><img src="images/btn_menu.jpg" alt=""></a>
+	<h1 class="left" style="width:60%;"><a href="#n"><img src="images/logo.jpg" alt=""></a></h1>
+	<a class="left" style="width:20%;" href="#n"><img src="images/btn_my.jpg" alt=""></a>
+</div>
+
+<div id="gnb" class="cf">
+	<a href="#n" style="width:22.5%;"><img src="images/gnb1.jpg" alt=""></a><!--파일명에 _on붙이면 활성화된 이미지-->
+	<a href="#n"><img src="images/gnb2.jpg" alt=""></a>
+	<a href="#n"><img src="images/gnb3.jpg" alt=""></a>
+	<a href="#n" style="width:37.5%;"><img src="images/gnb4.jpg" alt=""></a>
+</div>
+
+<div id="visual">
+	<ul class="bxslider1">
+		<li><a href="#n"><img src="images/visual1.jpg" /></a></li>
+		<li><a href="#n"><img src="images/visual2.jpg" /></a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+//메인 비주얼
+var timer1;
+var slider1 = $('.bxslider1').bxSlider({
+		mode : 'fade',
+    pause : 3000,
+    auto: true,
+    autoControls: false,
+    controls: false,
+    autoHover: true,
+    pager: true,
+    stopAuto: false,
+    onSlideLoad: function() {
+        timer1 = setTimeout(null, 5000);
+    },
+    onSlideBefore: function() {
+        clearTimeout(timer1);
+    },
+    onSlideAfter: function() {
+        timer1 = setTimeout(startAutoSlide1, 5000);
+    }
+});
+
+function startAutoSlide1() {
+    slider1.startAuto();
+}
+</script>
+
+<div class="main_slide2">
+	<ul class="bxslider2">
+		<li><img src="images/rev_slide1.jpg" /></li>
+		<li><img src="images/rev_slide2.jpg" /></li>
+		<li><img src="images/rev_slide3.jpg" /></li>
+	</ul>
+	<div class="control">
+		<button class="btn_prev2" style="left:8px;"><img src="images/prev.png" alt=""></button>
+		<button class="btn_next2" style="right:8px;"><img src="images/next.png" alt=""></button>
+	</div>
+</div>
+<script type="text/javascript">
+//후기 슬라이드
+var timer2;
+var slider2 = $('.bxslider2').bxSlider({
+    pause : 3000,
+    auto: true,
+    autoControls: false,
+    controls: false,
+    autoHover: true,
+    pager: false,
+    stopAuto: false,
+    onSlideLoad: function() {
+        timer2 = setTimeout(null, 5000);
+    },
+    onSlideBefore: function() {
+        clearTimeout(timer2);
+    },
+    onSlideAfter: function() {
+        timer2 = setTimeout(startAutoSlide2, 5000);
+    }
+});
+
+function startAutoSlide2() {
+    slider2.startAuto();
+}
+
+$('.btn_prev2').click(function(){
+		slider2.goToPrevSlide();  
+});
+
+$('.btn_next2').click(function(){
+		slider2.goToNextSlide();
+});
+</script>
+
+<div style="border-top:1px solid #ddd;"><a href="#n"><img src="images/more.jpg" alt=""></a></div>
+
+<div class="main_vid">
+	<img src="images/intro.jpg" alt="">
+	<div class="video_container">
+		<iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>			
+	</div>
+</div>
+
+<img src="images/features.jpg" alt="">
+<a href="#n"><img src="images/bnr.jpg" alt=""></a>
+
+<div class="main_teacher">
+	<img src="images/slide3_tit.jpg" alt="">
+	<ul class="bxslider3">
+		<li><a href="#n"><img src="images/t1.jpg" /></a></li>
+		<li><a href="#n"><img src="images/t2.jpg" /></a></li>
+	</ul>
+	<div class="control">
+		<button style="left:8px;" class="btn_prev3"><img src="images/prev.png" alt=""></button>
+		<button style="right:8px;" class="btn_next3"><img src="images/next.png" alt=""></button>
+	</div>	
+</div>
+<script type="text/javascript">
+//강사 슬라이드
+var timer3;
+var slider3 = $('.bxslider3').bxSlider({
+    pause : 3000,
+    auto: true,
+    autoControls: false,
+    controls: false,
+    autoHover: true,
+    pager: false,
+    stopAuto: false,
+    onSlideLoad: function() {
+        timer3 = setTimeout(null, 5000);
+    },
+    onSlideBefore: function() {
+        clearTimeout(timer3);
+    },
+    onSlideAfter: function() {
+        timer3 = setTimeout(startAutoSlide3, 5000);
+    }
+});
+
+function startAutoSlide3() {
+    slider3.startAuto();
+}
+
+$('.btn_prev3').click(function(){
+		slider3.goToPrevSlide();  
+});
+
+$('.btn_next3').click(function(){
+		slider3.goToNextSlide();
+});
+</script>
+
+<ul class="vid_tabs cf" id="main_mov_tabs">
+	<li class="on"><a class="a1" href="#n"></a></li>
+	<li><a class="a2" href="#n"></a></li>
+	<li><a class="a3" href="#n"></a></li>
+	<li><a class="a4" href="#n"></a></li>
+	<li><a class="a5" href="#n"></a></li>
+</ul>
+<div>
+	<div class="vid_conts">         
+		<div class="video_container">
+			<iframe id="mov1" src="https://player.vimeo.com/video/49810106?api=1" scrolling="no" frameborder="0"></iframe>
+		</div>
+	</div>
+	<div class="vid_conts" style="display:none">         
+		<div class="video_container">
+			<iframe id="mov2" src="https://player.vimeo.com/video/32304373?api=1" scrolling="no" frameborder="0"></iframe>		
+		</div>
+	</div> 
+	<div class="vid_conts" style="display:none">         
+		<div class="video_container">
+			<iframe id="mov3" src="https://player.vimeo.com/video/49810106?api=1" scrolling="no" frameborder="0"></iframe>
+		</div>
+	</div>
+	<div class="vid_conts" style="display:none">         
+		<div class="video_container">
+			<iframe id="mov4" src="https://player.vimeo.com/video/32304373?api=1" scrolling="no" frameborder="0"></iframe>		
+		</div>
+	</div> 
+	<div class="vid_conts" style="display:none">         
+		<div class="video_container">
+			<iframe id="mov5" src="https://player.vimeo.com/video/49810106?api=1" scrolling="no" frameborder="0"></iframe>
+		</div>
+	</div>
+</div> 
+
+<script>
+//영상탭
+$(function(){
+	$(".vid_tabs > li").bind('click',function(e){
+		e.preventDefault();
+		var index = jQuery(this).closest('li').index();
+		jQuery(".vid_conts").hide().eq(index).show();
+		jQuery('.vid_tabs > li').removeClass('on');
+		jQuery(this).addClass('on');
+	});
+	
+	//탭전환시 vimeo 멈추게
+	var iframe1 = document.getElementById('mov1');
+	var player1 = $f(iframe1); // $f == Froogaloop
+	var iframe2 = document.getElementById('mov2');
+	var player2 = $f(iframe2); 
+	var iframe3 = document.getElementById('mov3');
+	var player3 = $f(iframe3); 
+	var iframe4 = document.getElementById('mov4');
+	var player4 = $f(iframe4); 
+	var iframe5 = document.getElementById('mov5');
+	var player5 = $f(iframe5);
+	var pauseButton = document.getElementById("main_mov_tabs");
+	pauseButton.addEventListener("click", function() {
+		player1.api("pause");
+		player2.api("pause");
+		player3.api("pause");
+		player4.api("pause");
+		player5.api("pause");
+	});	
+});
+</script>
+
+<div class="main_cs cf">
+	<img class="left" style="width:50%;" src="images/cs.jpg" alt="">
+	<a style="width:23.75%;" href="#n"><img src="images/faq.jpg" alt=""></a>
+	<a style="width:26.25%;" href="#n"><img src="images/one.jpg" alt=""></a>
+</div>
+
+<div id="footer">
+	<div class="upper">
+		<a href="#n"><img height="10" src="images/footer1.jpg" alt=""></a>
+		<a href="#n"><img height="10" src="images/footer2.jpg" alt=""></a>
+		<a href="#n"><img height="10" src="images/footer3.jpg" alt=""></a>
+		<a href="#n"><img height="10" src="images/footer4.jpg" alt=""></a>
+	</div>
+	<div class="address noto">
+		<div class="wrap">
+			㈜진짜녀석들 | 대표 안순원 | 개인정보관리책임자 : 박영진<br />
+			사업자번호 : 881-87-00735 / 통신판매업신고번호 : 제2102-서울강남-01548호<br />
+			주소 : 서울시 강남구 테헤란로 2길 36 엘에스비즈니스센터 507호<br />
+			TEL : 1555-5555 / FAX : 02-4554-5542 | 제휴문의 soon@jinjja-eng.com
+			<div class="copy">Copyright. 진짜녀석들. All Rights Reserved.</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

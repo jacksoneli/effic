@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import url(normalize.css);
+@import url(sub.css);
+
+@font-face {
+  font-family:noto_sans;
+	src:url(../images/font/NotoSansKR-Regular.otf);
+}
+@font-face {
+  font-family:noto_sans_bold;
+	src:url(../images/font/NotoSansKR-Bold.otf);
+}
+
+/*****폰트*****/
+body{
+	font-size:13px;
+	color: #343434;
+	font-family:noto_sans, 'Noto Sans', Noto Sans Korean Regular, sans-serif;
+	letter-spacing: -1px;
+}
+.malgun{font-family: 맑은 고딕, '맑은 고딕', MalgunGothic}
+
+/*레이아웃*/
+body{position: relative; min-width: 1400px}
+
+/*****메인페이지*****/
+#upper{width: 100%; min-width: 1400px; height: 41px; border-bottom: 1px solid #ddd}
+#upper .member{width: 1099px; margin: 0 auto; text-align: right}
+#upper .member a{display: inline-block; line-height: 41px; font-size: 12px; color: #888; font-weight: bold; margin-left: 15px;}
+#upper .member a span{ color: #18c4e9}
+#upper .member a img{ position: relative; top:7px;}
+
+#header{ height: 78px;}
+#header .wrap{ width: 1099px; margin: 0 auto;}
+#logo{margin-top: 15px; float: left}
+#gnb{float: left; margin-left: 86px; margin-top: 30px;}
+#gnb li{  float: left; height: 48px;}
+#gnb li a{height: 19px; font-weight: bold; font-size: 18px; color: #333; display: block; width: 129px; text-align: center; border-right: 1px solid #ccc}
+#gnb li.last a{border-right: none}
+#header .wrap .r_btns{float: right; margin-top: 22px;}
+#header .wrap .r_btns a{margin-left: 2px;}
+
+#lnb{display: none; width: 100%; position: absolute; z-index: 100; background:url(../images/main/lnb_border.jpg) repeat-x #fff}
+#lnb .wrap{ width: 1099px; margin: 0 auto;}
+#lnb .wrap ul{ float: left; height: 145px; padding-top: 24px; width: 129px; border-right: 1px solid #ddd; text-align: center;}
+#lnb .wrap ul.first{ margin-left: 245px}
+#lnb .wrap ul.last{ border-right: none}
+#lnb .wrap ul li{margin-bottom: 16px}
+#lnb .wrap ul li a{ font-size: 14px; font-weight: bold; color: #666}
+#lnb .wrap ul li a:hover{color: #ff6035}
+
+.main_banner {min-width: 1400px}
+/*대배너 이미지*/
+.main_banner .slide{ display: block; height: 433px; background: url(../images/main/main_bnr_2.jpg) no-repeat center #fff}
+.main_banner .slide.no2{background-image: url(../images/main/main_bnr_1.jpg)}
+.main_banner .slide.no3{background-image: url(../images/main/main_bnr_3.jpg)}
+/*대배너 페이저*/
+.main_bnr_pager {}
+.main_bnr_pager #bx-pager a{ display: block; width: 100px; height: 71px; margin-bottom: 9px; background: url(../images/main/pager2.jpg)}
+.main_bnr_pager #bx-pager a.active{background-image: url(../images/main/pager2_on.jpg)}
+.main_bnr_pager #bx-pager a.pager2{background-image: url(../images/main/pager1.jpg)}
+.main_bnr_pager #bx-pager a.pager2.active{background-image: url(../images/main/pager1_on.jpg)}
+.main_bnr_pager #bx-pager a.pager3{background-image: url(../images/main/pager3.jpg)}
+.main_bnr_pager #bx-pager a.pager3.active{background-image: url(../images/main/pager3_on.jpg)}
+.main_banner{position: relative;}
+.main_banner .main_bnr_pager{position: absolute; left:50%; margin-left: 578px; top:20px; z-index: 80;}
+
+.main_con1{}
+.main_con1 .wrap{ width: 1099px; margin: 0 auto}
+.main_con1 .wrap .product{width: 383px; height: 378px; float: left; position: relative; margin-top: 33px}
+.main_con1 .wrap .product .bx-pager {text-align: center; position: absolute; width: 383px; bottom:5px}
+.main_con1 .wrap .product .bx-pager .bx-pager-item{display: inline-block; margin: 0 4px}
+.main_con1 .wrap .product .bx-pager-item a{text-indent: -9999px; overflow: hidden; display: block; width: 13px; height: 14px; background: url(../images/main/product_pager.png)}
+.main_con1 .wrap .product .bx-pager-item a.active{background-image: url(../images/main/product_pager_on.png)}
+.main_con1 .wrap .review{float: right;}
+.main_con1 .wrap .review .more{ text-align: center; border-top: 1px solid #ddd; padding-top: 15px}
+
+.main_con2{}
+.main_con2 .title{ text-align: center; padding-top: 45px}
+.main_con2 .video_wrap{background: url(../images/main/con2_bg.jpg)}
+.main_con2 .video_wrap .video_box{ text-align: center}
+.main_con2 .video_wrap .video_box iframe{ display: inline-block; width: 1099px; height: 618px}
+
+.main_con3{text-align: center; margin-bottom: 58px}
+
+.main_con4{padding-bottom: 33px; width:1099px;margin: 0 auto}
+.main_con4 .title{margin-bottom: 22px}
+
+.main_con5{margin-bottom: 55px}
+.main_con5 .wrap{width: 1099px; margin: 0 auto}
+.main_con5 .wrap .tabs_area{float: left}
+.main_con5 .wrap .tabs_area .tabs{}
+.main_con5 .wrap .tabs_area .tabs li{}
+.main_con5 .wrap .tabs_area .tabs li a{ display: block; width: 242px; height: 97px; background: url(../images/main/mov_tab1.jpg); text-indent: -9999px; overflow: hidden;}
+.main_con5 .wrap .tabs_area .tabs li a.tab2{background-image: url(../images/main/mov_tab2.jpg);}
+.main_con5 .wrap .tabs_area .tabs li a.tab3{background-image: url(../images/main/mov_tab3.jpg); height: 96px;}
+.main_con5 .wrap .tabs_area .tabs li a.tab4{background-image: url(../images/main/mov_tab4.jpg);}
+.main_con5 .wrap .tabs_area .tabs li a.tab5{background-image: url(../images/main/mov_tab5.jpg); height: 96px;}
+.main_con5 .wrap .tabs_area .tabs li.on a.tab1{background-image: url(../images/main/mov_tab1_on.jpg);}
+.main_con5 .wrap .tabs_area .tabs li.on a.tab2{background-image: url(../images/main/mov_tab2_on.jpg);}
+.main_con5 .wrap .tabs_area .tabs li.on a.tab3{background-image: url(../images/main/mov_tab3_on.jpg);}
+.main_con5 .wrap .tabs_area .tabs li.on a.tab4{background-image: url(../images/main/mov_tab4_on.jpg);}
+.main_con5 .wrap .tabs_area .tabs li.on a.tab5{background-image: url(../images/main/mov_tab5_on.jpg);}
+.main_con5 .wrap .mov_area{float: left}
+.main_con5 .wrap .mov_area .conts iframe{width: 856px; height: 482px}
+
+.main_con6{ text-align: center; background: #eee; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-bottom: 54px;}
+
+.main_con7 .wrap{ width: 1099px; margin: 0 auto; padding-bottom: 59px}
+.main_con7 .wrap .title_area{float: left;}
+.main_con7 .wrap .title_area a{ display: block;}
+.main_con7 .wrap .mov_area{float: right; width: 740px;}
+.main_con7 .wrap .mov_area li{float: left; margin-bottom: 10px; margin-left: 9px;}
+.main_con7 .wrap .mov_area li iframe{width: 360px; height: 202px;}
+
+.main_bbs_cont{ margin-bottom: 89px !important;}
+.main_bbs_cont .wrap{ width: 1097px !important; margin: 0 auto !important;}
+.main_bbs_cont .wrap .rev{float: left !important; margin-right: 33px !important}
+.main_bbs_cont .wrap .main_bbs_table{ width: 356px !important;}
+.main_bbs_cont .wrap .main_bbs_table td{height: 39px !important; border-bottom: 1px solid #dedede !important}
+.main_bbs_cont .wrap .main_bbs_table td a{ display: block !important; width: 340px !important; font-size: 13px !important; color: #343434 !important; font-family: 돋움, '돋움', Dotum, 'Dotum' !important} 
+.main_bbs_cont .wrap .notice{float: left !important;}
+.main_bbs_cont .wrap .cs{float: right;}
+.main_bbs_cont .wrap .cs table{margin-top: 41px}
+.main_bbs_cont .wrap .cs table tr td{width: 322px; border: 1px solid #dedede; text-align: center;}
+.main_bbs_cont .wrap .cs table tr td.title{height: 42px;}
+.main_bbs_cont .wrap .cs table tr td.phone{height: 117px;}
+.main_bbs_cont .wrap .cs table tr td.phone p{margin-bottom: 13px; color: #ff6035; font-size: 46px; font-family:noto_sans_bold, Noto Sans Korean Bold, noto_sans, 'Noto Sans', Noto Sans Korean Regular, sans-serif; font-weight: bold;}
+.main_bbs_cont .wrap .cs table tr td.qna{width: 160px; height: 39px}
+
+#footer{min-width: 1400px}
+#footer .upper{height: 43px; border-top: 1px solid #ddd; text-align: center;}
+#footer .upper a{ margin: 0 16px; display: inline-block; margin-top: 15px}
+#footer .lower{background: #eee; height: 130px}
+#footer .lower .wrap{width: 1099px; margin: 0 auto;}
+#footer .lower .wrap .logo{padding-top: 42px; float: left;}
+#footer .lower .wrap .address{float: left; margin-left: 47px; padding-top: 30px; letter-spacing: 0.5px;}
+#footer .lower .wrap .address p{ color: #666; font-size: 11px; font-weight: bold; line-height: 16px; margin-bottom: 9px;}
+#footer .lower .wrap .address span{ color: #bbb; font-size: 10px; font-weight: bold;}
+
+/*퀵메뉴*/
+.main_qmenu{position: absolute; left: 50%; margin-left: 568px; padding-top:97px; top:490px; z-index: 50}
+.main_qmenu.on{ position: fixed; top:0px !important;}
+
+
+
+
+
+
+
+
+
+
+

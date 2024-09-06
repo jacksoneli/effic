@@ -1,0 +1,68 @@
+@charset "euc-kr";
+/****************** reset *********************/
+*{padding:0; margin:0;}
+p, ul, ol, li, dl, dt, dd, form {list-style-image:none; list-style-position:outside; list-style-type:none; border:0px;}
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+img,fieldset,iframe{border:0 none}
+input::-ms-clear {display:none}
+input, select, option{font-size:1.0em;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+dl,ul,ol,menu,li{list-style:none}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+a{color:#888888;text-decoration:none}
+a:hover,a:active,a:focus{color:#687fd2;}
+
+/********************* HTML5 display-role reset for older browsers **********************/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/****************************font*****************************/
+html, body {
+	font-size:14px;
+	color: #656565;
+	line-height:140%;
+	font-family:NotoSansKR, 'Noto Sans', NanumGothic, "��������", 'Nanum Gothic', dotum,'����',gulim,'����', Tahoma, sans-serif;
+	min-width:1200px;
+}
+@font-face {
+    font-family:NotoSansKR;
+	src:url(http://saengcl.com/main_re_2016/font/NotoSansKR-Medium.otf);
+	src:url(http://saengcl.com/main_re_2016/font/NotoSans-Regular.ttf);
+}
+
+/************************* contents ********************************/
+.con1{ height:830px; position:relative; background:url(../images/up/con1_bg.jpg) no-repeat center top;}
+.con1 .intro_ment{margin-top:30px; position:absolute; left:30px;}
+.con1 .logo{margin-top:25px; position:absolute; right:30px;}
+.con1 ul{ padding-top:440px; position:absolute; left:60px;}
+.con1 .pdf{ position:absolute; right:30px; margin-top:546px;}
+.con1 .slide_wrap{ position:absolute; left:50%; margin-left:-499px; top:678px;}
+.con1 .mask{ position:absolute; left:50%; margin-left:-500px; top:0px;}
+.con1 .slide_wrap .bx-prev{ display:block; width:29px; height:57px; background:url(../images/up/con1_slide_next.png); text-indent:-9999px; overflow:hidden; position:absolute; top:28px; right:-50px;}
+.con1 .slide_wrap .bx-next{ display:block; width:29px; height:57px; background:url(../images/up/con1_slide_prev.png); text-indent:-9999px; overflow:hidden; position:absolute; top:28px; left:-50px}
+
+.con3{ height:720px; background:url(../images/up/con3_bg.jpg) no-repeat center top;}
+.con3 .con3_wrap{ width:956px; height:720px; margin:0 auto; position:relative; right:1px;}
+.con3 ul{}
+.con3 ul li{}
+.con3 ul li p{ float:left;}
+.con3 ul li p img{ display:block;}
+.con3 ul li .mouse_over{}
+.con3 ul li .mouse_over .pop{ position:absolute; left:0; top:0; display:none;}
+.con3 ul li .mouse_over:hover .pop{ display:block;}
+.con3 ul li .mouse_over .pop1{ left:478px;}
+.con3 ul li .mouse_over .pop2{ left:478px;}
+.con3 ul li .mouse_over .pop4{ left:478px;}
+.con3 ul li .mouse_over .pop5{ left:478px;}
+.con3 .con3_wrap .control{}
+.con3 .con3_wrap .control a{ position:absolute; bottom:10px; z-index:500;}
+.con3 .con3_wrap .control a.btn_prev{ left:420px;}
+.con3 .con3_wrap .control a.btn_next{ right:420px;}
+.con4{}
+.con4 .wrap{ position:relative;}
+.con4 .wrap input{ width:235px; height:33px; position:absolute; background:transparent; border:none;}
+.con4 .wrap textarea{ width:630px; height:133px; position:absolute; left:40px; top:255px; background:transparent; border:none;}
+
+

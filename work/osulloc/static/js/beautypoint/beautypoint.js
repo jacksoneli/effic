@@ -1,0 +1,225 @@
+var searchChk = "N";
+require(['$'], function() {
+	$( function(){
+		var date = new Date();
+		var on_nextDate = new Date(new Date().setMonth(new Date().getMonth()-1));
+		$('#startDate').val(dateToYYYYMMDD(on_nextDate));
+		$('#endDate').val(dateToYYYYMMDD(date));
+		$('#1Month').click(function(){
+			var curDate = date;
+			var nextDate = new Date(new Date().setMonth(new Date().getMonth()-1));
+			$('#startDate').val(dateToYYYYMMDD(nextDate));
+			$('#endDate').val(dateToYYYYMMDD(date));
+			
+			monthClassSetting(this);
+		});
+		$('#3Month').click(function(){
+			var curDate = date;
+			var nextDate = new Date(new Date().setMonth(new Date().getMonth()-3));
+			$('#startDate').val(dateToYYYYMMDD(nextDate));
+			$('#endDate').val(dateToYYYYMMDD(date));
+			
+			monthClassSetting(this);
+		});
+		$('#6Month').click(function(){
+			var curDate = date;
+			var nextDate = new Date(new Date().setMonth(new Date().getMonth()-6));
+			$('#startDate').val(dateToYYYYMMDD(nextDate));
+			$('#endDate').val(dateToYYYYMMDD(date));
+			
+			monthClassSetting(this);
+		});
+		$('#point').bind("keyup",function(str){
+			$(this).val($(this).val().toUpperCase());
+			if($(this).val().length == 16){
+				var str = $(this).val().replace(/\-/g,'');
+				$(this).val(str.substr(0,4)+"-"+str.substr(4,4)+"-"+str.substr(8,4)+"-"+str.substr(12,4));
+			}
+		});
+		$('#point').keydown(function(event) {
+			if (event.keyCode == '189') {
+				event.preventDefault();
+			}
+			if (event.keyCode == '109') {
+				event.preventDefault();
+			}
+		});
+		
+		$('#list-search').click(function(){
+			doSearch(0);
+		});
+		
+		$('#point-search').click(function(){
+			if($('#point').val() ==""){
+				alert("적립번호를 입력해 주세요.");
+				return false;
+			}
+			searchChk = "N";
+			 $.ajax({
+	                type : "GET",
+	                url : "/kr/ko/beautypoint/pointList",
+	                cache : false,
+	                data : "pointAccNo="+$('#point').val().replace(/\-/g,''),
+	                success : function(response) {
+	                	var jsonData = $.parseJSON(response);
+	                	var msg = jsonData.msg;
+	                	$('#beautyPoint tbody tr').remove();
+	                	if(jsonData.result == "S"){
+	                		searchChk = "Y";
+	                		var text = msg.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+	                		$('#beautyPoint tbody').html(text);
+	                	}else{
+	                		var listHtml = "<tr>";
+	                		listHtml += "<td colspan='6'>"+msg+"</td>";
+	                		listHtml += "</tr>";
+	                		$('#beautyPoint tbody').html(listHtml);
+	                		alert(msg);
+	                	}
+	                },
+	                error : function(xhr, status, error) {
+	                    popupNotification({
+	                        msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+	                        type: 'error',
+	                        timer: 7000
+	                    });
+	                }
+	            });
+		});
+		$('#point-update').click(function(evnet){
+			if(searchChk != "Y"){
+				alert("조회하기를 먼저 해주세요.");
+				return false;
+			}
+			var result = confirm('고객님의 구매내역과 정보가 일치하는 것을 확인하셨습니까?');
+			if(result){
+				var point  = $('#beautyPoint tbody tr td:eq("0")').text().replace(/\-/g,'');
+				var amt  = $('#beautyPoint tbody tr td:eq("5")').text();
+				$.ajax({
+					type : "POST",
+					url : "/kr/ko/beautypoint/pointUpdate",
+					cache : false,
+					data : "pointAccNo="+point,
+					dataType : "json",
+					success : function(data) {
+						if(data.result == "E"){
+							alert("적립 횟수를 초과했습니다. (1일 최대 5회) 고객 센터로 문의해 주세요. 031-8047-9388");
+						}else if(data.result == "maxPoint"){
+							alert("해당 년도에 "+data.maxPoint+"P는 적립 할수 없습니다. 고객 센터로 문의해 주세요. 031-8047-9388");
+						}else if(data.result == "S"){
+							alert("적립하신 "+data.point+"P는 약 10분 후 누적 뷰티포인트에 반영됩니다.");
+							location.href = "/kr/ko/beautypoint/list";
+						}else if(data.result == "notMal"){
+							alert("가입 처리 중입니다. 고객 센터로 문의해 주세요. 031-8047-9388");
+						}else{
+							alert("시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.");
+						}
+					},
+					error : function(xhr, status, error) {
+						popupNotification({
+							msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+							type: 'error',
+							timer: 3000
+						});
+					}
+				});
+			}
+			event.preventDefault();
+		});
+		
+	});
+});
+
+function doSearch(page){
+	$('#page').val(page);
+	listSearch();
+}
+
+function dateToYYYYMMDD(date)
+{
+    function pad(num) {
+        num = num + '';
+        return num.length < 2 ? '0' + num : num;
+    }
+    return date.getFullYear() + '-' + pad(date.getMonth()+1) + '-' + pad(date.getDate());
+}
+
+
+function dateToYYYYMMDD2(date)
+{
+    function pad(num) {
+        num = num + '';
+        return num.length < 2 ? '0' + num : num;
+    }
+    return date.getFullYear() + '' + pad(date.getMonth()+1) + '' + pad(date.getDate());
+}
+
+function fn_calcDayMonthCount(pStartDate, pEndDate, pType) {
+    var strSDT = new Date(pStartDate.substring(0,4),pStartDate.substring(4,6)-1,pStartDate.substring(6,8));
+    var strEDT = new Date(pEndDate.substring(0,4),pEndDate.substring(4,6)-1,pEndDate.substring(6,8));
+    var strTermCnt = 0;
+     
+    if(pType == 'D') {  //일수 차이
+        strTermCnt = (strEDT.getTime()-strSDT.getTime())/(1000*60*60*24);
+    } else {            //개월수 차이
+        //년도가 같으면 단순히 월을 마이너스 한다.
+        // => 20090301-20090201 의 경우(윤달이 있는 경우) 아래 else의 로직으로는 정상적인 1이 리턴되지 않는다.
+        if(pEndDate.substring(0,4) == pStartDate.substring(0,4)) {
+            strTermCnt = pEndDate.substring(4,6) * 1 - pStartDate.substring(4,6) * 1;
+        } else {
+            //strTermCnt = Math.floor((strEDT.getTime()-strSDT.getTime())/(1000*60*60*24*365.25/12));
+            strTermCnt = Math.round((strEDT.getTime()-strSDT.getTime())/(1000*60*60*24*365/12));
+        }
+    }
+    
+    return strTermCnt;
+}
+
+function listSearch(){
+	var startDate = $('#startDate').val();
+	var endDate = $('#endDate').val();
+	
+	var rStartDate = parseInt(startDate.replace(/\-/g,''),10);
+	var rEndDate = parseInt(endDate.replace(/\-/g,''),10);
+	
+	var diffMonth = fn_calcDayMonthCount(rStartDate+'', rEndDate+'', ''); //월차이
+	
+	var pastDate= dateToYYYYMMDD2(new Date(new Date().setMonth(new Date().getMonth()-36)));
+	pastDate = parseInt(pastDate,10);
+	
+	if(rStartDate > rEndDate){
+		alert("시작일이 종료일 보다 클 수 없습니다.");
+		return;
+	} else if(diffMonth > 12) {
+		alert("최대조회기간은 12개월 입니다.");
+		return;
+	} else if(rStartDate <= pastDate){
+		alert("최대 3년 이내 내역만 조회 가능합니다.");
+		return;
+	}
+	
+	 $.ajax({
+            type : "GET",
+            url : "/kr/ko/beautypoint/searchList",
+            cache : false,
+            data : "startDate="+startDate.replace(/\-/g,'')+"&endDate="+endDate.replace(/\-/g,'')+"&p="+$('#page').val(),
+            success : function(response) {
+                $('#beautyPointList table').remove();
+                $('#beautyPointList').html(response);
+            },
+            error : function(xhr, status, error) {
+                popupNotification({
+                    msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+                    type: 'error',
+                    timer: 7000
+                });
+            }
+        });
+}
+
+function monthClassSetting(obj){
+	$('#1Month').removeClass('btn-em');
+	$('#3Month').removeClass('btn-em');
+	$('#6Month').removeClass('btn-em');
+	
+	$(obj).addClass('btn-em');
+}

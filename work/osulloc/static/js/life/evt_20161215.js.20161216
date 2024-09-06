@@ -1,0 +1,144 @@
+
+require(['$'], function() {
+	$(function() {
+		var evtId = $("#evtId").val();
+		$("#checkEvt").click(function(event){
+			event.preventDefault();
+			
+			$.ajax({
+				type : "POST",
+				url : "/kr/ko/life/event/apply/evt20161215",
+				cache : false,
+				data : "give_name=&give_phone=&msg=&get_name=&get_phone=&seq="+evtId+"&method=check",
+				dataType : "json",
+				success : function(response) {
+					if(response.result == "success"){
+						$("#event161215").css("display","block"); 
+					}else if(response.result == "notTime"){
+						alert("이벤트 기간이 아닙니다.");
+					}else if(response.result == "notLogin"){
+						alert("로그인이 필요합니다.");
+						var url = "/kr/ko/login?r=/kr/ko/life/event/apply/"+evtId+"/check";
+						location.href=url;
+					}else if(response.result == "duplication"){
+						alert("이미 참여하셨습니다.");
+					}else{
+						popupNotification({
+							msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+							type: 'error',
+							timer: 3000
+						});
+					}
+				},
+				error : function(xhr, status, error) {
+					popupNotification({
+						msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+						type: 'error',
+						timer: 3000
+					});
+				}
+			});
+		});
+		
+		$("#give_phone").keydown(function(event) {
+			var key = event.which || event.keyCode;
+			if (key && (key <= 47 || key >= 58) && key != 8 && key !=189 && (key <= 95 || key >= 106) && key !=109) {
+		      event.preventDefault();
+		    }
+	    });
+		$('#get_phone').keydown(function(event) {
+			var key = event.which || event.keyCode;
+		    if (key && (key <= 47 || key >= 58) && key != 8 && key !=189 && (key <= 95 || key >= 106) && key !=109) {
+		      event.preventDefault();
+		    }
+		});
+		
+		$('#msg').on("keyup",function(){
+			var byteTxt = "";
+			var byte = function(str){
+				var byteNum=0;
+				for(var i=0;i<str.length;i++){
+					byteNum+=(str.charCodeAt(i)>127)?3:1;
+					if(byteNum<303){
+						byteTxt+=str.charAt(i);
+					};
+				};
+				return Math.round( byteNum/3 );
+			};
+			if(byte($(this).val())>100){
+				alert("100자 이상 입력할수 없습니다.");
+				$(this).val("");
+				$(this).val(byteTxt);
+			}
+		});
+		
+		$("#evt_insert").click(function(){
+			
+			if($("#give_name").val().trim() == ""){
+				alert("본인 성함을 입력해주세요.");
+				return false;
+			}
+			if($("#give_phone").val().trim() ==""){
+				alert("본인 연락처을 입력해주세요.");
+				return false;
+			}
+			if($("#msg").val() ==""){
+				alert("메세지 내용을 입력해주세요.");
+				return false;
+			}
+			if($("#get_name").val().trim() ==""){
+				alert("받는 사람 성함을 입력해주세요.");
+				return false;
+			}
+			if($("#get_phone").val().trim() ==""){
+				alert("받는 사람 연락처를 입력해주세요.");
+				return false;
+			}
+			if(!$('#chk1').is(':checked')){
+				alert("개인정보 수집 및 이용에 동의해주세요.");
+				return false;
+			}
+			if(!$('#chk2').is(':checked')){
+				alert("개인정보 처리위탁에 대해 동의해주세요.");
+				return false;
+			}
+			
+			var data = $("#evt_frm").serialize()+"&seq="+evtId+"&method=insert";
+
+			 $.ajax({
+					type : "POST",
+					url : "/kr/ko/life/event/apply/evt20161215",
+					cache : false,
+					data : data,
+					dataType : "json",
+					success : function(response) {
+						if(response.result == "success"){
+							alert("응모되셨습니다.");
+							location.reload();
+						}else if(response.result == "notTime"){
+							alert("이벤트 기간이 아닙니다.");
+						}else if(response.result == "notLogin"){
+							alert("로그인이 필요합니다.");
+							var url = "/kr/ko/login?r=/kr/ko/life/event/apply/"+evtId+"/check";
+							location.href=url;
+						}else if(response.result == "duplication"){
+							alert("이미 참여하셨습니다.");
+						}else{
+							popupNotification({
+								msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+								type: 'error',
+								timer: 3000
+							});
+						}
+					},
+					error : function(xhr, status, error) {
+						popupNotification({
+							msg: '시스템 에러가 발생하였습니다. 잠시 후 다시 시도해 주십시오. 문제가 계속 발생하면 관리자에게 문의해주십시오.',
+							type: 'error',
+							timer: 3000
+						});
+					}
+				});
+		});
+	});
+});

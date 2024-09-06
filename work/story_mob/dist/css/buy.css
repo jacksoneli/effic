@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.my_c{height: 72px; padding: 0 20px;}
+.my_c .left{float: left; margin-top: 35px;}
+.my_c .left .txt{font-size: 15px; color: #404040; line-height: 15px;}
+.my_c .right{float: right; margin-top: 30px;}
+.my_c .right .num{font-size: 21px; color: #404040; font-weight: 600; background: url(../../images/icons/44_cookie@2x.png) no-repeat 0 0; background-size: 24px; padding-left: 32px; line-height: 24px;}
+
+.cookie_boxes{border-top: 12px solid #f8f8f8; padding-top: 20px;}
+.cookie_boxes .upper{padding: 0 20px;}
+.cookie_boxes .upper .bnr{}
+.cookie_boxes .upper .bnr img{border-radius: 8px;}
+.cookie_boxes ul{margin-top: 17px; padding: 0 20px;}
+.cookie_boxes ul li{float: left; width: calc(33.33% - 6.666px); margin-left: 10px; margin-top: 15px;}
+.cookie_boxes ul li:nth-of-type(3n+1){margin-left: 0;}
+.cookie_boxes ul li a{display: block; color: #404040; text-align: center; padding-bottom: 12px; background: #f7f8f9; border-radius: 4px;}
+.cookie_boxes ul li a span{display: inline-block;}
+.cookie_boxes ul li .top{}
+.cookie_boxes ul li .top img{border-radius: 4px 4px 0 0;}
+.cookie_boxes ul li .num{margin-top: 5px; font-size: 17px; font-weight: 500; line-height: 15px;}
+.cookie_boxes ul li .num span{}
+.cookie_boxes ul li .price{display: block; margin-top: 11px; padding: 0 10px;}
+.cookie_boxes ul li .price .box{display: block; border-radius: 16px; background: linear-gradient(0deg, rgba(255,34,75,1) 0%, rgba(255,71,130,1) 100%); height: 32px; padding-top: 7px; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 0.2px;}
+.cookie_boxes ul li .price .box span{font-family: "AppleSDGothicNeo-Medium";}
+
+.pay{margin-top: 33.5px;}
+.pay .cont1{padding: 0 20px; padding-bottom: 28px; border-bottom: 12px solid #f8f8f8;}
+.pay .cont1 .lr_list{}
+.pay .cont2{margin-top: 40px; padding: 0 20px;}
+.pay .cont2 .contents__title2{margin-bottom: 28px;}
+.pay .cont2 .rad_wrap{}
+.pay .btn_wrap{margin-top: 48px; padding: 0 20px; border-top: 0;}
+.pay .btn_wrap a{width: 100%; font-weight: normal; letter-spacing: 0px;}
+.pay .btn_wrap a b{font-weight: bold;}
+
+.need_cookie{border-top: 0.5px solid #e7e7e7; padding: 24px 0; background: url(../../images/icons/versus@2x.png) no-repeat 50% 32.5px; background-size: 4px;}
+.need_cookie dl{text-align: center; float: left; width: 50%;}
+.need_cookie dl.right{float: right;}
+.need_cookie dt{color: #a9a9a9; font-size: 13px; line-height: 15px;}
+.need_cookie dd{color: #404040; font-size: 21px; line-height: 15px; margin-top: 10px; font-weight: 500;}
+.need_cookie dl.right dd{color: #ff8c1c;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

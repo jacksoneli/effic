@@ -1,0 +1,476 @@
+@charset "euc-kr";
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 event layout 
+ * Created   : 2013/10/21
+ * Updated   : 
+ ------------------------------------------------------------ */
+
+/* wrap */
+#event_wrap {
+	width:100%;
+}
+#inner_event {
+	width:960px;
+	margin:0 auto;
+	position:relative;
+}
+#inner_event .event_logo {
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.event_quiz {
+	width:100%;
+	position:relative;
+	padding-bottom:101px;
+	background:url('/img/event/bg_quiz_bottom.gif') no-repeat center bottom;
+}
+.event_quiz .bt_entry {
+	position:absolute;
+	left:673px;
+	bottom:26px;
+}
+.event_quiz .quizs {
+	position:absolute;
+	left:449px;
+	top:175px;
+	overflow:hidden;
+}
+.event_quiz .quizs span {
+	margin-right:16px;
+	width:33px;
+	display:block;
+	float:left;
+}
+.event_quiz .quizs input {
+	border:none;
+	width:33px;
+	text-align:center;
+	height:31px;
+	padding-top:1px;
+	line-height:31px !important;
+	color:#d79bb2;
+	font-weight:bold;
+	font-size:29px;
+}
+.sns_top {
+	background:url('/img/event/sns_bg.gif') no-repeat left top;
+	height:40px;
+	overflow:hidden;
+	padding:30px 57px 35px 59px;
+}
+.sns_top .sns_btns {
+	overflow:hidden;
+	float:left;
+	padding-right:10px;
+}
+.sns_top .sns_btns li {
+	float:left;
+	margin-right:4px;
+}
+.sns_top .sns_input {
+	height:39px;
+	line-height:39px !important;
+	border:none;
+	vertical-align:0px;
+	width:570px;
+	padding:0px 3px;
+	margin-right:2px;
+}
+.sns_top .img_m {
+*vertical-align:-5px;
+}
+.sns_bottom {
+	padding:30px 57px 145px 59px;
+	background:url('/img/event/sns_bg2.gif') no-repeat center bottom;
+}
+table.sns-list {
+	width:100%;
+}
+table.sns-list td {
+	border-bottom: 1px solid #d9d9d9;
+	padding:9px 0 11px;
+	text-align: center;
+}
+table.sns-list td.subject {
+	text-align:left;
+	padding-left:10px;
+}
+table.sns-list td.subject a {
+	line-height:14px;
+	padding-right:10px;
+}
+table.sns-list td img {
+	vertical-align:middle;
+}
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 이벤트 당첨자 layout 
+ * Created   : 2013/10/21
+ * Updated   : 
+ ------------------------------------------------------------ */
+#winner_wrap {
+	width:100%;
+}
+#inner_winner {
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	padding-bottom:42px;
+	background:url('/img/event/winner_bottom.gif') no-repeat center bottom;
+}
+.winner_middle {
+	width:840px;
+	padding:34px 80px 38px 80px;
+	background:url('/img/event/winner_middle.gif') repeat-y center top;
+}
+table.pr-list {
+	width:100%;
+}
+table.pr-list th {
+	border:1px solid #aaaaaa;
+	padding:10px 0 9px;
+	text-align:center;
+	color:#393939;
+	font-size:14px;
+}
+table.pr-list td {
+	border:1px solid #aaaaaa;
+	padding:7px 0;
+	text-align:center;
+	font-weight:bold;
+	color:#393939;
+}
+table.pr-list td.subject {
+	text-align:left;
+	padding-left:10px;
+	padding-right:10px;
+	color:#666666;
+	font-weight:normal;
+}
+table.pr-list td.subject a {
+	line-height:14px;
+	padding-right:10px;
+}
+table.pr-list td img {
+	vertical-align:middle;
+}
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 이벤트 당첨자 layout 
+ * Created   : 2013/10/21
+ * Updated   : 
+ ------------------------------------------------------------ */
+#winner_wrap {
+	width:100%;
+}
+#inner_winner {
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	padding-bottom:12px;
+	background:url('/img/event/winner_bottom.gif') no-repeat center bottom;
+}
+.winner_middle {
+	width:840px;
+	padding:34px 80px 38px 80px;
+	background:url('/img/event/winner_middle.gif') repeat-y center top;
+}
+table.pr-list {
+	width:100%;
+}
+table.pr-list th {
+	border:1px solid #aaaaaa;
+	padding:10px 0 9px;
+	text-align:center;
+	color:#393939;
+	font-size:14px;
+}
+table.pr-list td {
+	border:1px solid #aaaaaa;
+	padding:7px 0;
+	text-align:center;
+	font-weight:bold;
+	color:#393939;
+}
+table.pr-list td.subject {
+	text-align:left;
+	padding-left:10px;
+	padding-right:10px;
+	color:#666666;
+	font-weight:normal;
+}
+table.pr-list td.subject a {
+	line-height:14px;
+	padding-right:10px;
+}
+table.pr-list td img {
+	vertical-align:middle;
+}
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 facebook_event layout 
+ * Created   : 2013/10/28
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+.facebook_event01W {
+	width:736px;
+	height:649px;
+	background:url('/img/event/facebook_event01_bg.gif') no-repeat center top;
+	padding:0px 109px 0px 115px;
+}
+.facebook_event01W .bt_go {
+	text-align:right;
+	padding-bottom:8px;
+}
+.facebook_event01W .bt_share {
+	padding:36px 0px 0px 211px;
+}
+.sns_shareW {
+	width:100%;
+	background:#f6f6f6;
+	border-bottom:5px solid #666666;
+}
+
+.sns_shareW .sns_top {
+	width:900px;
+	margin:0 auto;
+	padding:32px 0px 31px 0px;
+	background:#666666;
+	overflow:hidden;
+	background-image:none;
+	height:40px;
+	overflow:hidden;
+
+}
+.sns_shareW .sns_top .sns_btns {
+	overflow:hidden;
+	float:left;
+	padding:0px 0px 0px 46px;
+}
+.sns_shareW .sns_top .sns_btns li {
+	float:left;
+	margin-right:15px;
+}
+.sns_shareW .sns_top .sns_input {	
+	width:640px;
+}
+.sns_shareW .sns_bottom {
+    background-image:none;
+    padding:1px 30px 85px 30px;
+	border:
+}
+.border_teable {border:4px solid #c3c3c3; padding:40px 24px; background:#FFF;}
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 superpack_event layout 
+ * Created   : 2013/12/28
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.entry { 
+     position: relative; 
+     width:960px;
+	 height:463px; 
+	 background:url('http://pic.neungyule.com/tomatoclass/img/event/2013/1210_tc_superpack/superpack_04.gif') no-repeat center top;
+}
+
+
+
+.entry .chk01{ position: absolute; top:55px; left: 98px;}
+.entry .chk02{ position: absolute; top:55px; left: 311px;}
+.entry .chk03{ position: absolute; top:55px; left: 525px;}
+.entry .chk04{ position: absolute; top:55px; left: 739px;}
+.entry .chk05{ position: absolute; top:207px; left: 98px;}
+.entry .chk06{ position: absolute; top:207px; left: 311px;}
+.entry .chk07{ position: absolute; top:207px; left: 525px;}
+.entry .chk08{ position: absolute; top:207px; left: 739px;}
+
+.entry .bt_go{ position: absolute; top:383px; left: 311px;}
+
+.sns_shareW_01 {
+	width:100%;
+	background:#1f112b;
+	
+}
+
+.sns_shareW_01 .sns_top {
+	width:900px;
+	margin:0 auto;
+	padding:32px 0px 31px 0px;
+	background:#666666;
+	overflow:hidden;
+	background-image:none;
+	height:40px;
+	overflow:hidden;
+
+}
+
+.sns_shareW_01 .sns_top .sns_btns {
+	overflow:hidden;
+	float:left;
+	padding:0px 0px 0px 46px;
+}
+
+.sns_shareW_01 .sns_top .sns_btns li {
+	float:left;
+	margin-right:15px;
+}
+
+.sns_shareW_01 .sns_top .sns_input {	
+    width:640px;
+
+}
+
+.sns_shareW_01 .sns_bottom {
+    background-image:none;
+    padding:1px 30px 0px 30px;
+	border:
+}
+
+.border_teable_01 {
+    border:4px solid #fff;
+	padding:40px 24px; 
+	background:#FFF;
+}
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 겨울방학 토준생 전폭지원 이벤트 event layout 
+ * Created   : 2013/12/23
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.after_w { 
+     position: relative; 
+     width:960px;
+	 height:400px; 
+	 vertical-align:top;
+	 padding-top:50px;
+	 padding-bottom:50px;
+	 background:url('http://pic.neungyule.com/tomatoclass/img/event/2013/1223_tc_payback/event_payback_imgbg.jpg') repeat bottom;
+	 text-align:center;
+}
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토마토 클래스 페이스북 좋아요 누르고 소원을말해봐 이벤트 event layout
+ * Created   : 2014/01/09
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.entry_01 { 
+     position: relative; 
+     width:960px;
+	 height:221px; 
+	 background:url('http://pic.neungyule.com/tomatoclass/img/event/2014/0109_facebooklike/02.jpg') no-repeat center top;
+}
+
+.entry_01 .likebtn{ position: absolute; top:66px; left: 746px; width:61px;  height: 20px; }
+.entry_01 .comment_btn{ position: absolute; top:112px; left: 593px; width:261px;  height: 25px; }
+
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 신규 강의 오픈 기념 교재무료 EVENT layout
+ * Created   : 2014/01/23
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.basic_mov {float:left;width:960px;height:219px;background:#f4f4f4;}
+.basic_mov li {float:left;}
+.basic_mov li .mov{width:358px;}
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 정월 대보름 맞이 이벤트 event layout
+ * Created   : 2014/02/10
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.f_likebtn{ position: absolute; top:478px; left:192px; width:61px;  height: 20px; }
+
+
+
+/* 2014 02 25 토단비 3일 무료 체험 */
+
+
+.free_tab {position:absolute;float:left;width:850px;}
+.free_tab li{float:left;width:211px;vertical-align:top;}
+
+.free_body_01 {position:absolute;width:850px;background:url('http://pic.neungyule.com/tomatoclass/img/common/free_page_tab01_bg.gif');margin-top:108px;}
+.free_body_02 {position:absolute;width:850px;background:url('http://pic.neungyule.com/tomatoclass/img/common/free_page_tab02_bg.gif');margin-top:108px;}
+.free_body_03 {position:absolute;width:850px;background:url('http://pic.neungyule.com/tomatoclass/img/common/free_page_tab03_bg.gif');margin-top:108px;}
+.free_body_04 {position:absolute;width:850px;background:url('http://pic.neungyule.com/tomatoclass/img/common/free_page_tab04_bg.gif');margin-top:108px;}
+
+.free_body_table {width:790px;text-align:center;}
+
+.free_after {width:790px;text-align:center;}
+
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 토단비 1+1 event layout
+ * Created   : 2014/03/05
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.db_1 {float:left;position:absolute;width:960px;height:250px;}
+.db_1 li {float:left;width:320px;}
+.db_1 li img {border:0px;}
+
+
+/* CSS Document */
+/* ------------------------------------------------------------
+ * Name      : event.css    
+ * Desc      : 타임세일이벤트 event layout
+ * Created   : 2014/04/02
+ * Updated   : 
+ ------------------------------------------------------------ */ 
+
+.timebg { 
+     position: relative; 
+     width:960px;
+	 height:312px; 
+	 background:url('http://pic.neungyule.com/tomatoclass/img/event/2014/0402_timesale/event_02.jpg') no-repeat center top;
+}
+
+.timebg .time01{ position: absolute; top:83px; left: 102px; width:100px;  height: 132px;}
+.timebg .time02{ position: absolute; top:83px; left: 203px; width:100px;  height: 132px;}
+.timebg .time03{ position: absolute; top:83px; left: 380px; width:100px;  height: 132px;}
+.timebg .time04{ position: absolute; top:83px; left: 481px; width:100px;  height: 132px;}
+.timebg .time05{ position: absolute; top:83px; left: 659px; width:100px;  height: 132px;}
+.timebg .time06{ position: absolute; top:83px; left: 760px; width:100px;  height: 132px;}
+
+.grp3{position:relative;width:100%;}
+.grp3 div{position:absolute;top:395px;width:143px;height:240px;}
+.grp3 div a{position:absolute;}
+.grp3 .grp3_1{left:90px;}
+.grp3 .grp3_2{left:303px;}
+.grp3 .grp3_3{left:518px;}
+.grp3 .grp3_4{left:730px;}
+.grp3 .grp3_5{top:787px;left:50px;width:970px; height:140px;}
+.grp3 .grp3_5 a{position:static;}
+.grp3 .btn1{left:32px;top:0;}
+.grp3 .btn2{left:89px;top:0;}
+.grp3 .btn3{left:32px;top:38px;}
+.grp3 .btn4{left:89px;top:38px;}
+.grp3 .btn5{left:0;top:258px;}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.story_up{padding-top: 56.5px; padding-bottom: 100px;}
+.story_up .title{height: 133.5px; position: relative; padding-left: 35px; padding-right: 35px;}
+.story_up .title .line{position: absolute; width: 200px; height: 8px; border-radius: 4px; background: #57e5d3; left: 35px; bottom: 48px;}
+.story_up .title .txt{font-size: 37px; letter-spacing: -0.25px; color: #191919; font-weight: bold; line-height: 44.5px; position: absolute; left: 35px; top: 0;}
+.story_up .up_step{padding-left: 35px; padding-right: 35px; margin-top: 63px;}
+.story_up .up_step article{height: 160px; border-radius: 12px; margin-top: 20px; padding-top: 28px; padding-left: 25px; background: url(../../images/bg/upload@2x.png) no-repeat right 25px bottom 24px #fff; background-size: 48px;}
+.story_up .up_step article:first-of-type{margin-top: 0;}
+.story_up .up_step article.a2{background-image: url(../../images/bg/story@2x.png)}
+.story_up .up_step article.a3{background-image: url(../../images/bg/money@2x.png)}
+.story_up .up_step article p{font-size: 17px; line-height: 24px; letter-spacing: -0.25px; font-weight: bold; color: #404040;}
+.story_up .btns_wrap{padding-left: 35px; padding-right: 35px; margin-top: 64px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

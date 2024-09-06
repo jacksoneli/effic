@@ -1,0 +1,876 @@
+@charset "utf-8";
+
+/*************************************공통***************************************/
+/*폰트컬러*/
+.pink{ color:#f75674 !important;}
+.mint{ color:#23c8c8 !important;}
+.gray{ color:#666 !important;}
+.dark{ color:#363840 !important;}
+.orange{ color:#ff7c1a !important;}
+
+/*백그라운드*/
+.bg_gray{ background:#eee;}
+
+/*레이아웃*/
+.wrap1000{ width:1000px; margin:0 auto;}
+.wrap980{ width:980px; margin:0 auto;}
+.center{ text-align:center !important; padding-left:0 !important; padding-right:0 !important;}
+
+/*제목*/
+.small_title{ padding-left:18px; font-size:18px; color:#363840; font-weight:bold; letter-spacing:-0.5px; background:url(http://pic.neungyule.com/nemiddle/common/small_title.png) no-repeat 0 2px;}
+.table_title{ color:#666; font-size:18px; font-weight:bold; margin-bottom:10px; display:inline-block;}
+
+/*체크박스*/
+a.chk{ display:inline-block; width:21px; height:21px; background:url(http://pic.neungyule.com/nemiddle/common/chk.png); text-indent:-9999px; overflow:hidden;}
+a.chk.on{ background-image:url(http://pic.neungyule.com/nemiddle/common/chk_on.png);}
+a.chk_white{ display:inline-block; width:21px; height:21px; background:url(http://pic.neungyule.com/netoeic/nemiddle/common/chk_white.png); text-indent:-9999px; overflow:hidden;}
+a.chk_white.on{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/common/chk_white_on.png);}
+a.chk_fav{ display:inline-block; width:50px; height:49px; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/chk_fav.png); text-indent:-9999px; overflow:hidden;}
+a.chk_fav.on{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/chk_fav_on.png);}
+a.chk_16{ display:inline-block; background:url(http://pic.neungyule.com/netoeic/nemiddle/common/chk_16.png) no-repeat left 6px; padding-left:20px; color:#666; font-size:13px; line-height:28px; }
+a.chk_16.on{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/common/chk_16_on.png);}
+
+/*라디오버튼*/
+a.radio{ display:inline-block; width:21px; height:21px; background:url(http://pic.neungyule.com/nemiddle/common/radio.png); text-indent:-9999px; overflow:hidden;}
+a.radio.on{ background-image:url(http://pic.neungyule.com/nemiddle/common/radio_on.png);}
+a.radio2{ display:inline-block; height:22px; background:url(http://pic.neungyule.com/nemiddle/common/radio.png) no-repeat 0 0; padding-left:26px; margin-right:20px;}
+a.radio2.on{ background-image:url(http://pic.neungyule.com/nemiddle/common/radio_on.png);}
+a.radio2 img{ position:relative; top:3px;}
+
+/*공지*/
+.exclamation_notice{ padding-left:23px; font-size:13px; color:#666; letter-spacing:-0.5px; background:url(http://pic.neungyule.com/nemiddle/common/exclamation.png) no-repeat;}
+.exclamation_notice a{ color:#ff7c1a; text-decoration:underline;}
+.megaphone_notice{ width:790px;}
+.megaphone_notice h5{ height:56px; line-height:56px; padding-left:55px; font-size:18px; font-weight:bold; color:#363840; background:url(http://pic.neungyule.com/nemiddle/common/megaphone_notice_bg.png);}
+.megaphone_notice p{ letter-spacing:-1px; width:750px; line-height:22px; border:2px solid #ddd; border-top:none; border-radius:0 0 14px 14px; padding:12px 18px; color:#363840; font-size:13px;}
+.megaphone_notice p a{ color:#ff7c1a; text-decoration:underline;}
+.megaphone_notice_980{ width:980px;}
+.megaphone_notice_980 h5{ height:56px; line-height:56px; padding-left:55px; font-size:18px; font-weight:bold; color:#363840; background:url(http://pic.neungyule.com/nemiddle/common/megaphone_notice_bg_980.png);}
+.megaphone_notice_980 p{ width:940px; line-height:22px; border:2px solid #ddd; border-top:none; border-radius:0 0 14px 14px; padding:12px 18px; color:#363840; font-size:13px;}
+.notice_box{ padding:18px; border:1px solid #ddd; border-radius:14px;}
+.small_notice{ font-size:12px; color:#656565;}
+.normal_notice{ color:#333; font-size:13px; line-height:22px;}
+.pink_notice{ color:#f75674; font-size:13px;}
+.notice_with_btn{ padding:16px; border:2px solid #ddd; border-radius:14px; overflow:hidden; font-size:13px; color:#363840; margin-bottom:21px;}
+.notice_with_btn .left{ float:left; width:600px; line-height:22px;}
+.notice_with_btn .right{ float:right;}
+.notice_with_btn .right a{ display:block; margin:2px 0;}
+
+/*width 790px 안에 탭2개*/
+.tabs_two{ margin-bottom:20px; overflow:hidden;}
+.tabs_two li{float:left;}
+.tabs_two li a{ display:block; width:389px; height:40px; line-height:32px; color:#666; font-size:14px; text-align:center; background:url(http://pic.neungyule.com/nemiddle/common/tabs_two.png) no-repeat;}
+.tabs_two li.on a{ font-weight:bold; color:#fff; background-image:url(http://pic.neungyule.com/nemiddle/common/tabs_two_on.png);}
+/*탭4개*/
+.tabs_four{ margin-bottom:10px; overflow:hidden;}
+.tabs_four li{float:left; margin-right:4px;}
+.tabs_four li.last{margin-right:0;}
+.tabs_four li a{ display:block; width:194px; height:41px; line-height:32px; color:#666; font-size:14px; text-align:center; background:url(http://pic.neungyule.com/netoeic/nemiddle/common/tabs_four.png) no-repeat;}
+.tabs_four li a:hover,
+.tabs_four li.on a{ font-weight:bold; color:#fff; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/common/tabs_four_on.png);}
+
+/*셀렉트*/
+.select_area{ text-align:right; margin-bottom:10px;}
+.select_area select{ border:1px solid #ddd; width:112px; padding-left:10px; height:32px; border-radius:15px;}
+
+/*게시판 등록 버튼*/
+div.write_btn{ text-align:right; margin-top:20px;}
+
+/*게시판 페이지 번호*/
+.bbs_pager{ text-align:center; margin:16px 0 18px;}
+.bbs_pager li{ display:inline-block; margin:0 3px;}
+.bbs_pager li a{ font-size:13px; color:#666;}
+.bbs_pager li a.on{color:#ff7c1a; font-weight:bold;}
+.bbs_pager li a img{ position:relative; top:6px;}
+
+/*게시판 검색*/
+.bbs_search{ text-align:center;}
+.bbs_search select{ border:1px solid #ddd; width:112px; padding-left:10px; height:32px; border-radius:15px; margin-right:3px;}
+.bbs_search .input_box{ width:260px; padding-left:10px; height:30px; border:1px solid #ddd; border-radius:15px; margin-right:3px;}
+.bbs_search .btn{ position:relative; top:13px;}
+
+/*게시판조회*/
+.bbs_read{}
+.bbs_read .btn{ text-align:center; margin-top:20px;}
+.bbs_table{ border-top:2px solid #333;}
+.bbs_table tr{border:1px solid #ddd;}
+.bbs_table tr td{height:39px;}
+.bbs_table tr td.title_box{ padding-left:18px; color:#666; background:#eee;}
+.bbs_table tr td.title{ padding-left:8px; font-size:13px; color:#333; }
+.bbs_table tr td.file{ padding-left:8px; font-size:13px; color:#23c8c8; }
+.bbs_table tr td.cont{ color:#333; font-size:13px; padding:18px;}
+.bbs_table tr td.answer_title{ color:#fff; font-size:13px; height:40px; padding-left:35px; background:url(http://pic.neungyule.com/nemiddle/common/answer.png) no-repeat 11px 11px #333;}
+.bbs_table.thick tr td{height:58px;}
+.bbs_table.thick tr td.title_box{ text-align:center; padding:0;}
+.bbs_table.thick tr td.title{ padding-left:20px;}
+.bbs_table input[type=text]{ height:27px; border:1px solid #ddd; width:98%;}
+.bbs_table select{ height:29px; border:1px solid #ddd; width:248px; margin-top:5px;}
+.bbs_table tr td .book_img{ border:1px solid #e1e1e1;}
+
+/*테이블1*/
+.table_border_top{ width:100%; border-top:3px solid #333; margin-bottom:18px;}
+.table_border_top tr{ border:1px solid #ddd;}
+.table_border_top tr td{ padding:10px 0;}
+.table_border_top tr td.title{ width:130px; padding-left:17px; background:#eee; color:#666; font-size:13px;}
+.table_border_top tr td.cont{ color:#363840; font-size:13px; padding-left:10px;}
+.table_border_top tr td.cont.date{ position:relative;}
+.table_border_top tr td.cont.date a{ position:absolute; right:6px; top:7px;}
+.table_border_top tr td.cont.period{}
+.table_border_top tr td.cont.period select{ width:281px; height:29px; border:1px solid #ddd;}
+.table_border_top tr td.cont.period span{ color:#666; font-size:13px; margin-left:9px;}
+.table_border_top tr td.cont input{ height:27px; border:1px solid #ddd;}
+.table_border_top.border tr td{ border:1px solid #ddd;}
+.table_border_top.height49 tr td{ height:49px; padding-top:0; padding-bottom:0;}
+
+/*테이블2*/
+.myclass_table{width:100%; font-size:13px; text-align:center; color:#666;}
+.myclass_table thead{}
+.myclass_table thead tr{}
+.myclass_table thead tr th{ height:40px; font-weight:normal; background:#333; color:#fff;}
+.myclass_table thead tr th.first{ background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/thead_first.jpg) no-repeat left top #333;}
+.myclass_table thead tr th.last{ background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/thead_last.jpg) no-repeat right top #333;}
+.myclass_table thead tr th.last{}
+.myclass_table tbody{}
+.myclass_table tbody tr{}
+.myclass_table tbody tr td{ border:1px solid #ddd; border-top:none; color:#363840;}
+.myclass_table tbody tr td.title{ text-align:left; padding:0 10px; color:#333;}
+.myclass_table tbody tr td.lett_spac{ letter-spacing:-1px;}
+.myclass_table tbody tr td.date a{ display:inline-block; margin-bottom:10px;}
+.myclass_table tbody tr td.date p{ color:#333;}
+.myclass_table tbody tr td.buttons{padding:17px 0;}
+.myclass_table tbody tr td.buttons a{ display:inline-block; margin-bottom:3px;}
+.myclass_table tbody tr td a{ color:#363840;}
+.myclass_table tbody tr td a:hover{ color:#000;}
+.myclass_table.in_tab tbody td{ height:60px;}
+.myclass_table.height40 tbody td{ height:40px;}
+.myclass_table.height50 tbody td{ height:50px;}
+.myclass_table.padding12 tbody td{ padding:12px 0;}
+.myclass_table.padding20 tbody td{ padding:20px 0;}
+.myclass_table.gray_font tbody td{ color:#666;}
+.myclass_table.gray_font tbody td a{ color:#666;}
+.myclass_table tbody tr.cart_total{ background:#eee; height:60px;}
+.myclass_table tbody tr.cart_total .txt{ color:#666; font-size:16px; padding-right:22px; text-align:right;}
+.myclass_table tbody tr.cart_total .price{ color:#f75674; font-size:30px; font-weight:bold; text-align:right; padding-right:10px;}
+.myclass_table.no_border tbody tr{ border:1px solid #ddd;}
+.myclass_table.no_border tbody tr td{border:none;}
+.myclass_table tbody tr td.course_tit_box{ text-align:left; padding-left:15px; position:relative;}
+.myclass_table tbody tr td.course_tit_box .course_title{ font-size:18px; font-weight:bold; color:#333; line-height:32px; cursor:pointer;}
+.myclass_table tbody tr td.course_tit_box .course_cont{ cursor:pointer;}
+.myclass_table tbody tr td.course_tit_box .bnts_area{position:relative;}
+.myclass_table tbody tr td.course_price_box{ color:#666; letter-spacing:-1px;}
+.myclass_table tbody tr td.course_price_box s{ font-size:15px;}
+.myclass_table tbody tr td.course_price_box .price{ font-size:20px; color:#f75674; font-weight:bold; line-height:28px;}
+.myclass_table tbody tr td.course_price_box .discount{ font-size:13px;}
+.myclass_table tbody tr td.course_price_box .discount span{ color:#23c8c8;}
+
+/*팝업 제목*/
+h2.pop_title{ position:relative; height:48px; line-height:48px; color:#fff; font-size:18px; font-weight:bold; padding-left:16px; background:#fdab01; border-radius:14px 14px 0 0;}
+h2.pop_title a{ position:absolute; right:10px; top:10px;}
+/*팝업 내 공지*/
+.pop_notice{ font-size:13px; color:#666;}
+/*팝업 내 버튼*/
+.pop_btn_area{ text-align:center;}
+.pop_btn_area a{ position:relative; display:inline-block; width:105px; height:32px; line-height:32px; background:#23c8c8; color:#fff; font-size:14px; border-radius:15px; margin:0 1px;}
+.pop_btn_area a span{ position:absolute; right:11px; color:#444; font-weight:bold;}
+.pop_btn_area a.gray{ height:30px; line-height:30px; border:1px solid #ddd; background:#eee; color:#666;}
+
+/*새창으로 뜨는 팝업*/
+.window_pop{}
+.window_pop h2{ border-radius:0;}
+.window_pop .contents_area{ padding:20px;}
+.window_pop .contents_area p{ font-size:13px; color:#666; margin-bottom:30px;}
+.window_pop .contents_area h3{ font-size:15px; font-weight:bold; margin-bottom:10px;}
+
+/***************************************내강의실*****************************************/
+/*공통*/
+.my_class{ width:1000px; margin:0 auto; padding-top:37px; padding-bottom:100px; overflow:hidden;}
+.my_class .left_menu{ width:160px; padding:0 31px 0 9px; float:left; letter-spacing:0;}
+.my_class .left_menu h3{ margin-bottom:11px;}
+.my_class .left_menu ul{}
+.my_class .left_menu ul li{ margin-bottom:14px;}
+.my_class .left_menu ul li.message{ margin-bottom:16px;}
+.my_class .left_menu ul li dl{}
+.my_class .left_menu ul li dl dt{}
+.my_class .left_menu ul li dl dt a{ display:block; height:31px; padding-top:11px; padding-left:12px; font-size:14px; color:#333; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_title.jpg);}
+.my_class .left_menu ul li dl dt a.on,
+.my_class .left_menu ul li dl dt a:hover{color:#fff; background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_title_on.jpg);}
+.my_class .left_menu ul li.message dl dt a{ background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_title_message.png);}
+.my_class .left_menu ul li.message dl dt a.on,
+.my_class .left_menu ul li.message dl dt a:hover{ background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_title_message_on.png);}
+.my_class .left_menu ul li dl dd{}
+.my_class .left_menu ul li dl dd a{ display:block; height:25px; padding-top:5px; padding-left:12px; font-size:13px; color:#666; background:#eee;}
+.my_class .left_menu ul li dl dd a.on,
+.my_class .left_menu ul li dl dd a:hover{color:#fff; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_subtitle_on.jpg);}
+.my_class .left_menu ul li dl dd.last a{ height:34px; background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_subtitle_last.jpg);}
+.my_class .left_menu ul li dl dd.last a.on,
+.my_class .left_menu ul li dl dd.last a:hover{background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/menu_subtitle_last_on.jpg);}
+.my_class .sub_cont{ width:790px; float:right; margin-right:10px;}
+.my_class .title_area{ width:100%; margin-bottom:30px;}
+.my_class .title_area tr{}
+.my_class .title_area tr td{ height:56px; border-bottom:3px solid #ff7c1a;}
+.my_class .title_area tr td.title{width:240px; padding-left:12px; color:#333; font-size:24px; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/common/title_bg.png) no-repeat 0 7px;}
+.my_class .title_area tr td.category{ border-color:#333;}
+.my_class .title_area tr td.category img{ position:relative; top:3px;}
+.my_class .title_area tr td.category ul{ text-align:right;}
+.my_class .title_area tr td.category ul li{ display:inline-block; margin:0 1px;}
+.my_class .title_area tr td.category ul li a{ font-size:13px; color:#4a4a4a;}
+.my_class .title_area tr td.category ul li a.on{ color:#ff7c1a;}
+/*탭*/
+.tab_shape{margin-bottom:12px; position:relative}
+.tab_shape ul{}
+.tab_shape ul li{ display:inline-block;}
+.tab_shape ul li a{ display:block; width:105px; height:33px; padding-top:7px; font-size:13px; color:#666; text-align:center; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/tab.png) no-repeat;}
+.tab_shape ul li a.on{ color:#fefefe; font-weight:bold; background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/tab_on.png);}
+.tab_shape ul li a:hover{ color:#fefefe; font-weight:bold; background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/tab_on.png);}
+
+/*수강중인 강좌*/
+.my_class .sub_cont .tab_shape .my_freepass{ position:absolute; right:0; top:0;}
+.pause_pop{ position:absolute; width:628px; left:50%; margin-left:-314px; top:280px; z-index:5100; border-radius:14px; background:#fff;}
+.pause_pop .pop_cont{ padding:20px 20px 0 20px;}
+.cancle_pop{ position:absolute; width:628px; left:50%; margin-left:-314px; top:280px; z-index:5100; border-radius:14px; background:#fff;}
+.cancle_pop .pop_cont{ padding:20px 20px 0 20px;}
+.start_pop{ position:absolute; width:548px; left:50%; margin-left:-274px; top:280px; z-index:5100; border-radius:14px; background:#fff;}
+.start_pop .pop_cont{ padding:20px 20px 0 20px;}
+.start_pop .month{ margin-left:85px; margin-bottom:12px;}
+.start_pop .month a{position:relative; top:-1px; margin:0 3px;}
+.start_pop .month span{ color:#666; font-size:13px; font-weight:bold;}
+.start_pop .select_area{ overflow:hidden; margin-bottom:16px; border-bottom:1px solid #ddd;}
+.start_pop .select_area .calendar{ float:left;}
+.start_pop .select_area .calendar table{text-align:center; border:1px solid #aaa; margin-bottom:30px;}
+.start_pop .select_area .calendar table a{color:#333;}
+.start_pop .select_area .calendar table thead{}
+.start_pop .select_area .calendar table thead tr{ height:40px; background:#666; color:#fff;}
+.start_pop .select_area .calendar table thead tr th{ width:36px;}
+.start_pop .select_area .calendar table thead tr th.sun{ color:#b60000; border-left:1px solid #57bfd5;}
+.start_pop .select_area .calendar table thead tr th.last{border-right:none;}
+.start_pop .select_area .calendar table tbody{}
+.start_pop .select_area .calendar table tbody tr{ height:26px;}
+.start_pop .select_area .calendar table tbody tr td{}
+.start_pop .select_area .calendar table tbody tr td.sun a{ color:#d10000;}
+.start_pop .select_area .calendar table tbody tr td.today{ background:#e1e1e1;}
+.start_pop .select_area .period_list{ float:right; width:240px;}
+.start_pop .select_area .period_list ul{font-size:13px;}
+.start_pop .select_area .period_list ul li{ width:100%; text-align:left;}
+.start_pop .select_area .period_list ul li p{ height:20px; line-height:20px; color:#666;}
+.start_pop .select_area .period_list ul li p.title{ color:#f75674;}
+.start_pop .select_area .period_list ul li p.period{ margin-bottom:35px;}
+
+/*수강중인 강좌-강의실*/
+.sub_cont .lec_title{ position:relative; height:66px; line-height:66px; font-size:24px; color:#333; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/lec_title_bg.png); padding-left:71px; margin-bottom:10px;}
+.sub_cont .lec_title span{ position:absolute; left:255px; top:0; font-size:20px; font-weight:normal;}
+.sub_cont .period_area{ overflow:hidden; height:40px; margin-bottom:42px; padding-left:15px; letter-spacing:-1px; background:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/perido_bg.jpg);}
+.sub_cont .period_area .date{height:40px; line-height:40px; float:left; margin-right:10px;}
+/*.sub_cont .period_area .study{height:40px; line-height:40px;}
+.sub_cont .period_area .refund{height:40px; line-height:40px;}*/
+.sub_cont .period_area div .title{ color:#ff7c1a; font-weight:bold; font-size:17px; margin-right:6px; float:left;}
+.sub_cont .period_area div .date{ color:#666; font-weight:bold; font-size:14px; float:left;}
+.sub_cont .period_area a{ position:absolute; right:9px; top:6px; display:block; width:144px; height:27px; line-height:27px; text-align:center; font-size:12px; color:#333; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/exam_btn_bg.png);}
+/*.sub_cont .progress_graph{ position:relative; height:40px; margin-bottom:30px; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/progress_graph.png);}
+.sub_cont .progress_graph .stick_wrap{ width:661px; height:9px; position:absolute; left:18px; top:15px;}
+.sub_cont .progress_graph .stick_wrap .stick{ height:100%; background:#fdab01; text-indent:-9999px; overflow:hidden;}
+.sub_cont .progress_graph .stick_wrap .today{ position:absolute; top:-48px; margin-left:-10px;}
+.sub_cont .progress_graph span{ font-size:15px; color:#333; position:absolute; right:25px; top:10px;}*/
+.sub_box2_wrap{ height:80px;}
+.sub_box2 {height:35px; background:#fff; border:1px solid #ddd; border-radius:35px; box-sizing:border-box; padding:7px 8px;}
+.sub_box2_1 {height:10px; background:#eee; border-radius:18px; position:relative; border:4px solid #eee;}
+.sub_box2_1 .bar2 {position:absolute; height:10px; background:#cfcfcf; left:0; top:0; border-radius:10px;}
+.sub_box2_1 .bar {position:absolute; height:10px; background:#fdab01; right:0; top:0; border-radius:10px;}
+.sub_box2_1 .today {position:relative;}
+.sub_box2_1 .today span {position:absolute; top:-40px; z-index:100;}
+.sub_box2_1 .today span b {display:block; text-align:center; font-size:13px; color:#333; font-weight:600; padding-bottom:2px;}
+.sub_box2_1 .today span img {width:18px; display:block; margin:0 auto;}
+.sub_box2_txt {text-align:center; font-size:13px; color:#343434; padding-top:4px; margin-bottom:11px;}
+.sub_box2_1 .txt {position:absolute; left:0; top:-30px; width:100%;}
+.sub_box2_1 .txt span {display:inline-block; vertical-align:top; text-align:center;}
+.sub_cont .tab_area{overflow:hidden;}
+.sub_cont .tab_area ul{ float:left; position:relative; width:100%;}
+.sub_cont .tab_area ul li{ display:inline-block;}
+.sub_cont .tab_area ul li a{ display:block; width:105px; height:33px; padding-top:7px; font-size:13px; color:#666; text-align:center; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/tab.png);}
+.sub_cont .tab_area ul li.on a,
+.sub_cont .tab_area ul li a:hover{ color:#fefefe; font-weight:bold; background-image:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/tab_on.png);}
+.sub_cont .tab_area ul li.refund{ position:absolute; right:17px;; top:-7px;}
+.sub_cont .tab_area ul li.refund a,
+.sub_cont .tab_area ul li.refund a:hover{background:none;}
+.sub_cont .tab_conts{ margin-top:10px; border-top:2px solid #ddd;}
+.sub_cont .tab_conts .progress{ margin-top:30px; overflow:hidden; margin-bottom:36px;}
+.sub_cont .tab_conts .progress .progress_rate{ width:247px; text-align:center; float:left;}
+.sub_cont .tab_conts .progress .progress_rate .small_title{ margin-bottom:28px; display:inline-block;}
+.sub_cont .tab_conts .progress .progress_rate .graph{ position:relative; text-align:center;}
+.sub_cont .tab_conts .progress .progress_rate .graph img{}
+.sub_cont .tab_conts .progress .progress_rate .graph .percent{ font-size:49px; color:#23c8c8; font-weight:bold; position:absolute; left:71px; top:80px;}
+.sub_cont .tab_conts .progress .progress_rate.training .graph .percent{color:#f84869;}
+.sub_cont .tab_conts .progress .progress_rate .graph .class_num{ color:#363840; font-size:24px; font-weight:bold; position:absolute; left:85px; top:119px;}
+.sub_cont .tab_conts .progress .progress_rate .graph .class_num span{ font-size:15px; font-weight:normal;}
+.sub_cont .tab_conts .progress .exam{ width:296px; float:right; text-align:center;}
+.sub_cont .tab_conts .progress .exam .small_title{ margin-bottom:54px; display:inline-block;}
+.sub_cont .tab_conts .progress .exam ul{ text-align:center;}
+.sub_cont .tab_conts .progress .exam ul li{ display:inline-block; width:92px; text-align:center;}
+.sub_cont .tab_conts .progress .exam ul li .title{ color:#363840; font-size:14px; margin-bottom:8px;}
+.sub_cont .tab_conts .progress .exam ul li .status{ display:inline-block; margin-bottom:8px; width:72px; height:72px; line-height:72px; color:#333; font-size:18px; text-align:center; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/my_class/ongoing/exam_bg.png);}
+.sub_cont .tab_conts .progress .exam ul li .status.done{line-height:normal; color:#f75674; height:56px; padding-top:16px;}
+.sub_cont .tab_conts .step_tabs{ margin-top:30px; overflow:hidden; position:relative; margin-bottom:20px;}
+.sub_cont .tab_conts .step_tabs li{ width:174px; height:52px; float:left;}
+.sub_cont .tab_conts .step_tabs li.tab5{ position:absolute; right:-10px; top:0;}
+.sub_cont .tab_conts .step_tabs li a{ display:block; height:100%;position:relative; padding-left:50px; padding-top:10px; color:#666; font-size:14px;}
+.sub_cont .tab_conts .step_tabs li.on a{color:#333;}
+.sub_cont .tab_conts .step_tabs li a span{ display:block; font-weight:bold;}
+.sub_cont .tab_conts .step_tabs li.on a span{ color:#fff;}
+.sub_cont .tab_conts .step_tabs li.tab1 a{ background:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap1.png); z-index:500;}
+.sub_cont .tab_conts .step_tabs li.tab2 a{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2.png); right:32px; z-index:490;}
+.sub_cont .tab_conts .step_tabs li.tab3 a{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2.png); right:64px; z-index:480;}
+.sub_cont .tab_conts .step_tabs li.tab4 a{ background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2.png); right:96px; z-index:470;}
+.sub_cont .tab_conts .step_tabs li.tab5 a{ width:162px; padding:0; line-height:52px; text-align:center; font-size:15px; font-weight:bold; color:#fff; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/step_exam.png);}
+.sub_cont .tab_conts .step_tabs li.tab1.on a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap1_on.png);}
+.sub_cont .tab_conts .step_tabs li.tab2.on a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2_on.png);}
+.sub_cont .tab_conts .step_tabs li.tab3.on a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2_on.png);}
+.sub_cont .tab_conts .step_tabs li.tab4.on a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/my_class/stap2_on.png);}
+.step_conts{}
+.step_conts .step_title{ color:#23c8c8; font-size:24px; font-weight:bold; margin-bottom:26px;}
+.refund_policy{ border:2px solid #ddd; border-radius:14px; margin-top:20px; background:#eee; padding:20px; margin-bottom:20px;}
+.refund_policy ul{ padding:16px; background:#fff; border:10x solid #ddd; font-size:13px; color:#333; margin-top:12px; margin-bottom:20px;}
+.refund_policy ul li{ height:22px; line-height:22px;}
+.refund_policy .btns{ text-align:center;}
+.complete_pop{}
+.complete_pop .upper{ background:#ededed; padding:10px 25px 0 25px;}
+.complete_pop .upper ul{}
+.complete_pop .upper ul li{ color:#363840; font-size:16px; font-weight:bold; border-bottom:1px dashed #a1a1a1; line-height:40px; position:relative;}
+.complete_pop .upper ul li.last{ border-bottom:none;}
+.complete_pop .upper ul li a{ position:absolute; right:4px; top:10px;}
+.complete_pop .lower{ padding-top:20px; text-align:center;}
+.complete_pop .lower p{ font-size:13px; color:#666; margin-bottom:23px; line-height:28px;}
+.complete_pop .lower p b{ font-weight:bold; color:#000;}
+.refund_pop{}
+.refund_pop .upper{ padding:10px 22px 5px;}
+.refund_pop .upper h4{ color:#363840; font-weight:bold; font-size:13px; margin-bottom:3px;}
+.refund_pop .upper p{ font-size:13px; color:#666;}
+.refund_pop .upper p span{color:#f00;}
+.refund_pop .lower{ background:#ededed; text-align:center; padding:7px 0;}
+.refund_pop .lower form{}
+.refund_pop .lower form label{ color:##666; font-size:13px; display:inline-block; margin-bottom:3px;}
+.refund_pop .lower form label input{ width:157px; height:20px; border:1px solid #ddd;}
+.refund_pop .lower form p{ color:#666; font-size:13px; margin:10px 0;}
+.refund_pop .lower form .tel{ margin-bottom:10px;}
+.refund_pop .lower form .tel input{ width:65px; height:20px; border:1px solid #ddd;}
+.refund_pop .lower .notice{ font-size:12px; color:#f00;}
+.refund_pop .btn{ text-align:center; padding:12px 0 8px;}
+.refund_pop .btn a{}
+.refund_pop .btn p{ margin-top:8px; font-size:13px; color:#666;}
+
+/*수강완료강좌_수강증팝업*/
+.certificate_pop{ position:absolute; width:521px; left:50%; margin-left:-260px; top:280px; z-index:5100; border-radius:14px; background:#fff;}
+.certificate_pop .pop_title{background:#000; height:48px;}
+.certificate_pop .pop_title >img{ position:relative; top:15px;}
+.certificate_pop .pop_cont{ padding:0px 20px 30px 20px;}
+.certificate_pop .pop_cont h3{ font-size:46px; font-weight:bold; color:#363840; text-align:center; height:120px; line-height:120px; border-bottom:1px solid #ddd; letter-spacing:10px; margin-bottom:10px;}
+.certificate_pop .pop_cont table.user{ margin:14px;}
+.certificate_pop .pop_cont table.user tr{}
+.certificate_pop .pop_cont table.user tr td{ font-size:13px; color:#363840; height:28px;}
+.certificate_pop .pop_cont table.user tr td.title{width:90px; font-weight:bold;}
+.certificate_pop .pop_cont .address{ border:1px solid #ddd; background:#eee; font-size:12px; color:#666; padding:8px 10px; margin-bottom:21px;}
+
+/*나의 교재*/
+.mybook_top{ height:66px; background:url(http://pic.neungyule.com/nemiddle/my_class/my_book/book_top_bg.png) no-repeat; margin-bottom:20px; overflow:hidden;}
+.mybook_top p{ float:left;}
+.mybook_top .book_num{ font-size:20px; color:#333; margin-left:53px; margin-top:22px;}
+.mybook_top .book_num span{ color:#f75674; font-size:24px; font-weight:bold; margin-left:8px; margin-right:3px;}
+.mybook_top a{ display:block; float:left; margin-left:220px; margin-top:19px;}
+.mybook_top .exclamation_notice{ float:left; margin-left:13px; margin-top:24px; color:#333;}
+.mybook_boxes{ overflow:hidden;}
+.mybook_boxes >li{ width:380px; height:306px; border:2px solid #ddd; border-radius:14px; float:left; margin-bottom:20px;}
+.mybook_boxes >li.left{ margin-right:21px;}
+.mybook_boxes >li a.book{ display:block; padding:20px 12px 20px 20px; overflow:hidden;}
+.mybook_boxes >li a.book .book_img{ float:left;}
+.mybook_boxes >li a.book .book_img img{}
+.mybook_boxes >li a.book .cont{ float:right; width:205px; height:172px; position:relative;}
+.mybook_boxes >li a.book .cont .date{ margin-bottom:8px; width:106px; height:27px; line-height:26px; text-align:center; color:#ff7c1a; font-size:12px; background:url(http://pic.neungyule.com/nemiddle/my_class/my_book/date_bg.png) no-repeat;}
+.mybook_boxes >li a.book .cont .date.reg{color:#fff; background-image:url(http://pic.neungyule.com/nemiddle/my_class/my_book/reg_date_bg.png);}
+.mybook_boxes >li a.book .cont h6{ color:#363840; font-weight:bold; font-size:18px; margin-bottom:6px; line-height:20px;}
+.mybook_boxes >li a.book .cont p{ color:#666; font-size:13px; margin-bottom:20px;}
+.mybook_boxes >li a.book .cont img{ position:absolute; left:0; bottom:0;}
+.mybook_boxes >li .service{ background:#f3f3f3; height:66px; padding:14px 20px; border-radius:0 0 14px 14px;}
+.mybook_boxes >li .service h6{ margin-bottom:7px; font-size:13px; padding-left:20px; color:#333; font-weight:bold; background:url(http://pic.neungyule.com/nemiddle/my_class/my_book/ico_service.png) no-repeat;}
+.mybook_boxes >li .service ul{ overflow:hidden;}
+.mybook_boxes >li .service ul li{ float:left; margin-right:5px;}
+.mybook_boxes >li .service ul li a{ color:#666; font-size:13px;}
+
+/*주문 배송 조회*/
+.period_box{ height:66px; overflow:hidden; background:url(http://pic.neungyule.com/nemiddle/my_class/order/period_box_bg.png) no-repeat; margin-bottom:19px;}
+.period_box .btns_area{ float:left;}
+.period_box .btns_area span{ color:#333; font-size:14px; font-weight:bold; margin-left:20px; margin-top:26px; display:inline-block;}
+.period_box .btns_area ul{ display:inline-block; margin-left:6px;}
+.period_box .btns_area ul li{ display:inline-block;}
+.period_box .btns_area ul li a{ display:block; width:44px; height:22px; line-height:22px; font-size:12px; color:#666; text-align:center; background:url(http://pic.neungyule.com/nemiddle/my_class/order/btn.png) no-repeat;}
+.period_box .btns_area ul li a.on{background:url(http://pic.neungyule.com/nemiddle/my_class/order/btn_on.png) no-repeat; color:#fff;}
+.period_box .date_select{ float:right; margin-right:12px; margin-top:6px;}
+.period_box .date_select input{ width:90px; padding-left:8px; height:27px; border:1px solid #ddd;}
+.period_box .date_select a{ position:relative; top:7px;}
+.period_box .date_select a.search{top:12px; margin-left:4px;}
+
+/*장바구니, 주문결제, 졀제완료*/
+.cart_step{ margin-bottom:30px;}
+.recommend_lec{ overflow:hidden;}
+.recommend_lec li{ float:left; width:315px; height:306px; border:2px solid #ddd; border-radius:14px; position:relative;}
+.recommend_lec li .lec_img{ display:block; margin:10px;}
+.recommend_lec li h6{ padding-left:10px; font-size:13px; color:#666;}
+.recommend_lec li .price{border-radius:0 0 14px 14px; background:#f3f3f3; overflow:hidden; width:100%; height:58px; position:absolute; left:0; bottom:0;}
+.recommend_lec li .price p{ color:#333; font-size:28px; font-weight:bold; float:left; margin-top:20px; margin-left:10px;}
+.recommend_lec li .price a{ float:right; margin-right:11px; margin-top:13px;}
+.coupon_point{ margin-bottom:30px; text-align:center;}
+.coupon_point table{ display:inline-block; width:463px;}
+.coupon_point table thead{}
+.coupon_point table thead tr{}
+.coupon_point table thead tr th{width:463px; height:81px; background:url(http://pic.neungyule.com/nemiddle/my_class/order/table_hd_bg.jpg) no-repeat;}
+.coupon_point table tbody{}
+.coupon_point table tbody tr{}
+.coupon_point table tbody tr td{width:463px; height:123px; background:url(http://pic.neungyule.com/nemiddle/my_class/order/table_bd_bg.jpg) no-repeat;}
+.coupon_point table p{ color:#666; font-size:22px; font-weight:bold;}
+.coupon_point table tr p.own{color:#333;}
+.coupon_point table tr p.discount{ margin-bottom:10px;}
+.coupon_point table tr p.notice{ font-size:13px; font-weight:normal; margin-top:5px;}
+.coupon_point table tr th input{ width:129px; height:27px; border:none;}
+.coupon_point table tr th a{ position:relative; top:13px}
+.coupon_point .txt{ display:inline-block; font-size:18px; font-weight:bold; color:#666; position:relative; bottom:85px;}
+.total_table{ margin-bottom:27px;}
+.total_table thead{}
+.total_table thead tr th{ background:#f75674; height:40px; color:#fff; font-size:13px; font-weight:normal;}
+.total_table thead tr th.first{ background:url(http://pic.neungyule.com/nemiddle/my_class/order/total_table_fist.jpg) no-repeat 0 0 #f75674;}
+.total_table thead tr th.last{ background:url(http://pic.neungyule.com/nemiddle/my_class/order/total_table_last.jpg) no-repeat 100% 0 #f75674;}
+.total_table tbody{}
+.total_table tbody tr{}
+.total_table tbody tr td{ height:89px; border:1px solid #ddd;}
+.total_table tbody tr td.price{ color:#666; font-size:22px; font-weight:bold; text-align:center; position:relative;}
+.total_table tbody tr td.price img{ position:absolute; right:-15px; top:30px;}
+.total_table tbody tr td p.total{ text-align:right; font-size:32px; color:#f75674; font-weight:bold; padding-right:18px; margin-bottom:12px;}
+.total_table tbody tr td p.notice{ text-align:right; padding-right:18px;}
+.payment_table{}
+.payment_table tr{}
+.payment_table tr td{ height:196px;}
+.payment_table tr td.select{ width::317px; background:url(http://pic.neungyule.com/nemiddle/my_class/order/payment_table1.png) no-repeat;}
+.payment_table tr td.select ul{ margin-left:40px;}
+.payment_table tr td.select ul li{color:#666; font-size:18px; font-weight:bold; cursor:pointer; margin:16px 0;}
+.payment_table tr td.select ul li a{ position:relative; top:3px; margin-right:5px;}
+.payment_table tr td.notice{ width:637px; padding-left:26px; font-size:13px; line-height:22px; color:#363840;  background:url(http://pic.neungyule.com/nemiddle/my_class/order/payment_table2.png) no-repeat}
+
+/*나의혜택(포인트, 쿠폰수강권)*/
+.point_info{ height:66px; background:url(http://pic.neungyule.com/nemiddle/my_class/benefit/point_bg.png) no-repeat; margin-bottom:20px; overflow:hidden;}
+.point_info p{ color:#333; font-size:18px; margin-top:23px;}
+.point_info p.own{ margin-left:70px; float:left; width:343px; text-align:center;}
+.point_info p.discharge{ float:right; margin-right:5px; width:360px; text-align:center;}
+.point_info p b{ color:#23c8c8; font-weight:bold; font-size:18px;}
+.reg_coupon{ height:164px; padding:22px 19px; margin-bottom:30px; background:url(http://pic.neungyule.com/nemiddle/my_class/benefit/reg_coupon_bg.png) no-repeat; position:relative;}
+.point_info.inquiry{background-image:url(http://pic.neungyule.com/nemiddle/my_class/inquiry/inquiry_inof_bg.png);}
+.reg_coupon .small_title{}
+.reg_coupon .reg_btn{ position:absolute; right:22px; top:15px;}
+.reg_coupon .reg_area{ width:743px; height:48px; margin:0 auto; border:1px solid #ddd; background:#fff;}
+.reg_coupon .reg_area li{ font-size:15px; color:#333; display:inline-block;}
+.reg_coupon .reg_area li a{ position:relative; top:5px; margin-right:3px;}
+.reg_coupon .reg_area li input{ width:451px; height:27px; border:1px solid #ddd; margin-left:10px; position:relative; bottom:4px;}
+
+/***************************************고객센터*****************************************/
+/*고객센터*/
+.cs_notice_area{ overflow:hidden; margin-bottom:30px;}
+.cs_notice_area .call{float:left; width:318px;}
+.cs_notice_area h5{ margin-bottom:8px;}
+.cs_notice_area .call .box{height:132px; background:url(http://pic.neungyule.com/nemiddle/cs_center/cs_notice_area_bg1.png) no-repeat; text-align:center;}
+.cs_notice_area .call .box .num{ color:#f75674; font-size:40px; font-weight:bold; padding-top:35px; margin-bottom:20px; letter-spacing:-3px;}
+.cs_notice_area .call .box .time{ font-size:13px; color:#666; line-height:20px;}
+.cs_notice_area .notice{float:right; width:450px;}
+.cs_notice_area .notice ul{height:104px; padding:14px; background:url(http://pic.neungyule.com/nemiddle/cs_center/cs_notice_area_bg2.png) no-repeat;}
+.cs_notice_area .notice ul li{ font-size:13px; overflow:hidden;}
+.cs_notice_area .notice ul li a{ color:#343434; display:block; width:334px; padding-left:6px; height:26px; line-height:26px; float:left; background:url(http://pic.neungyule.com/nemiddle/cs_center/middot.jpg) no-repeat 0 15px;}
+.cs_notice_area .notice ul li a:hover{ color:#000;}
+.cs_notice_area .notice ul li span{ color:#666;float:right; height:26px; line-height:26px;}
+.faq_search{ position:relative; margin-bottom:16px;}
+.faq_search .search{ position:absolute; right:0; top:0; overflow:hidden;}
+.faq_search .search span{ font-size:16px; color:#666; float:left; margin-right:8px; margin-top:6px;}
+.faq_search .search .wrap{ width:272px; height:32px; float:left; background:url(http://pic.neungyule.com/nemiddle/cs_center/search_bg.png) no-repeat; margin-right:5px;}
+.faq_search .search .wrap input{ width:240px; height:26px; display:inline-block; margin-left:15px; margin-top:2px; border:none;}
+.faq_search .search a{ float:left;}
+.faq_tabs_wrap{ height:71px; padding:12px 0; background:url(http://pic.neungyule.com/nemiddle/cs_center/faq_tab_bg.png) no-repeat;}
+.faq_tabs{ padding:0 10px; overflow:hidden;}
+.faq_tabs li{ float:left; margin:0 1px; margin-bottom:6px;}
+.faq_tabs li a{ display:block; width:152px; height:32px; line-height:32px; color:#333; font-weight:bold; font-size:13px; text-align:center; background:url(http://pic.neungyule.com/nemiddle/cs_center/faq_tab.png) no-repeat;}
+.faq_tabs li a.on,
+.faq_tabs li a:hover{background-image:url(http://pic.neungyule.com/nemiddle/cs_center/faq_tab_on.png); color:#fff;}
+.faq_best{ width:750px; padding:18px; border:2px solid #ddd; border-top:none; border-radius:0 0 14px 14px;}
+.faq_best_title{ font-size:16px; font-weight:bold; color:#23c8c8; margin-bottom:8px;}
+.faq_best_list{ border:1px solid #ddd; border-bottom:none;}
+.faq_best_list li{ border-bottom:1px solid #ddd;}
+.faq_best_list li dl{}
+.faq_best_list li dl dt{height:40px; line-height:40px; overflow:hidden;}
+.faq_best_list li dl dt .num{ width:59px; text-align:center; border-right:1px solid #ddd; float:left;}
+.faq_best_list li dl dt .title{ float:left; width:667px; padding:0 10px;}
+.faq_best_list li dl dt div a{ font-size:13px; color:#666;}
+.faq_best_list li dl.on dt div a{ color:#f75674;}
+.faq_best_list li dl dd{ padding:17px; padding-bottom:25px; background:#eee; color:#363840; font-size:13px; line-height:22px; display:none; border-top:1px solid #ddd;}
+.faq_best_list li dl.on dd{ display:block;}
+
+/*FAQ*/
+.faq_search_top{background:url(http://pic.neungyule.com/nemiddle/my_class/order/period_box_bg.png); height:66px; margin-bottom:7px;}
+.faq_search_top .title{ display:inline-block; margin-left:53px; margin-top:25px; margin-right:28px;}
+.faq_search_top .bbs_search{ display:inline-block; position:relative; bottom:5px;}
+.faq_search_top .bbs_search .input_box{ width:422px;}
+.faq_wrap{ border:2px solid #ddd; border-radius:14px; padding:18px 8px; margin-bottom:30px;}
+
+/*사이트이용가이드*/
+.tab_shape2{padding-bottom:10px; border-bottom:2px solid #ddd; margin-bottom:18px;}
+.tab_shape2 ul{}
+.tab_shape2 ul li{ display:inline-block;}
+.tab_shape2 ul li a{ display:block; width:194px; height:33px; padding-top:7px; font-size:14px; color:#666; text-align:center; background:url(http://pic.neungyule.com/netoeic/nemiddle/cs_center/tab.png) no-repeat;}
+.tab_shape2 ul li.on a,
+.tab_shape2 ul li a:hover{ color:#fff; font-weight:bold; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/cs_center/tab_on.png);}
+
+/***************************************단과*****************************************/
+/*단과 서브메인*/
+.course_intro{ border:2px solid #ddd; border-radius:14px; margin-top:37px; position:relative; padding-top:17px; margin-bottom:7px;}
+.course_intro .upper{ padding-left:160px; margin-bottom:12px;}
+.course_intro .upper ul{}
+.course_intro .upper ul li{ }
+.course_intro .upper ul li img{}
+.course_intro .upper ul li .r_cont{ display:inline-block; margin-left:25px; width:380px; position:relative;}
+.course_intro .upper ul li .r_cont .wrap{height:140px; position:absolute; bottom:0px;}
+.course_intro .upper ul li .r_cont .wrap .title{height:70px; line-height:28px; color:#f75674; font-size:22px; font-weight:bold;}
+.course_intro .upper ul li .r_cont .wrap .teacher{ font-size:16px; color:#333; margin-bottom:5px;}
+.course_intro .upper ul li .r_cont .wrap .price{ font-size:20px; color:#333;}
+.course_intro .bx-pager{ position:absolute; left:19px; top:17px;}
+.course_intro .bx-pager .bx-pager-item{margin-bottom:5px;}
+.course_intro .bx-pager .bx-pager-item a{ display:block; width:118px; height:57px; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/pager1.jpg); border:2px solid #eee; text-indent:-9999px; overflow:hidden;}
+.course_intro .bx-pager .bx-pager-item:nth-of-type(2) a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/pager2.jpg);}
+.course_intro .bx-pager .bx-pager-item:nth-of-type(3) a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/pager3.jpg);}
+.course_intro .bx-pager .bx-pager-item a.active{ border-color:#414141;}
+.course_intro .lower{ background:#eee; height:60px; padding-top:23px; border-radius:0 0 14px 14px; text-align:center;}
+.course_choose{background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/box_bg_979x66.png); height:66px; line-height:66px; position:relative; margin-bottom:14px;}
+.course_choose span{ margin-left:20px; margin-right:14px;}
+.course_choose .category{ display:inline-block;}
+.course_choose input{ position:relative; top:2px;}
+.course_choose label{ margin-right:15px; font-size:13px; color:#666;}
+.course_choose .search_area{ position:absolute; right:12px; top:0;}
+.pop_book_info{ display:none; position:absolute; background:#fff; z-index:100; border:2px solid #f75674; border-radius:18px; width:513px; left:-7px; top:35px;}
+.pop_book_info h6{ height:46px; line-height:46px; width:498px; padding-left:16px; border-radius:14px 14px 0 0; background:#f75674; color:#fff; font-weight:bold; font-size:18px; position:relative;}
+.pop_book_info h6 button{ position:absolute; right:9px; top:10px;}
+.pop_book_info h6 .arrow{ position:absolute; left:42px; top:-8px;}
+.pop_book_info .contents{}
+.pop_book_info .contents table{ border-top:none; margin-bottom:0;}
+.pop_book_info .contents table td{padding:10px 13px; color:#333;}
+.pop_book_info .contents table td.title{ width:auto;}
+.pop_book_info .contents table .cont{ position:relative;}
+.pop_book_info .contents table .cont button{ position:absolute; right:10px; top:5px;}
+.pop_package_info{position:absolute; background:#fff; z-index:100; border:2px solid #ff7c1a; border-radius:18px; width:665px; left:0px; top:105px; display:none;}
+.pop_package_info h5{ height:46px; line-height:46px; width:650px; padding-left:16px; border-radius:14px 14px 0 0; background:#ff7c1a; color:#fff; font-weight:bold; font-size:18px; position:relative; bottom:1px;}
+.pop_package_info h5 button{ position:absolute; right:9px; top:10px;}
+.pop_package_info h5 .arrow{ position:absolute; left:42px; top:-8px;}
+.pop_package_info .contents_area{ height:226px; overflow-y:scroll; padding:15px; color:#333; font-size:13px;}
+.pop_package_info .contents_area .intro{margin-bottom:20px;}
+.pop_package_info .contents_area h6{ font-size:16px; font-weight:bold; margin-bottom:13px;}
+.pop_package_info .contents_area ul{}
+.pop_package_info .contents_area ul li{ border-top:1px solid #ddd; padding:10px 0;}
+.pop_package_info .contents_area ul li .title{ margin-bottom:5px;}
+.pop_package_info .contents_area ul li .info span{ margin:0 3px;}
+a.teacer_name_wrap{ position:relative;}
+a.teacer_name_wrap .teacer_img_pop{ display:none; position:absolute; left:50%; margin-left:-49px; top:16px; text-align:center; width:98px; height:142px; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/teacer_img_pop_bg.png); z-index:100;}
+a.teacer_name_wrap:hover .teacer_img_pop{ display:block;}
+a.teacer_name_wrap .teacer_img_pop h6{ font-size:14px; font-weight:bold; color:#fff; padding-top:13px;}
+a.teacer_name_wrap .teacer_img_pop img{ position:absolute; left:7px; top:41px; border:1px solid #ddd;}
+
+/*단과 상세*/
+.single_course{ padding-bottom:70px; padding-top:37px; width:980px; margin:0 auto; overflow:hidden;}
+.single_course .left_box{ width:356px; border:2px solid #ddd; border-radius:14px; float:left;}
+.single_course .left_box .upper{padding:20px;}
+.single_course .left_box .upper h3{ font-size:20px; color:#333; font-weight:bold; margin-bottom:15px;}
+.teacher_box{ background:#eee; border:1px solid #ddd; padding:8px 0px; position:relative; margin-bottom:11px;}
+.teacher_box > li{display:inline-block; padding-right:11px; margin-left:10px; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/teacher_border.jpg) no-repeat right 6px;}
+.teacher_box > li:nth-child(3n){ background:none;}
+.teacher_box > li span{ color:#333; font-size:13px;}
+.teacher_box > li a.teacher_info{ position:relative; top:3px;}
+.teacher_box > li .pop_package_info{ position:absolute; left:-11px; top:-2px; border-color:#24c8c9; width:332px;}
+.teacher_box > li .pop_package_info h5{ background:#24c8c9; width:317px;}
+.teacher_box > li .pop_package_info .contents_area{ padding:0 9px;}
+.teacher_box > li .pop_package_info li{ border:none; border-bottom:1px solid #ddd;}
+.teacher_box > li .pop_package_info li a{ color:#333; display:block;}
+.single_course .left_box .upper .bbs_table td.title_box{ padding-left:8px; color:#333;}
+.single_course .left_box .upper .bbs_table td.title{color:#666; position:relative}
+.single_course .left_box .upper .bbs_table td.title .book_list{overflow:hidden;}
+.single_course .left_box .upper .bbs_table td.title .book_list .book_name{ float:left;}
+.single_course .left_box .upper .bbs_table td.title .book_list .detail{ float:right; color:#23c8c8; font-size:12px; text-decoration:underline; margin-right:8px;}
+.pop_book_info2{ display:none; position:absolute; background:#fff; z-index:100; border:2px solid #f75674; border-radius:18px; width:332px; left:-88px; top:-393px;}
+.pop_book_info2 h6{ height:46px; line-height:46px; width:316px; padding-left:16px; border-radius:14px 14px 0 0; background:#f75674; color:#fff; font-weight:bold; font-size:18px; position:relative;}
+.pop_book_info2 h6 button{ position:absolute; right:9px; top:10px;}
+.pop_book_info2 h6 .arrow{ position:absolute; left:42px; top:-8px;}
+.pop_book_info2 .contents{ padding:12px 10px; height:286px; overflow-y:scroll;}
+.pop_book_info2 .contents .book_detail_name{ color:#333; font-size:13px; margin-bottom:10px; display:block; letter-spacing:-1px;}
+.pop_book_info2 .contents .table_area{ position:relative; padding-left:88px;}
+.pop_book_info2 .contents .table_area .book{ position:absolute; left:0; top:0;z}
+.pop_book_info2 .contents .table_area table{ border-top:none; margin-bottom:8px;}
+.pop_book_info2 .contents .table_area table td{padding:0px 13px; color:#333; height:47px;}
+.pop_book_info2 .contents .table_area table td.title{ width:auto;}
+.pop_book_info2 .contents .table_area table td.cont{ color:#333; font-size:13px;}
+.single_course .left_box .lower{}
+.single_course .left_box .lower .price_info{border-top:1px solid #ddd;}
+.single_course .left_box .lower .price_info li{border-bottom:1px solid #ddd; padding:8px 18px 8px 38px; font-size:13px; position:relative; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/lec_info.png) no-repeat 17px 7px #eee; }
+.single_course .left_box .lower .price_info li h4{ color:#333; margin-bottom:5px;}
+.single_course .left_box .lower .price_info li s{ margin-right:4px;}
+.single_course .left_box .lower .price_info li img{}
+.single_course .left_box .lower .price_info li span{ color:#f75674; font-weight:bold;}
+.single_course .left_box .lower .price_info li a{ position:absolute; right:10px; top:15px;}
+.single_course .left_box .lower .total{ border-bottom:1px solid #ddd; height:59px; line-height:59px; font-size:24px; font-weight:bold; color:#f75674; text-align:right; background:url(http://pic.neungyule.com/netoeic/nemiddle/single_course/total.png) no-repeat 20px 13px;}
+.single_course .left_box .lower .btns_area{ text-align:center; padding-top:15px; padding-bottom:20px; border-bottom:1px solid #ddd; }
+.single_course .left_box .lower .btns_area p{ font-size:13px; color:#333; margin-bottom:15px;}
+.single_course .left_box .lower .bnr_area{ text-align:center; padding:18px 0;}
+.single_course .right_area{ width:600px; float:right;}
+.single_course .right_area .bnr_area{ margin-bottom:20px;}
+.single_course .right_area .tab_shape{ padding-bottom:12px; border-bottom:2px solid #ddd;}
+
+
+/*강좌소개(프레임으로 들어감)*/
+.frame_lec_intro{ width:600px;}
+.frame_lec_intro h2{ margin-bottom:10px;}
+.frame_lec_intro .paragraph{margin-bottom:35px; line-height:22px; color:#363840; font-size:13px; padding:0 22px;}
+.frame_lec_intro .blue_title{ font-size:15px; color:#0090ff; font-weight:bold; padding:0 22px; margin-bottom:5px;}
+
+/***************************************학습플레이어*****************************************/
+.mov_player{ width:1094px; height:614px;}
+.mov_player .title_area{ height:56px; overflow:hidden;}
+.mov_player .title_area .left{ float:left;}
+.mov_player .title_area .left img{ margin-left:16px; margin-top:14px; margin-right:24px;}
+.mov_player .title_area .left span{ font-size:18px; color:#333; position:relative; bottom:10px;}
+.mov_player .title_area .right{ float:right; margin-top:14px; margin-right:20px;}
+.mov_player .contents_area{ background:#000; overflow:hidden; padding-top:4px; padding-right:4px;}
+.mov_player .contents_area .mov_wrap{ width:794px; padding:0 8px; height:558px; float:left;}
+.mov_player .contents_area .list_area{ background:#333; float:right; width:280px;}
+.small_tabs{ text-align:center; padding-top:6px; overflow:hidden;}
+.small_tabs li{ float:left; padding-left:6px;}
+.small_tabs li a{ display:block; width:86px; height:40px; color:#ddd; font-size:14px; font-weight:bold; text-align:center; line-height:32px; background:url(http://pic.neungyule.com/netoeic/nemiddle/common/player_tab.png) no-repeat;}
+.small_tabs li.on a{ color:#fff; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/common/player_tab_on.png);}
+.mov_player .contents_area .list_area .conts_area{ border-top:1px solid #000; margin-top:6px; height:378px; overflow:auto;}
+.mov_player .contents_area .list_area .conts_area .cont{}
+.mov_player .contents_area .list_area .conts_area .cont ul{}
+.mov_player .contents_area .list_area .conts_area .cont ul li{ border-bottom:1px solid #000; color:#888; font-size:13px; letter-spacing:-1px;}
+.mov_player .contents_area .list_area .conts_area .cont ul li p{}
+.mov_player .contents_area .list_area .conts_area .cont ul li p a{ color:#888;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_list li{ overflow:hidden;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_list li p{ height:37px; line-height:37px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_list li p.num{ float:left; width:60px; text-align:center;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_list li p.title{ float:left; width:190px; padding-right:10px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.recommend_list li{ padding:10px 15px; font-weight:bold;}
+.mov_player .contents_area .list_area .conts_area .cont ul.recommend_list li p{ line-height:22px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.recommend_list li p.title{}
+.mov_player .contents_area .list_area .conts_area .cont ul.recommend_list li p.teacher{}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info{}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li{padding:10px 15px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li p{line-height:22px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li p.title{ color:#ddd; font-weight:bold;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li p.info{position:relative; height:25px;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li p.info span{width:160px; display:block;}
+.mov_player .contents_area .list_area .conts_area .cont ul.lec_info li p.info a{ position:absolute; right:0px; top:0;}
+
+/***************************************교재*****************************************/
+/*교재 서브메인*/
+.book_slide{background:#fdab01; border-radius:14px; position:relative; margin-bottom:20px;}
+.book_slide ul{}
+.book_slide ul li{height:248px; padding:25px 0 0 25px; }
+.book_slide ul li .book_img{border:2px solid #fff;}
+.book_slide ul li .r_cont{display:inline-block; margin-left:25px; width:540px; position:relative; }
+.book_slide ul li .r_cont .wrap{ position:absolute; bottom:0px;}
+.book_slide ul li .r_cont .wrap .title{ font-size:22px; line-height:22px; letter-spacing:-1px; font-weight:bold; color:#fff; margin-bottom:10px;}
+.book_slide ul li .r_cont .wrap .icons{ margin-bottom:10px;}
+.book_slide ul li .r_cont .wrap .intro{ color:#333; font-size:16px; margin-bottom:50px;}
+.book_slide ul li .r_cont .wrap .discount{ width:54px; height:50px; padding-top:7px; text-align:center; margin-bottom:10px; background:url(http://pic.neungyule.com/netoeic/nemiddle/book/discount_bg.png); color:#f75674; font-size:22px; font-weight:bold;}
+.book_slide ul li .r_cont .wrap .price{ font-weight:bold; color:#333; font-size:26px; margin-right:10px;}
+.book_slide ul li .r_cont .wrap s{ color:#fff; font-size:16px;}
+.book_slide .bx-pager{ position:absolute; right:19px; bottom:17px; text-align:right;}
+.book_slide .bx-pager .bx-pager-item{margin-bottom:5px; display:inline-block; margin-right:4px;}
+.book_slide .bx-pager .bx-pager-item a{ display:block; width:41px; height:52px; background:url(http://pic.neungyule.com/netoeic/nemiddle/book/book_pager1.jpg); font-size:0px;}
+.book_slide .bx-pager .bx-pager-item:nth-of-type(2) a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/book/book_pager2.jpg);}
+.book_slide .bx-pager .bx-pager-item:nth-of-type(3) a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/book/book_pager1.jpg);}
+.book_slide .bx-pager .bx-pager-item:nth-of-type(4) a{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/book/book_pager2.jpg);}
+.book_slide .bx-pager .bx-pager-item a.active{ border:2px solid #333; box-sizing:border-box;}
+.recommend_book{ overflow:hidden; margin-bottom:20px;}
+.recommend_book li{ width:188px; height:479px; float:left; margin-right:10px; border:1px solid #ddd; border-top:2px solid #666; border-radius:0 0 14px 14px; margin-bottom:20px;}
+.recommend_book li.right{margin-right:0px;}
+.recommend_book li .icon{ padding:7px;}
+.recommend_book li .title{ padding:8px; padding-top:0; line-height:22px; font-size:16px; color:#333; font-weight:bold; border-bottom:1px solid #ddd;}
+.recommend_book li .price{ border-bottom:1px solid #ddd; padding:15px 8px; background:#f3f3f3;}
+.recommend_book li .price span{ font-size:16px; color:#333; margin-right:4px;}
+.recommend_book li .price s{ font-size:14px; color:#666;}
+.recommend_book li .img_area{ padding:10px; border-bottom:1px solid #ddd;}
+.recommend_book li .img_area a{ display:block;}
+.recommend_book li .img_area a .rec_book_img{ border:1px solid #dfdfdf;}
+.recommend_book li .img_area a p{ padding-top:10px; font-size:13px; color:#666; height:68px; line-height:23px; overflow:hidden;}
+.recommend_book li .stars{ padding:10px;}
+.rec_boxes{ overflow:hidden;}
+.rec_boxes .box_wrap{width:385px; float:left;}
+.rec_boxes .box_wrap .small_title{ margin-bottom:16px;}
+.rec_boxes .box_wrap ul{ border-top:2px solid #666; border-left:1px solid #ddd; border-right:1px solid #ddd; text-align:center; padding-top:26px; padding-bottom:25px;}
+.rec_boxes .box_wrap ul li{ display:inline-block; margin:0 6px;}
+.rec_boxes .box_wrap .contents_area{ background:#23c8c8; height:181px; position:relative;}
+.rec_boxes .box_wrap .contents_area.contents_area2{ background:#f75674;}
+.rec_boxes .box_wrap .contents_area .contents_box{}
+.rec_boxes .box_wrap .contents_area .contents_box a{ display:block;}
+.rec_boxes .box_wrap .contents_area .contents_box a .arrow{ position:absolute; top:-16px; left:69px;}
+.rec_boxes .box_wrap .contents_area .contents_box a h6{ color:#fff; font-weight:bold; font-size:18px; padding:0 17px; height:50px; line-height:50px; letter-spacing:-1px; border-bottom:1px solid #1ca2a2;}
+.rec_boxes .box_wrap .contents_area .contents_box a p{ padding:12px 18px; color:#333; font-size:13px; line-height:22px; border-bottom:1px solid #1ca2a2;}
+.rec_boxes .box_wrap .contents_area.contents_area2 .contents_box a h6,
+.rec_boxes .box_wrap .contents_area.contents_area2 .contents_box a p{border-color:#c9465e;}
+.rec_boxes .box_wrap .contents_area .contents_box a .tags{padding:10px 18px;}
+.rec_boxes .box_wrap .contents_area .contents_box a .tags span{ font-size:13px; color:#fff;}
+.book_lower_boxes{ overflow:hidden; margin-top:36px;}
+.book_lower_boxes .box{ width:385px; position:relative;}
+.book_lower_boxes .box h5{ margin-bottom:12px;}
+.book_lower_boxes .box .more{ position:absolute; right:0; top:3px;}
+.book_lower_boxes .box.left{ float:left;}
+.book_lower_boxes .box.left ul{border:1px solid #ddd; border-top:2px solid #333;}
+.book_lower_boxes .box.left ul li{ border-bottom:1px solid #ddd; height:38px; line-height:38px; padding:0 15px;}
+.book_lower_boxes .box.left ul li.last{border-bottom:none;}
+.book_lower_boxes .box.left ul li a{ font-size:13px; color:#666;}
+.book_lower_boxes .box.left ul li a span{ color:#f75674; margin-right:4px;}
+.book_lower_boxes .box.right{ float:right;}
+.book_lower_boxes .box.right .tags{ border:1px solid #ddd; border-top:2px solid #333; height:64px; padding:15px 17px; margin-bottom:14px;}
+.book_lower_boxes .box.right .tags a{ color:#666; font-size:13px;}
+.book_lower_boxes .box.right .call{ width:385px; height:126px; background:url(http://pic.neungyule.com/netoeic/nemiddle/book/call_bg.jpg) no-repeat;}
+.book_lower_boxes .box.right .call .num{ color:#f75674; font-size:40px; font-weight:bold; margin-left:130px; padding-top:25px; margin-bottom:20px; letter-spacing:-3px;}
+.book_lower_boxes .box.right .call p{ font-size:13px; color:#666; margin-left:134px;}
+/*교재찾기*/
+.search_book_table{ border:2px solid #ddd; border-radius:14px; -moz-border-radius: 14px 14px 14px 14px; -webkit-border-radius: 14px 14px 14px 14px;}
+.search_book_table tr{}
+.search_book_table tr.first .title{border-radius:14px 0 0 0; -moz-border-radius:14px 0 0 0; -webkit-border-radius:14px 0 0 0;}
+.search_book_table tr.first .right{border-radius:0 14px 0 0; -moz-border-radius:0 14px 0 0; -webkit-border-radius:0 14px 0 0;}
+.search_book_table tr.last td{border-radius:0 0 14px 14px; -moz-border-radius:0 0 14px 14px; -webkit-border-radius:0 0 14px 14px;}
+.search_book_table tr td{ color:#666; font-size:13px; padding:10px; border:1px solid #ddd;}
+.search_book_table tr td.title{ font-weight:bold; color:#333; font-size:16px; background:#eee; text-align:center; padding:0;}
+.search_book_table tr td.btn_area{ text-align:center;}
+.search_book_table tr td a{margin-right:18px;}
+.search_book_table tr td .search_input{ width:100%; height:27px; border:1px solid #ddd;}
+.sort_btns{ margin-bottom:20px; position:relative;}
+.sort_btns ul{}
+.sort_btns ul li{ display:inline-block;}
+.sort_btns ul li a{ background:#eee; border:1px solid #ddd; height:20px; padding:3px 10px; border-radius:20px; font-size:13px; color:#333;}
+.sort_btns ul li a:hover,
+.sort_btns ul li a.on{ background:#f75674; border-color:#f75674; color:#fff;}
+.sort_btns .chk_16{ position:absolute; right:0; top:0;}
+.book_search_result{}
+.book_search_result li{ border:1px solid #ddd; border-top:2px solid #333; border-radius:0 0 14px 14px; padding:20px; overflow:hidden; margin-bottom:30px;}
+.book_search_result li .left{ float:left; width:167px;}
+.book_search_result li .left a.book_img{ display:block; border:1px solid #ddd; margin-bottom:17px;}
+.book_search_result li .left table{}
+.book_search_result li .left table tr{}
+.book_search_result li .left table tr td{ border:1px solid #ddd; font-size:13px; color:#333; text-align:center; padding:6px 0;}
+.book_search_result li .left table tr td.title{ background:#eee; color:#666;}
+.book_search_result li .left table tr td.date{ color:#f75674; font-weight:bold;}
+.book_search_result li .right{ float:right; width:559px;}
+.book_search_result li .right .upper{ height:228px;}
+.book_search_result li .right h4{}
+.book_search_result li .right h4 a{ font-size:24px; font-weight:bold; color:#333; height:38px; line-height:38px;}
+.book_search_result li .right .intro{ color:#666; font-size:16px; margin-bottom:15px;}
+.book_search_result li .right .category{ text-align:center;}
+.book_search_result li .right .category .detail{ display:inline-block; width:258px; padding-left:15px; height:30px; line-height:30px; border:1px solid #ddd; border-radius:30px; text-align:left; color:#666; font-size:13px; margin-bottom:8px;}
+.book_search_result li .right .service{padding-left:15px; height:30px; line-height:30px; border:1px solid #ddd; border-radius:30px; text-align:left; margin-bottom:13px;}
+.book_search_result li .right .service span{ color:#23c8c8; font-weight:bold; margin-right:10px;}
+.book_search_result li .right .service a{color:#666; font-size:13px; }
+.book_search_result li .right .price{ height:52px; line-height:52px; border:2px solid #ddd; border-radius:14px; letter-spacing:-1px; margin-bottom:17px;}
+.book_search_result li .right .price .gray_area{ background:#eee; font-size:15px;  border-radius:12px 0 0 12px; width:240px; padding-left:12px; display:inline-block;}
+.book_search_result li .right .price .gray_area span{ color:#666; margin-right:10px;}
+.book_search_result li .right .price .gray_area .title{ font-weight:bold; color:#f75674; margin-right:10px;}
+.book_search_result li .right .price .gray_area img{ position:relative; top:10px; margin-right:5px;}
+.book_search_result li .right .price .white_area{ border-radius:0 14px 14px 0; display:inline-block; position:relative; width:300px;}
+.book_search_result li .right .price .white_area span{ color:#666; font-size:12px;}
+.book_search_result li .right .price .white_area .title{ color:#333; font-size:17px; line-height:0; margin-right:5px;}
+.book_search_result li .right .price .white_area b{ color:#f75674; font-size:22px; text-align:right; position:absolute; right:10px; top:-2px;}
+.book_search_result li .right .btn_area{ border-top:2px solid #ddd; border-bottom:1px solid #ddd; height:70px; padding-top:18px; position:relative; width:100%;}
+.book_search_result li .right .btn_area .center_btn{position:absolute; left:275px; top:17px;}
+.book_search_result li .right .btn_area .right_btn{ position:absolute; right:0; top:17px;}
+.book_search_result li .right .btn_area .ban{ position:absolute; left:0; top:0;}
+/*교재찾기-상세*/
+.book_detail_box{ border:2px solid #ddd; border-radius:14px; margin-bottom:40px;}
+.book_detail_box .white_area{ padding:20px;}
+.book_detail_box .white_area .upper{ overflow:hidden;}
+.book_detail_box .white_area .upper .left{ float:left;}
+.book_detail_box .white_area .upper .left img{ border:1px solid #ddd;}
+.book_detail_box .white_area .upper .right{ float:right; width:587px;}
+.book_detail_box .white_area .upper .right .title_area{ height:58px; margin-bottom:0;}
+.book_detail_box .white_area .upper .right .title_area h4{ color:#333; font-size:24px; font-weight:bold; margin-bottom:8px;}
+.book_detail_box .white_area .upper .right .title_area .intro{ font-size:16px; color:#666; position:relative;}
+.book_detail_box .white_area .upper .right .title_area .intro a{ position:absolute; right:0; top:0;}
+.book_detail_box .white_area .upper .right .table_border_top{ border-top:1px solid #ddd;}
+.book_detail_box .white_area .upper .right .table_border_top td{ height:40px; padding-top:0; padding-bottom:0; position:relative;}
+.book_detail_box .white_area .upper .right .table_border_top td.title{width:70px;}
+.book_detail_box .white_area .upper .right .table_border_top td.cont{width:176px;}
+.book_detail_box .white_area .upper .right .table_border_top td a{ position:absolute; right:10px; top:10px;}
+.book_detail_box .white_area .lower{ border:2px solid #ddd; border-radius:14px; overflow:hidden; height:52px; line-height:52px; letter-spacing:-1px;}
+.book_detail_box .white_area .lower .l_gray{ background:#eee; float:left; height:52px; width:213px; border-radius:12px 0 0 12px;}
+.book_detail_box .white_area .lower .l_gray .total{ color:#f75674; font-size:21px; font-weight:bold; margin-right:4px; padding-left:10px;}
+.book_detail_box .white_area .lower .l_gray .origin{ font-size:13px; color:#666; text-decoration:line-through; margin-right:5px;}
+.book_detail_box .white_area .lower .l_gray .discount{ color:#f75674; font-size:13px;}
+.book_detail_box .white_area .lower .r_white{ float:right; width:522px; height:43px; padding-top:9px; position:relative;}
+.book_detail_box .white_area .lower .r_white .center_btn{ position:absolute; left:200px; top:9px;}
+.book_detail_box .white_area .lower .r_white .right_btn{ position:absolute; right:10px; top:9px;}
+.book_detail_box .gray_area{ background:#eee; border-radius:0 0 12px 12px; height:62px; line-height:62px; padding:0 20px;  color:#666; position:relative;}
+.book_detail_box .gray_area img{ position:relative; top:4px;}
+.book_detail_box .gray_area b{ font-size:16px; margin-right:10px;}
+.book_detail_box .gray_area span{ font-size:13px;}
+.book_detail_box .gray_area a{ position:absolute; right:20px; top:20px;}
+.book_detail_conts{ border-top:2px solid #ddd; padding-top:30px;}
+.book_detail_conts .table_border_top{ margin-bottom:25px;}
+.book_detail_conts .table_border_top td.cont{ padding:15px;}
+.book_detail_conts .table_border_top td.title{ text-align:center;}
+.book_detail_conts .book_intro_detail{ padding:18px; border:1px solid #ddd; background:#eee; font-size:13px; color:#666; margin-bottom:28px;}
+.book_detail_conts .service{ padding:15px; border:1px solid #ddd; background:#eee; margin-bottom:30px;}
+.book_detail_conts .service a{ font-size:13px; color:#666;}
+.book_detail_conts h6{ font-size:16px; color:#333; font-weight:bold; position:relative; margin-bottom:13px;}
+.book_detail_conts h6 span{ font-size:13px; color:#666; font-weight:normal; position:absolute; right:0; top:0;}
+
+/***************************************교재*****************************************/
+.event_top{ position:relative; border-bottom:2px solid #ddd; }
+.event_top  input{ width:230px; padding:0 20px; height:30px; border:1px solid #ddd; border-radius:20px; position:absolute; right:70px; top:0;}
+.event_top  button{ position:absolute; right:0; top:0;}
+dl.event_list{ padding-top:18px; letter-spacing:-0.5px;}
+dl.event_list dt{}
+dl.event_list dt a{font-size:18px; color:#333; font-weight:bold; display:block; margin-bottom:5px;}
+dl.event_list dt p{ font-size:15px; color:#666; margin-bottom:5px;}
+dl.event_list dd{margin-bottom:30px;}
+dl.event_list dd a{}
+dl.event_list dd a img{ border:1px solid #ddd;}
+
+/***************************************강사진*****************************************/
+.teacher_tabs{ margin-bottom:22px; overflow:hidden;}
+.teacher_tabs li{float:left; margin-right:1px;}
+.teacher_tabs li.last{margin-right:0;}
+.teacher_tabs li a{ display:block; width:121px; height:40px; line-height:32px; color:#666; font-size:14px; text-align:center; background:url(http://pic.neungyule.com/netoeic/nemiddle/common/tab_121.png) no-repeat;}
+.teacher_tabs li a:hover,
+.teacher_tabs li.on a{ font-weight:bold; color:#fff; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/common/tab_121_on.png);}
+.teacher_boxes{ overflow:hidden;}
+.teacher_boxes li{ margin-bottom:30px; float:left;border:2px solid #ddd; border-radius:14px; height:169px; padding:20px; width:435px;}
+.teacher_boxes li.right{float:right;}
+.teacher_boxes li .teacher_img{ border:1px solid #ddd; position:absolute;}
+.teacher_boxes li .cont{ margin-left:197px;}
+.teacher_boxes li .cont h5{ color:#333; font-size:22px; font-weight:bold; margin-bottom:15px; margin-top:10px;}
+.teacher_boxes li .cont span{ color:#666; font-size:16px; margin-left:5px; }
+.teacher_boxes li .cont p{ font-size:13px; color:#666; height:52px; line-height:23px;}
+.teacher_boxes li .cont a{ margin-bottom:8px; display:inline-block;}
+.teacher_detail{ border:2px solid #ddd; border-radius:14px; overflow:hidden; height:517px; margin-bottom:30px;}
+.teacher_detail .left{ float:left; padding:20px;}
+.teacher_detail .left .wrap{ border:1px solid #ddd;}
+.teacher_detail .left .wrap .teacher_img{border-bottom:1px solid #ddd; position:relative;}
+.teacher_detail .left .wrap .teacher_img .profile_pop{ position:absolute; top:0; display:none;}
+.teacher_detail .left .wrap .teacher_img .profile_pop .pop_title{ background:#f75674;}
+.teacher_detail .left .wrap .teacher_img .profile_pop .pop_cont{ border:2px solid #f75674; border-top:none; background:#fff; padding:17px 20px; width:250px; height:210px; overflow-y:auto;}
+.teacher_detail .left .wrap .bnts_area{ text-align:center; padding:10px 0;border-bottom:1px solid #ddd;}
+.teacher_detail .left .wrap .bnts_area a{}
+.teacher_detail .left .wrap .name{border-bottom:1px solid #ddd; color:#333; font-size:26px; font-weight:bold; text-align:center; padding:20px 0;}
+.teacher_detail .left .wrap .name span{ font-size:16px; color:#666; font-weight:normal; margin-left:5px;}
+.teacher_detail .left .wrap .intro{ color:#666; font-size:13px; padding:14px; text-align:center;}
+.teacher_detail .right{float:right; background:#eee; width:602px; padding:20px;}
+.teacher_detail .right .slide_wrap{ position:relative; border:1px solid #ddd; margin-bottom:20px;}
+.teacher_detail .bx-pager{ position:absolute; right:19px; bottom:17px; text-align:right;}
+.teacher_detail .bx-pager .bx-pager-item{display:inline-block; margin-right:4px;}
+.teacher_detail .bx-pager .bx-pager-item a{ display:block; width:12px; height:12px; background:url(http://pic.neungyule.com/netoeic/nemiddle/teacher/pager.png); font-size:0px;}
+.teacher_detail .bx-pager .bx-pager-item a.active{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/teacher/pager_on.png)}
+.teacher_detail .right .lower{ overflow:hidden;}
+.teacher_detail .right .lower .title{ float:left; width:92px; padding-left:68px; padding-top:20px; height:53px; font-size:20px; color:#333; background:url(http://pic.neungyule.com/netoeic/nemiddle/teacher/notice_icon.png) no-repeat 0 5px;}
+.teacher_detail .right .lower ul{ float:right; padding:12px 16px 0; width:403px; height:59px; border:1px solid #ddd; background:#fff; overflow:auto;}
+.teacher_detail .right .lower ul li{}
+.teacher_detail .right .lower ul li a{color:#666; font-size:13px; line-height:22px;}
+.tabs_two_980{ margin-bottom:22px; text-align:center;}
+.tabs_two_980 li{ display:inline-block;}
+.tabs_two_980 li a{ display:block; width:487px; height:40px; line-height:32px; color:#666; font-size:14px; text-align:center; background:url(http://pic.neungyule.com/netoeic/nemiddle/teacher/tab.png) no-repeat;}
+.tabs_two_980 li.on a{ font-weight:bold; color:#fff; background-image:url(http://pic.neungyule.com/netoeic/nemiddle/teacher/tab_on.png);}
+

@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="신토익인강 추천 강의, 능률교육, 토익목표달성, 인터넷강의, 700점대 공부방법">
+<meta property="og:type" content="website">
+<meta property="og:title" content="토마토토익 공식인강 토단비">
+<meta property="og:description" content="신토익인강 추천 강의, 능률교육, 토익목표달성, 인터넷강의, 700점대 공부방법">
+<meta property="og:image" content="http://pic.neungyule.com/netoeic/main/logo.png">
+<meta property="og:url" content="http://www.tomatoclass.com">
+<title>토마토토익 공식인강 토단비</title>
+<link rel="shortcut icon" href="http://pic.neungyule.com/netoeic/main/tc_favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/import2015.css">
+<link rel="stylesheet" type="text/css" href="css/main2016.css">
+<link rel="stylesheet" type="text/css" href="css/ne_common.css">
+<link rel="stylesheet" type="text/css" href="css/sub.css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.sliderTabs.min.js"></script><!-- 메인 대배너 슬라이드 -->
+<script type="text/javascript" src="js/jquery.vticker-min.js"></script><!-- 리뷰 롤링 -->
+<script>
+function imgchange(imgobj){
+	if(imgobj.src.indexOf('_on.jpg')==-1){
+		imgobj.src=imgobj.src.replace('.jpg','_on.jpg');
+		imgobj.onmouseout=function(){if(this.src.indexOf('_on.jpg')!=-1) this.src=this.src.replace('_on.jpg','.jpg');}
+		imgobj.onclick = function(){imgobj.onmouseout=null;}
+	}
+};
+function imgchange2(imgobj){
+	if(imgobj.src.indexOf('_on.png')==-1){
+		imgobj.src=imgobj.src.replace('.png','_on.png');
+		imgobj.onmouseout=function(){if(this.src.indexOf('_on.png')!=-1) this.src=this.src.replace('_on.png','.png');}
+		imgobj.onclick = function(){imgobj.onmouseout=null;}
+	}
+};
+
+// lnb menu
+$(document).ready(function(e){
+	
+	// 메뉴
+	var nav_li = $("#lnbRe > li");
+	var nav_img = $("#lnbRe > li > a > img");
+	var nav_sub = $("#lnbRe .sub_menu");
+	
+	nav_li.bind("mouseenter mouseleave", function (e) {
+		var i = nav_li.index($(this));
+		
+		if(e.type == "mouseenter") {
+			$(this).find(".sub_menu").show();
+			$(this).siblings("li").find(".sub_menu").hide();
+			nav_img.each(function(index, element) {
+				if(i==index) {
+					this.src = this.src.replace(".jpg","_on.jpg");
+				} else {
+					this.src = this.src.replace("_on.jpg",".jpg");
+				}
+				if(i==index) {
+					this.src = this.src.replace(".png","_on.png");
+				} else {
+					this.src = this.src.replace("_on.png",".png");
+				}
+			});
+		} else {
+			nav_sub.hide();
+			nav_img.each(function(index, element) {
+					this.src = this.src.replace("_on.jpg",".jpg");
+					this.src = this.src.replace("_on.png",".png");
+			});
+		}
+	});
+	$("#lnbRe li, .nav_sub a").bind("focusin", function (e) {
+		if(e.type == "focusin") {
+			$(this).closest("#lnbRe > li").find(".sub_menu").show();
+			$(this).closest("#lnbRe > li").siblings("li").find(".sub_menu").hide();
+		}
+	});
+});
+
+
+// 강좌 탭
+function Menu(num) {
+	for(var i = 1; i<4; i++) {
+		obj = document.getElementById('lecC'+i);
+		img = document.getElementById('Menu_img'+i);
+		if ( num == i ) {
+			obj.style.display = "block";
+			img.src = "http://pic.neungyule.com/netoeic/mainRe/bestLec_ver2_tab0"+i+"_on.jpg";
+		}
+		else {
+			obj.style.display = "none";
+			img.src = "http://pic.neungyule.com/netoeic/mainRe/bestLec_ver2_tab0"+i+".jpg";
+		}
+	}
+}
+// 가이드 탭
+function Menu2(num) {
+	for(var i = 1; i<6; i++) {
+		obj = document.getElementById('guideC'+i);
+		img = document.getElementById('Menu2_img'+i);
+		if ( num == i ) {
+			obj.style.display = "block";
+			img.src = "http://pic.neungyule.com/netoeic/mainRe/m_guide_tab0"+i+"_on.jpg";
+		}
+		else {
+			obj.style.display = "none";
+			img.src = "http://pic.neungyule.com/netoeic/mainRe/m_guide_tab0"+i+".jpg";
+		}
+	}
+}
+// 메인 대배너
+$(document).ready(function(){
+
+  var tabs = $("div#mySliderTabs").sliderTabs({
+	autoplay: 6000,
+	mousewheel: false,
+	indicators: true,
+	panelArrows: true,
+	panelArrowsShowOnHover: true
+  });
+
+});
+
+// 응원 한줄
+$(function() {
+    var time = 500;
+    var idx = idx2 = 0;
+    var slide_width = $(".cheer_slide").width();
+    var slide_count = $(".cheer_slide li").size();
+    $(".cheer_slide li:first").css("display", "block");
+    if(slide_count > 1)
+        $(".btn").css("display", "inline");
+ 
+    $(".control_prev").click(function() {
+        if(slide_count > 1) {
+            idx2 = (idx - 1) % slide_count;
+            if(idx2 < 0)
+                idx2 = slide_count - 1;
+            $(".cheer_slide li:hidden").css("left", "-"+slide_width+"px");
+            $(".cheer_slide li:eq("+idx+")").animate({ left: "+="+slide_width+"px" }, time, function() {
+                $(this).css("display", "none").css("left", "-"+slide_width+"px");
+            });
+            $(".cheer_slide li:eq("+idx2+")").css("display", "block").animate({ left: "+="+slide_width+"px" }, time);
+            idx = idx2;
+        }
+    });
+ 
+    $(".control_next").click(function() {
+        if(slide_count > 1) {
+            idx2 = (idx + 1) % slide_count;
+            $(".cheer_slide li:hidden").css("left", slide_width+"px");
+            $(".cheer_slide li:eq("+idx+")").animate({ left: "-="+slide_width+"px" }, time, function() {
+                $(this).css("display", "none").css("left", slide_width+"px");
+            });
+            $(".cheer_slide li:eq("+idx2+")").css("display", "block").animate({ left: "-="+slide_width+"px" }, time);
+            idx = idx2;
+        }
+    });
+});
+
+// 이벤트 배너
+var rollBnrInter;
+var rollBnrInterval = 5000;
+var rollBnrAnimate = 500;
+var rollBnrWidth = 285;
+var rollBnrFlag = true;
+var rollBnrNum = 1;
+
+
+var rollBnrArrayLeft = new Array(0, 0);
+
+function rollBnr(){
+	if(rollBnrFlag) {
+		/* 20140129 수정 */
+		/* // 20140129 수정 */
+		if(rollBnrNum < 0) rollBnrNum = rollBnrArrayLeft.length - 1;
+		if(rollBnrNum > rollBnrArrayLeft.length - 1) rollBnrNum = 0;
+		rollBnrFlag = false;
+		$("div.eventB_roll. > ul.banner > li").each(function(i){
+			var curLeft = $(this).css("left").replace("px", "");
+			var left = curLeft - rollBnrWidth;
+			left = (i - rollBnrNum)*rollBnrWidth;
+			$(this).animate({left:left}, rollBnrAnimate, function(e){
+				rollBnrFlag = true;
+				$(".eventB_roll > p > a").children("img").attr("src", "http://pic.neungyule.com/netoeic/btn/btn_mainRoll.png");
+				$(".eventB_roll > p > a").eq(rollBnrNum-1).children("img").attr("src", "http://pic.neungyule.com/netoeic/btn/btn_mainRoll_on.png");
+			});
+		});
+		rollBnrNum++;
+	}
+}
+
+$(document).ready(function(){
+	$("div.eventB_roll > ul.banner > li").each(function(i){
+		$(this).css({
+			"position" : "absolute",
+			"left": i*rollBnrWidth
+		});
+		rollBnrArrayLeft[i] = $(this).css("left").replace("px", "");
+	});
+	$("div.eventB_roll > a.btn_prev").click(function(e){
+		if(rollBnrFlag) {
+			rollBnrNum--;rollBnrNum--;
+			rollBnr();
+			clearInterval(rollBnrInter);
+			rollBnrInter = setInterval(rollBnr, rollBnrInterval);
+		}
+		e.preventDefault();
+	});
+	$("div.eventB_roll > a.btn_next").click(function(e){
+		if(rollBnrFlag) {
+			rollBnr();
+			clearInterval(rollBnrInter);
+			rollBnrInter = setInterval(rollBnr, rollBnrInterval);
+		}
+		e.preventDefault();
+	});
+	$("div.eventB_roll > p > a").click(function(e){
+		if(rollBnrFlag) {
+			clearInterval(rollBnrInter);
+			var v = $("div.eventB_roll > p > a").index(this);
+			rollBnrNum = v;
+			rollBnr();
+			rollBnrInter = setInterval(rollBnr, rollBnrInterval);
+		}
+		e.preventDefault();
+	});
+	rollBnrInter = setInterval(rollBnr, rollBnrInterval);
+	
+	$("div.eventB_roll > ul.banner > li").mouseover(function(e){
+		rollBnrFlag = false;
+	});
+	
+	$("div.eventB_roll > ul.banner > li").mouseout(function(e){
+		rollBnrFlag = true;
+	});
+	
+});
+
+//후기 롤링
+$(function(){
+        $('.review_list').vTicker({
+		speed: 300,
+		pause: 2000,
+		animation: 'fade',
+		mousePause: true,
+		showItems: 5
+	});
+});
+
+// 로그인 레이어
+function wrapWindowByMask(){
+	//화면의 높이와 너비를 구한다.
+	var maskHeight = $(document).height();  
+	var maskWidth = $(window).width();  
+
+	//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+	$('.mask').css({'width':maskWidth,'height':maskHeight});  
+
+	//애니메이션 효과 -  80% 불투명도로 간다.
+	//$('.mask').fadeIn(); - 일단 1초동안 까맣게 됐다가    
+	$('.mask').fadeTo("slow",0.8);    
+	$('#loginPop').show();
+}
+
+$(document).ready(function(){
+	//검은 막 띄우기
+	$('.openMask').click(function(e){
+		e.preventDefault();
+		wrapWindowByMask();
+	});
+
+	//닫기 버튼을 눌렀을 때
+	$('#loginPop .close').click(function (e) {  
+		//링크 기본동작은 작동하지 않도록 한다.
+		e.preventDefault();  
+		$('.mask, #loginPop').hide();  
+	});       
+
+	//검은 막을 눌렀을 때
+	//$('.mask').click(function () {  
+	//	$(this).hide();  
+	//	$('.notice_pop').hide();  
+	//});      
+});
+
+// 유튜브 레이어
+function wrapWindowByMask2(){
+	//화면의 높이와 너비를 구한다.
+	var maskHeight2 = $(document).height();  
+	var maskWidth2 = $(window).width();  
+
+	//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+	$('.mask2').css({'width':maskWidth2,'height':maskHeight2});  
+
+	//애니메이션 효과 -  80% 불투명도로 간다.
+	//$('.mask').fadeIn(); - 일단 1초동안 까맣게 됐다가    
+	$('.mask2').fadeTo("slow",0.8);    
+	$('.mvArea').show();
+	$('#mvFrame').attr("src","https://www.youtube.com/embed/Zz85mny3Vqg?wmode=opaque");
+}
+
+$(document).ready(function(){
+	//검은 막 띄우기
+	$('.openMask2').click(function(e){
+		e.preventDefault();
+		wrapWindowByMask2();
+	});
+
+	//닫기 버튼을 눌렀을 때
+	$('.mvArea .close2').click(function (e) {  
+		//링크 기본동작은 작동하지 않도록 한다.
+		e.preventDefault();  
+		$('.mask2, .mvArea').hide();
+		$('#mvFrame').attr("src","");  
+	});          
+});
+
+</script>
+</head>
+<body>
+
+<!--모달팝업 시작-->
+<div id="modal_popup_bg" style="width:100%; height:100%; position:fixed; left:0; top:0; background:url(http://pic.neungyule.com/netoeic/popup/mask_80.png) repeat; z-index:6000;">
+</div>
+<div id="modal_popup" style="position:fixed; left:50%; margin-left:-250px; top:150px; z-index:6001;">
+	<img src="http://pic.neungyule.com/netoeic/popup/161223_main_24.jpg" alt="" usemap="#modal_pop_map"/>
+	<!--26일--><!--<img src="http://pic.neungyule.com/netoeic/popup/161223_main_26.jpg" alt="" usemap="#modal_pop_map"/>-->
+	<!--27일--><!--<img src="http://pic.neungyule.com/netoeic/popup/161223_main_27.jpg" alt="" usemap="#modal_pop_map"/>-->
+    <map name="modal_pop_map" id="modal_pop_map">
+        <area shape="rect" coords="4,5,495,497" href="#n" alt="" style="outline:none;"/>
+    </map>
+    <div style="position:absolute; top:-20px; left:10px;">
+        <input id="chkbox_close" type="checkbox" />
+        <label for="chkbox_close" style="font-size:15px; color:#fff; cursor:pointer;">오늘 하루 보지 않기</label>
+    </div>
+    <div id="close_popup" style="position:absolute; top:-20px; right:10px; font-size:28px; color:#fff; cursor:pointer; font-weight:bold;">X</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('#modal_popup_bg').click(function(){
+		$('#modal_popup_bg').fadeOut(700);
+		$('#modal_popup').hide();
+	});
+});
+
+$(function(){
+	$('#chkbox_close').click(function(){
+		$('#modal_popup_bg').fadeOut(700);
+		$('#modal_popup').hide();
+	});
+});
+
+$(function(){
+	$('#close_popup').click(function(){
+		$('#modal_popup_bg').fadeOut(700);
+		$('#modal_popup').hide();
+	});
+});
+</script>
+<!--//모달팝업 끝-->
+
+<div id="neIndex">
+	<ul>
+        <li><a href="#container">본문 바로가기</a></li>
+        <li><a href="#lnb">주메뉴 바로가기</a></li>
+    </ul>
+</div>
+<!-- 상단 전체 배너
+<div class="area_topBnr" style="background:#3e54aa;">
+	<div class="wrap pr">
+    	<a href="#n"><img src="http://pic.neungyule.com/netoeic/main/bnr_top.jpg" alt="상단 배너" /></a>
+        <span class="btn_close pa" style="top:10px;right:10px">
+          <a href="#" onClick="$('.area_topBnr').slideUp();"><img src="http://pic.neungyule.com/netoeic/main/btn_topBnr_close.png" alt="오늘 하루 보지 않기"/></a>
+        </span>
+    </div>
+</div>
+<!--// 상단 전체 배너 -->
+<!-- top menu -->
+<div id="header_top" style="z-index:50;">
+	<div class="wrap" style="z-index:50;">
+        <a href="https://members.neungyule.com/pages/t_member/join.asp?WHEREJOIN=53&amp;FNUM=1"><img src="http://pic.neungyule.com/gnb/gnb1.png" alt="통합회원가입" class="mt10"/></a>
+        <a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.neungyule.com" target="_blank"><img src="http://pic.neungyule.com/gnb/gnb2.png" alt="회사소개" class="mt10"/></a>
+        <a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.neungyule.com/pages/ko/ir/" target="_blank"><img src="http://pic.neungyule.com/gnb/gnb3.png" alt="IR" class="mt10"/></a>
+        <a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://recruit.neungyule.com" target="_blank"><img src="http://pic.neungyule.com/gnb/gnb4.png" alt="인재채용" class="mt10 bg_no"/></a>
+        <!-- 브랜드 전체보기 -->
+        <img src="http://pic.neungyule.com/gnb/gnb_brand.png" onclick="fnc_bookgnb_menushow();" alt="브랜드 전체보기" style="cursor:pointer;" >
+        <div style="position:rative;z-index:50;">
+        	<div style="position: absolute; width: 807px; height: 215px; left: 191px; top: 0px; display: none;" id="booktotal_common_brandgnb" >
+                <div class="brand_wrap" id="booktotal_common_area" style="top: 0px; display: none;">
+                    <ul class="brand_list">
+                        <li class="top">
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.neungyule.com/pages/ko/brand/" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_ne.png" alt="NE 능률" width="196" height="97" />
+						</a>
+					</li>
+					<li class="top">
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.nebooks.co.kr/pages/" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_books.png" alt="NE Books" width="196" height="97" />
+						</a>
+					</li>
+					<li class="top">
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.nebooks.co.kr/pages/book/category.asp?c=BA" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_build.png" alt="NE Build&Grow" width="196" height="97" />
+						</a>
+					</li>
+					<li class="top last">
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.netimes.co.kr/" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_times.png" alt="NE Times" width="196" height="97" />
+						</a>
+					</li>
+					<li>
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.nekids.co.kr/_pages/index/default.asp" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_kids.png" alt="NE Kids" width="196" height="97" />
+						</a>
+					</li>
+					<li>
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.nelab.co.kr/pages/index/index.asp" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_junior.png" alt="NE 능률주니어랩" width="196" height="97" />
+						</a>
+					</li>
+					<!-- <li><a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.nebooks.co.kr/pages/math/sagosem.asp" target="_blank"><img src="http://pic.neungyule.com/gnb/b_ne_mathquve.png" alt="NE 매쓰큐브" /></a></li> -->
+					<li>
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.neteensup.com/pages/index/index.asp" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_teens.png" alt="NE Teens Up" width="196" height="97" />
+						</a>
+					</li>
+					<li class="last">
+						<a href="https://members.neungyule.com/pages/t_member/bridge.asp?PURL=http://www.tomatoclass.com" target="_blank">
+							<img src="http://pic.neungyule.com/gnb/gnb_tomato.png" alt="NE 토마토클래스" width="196" height="97" />
+						</a>
+					</li>
+
+                    </ul>
+               </div>
+           </div>
+       </div>
+       <!--// 브랜드 전체보기 -->
+	</div>
+</div>
+<script type="text/javascript">
+var booktotal_common_brandgnb_flag = false;
+function fnc_bookgnb_menushow() {
+	if (booktotal_common_brandgnb_flag == false) {
+		booktotal_common_brandgnb_flag = true;
+		$('#booktotal_common_brandgnb').slideDown('fast');
+		$('#booktotal_common_area').slideDown('fast');
+	} else {
+		booktotal_common_brandgnb_flag = false;
+		$('#booktotal_common_brandgnb').slideUp('fast');
+		$('#booktotal_common_area').slideUp('fast');
+	}
+}
+
+document.getElementById('booktotal_common_area').style.display = 'none';
+document.getElementById('booktotal_common_brandgnb').style.display = 'none';
+
+$('#booktotal_common_area').hover(
+	function(){},
+	function(e){
+		$('#booktotal_common_brandgnb').slideUp('fast');
+		$('#booktotal_common_area').slideUp('fast');
+		booktotal_common_brandgnb_flag = false;
+	}
+);
+
+</script>
+<div id="top_menuRe">
+	<div class="wrap">
+		<div class="logo ml20 mt15 fl">
+			<h1 class="fl mr8"><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/logo_ver2.jpg" alt="첫 토익의 시작! 토마토 클래스"></a></h1>
+			<div class="txt fl mt15"><p><span>토단비 3월4일 시험대비반 모집 중 모집 중 모집 중 모집 중 모집 중 모집 중 모집 중</span></p></div>
+		</div>
+        <!-- 로그인 전 -->
+        <div class="myInfo fr" style="z-index:20">
+        	<a href="#n" class="openMask"><img src="http://pic.neungyule.com/netoeic/mainRe/btn_login.jpg" alt="로그인" class="mr15"/></a>
+            <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/btn_join.jpg" alt="회원가입" class="mr10" /></a>
+            <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/btn_srchMyinfo.jpg" alt="가입정보찾기" class="mr10" /></a>
+        </div>
+        <!--// 로그인 전 -->      
+		<!-- 로그인 후 정보
+		<div class="myInfo fr" style="z-index:20">
+			<div class="box fb"><span class="name">백동민동민</span> 회원님 <a href="#n"><img src="http://pic.neungyule.com/netoeic/ico/ico_setting.png" alt="정보수정" class="vm mr10"/></a> <input type="submit" title="로그아웃" value="[로그아웃]" class="logout"/></div>
+			<ul class="lecPoint">
+				<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/mLecS.jpg" alt="수강강좌" /></a>
+                    <span class="txt"><span><span>88</span></span></span>
+                </li>
+				<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/mLecG.jpg" alt="관심강좌" /></a>
+                    <span class="txt"><span><span>8888</span></span></span>
+                </li>
+				<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/mPoint.jpg" alt="포인트" /></a>
+                    <span class="txt"><span><span>888888</span></span></span>
+                </li>
+			</ul>
+		</div>
+		<!--// 로그인 후 정보 -->
+		<div class="gnb">
+			<ul>
+				<!--<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb06.jpg" alt="로그인" /></a></li>-->
+                <li>
+                    <div class="facebook_like" >
+                        <iframe class="facebook" src="facebook.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:19px; position:relative; bottom:3px; left:-2px;" allowTransparency="true"></iframe>
+                    </div>
+                </li>
+				<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb01.jpg" alt="장바구니" /></a></li>
+				<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb02.jpg" alt="토마토클래스는?" /></a></li>
+				<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb03.jpg" alt="토클강사진" /></a></li>
+				<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb04.jpg" alt="고객센터" /></a></li>
+				<li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/gnb05.jpg" alt="이벤트" /></a></li>
+			</ul>
+		</div>
+	</div>   
+    <!-- 로그인 팝업 -->
+    <div class="mask" style="position:absolute;z-index:9000;background-color:#000;display:none;left:0;top:0;"></div> 
+    <div id="loginPop" style="display:none;position:absolute;left:50%;margin-left:-178px;top:200px;z-index:10000"> 
+        <p class="log_tit">토마토클래스 로그인</p>
+        <div class="cont">
+            <ul class="mb30">
+                <li class="mb20">
+                    <label for="login_sub_id" ><span>아&nbsp;이&nbsp;디</span><input type="text" id="login_sub_id" name="" class="ml10"/></label>
+                </li>
+                <li>
+                    <label for="login_main_pw" ><span>비밀번호</span><input type="password" id="login_main_pw" id="login_sub_pw" name="" class="ml10"/></label>
+                </li>
+            </ul>
+            <input type="submit" title="로그인" class="btn_login">
+            <input type="submit" title="회원가입" class="btn_join">
+        </div>
+        <p class="pt5">토마토클래스는 NE능률의 패밀리사이트 입니다.</p>
+		<p class="close"><a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_closeB.png" alt="닫기" /></a></p>
+	</div>
+    <!-- 로그인 팝업 -->
+</div>    	             
+<!-- top menu -->
+<!-- header -->
+<header>
+     <!-- main tab menu -->
+     <div id="navRe" style="position:relative;">
+     	<h2 class="hide">NE 토익 서비스 메뉴</h2>
+        <div style="border-bottom:1px solid #c6c6c6; position:absolute; top:27px; width:100%;"></div>
+        <div class="pink_belt_toe" style="position:absolute; bottom:-45px; width:100%; background:#eb005c; height:45px;"></div> <div class="pink_belt_opic" style="position:absolute; bottom:-45px; width:100%; background:#eb005c; height:45px;"></div>
+        <nav>
+            <ul id="lnbRe">
+                <!----<div style="position:absolute;bottom:-7px;left:-3px;">
+					<a href="#n" ><img src="http://pic.neungyule.com/netoeic/mainRe/lnb00.jpg" alt="입문자 시작이 반값" /></a>
+                    <img style="position:absolute; right:-237px; top:0px;" src="http://pic.neungyule.com/netoeic/mainRe/topMenu_01_top.jpg" alt="토익" />
+                </div>-->
+                <div class="toe_gnb" style="position:absolute;bottom:-7px;left:0px;">
+					<a href="#n" style="display:block; width:307px; height:44px; background:url(http://pic.neungyule.com/netoeic/mainRe/gnb_toeic_ver2.jpg); text-indent:-9999px; overflow:hidden;">토익(초입문 밀착케어 PACK)</a>
+                </div>
+                
+				<!-- 토단비 -->
+                <li class="toe_lnb" style="position:absolute;bottom:-52px;left:-14px;">
+					<a href="/todanbi/todanbiMain.do" ><img id="topMenu_01" src="http://pic.neungyule.com/netoeic/mainRe/lnb01_ver6.jpg" alt="토단비 4주 단기 목표" /></a>
+                	<div class="sub_menu bt_no" style="display:none;top:45px;left:0px;width:395px;" >
+						<div class="menu_top">
+							<span class="in_r fr mt25 mr5 mb25" style="border-left:1px solid #ddd; padding-left:5px;">
+                            	<a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self">
+                                	<img src="http://pic.neungyule.com/netoeic/mainRe/161208_menu_bnr1.jpg" alt="성적표만 제출하면 사자마자 수강료 50% 현금환급!" />
+                                </a>
+                            </span>
+							<div class="in_l fl ml15">
+								<!--<p class="fb t_blue f13 mb10">토단비 첫토익 반/반패키지</p>-->
+								<ul class="hover_pink">
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=26">토단비 생기초</a></li>
+									<li><a href="#n">토단비 700</a></li>
+									<li><a href="#n">토단비 700 - 337 (17.6예정)</a></li>
+									<li><a href="#n">토단비 800 (신규)</a></li>
+									<li><a href="#n">토단비 실전</a></li>
+									<li><a href="#n">토단비 파트전략</a></li>
+								</ul>
+							</div>
+                        </div>
+						<!--<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">100만원 장학금 지급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+							</ul>
+						</div>-->
+                    </div>
+                </li>
+                <!-- 2학년토익 -->
+				<li class="toe_lnb" style="position:absolute;bottom:-52px;left:128px;">
+					<a href="/todanbi/todanbiPromotion.do"><img id="topMenu_12" src="http://pic.neungyule.com/netoeic/mainRe/lnb02_ver6.jpg" alt="2학년토익 입문 올인원" /></a>
+                	<div class="sub_menu bt_no" style="display:none;top:45px;left:-113px;width:395px;" >
+						<div class="menu_top">
+							<span class="in_r fr mt25 mr5 mb25" style="border-left:1px solid #ddd; padding-left:5px;">
+                            	<a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self">
+                                	<img src="http://pic.neungyule.com/netoeic/mainRe/161208_menu_bnr1.jpg" alt="성적표만 제출하면 사자마자 수강료 50% 현금환급!" />
+                                </a>
+                            </span>
+							<div class="in_l fl ml15">
+								<!--<p class="fb t_blue f13 mb10">토단비 첫토익 반/반패키지</p>-->
+								<ul class="hover_pink mt10">
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=26">2학년 토익 - 3개월</a></li>
+									<li><a href="#n">2학년 토익 3개월 +3</a></li>
+									<li><a href="#n">2학년 토익 3개월 +9</a></li>
+									<li><a href="#n">2학년 토익 MOOMIN Edition</a></li>
+									<!--<li><a href="/lecture/lectureDetail.do?pdtCateASeq=27">토단비 700 [新유형 반영]</a></li>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=28">토단비 생기초+700 [新유형 반영]</a></li>-->
+								</ul>
+							</div>
+                        </div>
+						<!--<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">100만원 장학금 지급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+							</ul>
+						</div>-->
+                    </div>
+					<!--<div class="sub_menu bt_no bb_no" style="display:none;top:41px;left:-148px;width:442px" >
+						<div class="menu_top">
+							<div class="in_l fl">
+								<p class="fb t_blue f13 mb10">토단비 입문 (新유형반영)</p>
+								<ul>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=26">4주안에 500점 달성 (토단비 생기초)</a></li>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=27">4주안에 700점 달성 (토단비 700)</a></li>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=28">4주안에 900점 달성(토단비 실전)</a></li>
+								</ul>
+							</div>
+							<span class="in_r fr"><a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self"><img src="http://pic.neungyule.com/netoeic/banner/160926_menu_bnr2.jpg" alt="구매자전원 100%환급" /></a></span>
+	                        </div>
+						<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">재수강권 100%지급</a></li>
+							</ul>
+						</div>
+					</div>-->
+				</li>
+                
+                <!--<div style="position:absolute;bottom:-7px;left:327px;">
+					<a href="#n" ><img src="http://pic.neungyule.com/netoeic/mainRe/lnb_tos.jpg" alt="2주속성 토스 오픽" /></a>
+                    <img style="position:absolute; right:-237px; top:0px;" src="http://pic.neungyule.com/netoeic/mainRe/topMenu_02_top.jpg" alt="토스 오픽" />
+                </div>-->
+                
+                <div class="opic_gnb" style="position:absolute;bottom:-7px;left:307px;">
+					<a href="#n" style="display:block; width:306px; height:44px; background:url(http://pic.neungyule.com/netoeic/mainRe/gnb_tos.jpg); text-indent:-9999px; overflow:hidden;">토스/오픽(최소암기 단기합격)</a>
+                </div>
+                
+				<!-- 토스단비 -->
+				<li class="opic_lnb" style="position:absolute;bottom:-52px;left:290px;">
+					<a href="/hook.do" ><img id="topMenu_11" src="http://pic.neungyule.com/netoeic/mainRe/lnb03_ver5.jpg" alt="토스단비 한장토스" /></a>
+                	<div class="sub_menu bt_no" style="display:none;top:45px;left:-113px;width:395px;" >
+						<!--<div class="menu_top pink">
+							<div class="in_l fl" style="width:43.2%;border-right:1px solid #dedede">
+								<p class="fb t_dPink f13 mb10">오픽훅</p>
+								<ul>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1736">IM 보장 코스 - 오픽훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1737">IH/AL 보장 코스 - 오픽훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1769">오픽모의테스트 + 오답리뷰</a></li>
+								</ul>
+							</div>
+							<div class="in_l fl">
+								<p class="fb t_dPink f13 mb10">토스훅</p>
+								<ul>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1771">Lv.6 보장 코스 - 토스훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1772">Lv.7/8 보장 코스 - 토스훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1775">토스모의테스트 + 오답리뷰</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="menu_btm pink">
+							<ul>
+								<li style="width:48.7%"><a class="t_dPink">보장코스 상품 환급 지원!</a></li>
+								<li><a href="/hook.do" class="t_dPink">2주 안에 치고 빠지기</a></li>
+							</ul>
+						</div>-->
+						<!--<div class="menu_top green">
+							<span class="in_r fl"><a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self"><img src="http://pic.neungyule.com/netoeic/banner/160819_menu_bnr3.jpg" alt="2학년때 끝내는 2학년토익 한번에 800점달성" /></a></span>
+							<div class="in_l fr" style=" position:relative; right:70px;">
+								<p class="fb t_green f13 mb10" style="color:#289b15;">2학년 토익 [新유형반영]</p>
+								<ul>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=26">2학년 토익 3개월</a></li>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=27">2학년 토익 3개월+3개월</a></li>
+									<li><a href="/lecture/lectureDetail.do?pdtCateASeq=28">2학년 토익 3개월+9개월</a></li>
+								</ul>
+							</div>
+                        </div>
+						<div class="menu_btm grn" style="height:37px; line-height:0px;">
+							<ul style="position:relative; bottom:2px;">
+								<li><a href="/todanbi/todanbiMain.do">장학금 100만원 지원!</a></li>
+								<li><a href="/todanbi/todanbiMain.do">수강료 100%현금환급</a></li>
+							</ul>
+						</div>-->
+						<div class="menu_top">
+							<span class="in_r fr mt25 mr5 mb25" style="border-left:1px solid #ddd; padding-left:5px;">
+                            	<a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self">
+                                	<img src="http://pic.neungyule.com/netoeic/mainRe/161208_menu_bnr1.jpg" alt="성적표만 제출하면 사자마자 수강료 50% 현금환급!" />
+                                </a>
+                            </span>
+							<div class="in_l fl pl10 mb10">
+								<!--<p class="fb t_blue f13 mb10">토단비 첫토익 반/반패키지</p>-->
+								<ul class="hover_pink mt10">
+									<li><a href="#n">토스단비-꼼수</a></li>
+									<li><a href="#n">토스훅</a></li>
+								</ul>
+							</div>
+                        </div>
+						<!--<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">100만원 장학금 지급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+							</ul>
+						</div>-->
+					</div>
+                </li>
+                
+				<!-- 오픽단비 -->
+				<li class="opic_lnb" style="position:absolute;bottom:-52px;left:442px;">
+					<a href="/hook.do" ><img id="topMenu_11" src="http://pic.neungyule.com/netoeic/mainRe/lnb04_ver3.jpg" alt="오픽단비 한장오픽" /></a>
+                	<div class="sub_menu bt_no" style="display:none;top:45px;left:-120px;width:395px;" >
+						<div class="menu_top">
+							<span class="in_r fr mt25 mr5 mb25" style="border-left:1px solid #ddd; padding-left:5px;">
+                            	<a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self">
+                                	<img src="http://pic.neungyule.com/netoeic/mainRe/161208_menu_bnr1.jpg" alt="성적표만 제출하면 사자마자 수강료 50% 현금환급!" />
+                                </a>
+                            </span>
+							<div class="in_l fl pl10 mb10">
+								<!--<p class="fb t_blue f13 mb10">토단비 첫토익 반/반패키지</p>-->
+								<ul class="hover_pink mt10">
+									<li><a href="#n">토스단비-꼼수</a></li>
+									<li><a href="#n">토스훅</a></li>
+								</ul>
+							</div>
+                        </div>
+						<!--<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">100만원 장학금 지급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+							</ul>
+						</div>-->
+					</div>
+                </li>
+                
+				<div class="opic_lnb" style="position:absolute;bottom:-43px;left:624px;">
+					<a href="#n"><img id="topMenu_11" src="http://pic.neungyule.com/netoeic/mainRe/gnb_event.png" alt="한정혜택! 선구매 3만원 특별할인" /><span style="color:#333; font-size:14px; font-weight:bold; position:relative; top:5px; letter-spacing:-1px;">12월 5일까지&nbsp;&gt;</span></a>
+                </div>
+				<!-- 신토익-->
+                <!--<li style="margin-left:490px; padding-top:15px">
+					<a href="/newToeicInfo.do" class="cPoint"><img id="topMenu_14" src="http://pic.neungyule.com/netoeic/mainRe/lnb05_ver2.jpg" alt="신토익특강" /></a>
+                </li>-->
+				<!-- 오픽/토스 -->
+                <li style="margin-left:660px; padding-top:27px">
+					<a href="/lecture/lectureMain.do"  class="cPoint"><img id="topMenu_03" src="http://pic.neungyule.com/netoeic/mainRe/lnb_strategy.png" alt="족보 전략" /></a>
+                	<!--<div class="sub_menu" style="display:none;right:95px; width:566px; border-top:2px solid #e7007c;">
+						<div class="menu_top pink">
+							<div class="in_l fl" style="width:43.2%;border-right:1px solid #dedede">
+								<p class="fb t_dPink f13 mb10">오픽훅</p>
+								<ul>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1736">IM 보장 코스 - 오픽훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1737">IH/AL 보장 코스 - 오픽훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1769">오픽모의테스트 + 오답리뷰</a></li>
+								</ul>
+							</div>
+							<div class="in_l fl">
+								<p class="fb t_dPink f13 mb10">토스훅</p>
+								<ul>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1771">Lv.6 보장 코스 - 토스훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1772">Lv.7/8 보장 코스 - 토스훅 3단계 코스</a></li>
+									<li><a href="/offichook/officHookDetail.do?pdtInfoSeq=1775">토스모의테스트 + 오답리뷰</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="menu_btm">
+							<ul>
+								<li style="width:48.7%"><a class="t_dPink">보장코스 상품 환급 지원!</a></li>
+								<li><a href="/hook.do" class="t_dPink">2주 안에 치고 빠지기</a></li>
+							</ul>
+						</div>
+                    </div>-->
+                	<div class="sub_menu bb_no" style="display:none;top:72px;left:540px;width:328px;" >
+						<span class="ico_arrow" style="right:192px"><img src="http://pic.neungyule.com/netoeic/ico/ico_arrowUpBlue.png" alt="하위 메뉴" /></span>
+						<div class="menu_top">
+							<span class="in_r fl">
+                            	<a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_회원가입 즉시 시간낭비 막아주는 토익 공략법 강의\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_self">
+                                	<img src="http://pic.neungyule.com/netoeic/banner/161118_menu_bnr1.jpg" alt="성적표만 제출하면 사자마자 수강료 50% 현금환급!" />
+                                </a>
+                            </span>
+							<div class="in_l fl">
+								<!--<p class="fb t_blue f13 mb10">토단비 첫토익 반/반패키지</p>-->
+								<ul>
+									<li><a href="#n">토익적중특강</a></li>
+									<li><a href="#n">新토익특강</a></li>
+								</ul>
+							</div>
+                        </div>
+						<div class="menu_btm blue">
+							<ul>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">100만원 장학금 지급</a></li>
+								<li><a href="/todanbi/todanbiMain.do" class="t_blue">응시료 100%환급</a></li>
+							</ul>
+						</div>
+					</div>
+                </li>
+				<!-- 단과 강좌 -->
+                <li style="padding-top:27px">
+					<a href="/lecture/lectureMain.do"  class="cPoint"><img id="topMenu_03" src="http://pic.neungyule.com/netoeic/mainRe/lnb06_ver2.jpg" alt="단과 강좌" /></a>
+                </li>
+				<!-- 
+                <li style="padding-top:15px">
+					<a href="/newToeicInfo.do" class="cPoint"><img id="topMenu_14" src="http://pic.neungyule.com/netoeic/mainRe/lnb05_ver2.jpg" alt="신토익특강" /></a>
+                </li>-->
+				<!-- 무료 강좌 -->
+				<!--<li style="padding-top:15px">
+					<a href="/free/monthlySpecial.do"  class="cPoint"><img id="topMenu_04" src="http://pic.neungyule.com/netoeic/mainRe/lnb06.jpg" alt="무료강좌" /></a>
+                	<div class="sub_menu" style="display:none;right:160px">
+						<span class="ico_arrow" style="right:42px;"><img src="http://pic.neungyule.com/netoeic/ico/ico_arrowUpBlue.png" alt="하위 메뉴" /></span>
+                        <div class="menu_top bb_no">
+							<span class="fl"><a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_2학년 토익 마케팅 서포터즈 모집\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=582&pageIndex=1" target="_self"><img src="http://upfile.neungyule.com/upload_admin/2016/06/support_gnb_20160612.jpg" alt="2학년 토익 마케팅 서포터즈 모집" style="height:100%"/></a></span>
+	                        <div class="fl" style="padding:10px">
+								<ul>
+									<li><a href="/free/monthlySpecial.do">토익 적중 특강</a></li>
+									<li><a href="/free/zeroCostLecture.do">0원 강의</a></li>
+								</ul>
+							</div>
+						</div>
+                    </div>
+                </li>-->
+                <!-- 교재 -->
+                <li style="padding-top:27px">
+					<a href="/book/bookMain.do" class="cPoint"><img id="topMenu_10" src="http://pic.neungyule.com/netoeic/mainRe/lnb07_ver2.jpg" alt="교재" /></a>
+                	<div class="sub_menu" style="display:none;right:13px">
+						<span class="ico_arrow" style="right:154px"><img src="http://pic.neungyule.com/netoeic/ico/ico_arrowUpBlue.png" alt="하위 메뉴" /></span>
+						<div class="menu_top">
+                        	<span class="fl"><a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_2학년 토익 마케팅 서포터즈 모집\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=582&pageIndex=1" target="_self"><img src="http://pic.neungyule.com/netoeic/mainRe/20160912_tester.jpg" alt="2학년토익 1만체험담" style="height:100%"/></a></span>
+	                        <div class="fl" style="padding:10px">
+								<ul>
+									<li><a href="/book/bookList.do">교재 찾기</a></li>
+									<li><a href="/book/bookDataFileList.do">학습자료실</a></li>
+									<li><a href="/book/bookEpilogueList.do">교재후기</a></li>
+									<li><a href="/book/bookQnaList.do">교재 Q&amp;A</a></li>
+									<li><a href="/book/bookGuide.do">교재 선택가이드</a></li>
+								</ul>
+							</div>
+						</div>
+                    </div>
+                </li>
+                <!-- 내강의실 -->
+                <li style="padding-top:27px;">
+                    <a href="/classroom/classRoomMain.do" class="cPoint" style=" position:relative; bottom:8px; z-index:0;"><img src="http://pic.neungyule.com/netoeic/mainRe/lnb08_ver3.jpg" alt="내 강의실" /></a>
+                    <div class="sub_menu" style="display:none;right:0px">
+                        <span class="ico_arrow" style="right:53px;"><img src="http://pic.neungyule.com/netoeic/ico/ico_arrowUpBlue.png" alt="하위 메뉴" /></span>
+                        <div class="menu_top">
+                            <span class="fl"><a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'GNB 개별 배너_2학년 토익 마케팅 서포터즈 모집\' ); }catch(_e){ }');" href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=582&pageIndex=1" target="_self"><img src="http://upfile.neungyule.com/upload_admin/2016/06/support_gnb_20160612.jpg" alt="2학년 토익 마케팅 서포터즈 모집" style="height:100%"/></a></span>
+                            <div class="fl" style="padding:10px">
+                                <ul>
+                                    <li><a href="/classroom/classRoomMain.do">강의실</a></li>
+                                    <li><a href="/purchase/deliveryList.do">결제정보</a></li>
+                                    <li><a href="/purchase/point.do">나의 혜택</a></li>
+                                    <li><a href="/customer/memoList.do">쪽지함</a></li>
+                                    <li><a href="/customer/customerQnaList.do">나의 이용 문의 내역</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="num"><span class="txt"><span><span>3</span></span></span></p>
+                </li>
+                <!-- 강사 강의실-->
+                <li style="padding-top:15px;" class="hide">
+					<a href="#n" target="_blank" class="cPoint"><img src="http://pic.neungyule.com/netoeic/mainRe/lnb09.jpg" alt="강사 강의실" /></a>
+                	<div class="sub_menu" style="display:none;right:10px">
+						<span class="ico_arrow" style="right:40px"><img src="http://pic.neungyule.com/netoeic/ico/ico_arrowUpBlue.png" alt="하위 메뉴" /></span>
+                        <div class="menu_top bb_no">
+							<span class="fl"><a href="#n"><img src="http://pic.neungyule.com/netoeic/main/bnr_lnb.gif" alt="" style="height:100%"/></a></span>
+							<div class="fl" style="padding:10px">
+								<ul>
+									<li><a href="#n">강좌 리스트</a></li>
+									<li><a href="#n">공지사항</a></li>
+									<li><a href="#n">학습 Q&amp;A</a></li>
+									<li><a href="#n">학습 자료실</a></li>
+									<li><a href="#n">수강후기</a></li>
+								</ul>
+							</div>
+						</div>
+                    </div>
+                </li>
+           </ul>
+           
+			<!-- sns 링크 -->
+			<div class="snsArea" style="position:absolute;bottom:40px;right:-112px;width:60px">
+				<div class="mb2">
+                    <a style="position:relative; bottom:5px; right:4px;" href="http://tvcast.naver.com/tomatoclass" target="_blank"><img src="http://pic.neungyule.com/netoeic/ico/ico_tvCast.jpg" alt="토마토클래스 TV CAST" /></a>
+					<a style="position:relative; bottom:5px; left:3px;" href="#n"><img src="http://pic.neungyule.com/netoeic/ico/ico_fBook_ver3.jpg" alt="토마토클래스 페이스북" /></a>
+					<a style="position:relative; right:4px;" href="#n"><img src="http://pic.neungyule.com/netoeic/ico/ico_nCafe_ver2.jpg" alt="토마토클래스 네이버 카페" /></a>
+					<a href="#n"><img src="http://pic.neungyule.com/netoeic/ico/ico_nBlog_ver3.jpg" alt="토마토클래스 네이버 블로그" /></a>
+				</div>
+				<!--페이스북 좋아요 버튼공간 -->
+				<!--<div  class="facebook_like" >
+					<iframe src="facebook.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:26px;" allowTransparency="true" class="facebook" ></iframe>
+				</div>-->
+				<!--페이스북 좋아요 버튼공간 -->
+			</div>
+			<!-- sns 링크 -->
+			
+			<!-- quick -->
+			<ul class="wing" style="clear:both;top:665px;right:-103px;width:82px;">
+				<!--<li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/quick1_ver3.jpg" alt="토마토토익 교재혜택" class="mb5"/></a></li>
+                <li><a href="http://www.tomatoclass.com/hook.do"><img src="http://pic.neungyule.com/netoeic/mainRe/quick2_ver3.jpg" alt="영포자도 오픽2주 IM/IH/AL 3만원 중복할인" class="mb5"/></a></li>-->
+                <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/161216_wing.jpg" alt="100%리얼, 구매후기. 다른 곳과 비교해보고 샀어요! 바로가기" class="mb5"/></a></li>
+                <li><a href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1"><img src="http://pic.neungyule.com/netoeic/mainRe/quick3_ver3.jpg" alt="회원가입 시 토익&amp;오픽 0원" class="mb5"/></a></li>
+				<li><a href="http://www.tomatoclass.com/event/mockTest.do"><img src="http://pic.neungyule.com/netoeic/mainRe/quick4_ver3.jpg" alt="신토익 모의고사 정답/해설/MP3" class="mb5"/></a></li>
+			</ul>
+			<!--// quick -->
+        </nav>
+    </div>
+    <!--// main tab menu -->
+    <style type="text/css">
+	.toe_lnb, .pink_belt_toe,
+	.opic_lnb, .pink_belt_opic{ display:none;}
+	.toe_gnb a.on{background-image:url(http://pic.neungyule.com/netoeic/mainRe/gnb_toeic_ver2_on.jpg) !important;}
+	.opic_gnb a.on{background-image:url(http://pic.neungyule.com/netoeic/mainRe/gnb_tos_on.jpg) !important;}
+	
+	</style>
+	<script type="text/javascript">
+    //<![CDATA[
+    //새gnb 활성
+		//토익
+		$(".toe_gnb, .toe_lnb, .pink_belt_toe").mouseenter(function() {
+			$('.pink_belt_toe').show();
+			$('.toe_lnb').show();
+			$('.toe_gnb a').removeClass('on');
+			$('.toe_gnb a').addClass('on');
+		});	
+		$(".toe_gnb, .toe_lnb, .pink_belt_toe").mouseleave(function() {
+			$('.pink_belt_toe').hide();
+			$('.toe_lnb').hide();
+			$('.toe_gnb a').removeClass('on');
+		});	
+		//오픽	
+		$(".opic_gnb, .opic_lnb, .pink_belt_opic").mouseenter(function() {
+			$('.pink_belt_opic').show();
+			$('.opic_lnb').show();
+			$('.opic_gnb a').removeClass('on');
+			$('.opic_gnb a').addClass('on');
+		});	
+		$(".opic_gnb, .opic_lnb, .pink_belt_opic").mouseleave(function() {
+			$('.pink_belt_opic').hide();
+			$('.opic_lnb').hide();
+			$('.opic_gnb a').removeClass('on');
+		});	
+    //]]>
+    </script>
+</header>
+<!--// header -->
+<!-- container -->
+<section id="container2016">
+	<!-- 레이어 팝업 -->
+    <!--<div style="width:1000px;margin:0 auto;position:relative;z-index:1000">
+        <div id="noticePop">
+            <div style="position:absolute;width:360px;height:420px;right:10px;top:643px;z-index:100000;">
+                <a href="http://www.tomatoclass.com/customer/noticeDetail.do?seq=105"><img src="http://pic.neungyule.com/netoeic/popup/1220_notice_pop.jpg" alt="새롭게 업그레이드 된 토마토클래스를 소개합니다" /></a>
+                <div style="display:none">
+                    <p>토마토 클래스, 이렇게 달라집니다.</p>
+                    <ul>
+                        <li>첫째, 오픽훅 상품 런칭</li>
+                        <li>둘째, 북몰 오픈</li>
+                        <li>셋째, 내 강의실 개편</li>
+                    </ul>
+                </div>
+                <div>
+                    <span style="position:absolute;bottom:6px;right:162px;color:#fff"><input type="checkbox" id="" name="" /> 오늘 하루는 이 창을 열지 않음</span>
+                    <span style="position:absolute;bottom:6px;right:13px;"><a href="#n" onclick="$('#noticePop').hide();" style="color:#fff;font-size:14px;font-weight:bold">X</a></span>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--// 레이어 팝업 -->
+	<div class="inner_contop">
+    	<!-- main top banner -->
+    	<div class="section1" style="background:#415bba; border-top:1px solid #d9d9db; position:relative; top:-1px;">
+        	<div class="bg"></div>
+        	<div class="wrap">
+				<style type="text/css">
+                .tabList li.btn1.selected,
+                .tabList li.btn1:hover{background:#415bba;}
+                .tabList li.btn2.selected,
+                .tabList li.btn2:hover{background:blue;}
+                .tabList li.btn3.selected,
+                .tabList li.btn3:hover{background:green;}
+                .tabList li.btn4.selected,
+                .tabList li.btn4:hover{background:#415bba;}
+                .tabList li.btn5.selected,
+                .tabList li.btn5:hover{background:#415bba;}
+                .tabList li.btn6.selected,
+                .tabList li.btn6:hover{background:#415bba;}
+                .tabList li.btn7.selected,
+                .tabList li.btn7:hover{background:#415bba;}
+                .bnrImg {float:left}
+                </style>
+                <div id="mySliderTabsContainer" style="height:490px">
+                    <!-- Sample slider -->
+                    <div id="mySliderTabs">
+                        <ul class="tabList">
+                            <li class="btn1"><a href="#bnr1">토단비 무제한 수강</a></li>
+                            <li class="btn2"><a href="#bnr2">오픽훅 무제한 수강</a></li>
+                            <li class="btn3"><a href="#bnr3">토단비 무제한 수강</a></li>
+                            <li class="btn4"><a href="#bnr4">오픽훅 무제한 수강</a></li>
+                            <li class="btn5"><a href="#bnr5">토단비 무제한 수강</a></li>
+                            <li class="btn6"><a href="#bnr6">토단비 무제한 수강</a></li>
+                            <li class="btn7"><a href="#bnr7">토단비 무제한 수강</a></li>
+                        </ul>
+        
+                        <div id="bnr1">
+                            <a href="http://www.naver.com"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_t01.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr2">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/common/0606_system_bg.gif" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr3">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_t01.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr4">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/main/bnr1.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr5">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_t01.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr6">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/main/bnr2.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                        <div id="bnr7">
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/main/img_thr.jpg" alt="" style="width:1000px;height:450px"/></a>
+                        </div>
+                    </div>
+                    <!-- layer bnr -->
+                    <div class="pa" style="width:140px;height:115px;top:20px;right:200px;z-index:5">
+                        <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_t_layer01.png" alt="토익 꼼꼼히 따져보세요!" /></a>
+                    </div>
+                    <div class="pa" style="width:136px;height:115px;top:20px;right:50px;z-index:5">
+                        <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_t_layer02.png" alt="토익 꼼꼼히 따져보세요!" /></a>
+                    </div>
+                    <!--// layer bnr -->
+                </div>
+            </div>
+		</div>   
+        <!--// main top banner -->         
+	</div>
+
+    <div class="inner_conmid">
+    	<!-- 한줄응원 -->
+    	<div class="section1">
+        	<div class="wrap">
+				<a href="#n" class="control_prev"><img src="http://pic.neungyule.com/netoeic/btn/btn_arrowCL_ver2.jpg" alt="이전" /></a>
+                <a href="#n" class="control_next"><img src="http://pic.neungyule.com/netoeic/btn/btn_arrowCR_ver2.jpg" alt="다음" /></a>
+                <ul class="cheer_slide">
+                    <li><a href="#n">응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄</a></li>
+                    <li><a href="#n">22222222222222응원한줄응원한줄응원한줄응원한줄응원한줄응원한줄</a></li>
+                    <li><a href="#n">333333333333응원한줄응원한줄응원한줄응원한줄</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--// 한줄응원 -->
+        
+        <!--토익입문1위비결-->
+        <div class="section1_1">
+        	<div class="wrap">
+                <img class="title" src="http://pic.neungyule.com/netoeic/mainRe/section1_1_tit.jpg" alt="토익입문1위의 비결! 입문자들을 분석하다" /> 
+                
+                <!--<div class="slide_wrap">
+                    <img class="title_image" src="http://pic.neungyule.com/netoeic/mainRe/section1_1_slide_tit.png" alt="토익입문1위의 비결! 입문자들을 분석하다" />  
+                    <div class="tab_area">
+                        <ul class="bg_tabs">
+                            <li class="on"><a href="#n">대학생 코스</a></li>
+                            <li><a href="#n">초단기 목표</a></li>
+                            <li><a href="#n">교재</a></li>
+                            <li class="last"><a href="#n">강사</a></li>
+                        </ul>
+                    </div>
+                    <div class="conts_area">
+                        <div class="conts">
+                            <ul class="bxslider1">
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide1_1.jpg" alt="2학년토익" usemap="#silde1_1_map"/>
+                                    <map name="silde1_1_map" id="silde1_1_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                      <area shape="rect" coords="585,158,686,186" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                            </ul>                            
+                        </div> 
+                        <div class="conts" style="display:none">     
+                            <ul class="bxslider2">
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide2_1.jpg" alt="토단비생기초" usemap="#silde2_1_map"/>
+                                    <map name="silde2_1_map" id="silde2_1_map">
+                                        <area shape="rect" coords="585,68,686,96" href="#n" alt="LC맛보기"/>
+                                        <area shape="rect" coords="585,99,686,127" href="#n" alt="RC맛보기"/>
+                                        <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                        <area shape="rect" coords="585,160,686,188" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide2_2.jpg" alt="토단비700" usemap="#silde2_2_map"/>
+                                    <map name="silde2_2_map" id="silde2_2_map">
+                                        <area shape="rect" coords="585,68,686,96" href="#n" alt="LC맛보기"/>
+                                        <area shape="rect" coords="585,99,686,127" href="#n" alt="RC맛보기"/>
+                                        <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                        <area shape="rect" coords="585,160,686,188" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide2_3.jpg" alt="토단비실전" usemap="#silde2_3_map"/>
+                                    <map name="silde2_3_map" id="silde2_3_map">
+                                        <area shape="rect" coords="585,68,686,96" href="#n" alt="LC맛보기"/>
+                                        <area shape="rect" coords="585,99,686,127" href="#n" alt="RC맛보기"/>
+                                        <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                        <area shape="rect" coords="585,160,686,188" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                            </ul>                            
+                        </div>
+                        <div class="conts" style="display:none">         
+                            <ul class="bxslider3">
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/silde3_1.jpg" alt="2학년토익" usemap="#silde3_1_map"/>
+                                    <map name="silde3_1_map" id="silde3_1_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                      <area shape="rect" coords="585,158,686,186" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/silde3_2.jpg" alt="토마토베이직" usemap="#silde3_2_map"/>
+                                    <map name="silde3_2_map" id="silde3_2_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                      <area shape="rect" coords="585,158,686,186" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/silde3_3.jpg" alt="토마토1000제" usemap="#silde3_3_map"/>
+                                    <map name="silde3_3_map" id="silde3_3_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                      <area shape="rect" coords="585,158,686,186" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/silde3_4.jpg" alt="33토익" usemap="#silde3_4_map"/>
+                                    <map name="silde3_4_map" id="silde3_4_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                      <area shape="rect" coords="585,158,686,186" href="#n" alt="구매하기"/>
+                                    </map>
+                                </li>
+                            </ul>                            
+                        </div>
+                        <div class="conts" style="display:none">  
+                            <ul class="bxslider4">
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_1.jpg" alt="최호선" usemap="#silde4_1_map"/>
+                                    <map name="silde4_1_map" id="silde4_1_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_2.jpg" alt="이규동" usemap="#silde4_2_map"/>
+                                    <map name="silde4_2_map" id="silde4_2_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_3.jpg" alt="김성범" usemap="#silde4_3_map"/>
+                                    <map name="silde4_3_map" id="silde4_3_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_4.jpg" alt="이용재" usemap="#silde4_4_map"/>
+                                    <map name="silde4_4_map" id="silde4_4_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_5.jpg" alt="송혜영" usemap="#silde4_5_map"/>
+                                    <map name="silde4_5_map" id="silde4_5_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                                <li>
+                                    <img src="http://pic.neungyule.com/netoeic/mainRe/slide4_6.jpg" alt="김유신" usemap="#silde4_6_map"/>
+                                    <map name="silde4_6_map" id="silde4_6_map">
+                                      <area shape="rect" coords="585,129,686,157" href="#n" alt="자세히보기"/>
+                                    </map>
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>    
+                </div>
+                <div class="r_bnr">
+                    <a href="http://www.tomatoclass.com/brandIntro.do"><img src="http://pic.neungyule.com/netoeic/mainRe/section1_1_r_bnr.jpg" alt="항상 입문 1위 능률의 토익이 특별한 이유" /></a>
+                </div>-->
+                
+                <div class="con1_slide">
+                    <div id="bx-pager">
+                        <a data-slide-index="0" href="#n">입문자 분석</a>
+                        <!--<span>|</span>-->
+                        <a data-slide-index="1" href="#n">최소 학습량</a>
+                        <!--<span>|</span>-->
+                        <a data-slide-index="2" href="#n">월등한 수업</a>
+                        <!--<span>|</span>-->
+                        <a data-slide-index="3" href="#n">완벽한 체득</a>
+                        <!--<span>|</span>-->
+                        <a data-slide-index="4" href="#n">전폭적 지원</a>
+                    </div>
+                    <div class="slide5_wrap">
+                        <ul class="bxslider5">
+                            <li><img src="http://pic.neungyule.com/netoeic/mainRe/slide1.jpg" alt="입문자를 정의하다. 무작정 고득점이 아닌 내 타입에 맞는 토익시작" /></li>
+                            <li><img src="http://pic.neungyule.com/netoeic/mainRe/slide2.jpg" alt="학습량이 줄어들다 4주. 뛰어난 분석과 노하우로 군더더기 없는 학습량 제시" /></li>
+                            <li><img src="http://pic.neungyule.com/netoeic/mainRe/slide3.jpg" alt="수업 중에 해결하다. 재미있게 집중되고, 수업중에 다 외워지는 강의력" /></li>
+                            <li><img src="http://pic.neungyule.com/netoeic/mainRe/slide4.jpg" alt="완전하게 체득하다. 배운 내용이 완전해 내 것으로 체득되는 데.실.트와 핵강의" /></li>
+                            <li><img src="http://pic.neungyule.com/netoeic/mainRe/slide5.jpg" alt="전폭적으로 지원받다. 국내 최고/최대 영어 연구진의 지속적인 업데이트와 관리" /></li>
+                        </ul>
+                        <a class="btn_prev5" href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/btn_prev5.png" /></a>
+                        <a class="btn_next5" href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/btn_next5.png" /></a>
+               		</div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">-->
+        <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
+		<script type="text/javascript">
+        //<![CDATA[
+		var timer5;
+		var slider5 = $('.bxslider5').bxSlider({
+			pagerCustom: '#bx-pager',
+			auto: true,
+			autoControls: false,
+			controls: false,
+			autoHover: true,
+			pager: true,
+			stopAuto: false,
+			onSlideLoad: function() {
+				timer5 = setTimeout(null, 5000);
+			},
+			onSlideBefore: function() {
+				clearTimeout(timer5);
+			},
+			onSlideAfter: function() {
+				timer5 = setTimeout(startAutoSlide5, 5000);
+			}
+		});
+		
+		function startAutoSlide5() {
+			slider5.startAuto();
+		}
+		
+		$('.btn_prev5').click(function(){
+				slider5.goToPrevSlide();  
+		});
+		
+		$('.btn_next5').click(function(){
+				slider5.goToNextSlide();
+		});
+        //]]>
+        </script>     
+           
+        <!--<script type="text/javascript">
+			// 강좌 상세 탭
+			$(document).ready(function(){
+				$(".bg_tabs > li").bind('click',function(e){
+					e.preventDefault();
+					var index = jQuery(this).closest('li').index();
+					jQuery(".conts").hide().eq(index).show();
+					jQuery('.bg_tabs > li').removeClass('on');
+					jQuery(this).addClass('on');
+				});
+			});
+			
+			//슬라이더1
+			var timer;
+			var slider1 = $('.bxslider1').bxSlider({
+				auto: true,
+				autoControls: false,
+				controls: false,
+				autoHover: true,
+				pager: true,
+				stopAuto: false,
+				onSlideLoad: function() {
+					timer = setTimeout(null, 5000);
+				},
+				onSlideBefore: function() {
+					clearTimeout(timer);
+				},
+				onSlideAfter: function() {
+					timer = setTimeout(startAutoSlide, 5000);
+				}
+			});
+			function startAutoSlide() {
+				slider1.startAuto();
+			}
+			
+			//슬라이더2
+			var timer2;
+			var slider2 = $('.bxslider2').bxSlider({
+				auto: true,
+				autoControls: false,
+				controls: false,
+				autoHover: true,
+				pager: true,
+				stopAuto: false,
+				onSlideLoad: function() {
+					timer2 = setTimeout(null, 5000);
+				},
+				onSlideBefore: function() {
+					clearTimeout(timer2);
+				},
+				onSlideAfter: function() {
+					timer2 = setTimeout(startAutoSlide2, 5000);
+				}
+			});
+			function startAutoSlide2() {
+				slider2.startAuto();
+			}
+			
+			//슬라이더3
+			var timer3;
+			var slider3 = $('.bxslider3').bxSlider({
+				auto: true,
+				autoControls: false,
+				controls: false,
+				autoHover: true,
+				pager: true,
+				stopAuto: false,
+				onSlideLoad: function() {
+					timer3 = setTimeout(null, 5000);
+				},
+				onSlideBefore: function() {
+					clearTimeout(timer3);
+				},
+				onSlideAfter: function() {
+					timer3 = setTimeout(startAutoSlide3, 5000);
+				}
+			});
+			function startAutoSlide3() {
+				slider3.startAuto();
+			}
+			
+			//슬라이더4
+			var timer4;
+			var slider4 = $('.bxslider4').bxSlider({
+				auto: true,
+				autoControls: false,
+				controls: false,
+				autoHover: true,
+				pager: true,
+				stopAuto: false,
+				onSlideLoad: function() {
+					timer4 = setTimeout(null, 5000);
+				},
+				onSlideBefore: function() {
+					clearTimeout(timer4);
+				},
+				onSlideAfter: function() {
+					timer4 = setTimeout(startAutoSlide4, 5000);
+				}
+			});
+			function startAutoSlide4() {
+				slider4.startAuto();
+			}
+        </script>-->
+        <!--//토익입문1위비결-->
+        
+        <!-- 추천강좌 -->
+        <!--<div class="section3">
+            <div class="mTit" style="height:63px; margin-top:0;"><img src="http://pic.neungyule.com/netoeic/mainRe/section3_tit.jpg" alt="토익입문1위! 수강생 98%가 추천한 입문자 맞품형 강의" /></div>
+            <div class="of_hi">
+            	<div class="srch_lec">
+                    <div class="srch_start hide">
+                        <a href="#n" class="btn"><img src="http://pic.neungyule.com/netoeic/mainRe/srch_lec.jpg" alt="나는 어떤 토익입문자?" /></a>
+                    </div>
+                    <div class="srch_start srch_ing hide">
+                        <p class="tit mb30">당신의 현재 영어 실력은?</p>
+                        <ul class="q_list">
+                        	<li><a href="#n">응시할 시험이 있어요</a></li>
+                            <li><a href="#n">시험을 보지는 않지만 배워야 해요</a></li>
+                        </ul>
+                        <a href="#n" class="btnBack"><img src="http://pic.neungyule.com/netoeic/btn/btn_arrowCL2_ver2.png" alt="뒤로가기" /></a>
+                    </div>
+                    <div class="srch_start srch_ing">
+                        <p class="tit mb30" style=" font-size:22px; line-height:33px; font-weight:normal;">기존의 방법은 저학년에게<br />불필요한 부분이 많습니다.<br />국내 유일 대학생을 위한 학습법으로 한번에<br />쉽게 달성하실 수 있어요!</p>
+                        <a href="#n" style=" position:relative; left:100px;"><img src="http://pic.neungyule.com/netoeic/mainRe/to_start.png" alt="처음부터" /></a>
+                    </div>
+            	</div>
+
+                <div>
+                    <div class="product_box" style="margin-left:500px">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t01.jpg" alt="이미지" />
+                                <p class="cate blue">토익</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초<br/> [2016 Edition] 수강생 모집중</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성, 영포자 구원! 영포자 구원!</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">345,647원</p><p class="fr t_blue f16 fb">135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함 #교재포함 #교재포함 </p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익+토스</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익</p>
+                                <p class="saleTxt">HOT SALE! 98%</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t03.jpg" alt="이미지" />
+                                <p class="cate grn">교재</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초 토단비 생기초 토단비 생기초 토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t04.jpg" alt="이미지" />
+                                <p class="cate grn">토익</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                    	<div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t01.jpg" alt="이미지" />
+                                <p class="cate blue">토익+오픽+토스</p>
+                                <p class="saleTxt">HOT SALE! 8%</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height:1020px;">
+                <div>
+                    <div class="mTit" style="margin-top:20px;"><img style=" position:relative; top:10px;" src="http://pic.neungyule.com/netoeic/mainRe/products_tit.jpg" alt="토익입문1위의비결!" /></div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_t02.jpg" alt="이미지" />
+                                <p class="cate blue">토익단과</p>
+                                <div class="txtArea">
+                                    <div class="infoBox">
+                                        <p class="tit t_blue">토단비 생기초</p>
+                                        <p class="txt ellipsis mb10">토익 500점 3주 완성</p>
+                                        <p class="price of_hi"><p class="fl text_mLine">1,345,647원</p><p class="fr t_blue f16 fb">1,135,900원</p></p>
+                                    </div>
+                                    <div class="tagBox">
+                                        <p class="ellipsis">#교재포함 #교재포함</p>
+                                    </div>                          
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_tdb.jpg" alt="이미지" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_box">
+                        <div class="in_box">
+                            <div class="bestLec_area">
+                                <p class="tit">입문인기강좌 BEST</p>
+                                <ul class="tabArea">
+                                    <li><a href="#n" onClick="Menu(1)"><img id="Menu_img1" src="http://pic.neungyule.com/netoeic/mainRe/bestLec_ver2_tab01_on.jpg" alt="신토익" onmouseover="imgchange(this);"/></a></li>
+                                    <li><a href="#n" onClick="Menu(2)"><img id="Menu_img2" src="http://pic.neungyule.com/netoeic/mainRe/bestLec_ver2_tab02.jpg" alt="스피킹" onmouseover="imgchange(this);"/></a></li>
+                                    <li><a href="#n" onClick="Menu(3)"><img id="Menu_img3" src="http://pic.neungyule.com/netoeic/mainRe/bestLec_ver2_tab03.jpg" alt="취업영어" onmouseover="imgchange(this);"/></a></li>
+                                </ul>
+                                <div id="lecC1" class="contArea" style="display:block">
+                                    <div class="lec_list mt20">
+                                        <ol>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">1</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반 New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">2</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월</a></p>
+                                            </li>
+                                            <li>
+                                               <p class="ico_rankR fl mr10">3</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">4</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">5</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div id="lecC2" class="contArea" style="display:none">
+                                    <div class="lec_list mt20">
+                                        <ol>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">1</p>
+                                                <p class="txt"><a href="#n">오픽 IM 보장코스</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">2</p>
+                                                <p class="txt"><a href="#n">오픽 IH/AL 보장코스</a></p>
+                                            </li>
+                                            <li>
+                                               <p class="ico_rankR fl mr10">3</p>
+                                                <p class="txt"><a href="#n">토스 LV.6 보장코스</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">4</p>
+                                                <p class="txt"><a href="#n">토스 LV.7/8 보장코스</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">5</p>
+                                                <p class="txt"><a href="#n">오픽 모의테스트 1회+오답리뷰</a></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div id="lecC3" class="contArea" style="display:none">
+                                    <div class="lec_list mt20">
+                                        <ol>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">1</p>
+                                                <p class="txt"><a href="#n">단과</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">2</p>
+                                                <p class="txt"><a href="#n">단과단과단과단과단과단과단과단과단과단과단과단과단과단과단과단과단과단과</a></p>
+                                            </li>
+                                            <li>
+                                               <p class="ico_rankR fl mr10">3</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">4</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                            <li>
+                                                <p class="ico_rankR fl mr10">5</p>
+                                                <p class="txt"><a href="#n">New 토단비 750 3월/4월 시험 대비반</a></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="cb">
+                                    <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_m_b01.jpg" alt="배너" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                 
+            </div>
+		</div>-->
+        <!--// 추천강좌 -->
+        
+        <!--입문자를 정의하다-->
+        <div class="con2_boxes">
+            <h4 style=""><img src="http://pic.neungyule.com/netoeic/mainRe/con2tit.jpg" alt="입문자를 정의하다! 98%가 추천한 인생강의" /></h4>
+        	<dl>
+            	<dt>
+                    <img src="http://pic.neungyule.com/netoeic/mainRe/box1_tit.jpg" alt="토익입문자 나는 어떤 입문자인가요?" />                
+                </dt>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box1_1.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">영어를 못하면</span>
+                            <div class="under">
+                            	<h6>토단비 생기초</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box1_2.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">빠른 700 달성</span>
+                            <div class="under">
+                            	<h6>토단비 700</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box1_3.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">입문자 올인원 토익코스</span>
+                            <div class="under">
+                            	<h6>2학년 토익</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+            </dl>
+        
+        	<dl>
+            	<dt>
+                    <img src="http://pic.neungyule.com/netoeic/mainRe/box2_tit.jpg" alt="토익정체자 고득점은 학습법이 다릅니다." />                
+                </dt>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box2_1.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">쉽고 빠른 33비법</span>
+                            <div class="under">
+                            	<h6>토단비 실전 339</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box2_2.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">1,000문제 실전연습</span>
+                            <div class="under">
+                            	<h6>토단비 실전 1000제</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box2_3.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">입문자 올인원 토익코스</span>
+                            <div class="under">
+                            	<h6>2학년 토익</h6>
+                                <span>148,000원~</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+            </dl>
+        
+        	<dl style="margin-bottom:40px;">
+            	<dt>
+                    <img src="http://pic.neungyule.com/netoeic/mainRe/box3_tit.jpg" alt="토스 오픽. pass로 통하는 가장 쉬운 방법" />                
+                </dt>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box3_1.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">모든 질문의 마스터키</span>
+                            <div class="under">
+                            	<h6>토스단비 1장</h6>
+                                <span>50,000원</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box3_2.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">최소암기 최대효과</span>
+                            <div class="under">
+                            	<h6>오픽단비 1장</h6>
+                                <span>50,000원</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+                <dd>
+                	<a href="#n">
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/box3_3.jpg" alt="강좌 이미지" />   
+                        <div class="info_area">
+                        	<span class="tit_txt">원어민 약점 강화</span>
+                            <div class="under">
+                            	<h6>토스훅</h6>
+                                <span>129,000원</span>
+                            </div>
+                        </div>             
+                    </a>
+                <dd>
+            </dl>
+            
+            <ul>
+            	<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/box4_1.jpg" alt="항상 입문 1위! 능률의 토익이 특별한 이유. 경쟁사를 분석해도 괜히 복잡했습니다. 확실한 것은 [비싸다] 뿐이었습니다." /></a>
+                </li>
+            	<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/box4_2.jpg" alt="항상 입문 1위! 좋은 선생님의 구별법. 근거 없이 난무하는 일타 강사는 여러분을 더욱 힘들게 합니다." /></a>
+                </li>
+            	<li>
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/box4_3.jpg" alt="4주만에 목표 점수 가능할까요? 토단비 진단평가 바로 확인하세요" /></a>
+                </li>
+            	<li style="margin-right:0;">
+                	<a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/box4_4.jpg" alt="적중률의 비결은 누구보다 많이 공들인 강의 입니다. 토익 적중 특강" /></a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 목표 달성 후기 -->
+        <div style="background:#f0f1f3; padding-bottom:20px;">
+            <div class="section2" style="z-index:100;">
+                <div class="mTit" style=" position:relative; bottom:10px; margin-bottom:10px;"><img src="http://pic.neungyule.com/netoeic/mainRe/section2_tit.png" alt="쉽고 빠른 고득점 성공비법" /></div>
+                <div class="pr">
+                    <!-- 수강후기 -->
+                    <div class="box">                
+                        <div class="in_box">
+                            <div class="review_tit">
+                                <p style="width:700px">REALTIME 수강후기</p><p class="pl20" style="width:250px; position:relative; left:20px;">토마토 클래스는 수강후기를 조작하지 않습니다</p>
+                            </div>
+                            <div class="review_list">
+                                <ul>
+                                    <li>
+                                    	<a href="#n">1250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요 환호성질렀어요 환호성질렀어요 1250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요 환호성질렀어요 환호성질렀어요</a>
+                                    	<div class="review_cont">
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<a href="#n">2250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요</a>
+                                    	<div class="review_cont">
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<a href="#n">2250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요</a>
+                                    	<div class="review_cont">
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<a href="#n">2250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요</a>
+                                    	<div class="review_cont">
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<a href="#n">2250->680으로 비약했어요 ㅠㅠ 점수 확인하고 기뻐서 환호성질렀어요</a>
+                                    	<div class="review_cont">
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        	리뷰내용 리뷰내용 리뷰내용 리뷰내용<br />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+						//리뷰 토글
+						$(document).ready(function(){
+							$('.review_list ul li').click(function(){
+								if(!$(this).hasClass('on')) {
+									$('.review_list ul li').removeClass('on');
+									$(this).addClass('on');
+								} else {
+									$(this).removeClass('on');
+								}	
+							});
+						});					
+					</script>
+                    
+                    <!-- 목표달성 후기(토익) -->              
+                    <div class="box teReview">
+                        <img style=" position:absolute; left:80px; top:190px; z-index:50;" src="http://pic.neungyule.com/netoeic/mainRe/teReview_toe.jpg" alt="토익" />                    
+                        <ul class="tabArea">
+                            <li><a href="#">955점</a></li>
+                            <li><a href="#">950점</a></li>
+                            <li><a href="#">890점</a></li>
+                            <li><a href="#">780점</a></li>
+                            <li style=" background:none;"><a href="#">760점</a></li>
+                        </ul>
+                        <div class="slide_t">
+                            <div class="slideCont openMask2">
+                                <ul>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/toe_bnr_1.jpg" alt="" /></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/toe_bnr_2.jpg" alt=""/></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/toe_bnr_3.jpg" alt=""/></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/toe_bnr_4.jpg" alt=""/></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/toe_bnr_5.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 영상 -->
+                        <div class="mask2" style="position:fixed;z-index:9000;background-color:#000;display:none;left:0;top:0;"></div> 
+                        <div class="mvArea" style="display:none;position:absolute;top:0;left:50%;margin-left:-427px;z-index:10000;">                               
+                            <iframe id="mvFrame" width="854" height="480" src="" frameborder="0" allowfullscreen></iframe>
+                            <div class="close2" style="position:absolute;top:-25px;right:10px;"><a href="#n" style="font-size:25px;font-weight:bold;color:#fff">X</a></div>
+                        </div>	
+                        <!--// 영상 -->
+        
+                        <script type="text/javascript">
+                        //<![CDATA[
+                        (function () {
+                        
+                            var jsSlider = $(".slide_t"); // 슬라이더
+                            var jsSilderList = jsSlider.find(".slideCont ul"); // 슬라이더 리스트
+                            var jsSilderItem = jsSilderList.find("li");
+                            var jsSliderLen = jsSilderList.children().length; // 아이템 개수
+                            var cellLen = 1; // 페이지당 개수
+                            var timerObj; // 타이머
+                            var jsSliderWidth = 473; // 아이템 가로길이
+                            var jsSliderPos = 0; // 슬라이더 위치
+                            var sliderChk = true; // 동작가능 체크
+                            var moveDirection = 1; // 움직임 방향
+                            var r_time = 5000; // 자동움직임 딜레이
+                            var page = 0;
+                            var total = Math.ceil(jsSliderLen/cellLen);
+                            
+                            
+                            (function init () {
+                                // 단위 모자를땐 빈엘리먼트 추가
+                                if(jsSliderLen % cellLen) {
+                                    var empty =  cellLen-(jsSliderLen % cellLen);
+                                    for(var i=0; i<empty; ++i) {
+                                        jsSilderList.append('<li style="background:none;"></li>');
+                                    }
+                                    jsSliderLen = jsSilderList.children().length;
+                                }
+                                
+                            })();
+                            
+                            
+                            function pageView() {
+                                if(page < 0) {
+                                    page = total - 1;
+                                } else if( page >= total ) {
+                                    page = 0;
+                                }
+                                jsSlider.find(".slideCont").scrollLeft(0);
+                                
+                                
+                            }
+                            
+                            $(".box .tabArea li a").click(function () {
+                                var i = $(this).closest("li").index();
+                                var cal = i-page;
+                                var gap = Math.abs(cal);
+                                
+                                while(gap != 0) {
+                                    if(cal<0) {
+                                        moveDirection = 0;
+                                        if(jsSliderPos < 0) {
+                                            jsSliderPos = jsSliderPos + jsSliderWidth;
+                                        } else {
+                                            // 노드순서를 바꿔서 롤링
+                                            jsSilderList.css("left", jsSliderPos - jsSliderWidth);
+                                            var tg = jsSilderList.find("li")
+                                            tg.eq(0).before(tg.slice(jsSliderLen-cellLen,jsSliderLen));
+                                        }
+                                    } else {
+                                        moveDirection = 1;
+                                        if(jsSliderPos > -jsSliderWidth * Math.floor((jsSliderLen-1)/cellLen)) {
+                                            jsSliderPos = jsSliderPos - jsSliderWidth;
+                                        } else {
+                                            // 노드순서를 바꿔서 롤링
+                                            jsSilderList.css("left", jsSliderPos + jsSliderWidth);
+                                            var tg = jsSilderList.find("li")
+                                            tg.slice(0,cellLen).appendTo(tg.parent());
+                                        }
+                                    }
+                                    
+                                    gap--;
+                                }
+                                
+                                sliderChk = false;
+                                jsSilderList.animate({ left: jsSliderPos }, 500, function () {
+                                    page = i;
+                                    pageView();
+                                    sliderChk = true; // 모션 완료후 활성화
+                                });
+                                
+                                return false;
+                            });
+                            
+                            // 자동움직임
+                            function con_auto() {
+                                
+                                if(sliderChk) {
+                                    moveDirection = 1;
+                                    if(jsSliderPos > -jsSliderWidth * Math.floor((jsSliderLen-1)/cellLen)) {
+                                        jsSliderPos = jsSliderPos - jsSliderWidth;
+                                    } else {
+                                        // 노드순서를 바꿔서 롤링
+                                        jsSilderList.css("left", jsSliderPos + jsSliderWidth);
+                                        var tg = jsSilderList.find("li")
+                                        tg.slice(0,cellLen).appendTo(tg.parent());
+                                    }
+                                    
+                                    sliderChk = false;
+                                    jsSilderList.animate({ left: jsSliderPos }, 500, function () {
+                                        page++;
+                                        pageView();
+                                        sliderChk = true; // 모션 완료후 활성화
+                                    });
+                                }
+                                return false;
+                            }
+                            
+                            clearInterval(timerObj);
+                            timerObj = setInterval(con_auto, r_time);
+                            
+                            // 자동움직임 롤오버 멈춤
+                            $(".box .wrap").bind("mouseenter mouseleave", function (e) {
+                                if(e.type == "mouseenter") {
+                                    clearInterval(timerObj);
+                                } else {
+                                    timerObj = setInterval(con_auto, r_time);
+                                }
+                            });
+                            
+                            
+                        })();
+                        //]]>
+                        </script>
+                    </div>
+                    
+                    <!-- 목표달성 후기(오픽) -->              
+                    <div class="box teReview" style="position:absolute; right:0;">
+                        <img style=" position:absolute; left:120px; top:190px; z-index:50;" src="http://pic.neungyule.com/netoeic/mainRe/teReview_opic.jpg" alt="오픽훅" />                    
+                        <ul class="tabArea2">
+                            <li><a href="#n">IH</a></li>
+                            <li><a href="#n">IH</a></li>
+                            <li style="background:none;"><a href="#n">IM</a></li>
+                        </ul>
+                        <div class="slide_t2">
+                            <div class="slideCont2 openMask2">
+                                <ul>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/opic_bnr_1.jpg" alt="" /></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/opic_bnr_2.jpg" alt=""/></a></li>
+                                    <li><a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/opic_bnr_3.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 영상 -->
+                        <div class="mask2" style="position:fixed;z-index:9000;background-color:#000;display:none;left:0;top:0;"></div> 
+                        <div class="mvArea" style="display:none;position:absolute;top:0;left:50%;margin-left:-427px;z-index:10000;">                               
+                            <iframe id="mvFrame" width="854" height="480" src="" frameborder="0" allowfullscreen></iframe>
+                            <div class="close2" style="position:absolute;top:-25px;right:10px;"><a href="#n" style="font-size:25px;font-weight:bold;color:#fff">X</a></div>
+                        </div>	
+                        <!--// 영상 -->
+                        <style type="text/css">
+						.inner_conmid .section2 .box.teReview .slide_t2 {/*position:absolute;*/overflow:hidden;width:473px;height:206px}
+						.inner_conmid .section2 .box.teReview .slide_t2 .slideCont2 {overflow:hidden;width:473px;height:100%; }
+						.inner_conmid .section2 .box.teReview .slide_t2 .slideCont2 ul {width:9999px; position:relative; left:0;}
+						.inner_conmid .section2 .box.teReview .slide_t2 .slideCont2 li {float:left;width:473px;}
+						.inner_conmid .section2 .box.teReview .tabArea2 {width:400px;height:23px;padding:5px 0 0 60px;position:absolute; left:120px; bottom:30px;z-index:10;}
+						.inner_conmid .section2 .box.teReview .tabArea2 li {float:left;width:40px;margin-left:6px; background:url('http://pic.neungyule.com/netoeic/mainRe/teReview_tab_border.jpg') no-repeat 30px 3px;;}
+						.inner_conmid .section2 .box.teReview .tabArea2 li.tab_opic{width:12px;margin-left:5px;}
+						.inner_conmid .section2 .box.teReview .tabArea2 li.tab_toeic_1{margin-left:120px;}
+						.inner_conmid .section2 .box.teReview .tabArea2 li a {color:#565656; font-size:13px;}
+						.inner_conmid .section2 .box.teReview .tabArea2 li a:hover {text-decoration:underline; color:#333cf9;}
+						</style>
+        
+                        <script type="text/javascript">
+                        //<![CDATA[
+                        (function () {
+                        
+                            var jsSlider = $(".slide_t2"); // 슬라이더
+                            var jsSilderList = jsSlider.find(".slideCont2 ul"); // 슬라이더 리스트
+                            var jsSilderItem = jsSilderList.find("li");
+                            var jsSliderLen = jsSilderList.children().length; // 아이템 개수
+                            var cellLen = 1; // 페이지당 개수
+                            var timerObj; // 타이머
+                            var jsSliderWidth = 473; // 아이템 가로길이
+                            var jsSliderPos = 0; // 슬라이더 위치
+                            var sliderChk = true; // 동작가능 체크
+                            var moveDirection = 1; // 움직임 방향
+                            var r_time = 5000; // 자동움직임 딜레이
+                            var page = 0;
+                            var total = Math.ceil(jsSliderLen/cellLen);
+                            
+                            
+                            (function init () {
+                                // 단위 모자를땐 빈엘리먼트 추가
+                                if(jsSliderLen % cellLen) {
+                                    var empty =  cellLen-(jsSliderLen % cellLen);
+                                    for(var i=0; i<empty; ++i) {
+                                        jsSilderList.append('<li style="background:none;"></li>');
+                                    }
+                                    jsSliderLen = jsSilderList.children().length;
+                                }
+                                
+                            })();
+                            
+                            
+                            function pageView() {
+                                if(page < 0) {
+                                    page = total - 1;
+                                } else if( page >= total ) {
+                                    page = 0;
+                                }
+                                jsSlider.find(".slideCont2").scrollLeft(0);
+                                
+                                
+                            }
+                            
+                            $(".box .tabArea2 li a").click(function () {
+                                var i = $(this).closest("li").index();
+                                var cal = i-page;
+                                var gap = Math.abs(cal);
+                                
+                                while(gap != 0) {
+                                    if(cal<0) {
+                                        moveDirection = 0;
+                                        if(jsSliderPos < 0) {
+                                            jsSliderPos = jsSliderPos + jsSliderWidth;
+                                        } else {
+                                            // 노드순서를 바꿔서 롤링
+                                            jsSilderList.css("left", jsSliderPos - jsSliderWidth);
+                                            var tg = jsSilderList.find("li")
+                                            tg.eq(0).before(tg.slice(jsSliderLen-cellLen,jsSliderLen));
+                                        }
+                                    } else {
+                                        moveDirection = 1;
+                                        if(jsSliderPos > -jsSliderWidth * Math.floor((jsSliderLen-1)/cellLen)) {
+                                            jsSliderPos = jsSliderPos - jsSliderWidth;
+                                        } else {
+                                            // 노드순서를 바꿔서 롤링
+                                            jsSilderList.css("left", jsSliderPos + jsSliderWidth);
+                                            var tg = jsSilderList.find("li")
+                                            tg.slice(0,cellLen).appendTo(tg.parent());
+                                        }
+                                    }
+                                    
+                                    gap--;
+                                }
+                                
+                                sliderChk = false;
+                                jsSilderList.animate({ left: jsSliderPos }, 500, function () {
+                                    page = i;
+                                    pageView();
+                                    sliderChk = true; // 모션 완료후 활성화
+                                });
+                                
+                                return false;
+                            });
+                            
+                            // 자동움직임
+                            function con_auto() {
+                                
+                                if(sliderChk) {
+                                    moveDirection = 1;
+                                    if(jsSliderPos > -jsSliderWidth * Math.floor((jsSliderLen-1)/cellLen)) {
+                                        jsSliderPos = jsSliderPos - jsSliderWidth;
+                                    } else {
+                                        // 노드순서를 바꿔서 롤링
+                                        jsSilderList.css("left", jsSliderPos + jsSliderWidth);
+                                        var tg = jsSilderList.find("li")
+                                        tg.slice(0,cellLen).appendTo(tg.parent());
+                                    }
+                                    
+                                    sliderChk = false;
+                                    jsSilderList.animate({ left: jsSliderPos }, 500, function () {
+                                        page++;
+                                        pageView();
+                                        sliderChk = true; // 모션 완료후 활성화
+                                    });
+                                }
+                                return false;
+                            }
+                            
+                            clearInterval(timerObj);
+                            timerObj = setInterval(con_auto, r_time);
+                            
+                            // 자동움직임 롤오버 멈춤
+                            $(".box .wrap").bind("mouseenter mouseleave", function (e) {
+                                if(e.type == "mouseenter") {
+                                    clearInterval(timerObj);
+                                } else {
+                                    timerObj = setInterval(con_auto, r_time);
+                                }
+                            });
+                            
+                            
+                        })();
+                        //]]>
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// 목표 달성 후기 -->
+	</div>
+    
+    <!-- 배너 -->
+    <div class="main_m_bnr" style="width:100%;height:143px;min-width:980px;background:#68123c;">
+        <div class="wrap" style="position:relative;margin:0 auto;width:1380px; position:relative;">
+            <a href="#n"><img src="http://pic.neungyule.com/netoeic/mainRe/161216_bnr.jpg" alt="배너" /></a>
+        </div>
+    </div>
+    <!--// 배너 -->
+    
+    <div class="inner_conbtm">
+    	<div class="section1">
+        	<div class="mTit"><img src="http://pic.neungyule.com/netoeic/mainRe/section1_tit.jpg" alt="신토익0원자료" /></div>
+	    	<!-- 토마토 소식 -->
+            <div class="cont_l">
+            	<p class="sTit mb15"><img src="http://pic.neungyule.com/netoeic/mainRe/cont_l_tit.jpg" alt="토마토클래스소식" /></p>
+                <!-- tab menu -->
+                <ul class="tabArea mb15">
+                    <li><a href="#n" onClick="Menu2(1)"><img id="Menu2_img1" src="http://pic.neungyule.com/netoeic/mainRe/m_guide_tab01_on.jpg" alt="HOT CLIP" onmouseover="imgchange(this);"/></a></li>
+                    <li><a href="#n" onClick="Menu2(2)"><img id="Menu2_img2" src="http://pic.neungyule.com/netoeic/mainRe/m_guide_tab02.jpg" alt="토단비 강사" onmouseover="imgchange(this);"/></a></li>
+                    <li><a href="#n" onClick="Menu2(3)"><img id="Menu2_img3" src="http://pic.neungyule.com/netoeic/mainRe/m_guide_tab03.jpg" alt="무료 족보" onmouseover="imgchange(this);"/></a></li>
+                    <li><a href="#n" onClick="Menu2(4)"><img id="Menu2_img4" src="http://pic.neungyule.com/netoeic/mainRe/m_guide_tab04.jpg" alt="리얼 수강후기" onmouseover="imgchange(this);"/></a></li>
+                    <li><a href="#n" onClick="Menu2(5)"><img id="Menu2_img5" src="http://pic.neungyule.com/netoeic/mainRe/m_guide_tab05.jpg" alt="카페/블로그" onmouseover="imgchange(this);"/></a></li>
+                </ul>
+                <!--// tab menu -->
+                <!-- tab content -->
+                <!-- HOT CLIP cont -->
+                <div id="guideC1" class="contArea" style="display:block">
+					<ul>
+                        <li class="mv_thum ml0">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr_lkd.jpg" alt="영상 썸네일" style="width:237px;height:184px"/>
+                                <div class="txtArea">
+                                	<p class="tit">[0원 강의] 단 10분만에<br/>RC 점수가 달라지는<br/>마법의 특강</p>
+                                    <p>이용재 강사의<br/>문법 포인트 25</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="txt_box box_bgMint">
+                            <a href="http://cafe.naver.com/todanbi.cafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=26274017%26search.menuid=21%26search.boardtype=L" target="_blank">
+                                <strong>실전 대비 TOEIC<br/>LC 문제 풀이</strong>
+                                <p class="txt">실전에 확실한 토익<br/>문제들이 모였다.</p>
+                            </a>
+                        </li>
+                        <li class="txt_box box_bgYell ml0">
+                            <a href="http://cafe.naver.com/todanbi/1510" target="_blank">
+                                <strong>TOEIC 측면 돌파!<br/>측면 공략을 통한<br/> 점수 부스팅</strong>
+                                <p class="txt">to부정사/동명사/분사 집중공략</p>
+                            </a>
+                        </li>
+                        <li class="mv_thum">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr_chs.jpg" alt="영상 썸네일" style="width:237px;height:184px"/>
+                                <div class="txtArea">
+                                	<p class="tit">진짜 2주만에 OPIc.<br/> 치고 빠지기!<br/>인강만으로 절대 해결 안되는 OPIc</p>
+                                    <p>모의테스트 응시부터 학습까지<br/>제대로 한번에 끝낸다.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>					                
+                </div>
+                <!--// HOT CLIP cont -->
+                <!-- 토단비 강사 cont -->
+                <div id="guideC2" class="contArea mb20" style="display:none">
+                    <ul class="info_thr">
+                        <li class="ml0 mb20">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr01.jpg" alt="선생님 이미지" />
+                                <p class="info">실전에서 빛을 보는 LC<br/>고득점으로 가는<br/>신의 한수 </p>
+                                <p class="fb thr_name">최호선</p>
+                            </a>
+                        </li>
+                        <li class="ml20 mb20">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr02.jpg" alt="선생님 이미지" />
+                                <p class="info">영양가 100%<br/>불순물 없는<br/>유기농 토익을 맛보라</p>
+                                <p class="fb thr_name">이규동</p>
+                            </a>
+                        </li>
+                        <li class="ml0">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr03.jpg" alt="선생님 이미지" />
+                                <p class="info">누구보다 빠르게<br/> 최신 경향을 짚어내는<br/> LC 마스터</p>
+                                <p class="fb thr_name">김성범</p>
+                            </a>
+                        </li>
+                        <li class="ml20">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_thr04.jpg" alt="선생님 이미지" />
+                                <p class="info">토익 RC강의의<br/>Correct Answer</p>
+                                <p class="fb thr_name">이용재</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--// 토단비 강사 cont -->
+                <!-- 토익족보 cont -->
+                <div id="guideC3" class="contArea mb20" style="display:none">
+                    <ul>
+                        <li class="mv_thum ml0">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/bnr_0_lec2.jpg" alt="0원 강의 클래스" style="width:474px;height:184px"/>
+                            </a>
+                        </li>
+                        <li class="txt_box box_bgYell">
+                            <a href="http://cafe.naver.com/todanbi" target="_blank">
+                                <strong>토단비 카페 가입 시, <br/>고급진 토익자료 무료 제공!</strong>
+                                <p class="txt">다양한 정보와 자료가 <br/>토단비 카페에서 무료로 제공됩니다.</p>
+                            </a>
+                        </li>
+                        <li class="box_bgBlue ml0">
+                            <a href="http://cafe.naver.com/todanbi/1014" target="_blank">
+                            	<img src="http://pic.neungyule.com/netoeic/mainRe/img001.jpg" alt="" style="width:230px;height:132px" />
+                                <div class="tBox"><p class="txt">토익 문법 끝판왕<br/>&lt;시험 직전 노트&gt; 다운 받자!</p></div>
+                            </a>
+                        </li>
+                        <li class="box_bgBrn">
+                            <a href="#n">
+                            	<img src="http://pic.neungyule.com/netoeic/mainRe/img002.jpg" alt="" style="width:230px;height:132px" />
+                                <div class="tBox"><p class="txt">OPIc. 입문부터 AL까지 0원에 마스터.<br/>모범 답안과 족보 문장 완전 공개</p></div>
+                            </a>
+                        </li>
+                        <li class="txt_box box_bgBlack">
+                            <a href="http://www.tomatoclass.com/event/eventDetail.do?satus=1&seq=531&pageIndex=1" target="_blank">
+                                <strong>토익,<br/> 단기에 끝내고 싶다면 주목!<br/>토단비가 제안하는<br/> 올바른 토익 시작법</strong>
+                                <p class="txt">시간 낭비 막아주는 LC/RC 공략법</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--// 토익족보 cont -->
+                <!-- 수강후기 cont -->
+                <div id="guideC4" class="contArea mb20" style="display:none">
+                    <ul>
+                        <li class="review_thum ml0">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=12&hoogiSeq=1691&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">610 ▶ 815 </p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>LC145점 상승! <br/> 토단비 인강 정말 최고</p>
+                                        <p>b2748**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=12&hoogiSeq=1587&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">730 ▶ 830 </p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>시험에 나오는 것만 공부하는 토단비<br/> 덕분에 목표 달성!</p>
+                                        <p>chl3**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum ml0">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=4&hoogiSeq=1746&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">690 ▶ 915</p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>성적 급상승의 비결 바로 토단비!</p>
+                                        <p>khj9**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=4&hoogiSeq=1230&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">한달만에 960</p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>질문 올리면 바로 답변해주시는 강사님 덕분에 토익 졸업!</p>
+                                        <p>godek**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum ml0">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=12&hoogiSeq=2662&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">첫토익 815</p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>토익이란 무엇인가 알려주셨던 강사님들께 정말 감사!</p>
+                                        <p>sungmir**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum">
+                            <a href="http://www.tomatoclass.com/offichook/officHookMain.do7">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">NH ▶ IM </p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>생각보다 너무 잘나와서 믿기지가 않습니다.</p>
+                                        <p>lynn1**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum ml0">
+                            <a href="http://www.tomatoclass.com/lecture/lectureDetail.do?pdtCateASeq=2&hoogiSeq=323&hoogi=Yes#LectureBookMark">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">500 ▶ 810 </p>
+                                    <div class="fr" style="width:150px">
+                                    	<p style="letter-spacing:-1px">&ldquo;경이로운 성적 향상&rdquo; 점수가 오르지 않아 고민하는 분들께 자신 있게 권유</p>
+                                        <p>rain**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="review_thum">
+                            <a href="http://www.tomatoclass.com/offichook/officHookMain.do7">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/img_review.gif" alt="썸네일" style="width:355px;height:87px"/>
+                                <div class="box_filter of_hi">
+                                    <p class="fl">첫오픽 IH</p>
+                                    <div class="fr" style="width:150px">
+                                    	<p>원어민이 피드백 주는 전화영어가 가장 도움되었어요.</p>
+                                        <p>iren**</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!--
+                        <li class="review_thum">
+                            <a href="#n">
+                                <img src="http://pic.neungyule.com/netoeic/mainRe/bnr_goCafe.jpg" alt="네이버 카페 후기보러 가기" style="width:355px;height:87px"/>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+                <!--// 수강후기 cont -->
+                <!-- 카페블로그 cont -->
+                <div id="guideC5" class="contArea mb20" style="display:none">
+                    <div class="cafeBlog ml0">
+                    	<p class="tit">카페 인기 게시글</p>
+                        <ul>
+                        	<li><a href="#n" target="_blank">900점 받으려면 RC 몇 개 틀려야 하나요? <img src="http://pic.neungyule.com/netoeic/ico/ico_hot.gif" alt="hot" class="ml3 vm"/></a></li>
+                            <li><a href="#n" target="_blank">단어 효율적으로 외우는 방법 <img src="http://pic.neungyule.com/netoeic/ico/ico_hot.gif" alt="hot" class="ml3 vm"/></a></li>
+                            <li><a href="#n" target="_blank">오르지 않는 LC점수, 고민이예요</a></li>
+                            <li><a href="#n" target="_blank">PART 7 공부방법 따로없나요?</a></li>
+                        </ul>
+                        <div class="btn"><a href="http://cafe.naver.com/todanbi/" target="_blank"><img src="http://pic.neungyule.com/netoeic/btn/btn_more4.gif" alt="더보기" /></a></div>
+                    </div>
+                    <div class="cafeBlog">
+                    	<p class="tit">추천 필독 자료</p>
+                        <ul>
+                        	<li><a href="http://cafe.naver.com/todanbi/5172" target="_blank">[자료] 교재 배송기간 활용법 (mp3다운 외)</a></li>
+                            <li><a href="http://cafe.naver.com/todanbi/4317" target="_blank">[수강후기] 강의내용이 시험에 그대로! 935점 받았..</a></li>
+                            <li><a href="http://cafe.naver.com/todanbi/1085" target="_blank">[칼럼] 토익 측면 돌파! &lsquo;나란 놈은 답은 너다&rsquo;</a></li>
+                            <li><a href="https://www.facebook.com/tomatotalk/posts/903011773098462" target="_blank">[자료] LC PART 2 공략법!  &ldquo;다의어에 속지마라&rdquo;</a></li>
+                        </ul>
+                        <div class="btn"><a href="http://cafe.naver.com/todanbi/" target="_blank"><img src="http://pic.neungyule.com/netoeic/btn/btn_more4.gif" alt="더보기" /></a></div>
+                    </div>
+                    <div class="cafeBlog ml0">
+                    	<p class="tit">블로그 꿀팁</p>
+                        <ul>
+                        	<li><a href="http://blog.naver.com/tomato_talk/220547857289" target="_blank">외우라, 시험에 나올 것이니 – 동명사 관용 표현</a></li>
+                            <li><a href="http://blog.naver.com/tomato_talk/220540680153" target="_blank">2016 토익 신유형, 뭐가 달라지나요? <img src="http://pic.neungyule.com/netoeic/ico/ico_hot.gif" alt="hot" class="ml3 vm"/></a></li>
+                            <li><a href="http://blog.naver.com/tomato_talk/220503350950" target="_blank">토익 노하우 대방출, LC Part4 정밀 분석</a></li>
+                            <li><a href="http://blog.naver.com/tomato_talk/220491713767" target="_blank">신발 사이즈 토익점수 탈출 비법</a></li>
+                        </ul>
+                        <div class="btn"><a href="http://blog.naver.com/tomato_talk" target="_blank"><img src="http://pic.neungyule.com/netoeic/btn/btn_more4.gif" alt="더보기" /></a></div>
+                    </div>
+                    <div class="cafeBlog">
+                    	<p class="tit tc" style="color:#000">이벤트와 꿀팁이 매일 올라오는 곳</p>
+                        <img src="http://pic.neungyule.com/netoeic/mainRe/cafeBlog_link.jpg" alt="" usemap="#map_snsLink"/>
+                        <map name="map_snsLink" id="map_snsLink">
+                          <area shape="rect" coords="23,11,91,123" href="http://cafe.naver.com/todanbi" target="_blank" alt="토단비 공식카페"/>
+                          <area shape="rect" coords="138,11,208,122" href="http://blog.naver.com/tomato_talk" target="_blank" alt="토마토클래스 블로그"/>
+                          <area shape="rect" coords="253,12,323,121" href="https://www.facebook.com/tomatotalk" target="_blank" alt="토마토 클래스 페이스북"/>
+                        </map>
+                    </div>
+                </div>
+                <!--// 카페블로그 cont -->
+                <!--// tab content -->
+			</div>
+			<!--// 토마토 소식 -->  
+      
+            <!-- 이벤트/0원 강의 -->
+            <div class="cont_r">
+            	<!-- 이벤트 -->
+                <p class="sTit mb15"><img src="http://pic.neungyule.com/netoeic/mainRe/cont_r_tit.jpg" alt="진행중인이벤트" /></p>
+                <div class="mb30">
+                	<div class="eventB_roll">
+                        <p>
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_mainRoll_on.png" alt="버튼" /></a>
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_mainRoll.png" alt="버튼" /></a>
+                            <a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_mainRoll.png" alt="버튼" /></a>
+                        </p>
+                        <ul class="banner">
+                            <li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_event01.jpg" alt="배너" style="width:236px;height:188px" /></a></li>
+                            <li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_event01.jpg" alt="배너" style="width:236px;height:188px"  /></a></li>
+                            <li><a href="#n" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/bnr_event01.jpg" alt="배너" style="width:236px;height:188px"  /></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 이벤트 -->
+                <!-- 0원 강의 -->
+                <p class="sTit mb15"><img src="http://pic.neungyule.com/netoeic/mainRe/cont_r_0_title.jpg" alt="HOT PICK 0원 강의" /></p>
+                <ul class="freeLec_list">
+                	<li><a href="#n"><p class="ellipsis"><span class="t_pink">[11/5]</span> 생기초는 PART 1 집중 공략</p></a></li>
+                    <li><a href="#n"><p class="ellipsis"><span class="t_pink">[11/5]</span> 생기초는 PART 1 집중 공략 생기초는 PART 1 집중 공략</p></a></li>
+                    <li><a href="#n"><p class="ellipsis"><span class="t_pink">[11/5]</span> 생기초는 PART 1 집중 공략 생기초는 PART 1 집중 공략</p></a></li>
+                    <li><a href="#n"><p class="ellipsis"><span class="t_pink">[11/5]</span> 생기초는 PART 1 집중 공략 생기초는 PART 1 집중 공략</p></a></li>
+                    <li><a href="#n"><p class="ellipsis"><span class="t_pink">[11/5]</span> 생기초는 PART 1 집중 공략 생기초는 PART 1 집중 공략</p></a></li>
+                </ul>
+                <!--// 0원 강의 -->
+            </div>
+            <!--// 이벤트/0원 강의 -->
+		</div>   
+        <!--   
+        <div class="section2 mb20" style=" background:#f0f1f3;">
+        	<div class="cont_l box_gray">
+            	<h3 class="mb15"><img src="http://pic.neungyule.com/netoeic/main/main_tit4.gif" alt="공지사항" /></h3>
+                <ul>
+                	<li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내 이용약관 이용약관 이용약관 이용약관</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                </ul>
+                <div class="btn_noticeMore"><a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_more.gif" alt="공지사항 더보기" /></a></div>
+            </div>
+            <div class="cont_r box_gray">
+            	<h3 class="fl"><img src="http://pic.neungyule.com/netoeic/main/cm_info.jpg" alt="고객센터. 전화번호 0803002340. 평일 오전 9시부터 오후6시까지. 점심시간 12시반부터 1시반까지" /></h3>
+                <div class="fr">
+                	<div class="fl">
+                        <p><a href="http://www.tomatoclass.com/pages/customer/question.asp"><img src="http://pic.neungyule.com/netoeic/main/cm_inquiry.jpg" alt="일대일 문의" /></a></p>
+                        <p><a href="http://www.tomatoclass.com/pages/customer/faq.asp"><img src="http://pic.neungyule.com/netoeic/main/cm_faq.jpg" alt="FAQ" /></a></p>
+                    </div>
+                    <div class="fr ml15">
+                        <p><a href="http://www.tomatoclass.com/pages/customer/guide.asp"><img src="http://pic.neungyule.com/netoeic/main/main_b_bnr1.jpg" alt="토마토 클래스 100% 활용하기" /></a></p>
+                        <p class="of_hi">
+                        	<a class="fl" href="http://www.tomatoclass.com/univ/univMain.do" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/main_b_bnr2_1.jpg" alt="대학교 전용 학습관" /></a>
+                        	<a class="fl" href="http://b2b.neungyule.com/" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/main_b_bnr2_2.jpg" alt="BTB 전용 학습관" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            -->
+		</div>   
+    </div>
+    
+    <div class="inner_conbtm2" style="background:#f0f1f3; height:231px; border-top:1px solid #e1e1e1; padding-top:10px;">
+        <div class="section2" style="width:980px; margin:0 auto; overflow:hidden;">
+            <!-- 공지사항 -->
+            <div class="cont_l">
+                <h3 class="mb15"><img src="http://pic.neungyule.com/netoeic/mainRe/cont_l_notice_tit.jpg" alt="공지사항" /></h3>
+                <ul>
+                    <li style=" border-top:1px solid #dbdcde;"><a href="#n">이용약관 및 개인정보 취급방침 개정 안내 이용약관 이용약관 이용약관 이용약관</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                    <li><a href="#n">이용약관 및 개인정보 취급방침 개정 안내</a></li>
+                </ul>
+                <!--<div class="btn_noticeMore"><a href="#n"><img src="http://pic.neungyule.com/netoeic/btn/btn_more.gif" alt="공지사항 더보기" /></a></div>-->
+            </div>
+            <!--// 공지사항 -->
+            <!-- 고객센터 -->
+            <div class="cont_r">
+                <h3 class="fl ml20">
+                	<img src="http://pic.neungyule.com/netoeic/mainRe/cm_info_ver2.jpg" usemap="#cm_info_map" alt="고객센터. 전화번호 0803002340. 평일 오전 9시부터 오후6시까지. 점심시간 12시반부터 1시반까지" />
+                    <map name="cm_info_map" id="cm_info_map">
+                        <area shape="rect" coords="2,31,160,88" href="#n" alt="1:1문의" />
+                        <area shape="rect" coords="164,30,319,89" href="#n" alt="FAQ" />
+                    </map>
+                </h3>
+                <div class="fr mt10">
+                    <div class="">
+                        <p><a href="http://www.tomatoclass.com/pages/customer/guide.asp"><img src="http://pic.neungyule.com/netoeic/mainRe/main_b_bnr1_ver2.jpg" alt="토마토 클래스 100% 활용하기" /></a></p>
+                        <p class=" mt10">
+                            <a class="fl" href="http://www.tomatoclass.com/univ/univMain.do" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/main_b_bnr2_ver3.jpg" alt="대학교 전용 학습관" /></a>
+                            <a class="fl" href="http://b2b.neungyule.com/" target="_blank"><img src="http://pic.neungyule.com/netoeic/mainRe/main_b_bnr2_2_ver3.jpg" alt="BTB 전용 학습관" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--// 고객센터 -->
+        </div>  
+    </div> 
+    
+	<!-- 띠배너 -->
+	<style type="text/css">
+		.bnrArea {width:100%;min-width:1000px;height:142px;background:url(http://pic.neungyule.com/netoeic/banner/161218_start_bg.png) repeat-x 0 21px; position:fixed;bottom:0;left:0;z-index:1000;}
+		.bnrArea .wrap { width:1500px; margin:0 auto; position:relative}
+		/*.footer_wrap {margin-bottom:120px}*/
+	</style>
+	<div class="bnrArea">
+		<div class="wrap">
+			<img src="http://pic.neungyule.com/netoeic/banner/161218_start.png" alt="" usemap="#banner_map" />
+			<map name="banner_map" id="banner_map">
+				<area shape="rect" coords="5,33,1494,139" href="#" alt="수강신청" />
+				<area shape="rect" coords="1029,4,1061,33" href="#n" alt="팝업 닫기" onClick="$('.bnrArea').slideUp();"/>
+			</map>
+		</div>
+	</div>
+	<!--// 띠배너 -->
+
+</section>                       
+<!--// container -->
+<!-- footer -->
+<div class="footer_wrap" style="margin:0px;">
+    <footer>
+		<p class="footer_logo"><img src="http://pic.neungyule.com/netoeic/main/footer_logo.gif" alt="NE 능률" /></p>
+        <ul class="footer_navi">
+            <li><a href="#url" onClick="window.open('/pages/popup/alliance.asp','pop1','width=450,height=361');return false" ><img src="http://pic.neungyule.com/netoeic/main/btn_footer1.gif" alt="제휴문의" /></a></li>
+            <li><a href="http://recruit.neungyule.com/pages/apply/announce.asp?r_type=%EC%83%81%EC%8B%9C" target="_blank"><img src="http://pic.neungyule.com/netoeic/main/btn_footer2.gif" alt="강사모집" /></a></li>
+            <li><a href="https://members.neungyule.com/pages/t_member/private.asp?WHEREJOIN=53&FNUM=1" target="_blank"><img src="http://pic.neungyule.com/netoeic/main/btn_footer3.gif" alt="개인정보취급방침" /></a></li>
+            <li><a href="https://members.neungyule.com/pages/t_member/agreement.asp?WHEREJOIN=53&FNUM=1" target="_blank"><img src="http://pic.neungyule.com/netoeic/main/btn_footer4.gif" alt="이용약관" /></a></li>
+            <li><a href="#url" onClick="window.open('/pages/popup/e-mail.asp','pop2','width=542,height=306');return false" ><img src="http://pic.neungyule.com/netoeic/main/btn_footer5.gif" alt="이메일주소무단수집거부" /></a></li>
+        </ul>
+        <div class="address_wrap">
+            <address>
+            	<img src="http://pic.neungyule.com/netoeic/main/address.gif" alt="주식회사 능률교육(121-841) 서울특별시 마포구 월드컵북로 21(서교동, 풍성빌딩), 대표자 : 황도순, 대표번호 : 02-2014-7114, 고객센터 : 080-300-2340, 팩스 : 02-337-4956, 사업자등록번호 : 105-81-65267, 통신판매신고번호 : 제2004-02120호, 개인정보 관리 책임자(CPO) : 이규한(necpo@neungyule.com)"  />
+            </address>
+        	<p><img src="http://pic.neungyule.com/netoeic/main/copyright.gif" alt="COPYRIGHT ⓒ NEUNGYULE EDUCATION, INC. ALL RIGHTS RESERVED."  /></p>
+        </div>
+        <div class="familySite">
+        	<label class="hide" for="familysiteUrl">사이트바로가기</label>
+        	<select id="familysiteUrl" name="familysiteUrl"  class="select" onchange="fnc_ssoURL();">
+                <option value="" selected>Family Site</option>
+                <option value="http://www.neungyule.com/pages/ko/brand/" >NE 능률</option>
+                <option value="http://www.nebooks.co.kr/pages/" >NE 능률 (학습서)</option>
+                <option value="http://www.nebooks.co.kr/pages/book/category.asp&c=BA" >NE Build &amp; Grow</option>
+                <option value="http://www.netimes.co.kr/" >NE Times</option>
+                <option value="http://www.nekids.co.kr/_pages/index/default.asp" >NE Kids</option>
+                <option value="http://www.nelab.co.kr/pages/index/index.asp" >NE 능률 주니어랩</option>
+                <option value="http://www.neteensup.com/pages/index/index.asp" >NE Teens Up</option>
+                <option value="http://www.tomatoclass.com/main.do" >토마토 클래스</option>
+            </select>
+        </div>
+    </footer>
+</div>
+<!--// footer -->
+
+<!--좌측토글메뉴바 시작-->
+<div id="left_nav">
+	<h1><a href="#n"><img src="http://pic.neungyule.com/nemiddle/main/left_nav_logo.jpg" alt="능률로고" /></a></h1>
+    <div class="login"><a href="#n"><img src="http://pic.neungyule.com/nemiddle/main/left_nav_login.jpg" alt="login" /></a></div>
+    <ul class="menu">
+    	<li>
+        	<a class="menu1" href="#n">토익</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#n">대학생 입문코스</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;2학년토익</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#n">단기 취준생</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;4주 생기초</a></li>
+                        <li><a href="#n">&middot;&nbsp;4주 700</a></li>
+                        <li><a href="#n">&middot;&nbsp;4주 800</a></li>
+                        <li><a href="#n">&middot;&nbsp;4주 900</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu2" href="#n">토익스피킹</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#n">2주속성</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;토스단비</a></li>
+                        <li><a href="#n">&middot;&nbsp;토스훅</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu3" href="#n">오픽</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#n">2주속성</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;오픽단비</a></li>
+                        <li><a href="#n">&middot;&nbsp;오픽훅</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu4" href="#n">중학생영어</a>
+            <ul class="submenu bg_orange">
+                <li>
+                    <a href="#n">영어 단기 관리 코스</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;대치동문법 예비중</a></li>
+                        <li><a href="#n">&middot;&nbsp;대치동문법 중학기본</a></li>
+                        <li><a href="#n">&middot;&nbsp;대치동문법 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#n">교재 독학</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;교재별 강좌</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#n">영자신문/전화영어</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;내신 대비 영자신문</a></li>
+                        <li><a href="#n">&middot;&nbsp;청소년 전화영어</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu5" href="#n">일반영어</a>
+            <ul class="submenu bg_purple">
+                <li>
+                    <a href="#n">기초영어</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;회화</a></li>
+                        <li><a href="#n">&middot;&nbsp;문법</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#n">취업영어</a>
+                    <ul class="course">
+                        <li><a href="#n">&middot;&nbsp;직장인영어</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu6" href="#n">NE능률교재</a>
+            <ul class="submenu bg_green">
+                <li><a href="#n">유초등</a></li>
+                <li><a href="#n">점유율 1위 참고서</a></li>
+                <li><a href="#n">점유율 1위 교과서</a></li>
+                <li><a href="#n">토익/수험</a></li>
+                <li><a href="#n">일반영어</a></li>
+            </ul>
+        </li>
+    	<li>
+        	<a class="menu7" href="#n">능률교육</a>
+            <ul class="submenu bg_beige">
+                <li><a href="#n">회사소개</a></li>
+                <li><a href="#n">투자정보</a></li>
+                <li><a href="#n">채용정보</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <ul class="bnr">
+        <li><a href="#n"><img src="http://pic.neungyule.com/nemiddle/main/left_nav_bnr1.jpg" alt="배너이미지" /></a></li>
+        <li><a href="#n"><img src="http://pic.neungyule.com/nemiddle/main/left_nav_bnr2.jpg" alt="배너이미지" /></a></li>
+    </ul>
+    
+    <div id="left_nav_toggle">
+        <a href="#n">좌측메뉴 열고 닫기</a>   
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+//좌측토글메뉴 열고 닫기
+$('#left_nav_toggle').click(function() {
+	if($('#left_nav_toggle a').hasClass('open')){
+		$('#left_nav').animate({left:'0'}, 200);
+		$('#left_nav_toggle a').removeClass('open');
+	}else{
+		$('#left_nav').animate({left:'-126'}, 200);
+		$('#left_nav_toggle a').addClass('open');
+	};
+});
+
+//좌측토글메뉴의 각 메뉴 클릭시 토글
+$('#left_nav .menu > li > a').click(function(){
+	$('#left_nav .menu > li .submenu').slideUp(200);
+
+	if(!$(this).parent().hasClass('on')) {//'!'들어감
+	
+		$(this).parent().find('.submenu').slideDown(200);
+		
+		$('#left_nav .menu > li').removeClass('on');
+		$(this).parent().addClass('on');
+	} else {
+		$(this).parent().removeClass('on');
+	};
+});
+//]]>
+</script>
+<!--//좌측토글메뉴바 끝-->
+
+</body>
+</html>

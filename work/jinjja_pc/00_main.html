@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>진짜녀석들 리얼영어</title>
+	<link rel="shortcut icon" href="images/main/favicon.ico">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-custom.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/froogaloop2.min.js"></script>
+	<script>
+		//hover
+		(function($){
+			$(document).ready(function(){
+				$(".jpg_over").mouseenter(function() {
+					$(this).attr("src",$(this).attr("src").replace(/.jpg/,'_on.jpg'));
+				});
+
+				$(".jpg_over").mouseleave(function() {
+					$(this).attr("src",$(this).attr("src").replace(/_on.jpg/,'.jpg'));
+				});
+				$(".png_over").mouseenter(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(".png_over").attr("src",function(i,val){
+							if(!$(this).parent().hasClass('On')){
+								return val.replace(/_on.png/,'.png');
+							}
+						});
+						$(this).attr("src",$(this).attr("src").replace(/.png/,'_on.png'));
+					}
+				});
+
+				$(".png_over").mouseleave(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(this).attr("src",$(this).attr("src").replace(/_on.png/,'.png'));
+					}
+				});
+			});
+		})(jQuery)
+	</script>
+</head>
+<body>
+
+<div id="upper">
+	<div class="member">
+		<a href="00_login.html"><span>로그인</span></a>
+		<a href="00_id.html">아이디 및 패스워드 찾기</a>
+		<a href="06_myclass_cart.html">장바구니</a>
+		<a href="00_signup.html"><img src="images/main/reg.png" alt="회원가입"></a>
+	</div>
+	<div class="member" style="display:none">
+		<a href="#n"><span>홍길동</span>&nbsp;&nbsp;&nbsp;회원님</a>
+		<a href="#n"><img src="images/main/edit.png" alt="정보수정"></a>
+		<a href="#n"><img src="images/main/logout.png" alt="로그아웃"></a>
+	</div>
+</div>
+
+<div id="header">
+	 <div class="wrap cf">
+		<h1 id="logo"><a href="00_main.html"><img src="images/main/logo.png" alt="진짜녀석들 리얼영어 로고"></a></h1>
+		<ul id="gnb">
+			<li><a href="01_lec_real.html">강의안내</a></li>
+			<li><a href="02_review_real.html">수강후기</a></li>
+			<li><a href="03_teacher_jin.html">강사소개</a></li>
+			<li class="last"><a href="04_cs_notice.html">고객센터</a></li>
+		</ul>
+		<div class="r_btns">
+			<a href="05_register.html"><img src="images/main/btn_reg.jpg" alt="수강신청"></a>
+			<a href="06_myclass.html"><img src="images/main/btn_my.jpg" alt="내 강의실"></a>
+		</div> 
+ 	</div>
+</div>
+
+<div id="lnb">
+	<div class="wrap cf">
+		<ul class="first">
+			<li><a href="01_lec_real.html">리얼영어</a></li>
+			<li><a href="01_lec_talk.html">기초회화</a></li>
+			<li><a href="01_lec_pronounce.html">발음 및 문법</a></li>
+			<li><a href="01_lec_konglish.html">콩글리쉬클리닉</a></li>
+		</ul>
+		<ul>
+			<li><a href="02_review_real.html">리얼 수강후기</a></li>
+			<li><a href="02_review_bbs.html">수강후기 게시판</a></li>
+<!--			<li><a href="02_review_mov.html">쌤동영상 리뷰</a></li>-->
+		</ul>
+		<ul>
+			<li><a href="03_teacher_jin.html">진쌤</a></li>
+			<li><a href="03_teacher_sophia.html">모니카쌤</a></li>
+			<li><a href="03_teacher_jade.html">제이드쌤</a></li>
+<!--			<li><a href="03_teacher_leader.html">스터디리더</a></li>-->
+		</ul>
+		<ul>
+			<li><a href="04_cs_notice.html">공지사항</a></li>
+			<li><a href="04_cs_faq.html">자주하는 질문</a></li>
+			<li><a href="04_cs_1to1.html">1:1 문의</a></li>
+			<!--<li><a href="06_myclass_cart.html">장바구니</a></li>-->
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+//nlb 열고 접기
+$("#gnb, #lnb").mouseover(function(){
+    $("#lnb").show();
+}); 
+$("#gnb, #lnb").mouseleave(function(){
+    $("#lnb").hide();
+}); 
+
+//lnb에 마우스오버시 해당 gnb 활성
+$(document).ready(function(){
+	$("#lnb ul, #gnb li").on({
+		mouseover : function() {
+			var idx = $(this).index();
+			$("#gnb li").eq(idx).find('a').css('color', '#18c4e9'); 
+		},
+		mouseleave : function() {
+			var idx = $(this).index();				
+			$("#gnb li").eq(idx).find('a').css('color', '#333'); 
+		}
+	});
+});	
+</script>
+
+<div class="main_banner">
+	<ul class="bxslider1">
+		<li><a class="slide no1" href="05_register.html"></a></li>
+		<li><a class="slide no2" href="01_lec_real.html"></a></li>
+		<!--<li><a class="slide no3" href="#n"></a></li>-->
+	</ul>
+	<div class="main_bnr_pager">
+		<div id="bx-pager">
+			<a class="pager1" data-slide-index="0" href="#n"></a>
+			<a class="pager2" data-slide-index="1" href="#n"></a>
+			<!--<a class="pager3" data-slide-index="2" href="#n"></a>-->
+		</div>
+	</div>	
+</div>
+
+<script type="text/javascript">
+//대배너 슬라이더
+var timer1;
+var slider1 = $('.bxslider1').bxSlider({
+		pagerCustom: '#bx-pager',
+		mode: 'fade',
+    pause : 4000,
+    auto: true,
+    autoControls: false,
+    controls: false,
+    autoHover: true,
+    pager: true,
+    stopAuto: false,
+    onSlideLoad: function() {
+        timer1 = setTimeout(null, 5000);
+    },
+    onSlideBefore: function() {
+        clearTimeout(timer1);
+    },
+    onSlideAfter: function() {
+        timer1 = setTimeout(startAutoSlide1, 5000);
+    }
+});
+
+function startAutoSlide1() {
+    slider1.startAuto();
+}
+</script>
+
+<div class="main_con1">
+	<div class="wrap cf">
+		<div class="product">
+			<ul class="bxslider2">
+				<li><a href="01_lec_real.html"><img src="images/main/product_1.jpg" alt="리얼영어"></a></li>
+				<li><a href="01_lec_talk.html"><img src="images/main/product_2.jpg" alt="기초회화"></a></li>
+				<li><a href="01_lec_pronounce.html"><img src="images/main/product_3.jpg" alt="발음과 문법"></a></li>
+				<li><a href="01_lec_konglish.html"><img src="images/main/product_4.jpg" alt="콩글리쉬 클리닉"></a></li>
+			</ul>
+		</div>
+		<div class="review">
+			<div class="personal">
+				<a href="02_review_real.html"><img src="images/main/rev1.jpg" alt=""></a>
+				<a href="02_review_real.html"><img src="images/main/rev2.jpg" alt=""></a>
+				<a href="02_review_real.html"><img src="images/main/rev3.jpg" alt=""></a>
+			</div>
+			<div class="more">
+				<a href="02_review_real.html"><img src="images/main/rev_more.jpg" alt=""></a>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<script type="text/javascript">
+//상품 슬라이더
+var timer2;
+var slider2 = $('.bxslider2').bxSlider({
+		pause : 3000,
+		auto: true,
+		autoControls: false,
+		controls: false,
+		autoHover: true,
+		pager: true,
+		stopAuto: false,
+		onSlideLoad: function() {
+				timer2 = setTimeout(null, 5000);
+		},
+		onSlideBefore: function() {
+				clearTimeout(timer2);
+		},
+		onSlideAfter: function() {
+				timer2 = setTimeout(startAutoSlide2, 5000);
+		}
+});
+
+function startAutoSlide2() {
+		slider2.startAuto();
+}
+</script>
+
+<div class="main_con2">
+	<div class="title">
+		<img src="images/main/con2_tit.jpg" alt="진짜녀석들을 소개합니다">
+	</div>
+	<div class="video_wrap">
+		<div class="video_box">
+			<iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>			
+		</div>
+	</div>
+</div>
+
+<div class="main_con3">
+	<div class="features"><img src="images/main/con3_features.jpg" alt="8분영어(초단기 습득영어) 원어민표현(쫄지마! 할 수 있어) 실생활영어(써먹을 수 있어야지) 실전영어(인생은 실전이야)"></div>
+	<div class="bnr"><a href="00_signup.html"><img class="jpg_over" src="images/main/con3_bnr.jpg" alt="강력추천 진짜녀석들의 모든 강좌를 가장 저렴한 가격으로 구입할 수 있는 절호의 찬스! 진짜녀석들 프리패스 2018 총 340강. 리얼영어 192강+기초회화 61강+발음 31강+문법 26강+콩글리쉬 클리닉 30강. 오픈이벤트! 30%할인 딱 1000분에게만... 바로가기"></a></div>
+</div>
+
+<div class="main_con4">
+	<div class="title"><img src="images/main/con4_tit.jpg" alt=""></div>
+	<div class="bnr">
+		<img src="images/main/con4_teacher.jpg" alt="진쌤 소피아쌤 제이드쌤" usemap="#con4_map">
+		<map name="con4_map" id="con4_map">
+			<area shape="rect" coords="0,0,365,235" href="03_teacher_jin.html" alt="진쌤" />
+			<area shape="rect" coords="368,0,738,235" href="03_teacher_sophia.html" alt="소피아쌤" />
+			<area shape="rect" coords="737,0,1100,235" href="03_teacher_jade.html" alt="제이드쌤" />
+		</map>		
+	</div>
+</div>
+
+<div class="main_con5">
+	<div class="wrap cf">
+		<div class="tabs_area">
+			<ul class="tabs" id="main_mov_tabs">
+				<li><a class="tab1" href="#n">홍보영상</a></li>
+				<li class="on"><a class="tab2" href="#n">리얼영어</a></li>			
+				<li><a class="tab3" href="#n">기초회화</a></li>
+				<li><a class="tab4" href="#n">발음 및 문법</a></li>
+				<li><a class="tab5" href="#n">콩글리쉬클리닉</a></li>
+			</ul>
+		</div>
+		<div class="mov_area">
+			<div class="conts" style="display:none">         
+				<iframe id="mov1" src="https://player.vimeo.com/video/32304373?api=1" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
+			</div>			
+			<div class="conts">
+				<iframe id="mov2" src="https://player.vimeo.com/video/49810106?api=1" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>			
+			</div> 
+			<div class="conts" style="display:none">         
+				<iframe id="mov3" src="https://player.vimeo.com/video/32304373?api=1" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
+			</div>
+			<div class="conts" style="display:none">         
+				<iframe id="mov4" src="https://player.vimeo.com/video/49810106?api=1" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
+			</div>
+			<div class="conts" style="display:none">         
+				<iframe id="mov5" src="https://player.vimeo.com/video/32304373?api=1" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
+			</div>			
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	//탭
+	$(".tabs > li").bind('click',function(e){
+		e.preventDefault();
+		var index = jQuery(this).closest('li').index();
+		jQuery(".conts").hide().eq(index).show();
+		jQuery('.tabs > li').removeClass('on');
+		jQuery(this).addClass('on');	
+	});
+	
+	//탭전환시 vimeo 멈추게
+	var iframe1 = document.getElementById('mov1');
+	var player1 = $f(iframe1); // $f == Froogaloop
+	var iframe2 = document.getElementById('mov2');
+	var player2 = $f(iframe2); 
+	var iframe3 = document.getElementById('mov3');
+	var player3 = $f(iframe3); 
+	var iframe4 = document.getElementById('mov4');
+	var player4 = $f(iframe4); 
+	var iframe5 = document.getElementById('mov5');
+	var player5 = $f(iframe5);
+	var pauseButton = document.getElementById("main_mov_tabs");
+	pauseButton.addEventListener("click", function() {
+		player1.api("pause");
+		player2.api("pause");
+		player3.api("pause");
+		player4.api("pause");
+		player5.api("pause");
+	});
+});	
+</script>
+
+<div class="main_con6"><a href="05_register.html"><img src="images/main/con6_bnr.jpg" alt="진짜녀석들 오픈기념 리얼이벤트"></a></div>
+
+<div class="main_con7">
+	<div class="wrap cf">
+		<div class="title_area">
+			<img src="images/main/con7_tit.jpg" alt="스터디리더 추천영상">
+			<a href="#n"><img src="images/main/con7_more.jpg" alt="스터디리더란? 진짜녀석들의 스터디리더들은 여러분의 효과적인 수강을 위하여 다양한 학습도우미 역할을 수행합니다 자세히보기"></a>			
+		</div>
+		<ul class="mov_area">
+			<li><iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>
+			<li><iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>
+			<li><iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>
+			<li><iframe src="https://player.vimeo.com/video/49810106" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li>
+		</ul>	
+	</div>
+</div>
+
+<div class="main_bbs_cont">
+	<div class="wrap cf">
+		<div class="rev">
+			<table class="main_bbs_table" summary="게시판 테이블">
+					<thead>
+						<tr>
+							<th>
+								<img src="images/main/rev_bbs_tit.jpg" usemap="#table_tit_map1" alt="수강후기 게시판 more">
+								<map name="table_tit_map1" id="table_tit_map1">
+									<area shape="rect" coords="303,0,354,43" href="02_review_bbs.html" alt="more" />
+								</map>	
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a class="ellipsis" href="02_review_bbs.html"><span>&middot; </span>보고 듣고 경험하고 느낀 모든 생각들을 모두 말할 수 있어서 너무너무 좋아요 좋아요</a></td>
+						</tr>
+						<tr>
+							<td><a class="ellipsis" href="02_review_bbs.html"><span>&middot; </span>좌절에서 자신감으로 (2)</a></td>
+						</tr>
+						<tr>							
+							<td><a class="ellipsis" href="02_review_bbs.html"><span>&middot; </span>강의를 마쳤습니다! (7)</a></td>
+						</tr>
+						<tr>							
+							<td><a class="ellipsis" href="02_review_bbs.html"><span>&middot; </span>수강을 만족하며 (4)</a></td>
+						</tr>
+						<tr>							
+							<td><a class="ellipsis" href="02_review_bbs.html"><span>&middot; </span>아줌마도 하는 진짜녀석들 리얼영어 (3)</a></td>
+						</tr>
+					</tbody>
+			</table>			
+		</div>
+		<div class="notice">
+			<table class="main_bbs_table" summary="게시판 테이블">
+					<thead>
+						<tr>
+							<th>
+								<img src="images/main/notice_tit.jpg" usemap="#table_tit_map2" alt="공지사항 게시판 more">
+								<map name="table_tit_map2" id="table_tit_map2">
+									<area shape="rect" coords="303,0,354,43" href="04_cs_notice.html" alt="more" />
+								</map>	
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a class="ellipsis" href="04_cs_notice_read.html"><span>&middot; </span>[필독] 설 연휴 고객센터 휴무 및 단축운영, 배송중단 안내 배송중단 안내 배송중단 안내</a></td>
+						</tr>
+						<tr>
+							<td><a class="ellipsis" href="04_cs_notice_read.html"><span>&middot; </span>[필독] 이용약관 및 개인정보 취급방침 개정안내</a></td>
+						</tr>
+						<tr>
+							<td><a class="ellipsis" href="04_cs_notice_read.html"><span>&middot; </span>리얼영어 학습 커리큘럼</a></td>
+						</tr>
+						<tr>
+							<td><a class="ellipsis" href="04_cs_notice_read.html"><span>&middot; </span>프리패스 패키지 할인 안내</a></td>
+						</tr>
+						<tr>
+							<td><a class="ellipsis" href="04_cs_notice_read.html"><span>&middot; </span>[필독] 개인정보취급방침 개정 및 회원가입 변경 안내</a></td>
+						</tr>
+					</tbody>
+			</table>	
+		</div>
+		<div class="cs">
+			<table summary="고객센터 안내 테이블">
+				<tr>
+					<td colspan="2" class="title"><img src="images/main/cs_tit.jpg" alt="1:1 문의 "></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="phone">
+						<p>1555 - 1555</p>
+						<span>평일 10:00~18:00 | 점심 12:00~13:00</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="qna"><a href="04_cs_faq.html"><img src="images/main/cs_faq.jpg" alt="자주하는 질문"></a></td>
+					<td class="qna"><a href="04_cs_1to1.html"><img src="images/main/cs_1to1.jpg" alt="1:1 문의"></a></td>
+				</tr>
+			</table>			
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<div class="upper">
+		<a href="#n"><img src="images/main/footer1.jpg" alt="진짜녀석들 소개"></a>			
+		<a href="07_private.html"><img src="images/main/footer2.jpg" alt="개인정보취급방침"></a>			
+		<a href="07_policy.html"><img src="images/main/footer3.jpg" alt="서비스약관"></a>			
+		<a href="#n"><img src="images/main/footer4.jpg" alt="제휴문의"></a>	
+	</div>
+	<div class="lower">
+		<div class="wrap cf">
+			<div class="logo">
+				<a href="#n"><img src="images/main/footer_logo.jpg" alt="진짜녀석들 로고"></a>		
+			</div>
+			<div class="address">
+				<p>㈜진짜녀석들 | 대표 안순원 | 개인정보관리책임자 : 박영진<br />사업자번호 : 881-87-00735 / 통신판매업신고번호 : 제2102-서울강남-01548호    주소 : 서울시 강남구 테헤란로 2길 36 엘에스비즈니스센터 507호<br />TEL : 1555-5555 / FAX : 02-4554-5542 | 제휴문의 soon@jinjja-eng.com</p>
+				<span>Copyright. 진짜녀석들. All Rights Reserved.</span>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<!--퀵메뉴-->
+<div class="main_qmenu">
+	<img src="images/main/qmenu.png" alt="" usemap="#qmenu_map">
+	<map name="qmenu_map" id="qmenu_map">
+		<area shape="rect" coords="0,0,110,52" href="06_myclass.html" alt="" />
+		<area shape="rect" coords="0,53,110,288" href="05_register.html" alt="" />
+		<area shape="rect" coords="0,290,110,328" href="02_review_real.html" alt="" />
+		<area shape="rect" coords="0,331,33,370" href="#n" alt="" />
+		<area shape="rect" coords="35,331,74,370" href="#n" alt="" />
+		<area shape="rect" coords="77,331,110,370" href="#n" alt="" />
+	</map>	
+</div>
+
+<script>
+//퀵메뉴
+$(function(){
+	$('.main_qmenu').each(function(){ 
+		var $win = $(window),
+				$qmenu = $(this),
+				qmenuOffsetTop = $qmenu.offset().top;
+		
+		$win.on('scroll', function(){
+			var scrollTop = $win.scrollTop()
+
+			var scroll = Math.floor(scrollTop),
+					offset = Math.floor(qmenuOffsetTop);			
+
+			if(offset < scroll){
+				$qmenu.addClass('on')
+			}else{
+				$qmenu.removeClass('on')
+			};				
+		});	
+	});	
+});	
+</script>
+
+</body>
+</html>

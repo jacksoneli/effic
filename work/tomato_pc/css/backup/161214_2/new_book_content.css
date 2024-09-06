@@ -1,0 +1,537 @@
+/************************* new_book_content.css (content 부분만)*************************/
+@charset "utf-8";
+
+
+#content_wrap{
+	min-width:1550px;
+	position:relative;
+}
+
+/************ 오른쪽 고정 앵커 ****************/
+#con_anchor_fixed{
+	width:158px;
+	height:631px;
+	position:absolute;
+	top:10px;
+	left:50%;
+	margin-left:600px;
+	z-index:1000;
+}
+
+/************ con1 신토익 최초출시 ****************/
+#con1_ne_toeic{
+	/*background:url(http://pic.neungyule.com/netoeic/newBook/con1_bg.jpg) no-repeat center;*/
+	margin:0 auto;
+	width:100%;
+	height:1010px;
+	overflow:hidden;
+	}
+	.video_bg{
+		position:relative;
+		left:50%;
+		margin-left:-962px;
+	}
+		#video_img{
+			position:absolute;
+			z-index:1;
+		}	
+		#videobcg{
+			position:absolute;
+			z-index:3;
+		}
+		.video_mask{
+			width:1920px;
+			height:1080px;
+			position:absolute;
+			background:url(http://pic.neungyule.com/netoeic/newBook/con1_video_mask.png);
+			z-index:5;
+		}
+	#ne_toeic_title{
+		position:absolute;
+		top:0;
+		left:50%;
+		margin-left:-700px;
+		z-index:10;
+	}
+	#con1_clock{
+		position:absolute;
+		left:50%;
+		margin-left:-167px;
+		top:85px;
+		width:350px;
+		height:70px;
+		z-index:100;
+		position:relative;
+	}
+		#con1_clock > p{
+			color:#eef0f1;
+			font-size:50px;
+			line-height:75px;
+			position:absolute;
+			/*border:1px solid blue;*/ 
+		}
+		#con1_clock > p#days{left:0;}
+		#con1_clock > p#hours{left:105px;}
+		#con1_clock > p#minutes{left:185px;}
+		#con1_clock > p#seconds{left:263px;}
+		
+		
+
+/************ con2 사상누각 ****************/
+#con2_brick_house{
+	width:1400px;
+	margin:0 auto;
+}
+	
+/************ con3 토마토 basic이 걸어 온 길 ****************/
+#con3_tomato_step{
+	width:1400px;
+	height:940px;
+	margin:0 auto;
+	background:url(http://pic.neungyule.com/netoeic/newBook/con3_bg.jpg);
+}
+	ul#step_menu{
+		width:100%; 
+		height:100%; 
+		position:relative;
+	}
+		ul#step_menu > li{
+			/*border:1px solid orange;*/ 
+			width:165px; 
+			height:165px; 
+			position:absolute;
+		}
+		li#step_menu_1{top:700px; left:227px; position:relative;}
+		li#step_menu_2{top:427px; left:422px;}
+		li#step_menu_3{top:700px; left:628px;}
+		li#step_menu_4{top:427px; left:820px;}
+		li#step_menu_5{top:700px; left:1016px;}
+			ul#step_menu > li > div{
+				display:none;
+				width:639px; 
+				height:167px; 
+				position:absolute;
+			}
+			div#step_popup_1{
+			  	 left:161px;
+				 bottom:138px; 
+				 background:url(http://pic.neungyule.com/netoeic/newBook/con3_popup_1.png);
+			}
+			div#step_popup_2{
+				left:-36px; 
+				bottom:-136px; 
+				background:url(http://pic.neungyule.com/netoeic/newBook/con3_popup_2.png);
+			}
+			div#step_popup_3{
+				left:-242px; 
+				bottom:139px; 
+				background:url(http://pic.neungyule.com/netoeic/newBook/con3_popup_3.png);
+			}
+			div#step_popup_4{
+				left:-434px; 
+				bottom:-135px; 
+				background:url(http://pic.neungyule.com/netoeic/newBook/con3_popup_4.png);
+			}
+			div#step_popup_5{
+				left:-630px; 
+				bottom:139px; 
+				background:url(http://pic.neungyule.com/netoeic/newBook/con3_popup_5.png);
+			}
+			ul#step_menu > li:hover > div{display:block;}
+
+/************ con4 토익 전문가도 인정하는 ****************/
+#con4_expert{
+	width:100%;
+	height:547px;
+	margin:0 auto;
+	background:#ddd9d5;
+	text-align:center;
+}
+
+	#con4_accordion{width:1000px; margin:0 auto;}
+		#con4_accordion > dl{overflow:hidden;}
+			#con4_accordion > dl> dt, 
+			#con4_accordion > dl > dd{float:left;}
+			dd#con4_comment_1{}
+			dd#con4_comment_2{display:none;}
+			dd#con4_comment_3{display:none;}
+			dd#con4_comment_4{display:none;}
+
+/************ con5 기본기 미리보기 ****************/
+#con5_basic_preview{
+	width:1400px;
+	height:1253px;
+	margin:0 auto;
+}
+	#rc_wrap{
+		position:relative;
+		width:993px;
+		height:532px;
+		margin:0 auto;
+		background:url(http://pic.neungyule.com/netoeic/newBook/preview_rc_bg.jpg) no-repeat;
+		margin-bottom:30px;
+	}
+		#rc_btns{}
+			#rc_btns > ul{position:relative;}
+				#rc_btns > ul > li > a{
+					display:block;
+					position:absolute;
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				#rc_btns > ul > li > a#rc_buy_btn{
+					width:231px; 
+					height:53px;
+					left:27px;
+					top:392px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/con5_rc_buy_btn.jpg) no-repeat;
+				}
+				#rc_btns > ul > li > a#rc_preview_btn{
+					width:231px; 
+					height:46px;
+					left:27px;
+					top:464px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/con5_rc_preview_btn.jpg) no-repeat;
+				}
+				
+		.preview_slider{
+			position:absolute;
+			top:1px; 
+			left:282px;
+			width:710px;
+			height:530px;
+		}
+			.banner_container{
+			}
+				.banner_content{
+					margin-left:60px;
+					margin-top:26px;
+				}
+					.banner_content > img{}
+				
+			.banner_nav_container{}
+				.banner_nav_container > button{width:20px; height:32px;}
+				.btn_prev{position:absolute; left:18px; top:237px;}
+				.btn_next{position:absolute; left:670px; top:237px;}
+
+	#lc_wrap{
+		position:relative;
+		width:993px;
+		height:532px;
+		margin:0 auto;
+		background:url(http://pic.neungyule.com/netoeic/newBook/preview_lc_bg.jpg) no-repeat;
+	}
+	
+		#lc_btns{}
+			#lc_btns > ul{position:relative;}
+				#lc_btns > ul > li > a{
+					display:block;
+					position:absolute;
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				#lc_btns > ul > li > a#lc_buy_btn{
+					width:231px; 
+					height:53px;
+					left:27px;
+					top:392px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/con5_lc_buy_btn.jpg) no-repeat;
+				}
+				#lc_btns > ul > li > a#lc_preview_btn{
+					width:231px; 
+					height:46px;
+					left:26px;
+					top:462px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/con5_lc_preview_btn.jpg) no-repeat;
+				}
+
+/************ con6 3대 혜택 ****************/
+#con6_benefit{
+	width:100%;
+	height:894px;
+	background:#1c1c1c;
+	margin:0 auto;
+	position:relative;
+	text-align:center;
+}
+	#con6_register_book{
+		position:absolute;
+		left:50%;
+		margin-left:-496px;
+		top:495px;;
+		width:248px;
+		height:89px;
+		z-index:500;
+	}
+		#con6_register_book > a{
+			display:block;
+			width:240px;
+			height:90px;
+		}
+			#con6_popup{
+				display:none;
+				position:absolute;
+				left:18px;
+				bottom:73px;
+				width:233px;
+				height:285px;
+				background:url(http://pic.neungyule.com/netoeic/newBook/con6_popup.jpg) no-repeat;
+			}
+			#con6_register_book > a:hover > #con6_popup{
+				display:block;
+			}
+			
+
+/************ con7 Q & A ****************/
+#con7_qna{
+	width:100%;
+	background:url(http://pic.neungyule.com/netoeic/newBook/con7_bg.jpg) repeat;
+}
+	#con7_wrap{
+		width:1400px;
+		height:575px;
+		margin:0 auto;
+		background-image:url(http://pic.neungyule.com/netoeic/newBook/con7_question_back.jpg);
+		background-repeat:no-repeat;
+	}
+		#con7_wrap > ul{
+				overflow:hidden;
+				padding-left:202px;
+				padding-top:175px;
+			}
+			#con7_wrap > ul > li{
+				width:316px;
+				height:346px;
+				float:left;
+				margin-right:24px;
+				overflow:hidden;
+				text-indent:-9999px;
+			}
+			li#q1_box{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/q1.jpg);
+			}
+			li#q2_box{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/q2.jpg);
+			}
+			li#q3_box{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/q3.jpg);
+			}
+			li#q1_box:hover{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/a1.jpg);
+			}
+			li#q2_box:hover{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/a2.jpg);
+			}
+			li#q3_box:hover{
+				background-image:url(http://pic.neungyule.com/netoeic/newBook/a3.jpg);
+			}
+
+/************ con8 따끈한 후기 ****************/
+#con8_review{
+	width:1400px;
+	height:1453px;
+	margin:0 auto;
+}
+	#customer_review{}
+		#review_notice{
+			width:1400px;
+			height:277px;
+			background:url(http://pic.neungyule.com/netoeic/newBook/con8_notice_bg.jpg) no-repeat center 49px;
+			border:1px solid #fff;
+		}
+			#review_amount{
+				margin-left:515px;
+				margin-top:185px;
+				width:100px;
+				height:80px;
+				font-size:35px;
+				color:#fdff34;
+				line-height:36px;
+				text-align:right;
+			}
+			
+		#review_bbs{}
+			#review_bbs > ul{width:994px; margin:0 auto;}
+				#review_bbs > ul > li{
+					border-bottom:1px solid #ddd; 
+					height:39px; 
+					line-height:39px;
+					overflow:hidden;
+				}
+					#review_bbs > ul > li > img{
+						width:65px; 
+						height:22px; 
+						float:left;
+						margin-left:3px;
+						padding-top:8px;
+					}
+					#review_bbs > ul > li > p,
+					#review_bbs > ul > li > p > a,
+					#review_bbs > ul > li > p > a:hover{
+						color:#2e2e2e; 
+						float:left;
+						font-size:13px;
+						line-height:39px;
+					}
+					#review_bbs > ul > li > p.review_comment{width:850px; margin-left:15px;}
+					#review_bbs > ul > li > p.reviewer_name{width:50px; margin-left:5px;}
+					
+	#hot_review{margin-top:52px; text-align:center;}
+		#hot_review > img{}
+
+/************ con9 이벤트 1 기대평점등록 ****************/
+#con9_event_1{
+	width:100%;
+	height:515px;
+	margin:0 auto;
+	text-align:center;
+	background:url(http://pic.neungyule.com/netoeic/newBook/con9_back.jpg) repeat;
+}
+
+/************ con10 이벤트 2 소문내기 ****************/
+#con10_event_2{
+	width:100%;
+	height:823px;
+	margin:0 auto;
+	text-align:center;
+	background:url(http://pic.neungyule.com/netoeic/newBook/con10_back.jpg);
+}
+
+/************ con11 기대평 남기기 ****************/
+#con11_expect{
+	width:1400px;
+	height:940px;
+	margin:0 auto;
+	text-align:center;
+}
+	#con11_expect > img{}
+	#comment_field{margin-top:26px;}
+		#comment_field > fieldset{
+			width:994px;
+			height:115px;
+			background:url(http://pic.neungyule.com/netoeic/newBook/con11_fieldset_bg.jpg);
+			margin:0 auto;
+			position:relative;
+		}
+			#url_box{
+				width:857px; 
+				height:40px;
+				position:absolute;
+				left:12px;
+				top:12px;
+				font-size:14px;
+			}
+			#comment_box{
+				width:857px; 
+				height:40px;
+				position:absolute;
+				left:12px;
+				top:62px;
+				font-size:14px;
+			}
+			#posting_btn{
+				width:106px; 
+				height:93px; 
+				position:absolute;
+				left:879px;
+				top:12px;
+			}
+
+	#comment_bbs{
+		width:994px;
+		margin:0 auto;
+	}
+		#comment_bbs > table{text-align:left;}
+			.comment_tr{
+				width:994px;
+				border-bottom:1px solid #ddd;
+			}
+				.comment_td_1{width:145px; height:107px; padding-left:3px;}
+					p.comment_id{font-size:15px; color:#2e2e2e; font-weight:bold;} /**** font 맑은고딕 *****/
+					p.comment_date{padding-top:3px; font-size:12px; color:#999;} /**** font 맑은고딕 *****/
+				.comment_td_2{ /**** font 맑은고딕 *****/
+					vertical-align:top; 
+				}
+					.comment_td_2 > p{}
+					p.comment_url{
+						margin-top:25px;
+						width:100%; 
+						font-size:13px; 
+						color:#999; 
+						font-weight:bold; 
+					}
+					p.comment_text{
+						width:100%; 
+						font-size:13px; 
+						color:#2e2e2e; 
+						line-height:24px; 
+						padding-top:5px; 
+					}
+
+	#bbs_num{
+		padding-top:26px;
+	}
+		#bbs_num > ul{}
+			#bbs_num > ul > li{
+				display:inline-block;
+			}
+				#bbs_num > ul > li > a{
+					font-size:13px;
+					color:#666;
+					font-weight:bold;
+				}
+				#bbs_num > ul > li > a.bbs_num_selected{color:#618dcd;}
+				#bbs_first_btn{
+					display:block;
+					width:15px;
+					height:13px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/bbs_first_btn.gif);
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				#bbs_l_btn{
+					display:block;
+					width:15px;
+					height:13px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/bbs_l_btn.gif);
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				#bbs_r_btn{
+					display:block;
+					width:15px;
+					height:13px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/bbs_r_btn.gif);
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				#bbs_last_btn{
+					display:block;
+					width:15px;
+					height:13px;
+					background:url(http://pic.neungyule.com/netoeic/newBook/bbs_last_btn.gif);
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

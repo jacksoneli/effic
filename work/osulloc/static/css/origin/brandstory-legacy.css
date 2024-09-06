@@ -1,0 +1,553 @@
+.bs-mark-list {
+  zoom: 1; }
+  .bs-mark-list:before {
+    content: '';
+    display: block; }
+  .bs-mark-list:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+/* About Osulloc > Brand story */
+html, body, #wrap {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#bs-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 50px); }
+
+.bs-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 50px); }
+
+.has-masking {
+  -webkit-mask-position: 0 0;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 0.5)), color-stop(30%, rgba(30, 87, 153, 0.8)), color-stop(36%, rgba(30, 87, 153, 0.89)), color-stop(43%, #2470b9), color-stop(50%, #2989d8), color-stop(56%, #2575bf), color-stop(65%, rgba(30, 87, 153, 0.88)), color-stop(71%, rgba(30, 87, 153, 0.8)), color-stop(100%, rgba(30, 87, 153, 0)));
+  -webkit-transform-style: preserve-3d; }
+
+.bs-article {
+  position: relative;
+  z-index: 2; }
+
+.bs-content {
+  backface-visibility: hidden; }
+
+.bs-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px 0 20px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  width: 90%; }
+  .bs-section p {
+    margin-top: 0; }
+
+.bs-body {
+  padding-top: 4em;
+  padding-bottom: 8em; }
+
+.bs-heading {
+  position: relative;
+  height: 80vh;
+  height: calc(100vh - 100px); }
+
+.bs-h {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin-top: -1em;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.bs-nav {
+  position: absolute;
+  z-index: 3; }
+  .bs-nav a {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 70px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    opacity: 0.3; }
+    .bs-nav a:hover, .bs-nav a:focus {
+      text-decoration: none;
+      opacity: 1; }
+      .bs-nav a:hover .h, .bs-nav a:focus .h {
+        visibility: visible; }
+  .bs-nav .h {
+    position: absolute;
+    visibility: hidden; }
+  .bs-nav i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/about/nav.png) 0 0 no-repeat; }
+  .bs-nav .bs-icon2 {
+    background-position: 0 -95px; }
+  .bs-nav .bs-icon3 {
+    background-position: 0 -190px; }
+
+.bs-nav a.is-active {
+  opacity: 1; }
+  .bs-nav a.is-active .h {
+    visibility: visible; }
+
+.bs-nav {
+  right: 2%;
+  top: 50%;
+  margin: -120px 0 0; }
+  .bs-nav .h {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 100px;
+    margin-top: -.5em;
+    margin-left: .5em;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Buri", serif;
+    text-align: right; }
+  .bs-nav a {
+    display: block;
+    width: 48px;
+    height: 70px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center; }
+    .bs-nav a .bs-icon2 {
+      background-position: 0  -95px; }
+    .bs-nav a .bs-icon3 {
+      background-position: 0 -190px; }
+
+.bs-bg, .bs-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.bs-bg {
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .backgroundsize .bs-bg {
+    background-size: cover; }
+
+.bg-cur {
+  z-index: 1; }
+
+.bs-clip {
+  display: none; }
+
+[data-bg] {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.scene-a0 {
+  background-image: url(../images/about/brand_a0_m.jpg); }
+
+.scene-a1 {
+  background-image: url(../images/about/brand_a1_m.jpg); }
+
+.scene-a2 {
+  background-image: url(../images/about/brand_a2_m.jpg); }
+
+.scene-a3 {
+  background-image: url(../images/about/brand_a3_m.jpg); }
+
+.scene-a4 {
+  background-image: url(../images/about/brand_a4_m.jpg); }
+
+.scene-a5 {
+  background-image: url(../images/about/brand_a5_m.jpg); }
+
+.scene-b0 {
+  background-image: url(../images/about/brand_b0_m.jpg); }
+
+.scene-b1 {
+  background-image: url(../images/about/brand_b1_m.jpg); }
+
+.scene-b2 {
+  background-image: url(../images/about/brand_b2_m.jpg); }
+
+.scene-b3 {
+  background-image: url(../images/about/brand_b3_m.jpg); }
+
+.scene-b4 {
+  background-image: url(../images/about/brand_b4_m.jpg); }
+
+.scene-b5 {
+  background-image: url(../images/about/brand_b5_m.jpg); }
+
+.scene-c0 {
+  background-image: url(../images/about/brand_c0_m.jpg); }
+
+.scene-c1 {
+  background-image: url(../images/about/brand_c1_m.jpg); }
+
+.scene-c2 {
+  background-image: url(../images/about/brand_c2_m.jpg); }
+
+.scene-c3 {
+  background-image: url(../images/about/brand_c3_m.jpg); }
+
+.scene-a0 {
+  background-image: url(../images/about/brand_a0.jpg); }
+
+.scene-a1 {
+  background-image: url(../images/about/brand_a1.jpg); }
+
+.scene-a2 {
+  background-image: url(../images/about/brand_a2.jpg); }
+
+.scene-a3 {
+  background-image: url(../images/about/brand_a3.jpg); }
+
+.scene-a4 {
+  background-image: url(../images/about/brand_a4.jpg); }
+
+.scene-a5 {
+  background-image: url(../images/about/brand_a5.jpg); }
+
+.scene-b0 {
+  background-image: url(../images/about/brand_b0.jpg); }
+
+.scene-b1 {
+  background-image: url(../images/about/brand_b1.jpg); }
+
+.scene-b2 {
+  background-image: url(../images/about/brand_b2.jpg); }
+
+.scene-b3 {
+  background-image: url(../images/about/brand_b3.jpg); }
+
+.scene-b4 {
+  background-image: url(../images/about/brand_b4.jpg); }
+
+.scene-b5 {
+  background-image: url(../images/about/brand_b5.jpg); }
+
+.scene-c0 {
+  background-image: url(../images/about/brand_c0.jpg); }
+
+.scene-c1 {
+  background-image: url(../images/about/brand_c1.jpg); }
+
+.scene-c2 {
+  background-image: url(../images/about/brand_c2.jpg); }
+
+.scene-c3 {
+  background-image: url(../images/about/brand_c3.jpg); }
+
+.bs-bg.is-video {
+  background: transparent; }
+
+.loading {
+  background-position: center 100px; }
+
+.brandstory {
+  background-color: #333;
+  color: #f6f6f6;
+  font-size: 1.8em;
+  font-family: "Buri", serif;
+  line-height: 2.5;
+  letter-spacing: -.05em;
+  font-size: 2.1em;
+  font-size: 2.4em;
+  font-size: 2.6em; }
+  .brandstory .link {
+    color: #f6f6f6;
+    border-bottom: 1px dotted;
+    line-height: 1.5; }
+    .brandstory .link:focus, .brandstory .link:hover {
+      color: #fff;
+      text-decoration: none; }
+  .brandstory h2 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.3;
+    text-align: center; }
+  .brandstory h3 {
+    margin-top: 2em;
+    margin-bottom: .2em;
+    font-size: 1.32em;
+    line-height: 1.5; }
+  .brandstory h4 {
+    margin-top: 2em;
+    margin-bottom: .25em;
+    font-size: 1.16em;
+    line-height: 1.5; }
+  .brandstory blockquote {
+    margin: 1em 0; }
+    .brandstory blockquote p {
+      margin: 0; }
+  .brandstory h2 {
+    font-size: 1.8em; }
+
+.bs-intro {
+  position: relative;
+  height: 100%;
+  height: calc(100vh - 50px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 860px;
+  background-size: auto; }
+  .bs-intro .visual {
+    position: absolute;
+    left: 0;
+    top: 585px;
+    width: 100%;
+    height: 450px; }
+    .bs-intro .visual-img {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      max-width: none;
+      width: 1920px;
+      margin-left: -960px; }
+
+.bs {
+  white-space: nowrap;
+  max-width: 480px;
+  width: 80%;
+  height: 75%;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 640px;
+  width: 36%; }
+  .bs-cell {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal; }
+  .bs:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+
+.bs-mark {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto; }
+  .bs-mark-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap; }
+    .bs-mark-cont-cell {
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal; }
+    .bs-mark-cont:after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+  .bs-mark-cell {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal; }
+  .bs-mark-list {
+    display: inline-block;
+    max-width: 1280px;
+    vertical-align: middle;
+    white-space: normal; }
+    .bs-mark-list li {
+      float: left;
+      width: 50%;
+      color: #fff;
+      font-family: "Buri", serif;
+      font-size: 14px;
+      line-height: 1.3; }
+  .bs-mark-item {
+    margin: 0 25px; }
+    .bs-mark-item p {
+      height: 80px;
+      margin-top: 1.5em; }
+      .bs-mark-item p span {
+        display: block; }
+    .bs-mark-item br {
+      display: none; }
+  .bs-mark-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%; }
+    .bs-mark-bg img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 50%;
+      min-height: 50%;
+      max-width: none; }
+    .bs-mark-bg .for-desktop {
+      display: none; }
+  .bs-mark .title {
+    padding-bottom: 40px;
+    border-bottom: 0 none;
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: "Buri", serif;
+    text-align: center; }
+  .bs-mark + .close-modal {
+    overflow: initial;
+    position: fixed;
+    top: 20px;
+    left: auto;
+    right: 20px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: none;
+    text-align: right; }
+    .bs-mark + .close-modal:hover, .bs-mark + .close-modal:focus {
+      text-decoration: none; }
+    .bs-mark + .close-modal:after {
+      content: '\e82e';
+      padding: 4px 8px;
+      font-family: "fontello";
+      font-size: 24px;
+      color: #fff; }
+  .bs-mark-list {
+    max-width: 1280px; }
+    .bs-mark-list li {
+      width: 25%;
+      font-size: 16px; }
+  .bs-mark-bg .for-desktop {
+    display: block; }
+  .bs-mark-bg .for-mobile {
+    display: none; }
+  .bs-mark-item br {
+    display: block; }
+  .bs-mark .title {
+    padding-bottom: 3.2em;
+    font-size: 30px; }
+
+html, body, #wrap, #bs-frame {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto; }
+
+.bs-heading {
+  height: 860px; }
+
+.bs-body {
+  padding-bottom: 0; }
+
+.bs-section {
+  max-width: none;
+  width: auto;
+  padding: 0; }
+
+.bs-chap {
+  white-space: nowrap;
+  display: block;
+  height: 860px;
+  text-align: center; }
+  .bs-chap-cell {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal; }
+  .bs-chap:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .bs-chap-cell {
+    width: 80%;
+    max-width: 700px;
+    text-align: left; }
+
+.bs-nav {
+  position: fixed; }
+
+@media (max-width: 64em) and (orientation: portrait) {
+  .scene-a0 {
+    background-image: url(../images/about/brand_a0_m.jpg); }
+  .scene-a1 {
+    background-image: url(../images/about/brand_a1_m.jpg); }
+  .scene-a2 {
+    background-image: url(../images/about/brand_a2_m.jpg); }
+  .scene-a3 {
+    background-image: url(../images/about/brand_a3_m.jpg); }
+  .scene-a4 {
+    background-image: url(../images/about/brand_a4_m.jpg); }
+  .scene-a5 {
+    background-image: url(../images/about/brand_a5_m.jpg); }
+  .scene-b0 {
+    background-image: url(../images/about/brand_b0_m.jpg); }
+  .scene-b1 {
+    background-image: url(../images/about/brand_b1_m.jpg); }
+  .scene-b2 {
+    background-image: url(../images/about/brand_b2_m.jpg); }
+  .scene-b3 {
+    background-image: url(../images/about/brand_b3_m.jpg); }
+  .scene-b4 {
+    background-image: url(../images/about/brand_b4_m.jpg); }
+  .scene-b5 {
+    background-image: url(../images/about/brand_b5_m.jpg); }
+  .scene-c0 {
+    background-image: url(../images/about/brand_c0_m.jpg); }
+  .scene-c1 {
+    background-image: url(../images/about/brand_c1_m.jpg); }
+  .scene-c2 {
+    background-image: url(../images/about/brand_c2_m.jpg); }
+  .scene-c3 {
+    background-image: url(../images/about/brand_c3_m.jpg); }
+  .brandstory {
+    font-size: 2em; }
+  .bs-heading {
+    height: auto; }
+  .bs-body {
+    padding-top: 0; }
+  [data-bg],
+  .bs-chap {
+    height: auto;
+    min-height: 430px;
+    padding-top: 5%;
+    background-size: cover; }
+  .bs-chap {
+    height: auto; }
+  [data-bg] {
+    min-height: 430px;
+    padding-bottom: 5%; } }

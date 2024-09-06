@@ -1,0 +1,528 @@
+﻿/*Main*/
+.groupbuy_area {overflow: hidden;}
+.groupbuy_area p,.groupbuy_area div,.groupbuy_area span,.groupbuy_area a {margin:0; padding:0; line-height: 1;}
+.groupbuy_area .groupbuy_box {overflow: hidden; float: left; width: 50%;}
+.groupbuy_area .groupbuy_box > div.box_in {position: relative; overflow: hidden; border:1px solid #e6e6e6;}
+
+.groupbuy_area .groupbuy_top {position: absolute; top: 50px; left: 35px; line-height: 1;}
+.groupbuy_area .groupbuy_top .top_txt {color:#333333; font-family: "Buri", serif; font-size: 30px; font-weight: 500;}
+.groupbuy_area .groupbuy_top .btm_txt {display:inline-block; padding: 5px 10px; margin-top: 12px; background-color: #d75325; color:#ffffff; font-size: 16px;}
+.groupbuy_area .groupbuy_btm {position: absolute; bottom:50px; left: 35px;}
+.groupbuy_area .groupbuy_btm .top_txt {color:#333333; font-family: "Buri", serif; font-size: 24px; font-weight: 500;}
+.groupbuy_area .groupbuy_btm .btm_txt {margin-top: 10px; color: #d75325; font-size: 18px;}
+
+.groupbuy_area .groupbuy_itm {float: right; width: 24.4vw; margin-right: 30px; max-width: 318px;}
+
+.groupbuy_area .groupnow_box {position: relative; float: left; width: 50%; background-color: #fcfcfc;}
+.groupbuy_area .groupnow_box .groupnow_top {overflow: hidden; position: absolute; width: 100%; top:0; left:0;}
+.groupbuy_area .groupnow_box .groupnow_top .top_txt {margin-top: 62px; color:#333333; font-family: "Buri", serif; font-size: 26px; font-weight: 500; text-align: center;}
+.groupbuy_area .groupnow_box .groupnow_top .btm_txt {margin-top: 10px; color: #999999; font-size: 16px; text-align: center;}
+.groupbuy_area .groupnow_box .groupnow_top img {display: block; width: 128px; margin: 30px auto 0 auto;}
+.groupbuy_area .groupnow_box .groupnow_top .per_txt {margin-top: 0; color: #d75325; font-family: "Buri", serif; font-size: 24px; font-weight: 900; text-align: center; opacity: 0;}
+
+.groupbuy_area .groupnow_box .flag_area {position: absolute; overflow: visible; width: 100%; height: 5px; left: 0; bottom: 33px;}
+.groupbuy_area .groupnow_box .flag_area .flag_box {position: relative; float: left; height: 5px; margin-left: 3px; background-color: #d8d8d8;}
+.groupbuy_area .groupnow_box .flag_area.box_1st .flag_box {width: calc(100% - 3px);}
+.groupbuy_area .groupnow_box .flag_area.box_2nd .flag_box {width: calc(50% - 3px);}
+.groupbuy_area .groupnow_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 3px);}
+.groupbuy_area .groupnow_box .flag_area.box_4th .flag_box {width: calc(25% - 3px);}
+.groupbuy_area .groupnow_box .flag_area.box_5th .flag_box {width: calc(20% - 3px);}
+.groupbuy_area .groupnow_box .flag_area .flag_box:first-child {width: 33.33%; margin-left:0;}
+.groupbuy_area .groupnow_box .flag_area .flag_box img {display: none; position: absolute; width: 14px; bottom:0; right:-14px;}
+.groupbuy_area .groupnow_box .flag_area .flag_box:last-child img {display: none !important; visibility: hidden !important;}
+.groupbuy_area .groupnow_box .flag_area .flag_box .flag_bar {height: 5px; background-color: #000000;}
+
+.groupbuy_area .groupnext_box {position: relative; float: left; width: 50%;}
+.groupbuy_area .groupnext_box img {position: relative; z-index: 5;}
+.groupbuy_area .groupnext_box .groupnext_dim {position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.5); z-index: 10;}
+.groupbuy_area .groupnext_box .groupnext_dim .next_tit {margin-top: 132px; color:#ffffff; font-family: "Buri", serif; font-size: 24px; text-align: center;}
+.groupbuy_area .groupnext_box .groupnext_dim .next_txt {margin-top: 14px; color:#ffffff; font-size: 15px; text-align: center;}
+
+/*List*/
+/*LNB*/
+.lnb-header.groupbuy_lnb {margin:0; height:auto !important; }
+.lnb-header.groupbuy_lnb .h { padding-top:98px; }
+.lnb-header.groupbuy_lnb .switch-select {margin:0 auto; border-top: 1px solid #ddd; color: #727272; font: 15px "Buri", serif; line-height: 52px;}
+/* 190424 틀어짐 수정 */
+.groupbuy_lnb-infoBox { 
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flexbox;
+    display:flex;
+    -webkit-flex-wrap:nowrap;
+    -moz-flex-wrap:nowrap;
+    -ms-flex-wrap:nowrap;
+    flex-wrap:nowrap;
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center;
+    max-width:930px; height:57px; margin:0 auto; border-top:1px solid rgba(204,204,204, 0.5); }
+.groupbuy_lnb-infoBox li { 
+    -webkit-flex:initial;
+    -moz-flex:initial;
+    -ms-flex:initial;
+    flex:initial; 
+    position:relative; padding:0 25px;}
+.groupbuy_lnb-infoBox li:after { content:''; position:absolute; right:0; top:50%; width:1px; height:14px; margin-top:-7px; background-color:rgba(0,0,0,0.2); }
+.groupbuy_lnb-infoBox li:last-child:after { display:none; }
+.groupbuy_lnb-infoBox li em { /*margin-right:5px;*/ margin:0 5px 0 0; color:#727272; font-size:15px; font-weight:bold; }
+.groupbuy_lnb-infoBox li span { color:#727272; font-size:14px; }
+/* //end 190424 틀어짐 수정 */
+
+.groupbuylist_area {overflow: hidden; padding-bottom: 52px; border-bottom: 1px solid #cccccc;}
+.groupbuylist_area + .pagination {padding: 20px 0; margin:0;}
+.groupbuylist_area p,.groupbuylist_area span,.groupbuylist_area strong,.groupbuylist_area div {margin: 0; line-height: 1;}
+.groupbuylist_area .groupbuylist_box {position: relative; float: left; width: calc(50% - 12px); margin-top:20px; border: 1px solid #e8e8e8;}
+.groupbuylist_area .groupbuylist_box:nth-child(2n) {float: right;}
+
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum {position: relative; width: 100%; }
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count {top: 13px; right: 21px; z-index: 20;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count .count {width: 97px; height: 97px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count .icon-count {font-size: 27px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green .count {background:url(../images/groupbuy/ptn_events_ing.jpg) center center repeat;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready .count {background:url(../images/groupbuy/ptn_events_ready.png) center center repeat;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green .count .icon-count,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready .count .icon-count {font-size: 20px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum > img {width: 100%;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover {display: none; position: absolute; width: 100%; height: 100%; top:0; left:0; background-color: rgba(0,0,0,0.6); z-index: 15;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum:hover .groupbuylist_hover {display: block;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .tit,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .txt {color:#ffffff; text-align: center;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .tit {margin-top: 75px; font-size: 18px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .txt {margin-top: 17px; font-size: 14px; line-height: 20px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .txt strong {color: #d75325;}
+
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.done + img + .groupbuylist_hover {display:block;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready + img + .groupbuylist_hover,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green + img + .groupbuylist_hover {display:block; background-color: rgba(0,0,0,0.3);}
+
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready + img + .groupbuylist_hover > p,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.done + img + .groupbuylist_hover > p,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green + img + .groupbuylist_hover > p {display:none;}
+
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready + img + .groupbuylist_hover:hover > p,
+.groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green + img + .groupbuylist_hover:hover > p {display:block;}
+
+.groupbuylist_area .groupbuylist_box .groupbuylist_info {position: relative; height: 260px; padding-left: 25px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .tit,
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .desc {position: relative; z-index: 5;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .tit {height: 140px; margin-top: 37px; color: #727272; font-size: 22px; line-height: 28px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .tit strong {display: block; margin-top: 10px; color: #333333; font-family: "Buri", serif; font-size: 38px; font-weight: 500;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .desc {height: 80px; color: #d75325; font-size: 20px; line-height: 1;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .desc.desc_big {font-size: 35px;}
+.groupbuylist_area .groupbuylist_box .groupbuylist_info .desc span {display: block; margin-top: 8px; color: #727272; font-size: 15px; }
+.groupbuylist_area .groupbuylist_box .groupbuylist_info > a {position: absolute; display: block; width: 125px; height: 48px; bottom: 48px; right: 15px; border: 1px solid #898e86; border-radius: 50px; color:#000000; font-size: 14px; text-align: center; line-height: 48px; z-index: 10}
+
+.groupbuylist_area .groupbuylist_box .flag_area {position: absolute; overflow: visible; height: 5px; left: 0; right: 4px; bottom: 0;}
+.groupbuylist_area .groupbuylist_box .flag_area .flag_box {position: relative; float: left; height: 5px; margin-left: 3px; background-color: #d8d8d8;}
+.groupbuylist_area .groupbuylist_box .flag_area.box_1st .flag_box {width: calc(100% - 3px);}
+.groupbuylist_area .groupbuylist_box .flag_area.box_2nd .flag_box {width: calc(50% - 3px);}
+.groupbuylist_area .groupbuylist_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 3px);}
+.groupbuylist_area .groupbuylist_box .flag_area.box_4th .flag_box {width: calc(25% - 3px);}
+.groupbuylist_area .groupbuylist_box .flag_area.box_5th .flag_box {width: calc(20% - 3px);}
+.groupbuylist_area .groupbuylist_box .flag_area .flag_box img {display: none; position: absolute; width: 14px; bottom:0; right:-14px;}
+.groupbuylist_area .groupbuylist_box .flag_area .flag_box:last-child img {right: -4px;}
+.groupbuylist_area .groupbuylist_box .flag_area .flag_box .flag_bar {height: 5px; background-color: #000000;}
+
+.groupbuylist_area .fail.groupbuylist_box .groupbuylist_info .desc {color:#555555;}
+.groupbuylist_area .fail.groupbuylist_box .flag_area .flag_box {background-color: #828282;}
+.groupbuylist_area .comp.groupbuylist_box .groupbuylist_thum .groupbuylist_hover,
+.groupbuylist_area .fail.groupbuylist_box .groupbuylist_thum .groupbuylist_hover,
+.groupbuylist_area .fail.groupbuylist_box .flag_area .flag_box .flag_bar,
+.groupbuylist_area .fail.groupbuylist_box .flag_area .flag_box img {display: none !important; visibility: hidden;}
+
+/*Detail*/
+.l-wrap.grouypbuy {max-width: 930px;}
+/*Head*/
+.product_newdetail .prodhead_area .prod_head_visual.groupbuy {position: relative; height: 450px; background-image: url(../images/groupbuy/bg_prod_visual.png);}
+.product_newdetail .prodhead_area .prod_head_visual.groupbuy .prod_head_box .prod_visual_box {margin-top:0;}
+
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_detailview {position: absolute; width: 129px; height: 48px; top: 45px; left: 50%; margin-left: 318px; border: 1px solid #9b9f98; border-radius: 50px; color:#7c7b7b; font-size: 14px; text-align: center; line-height: 48px;}
+
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target {position: absolute; top: 200px; left: 50%; margin-left: -464px; z-index: 10;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number {color:#d75325; font-family: 'Buri', serif; font-size: 32px; font-weight: 500;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target.groupbuy_target2 {opacity: 0;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number,.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number span {font-size: 32px; font-family: 'Buri', serif; color:#d75325;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon {margin-top: 5px; color:#727272; font-size: 17px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon,
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon span {color:#727272; font-size: 17px;}
+
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area {position: absolute; overflow: visible; width: 930px; height: 8px; left: 50%; bottom: 0; margin-left: -465px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area > .flag_in {overflow: visible; position: relative; width:100%; height: 8px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .groupbuy_member {position:absolute; bottom: 20px; left: 0; color:#d75325; font-size: 16px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box {position: relative; float: left; height: 8px; margin-left: 5px; background-color: #d8d8d8;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_1st .flag_box {width: 100%; margin-left: 0;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_2nd .flag_box {width: calc(50% - 5px);}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_2nd .groupbuy_member + .flag_box {width: 50%; margin-left: 0;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 5px);}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_3rd .groupbuy_member + .flag_box {width: 33.33%; margin-left: 0;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_4th .flag_box {width: calc(25% - 5px);}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_4th .groupbuy_member + .flag_box {width: 25%; margin-left: 0;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_5th .flag_box {width: calc(20% - 5px);}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_5th .groupbuy_member + .flag_box {width: 20%; margin-left: 0;}
+
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box img {display: none; position: absolute; width: 21px; bottom:0; right:-21px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box:last-child img {right: -5px;}
+.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box .flag_bar {height: 8px; background-color: #000000;}
+
+/*Info*/
+.product_newdetail.groupbuy .prod_head_info {padding:0; border-bottom: 1px solid #dddddd;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_price > div {width:185px;}
+.product_newdetail .prod_head_info .prod_info_price .pridinfo_qty >  p.groupbuy_comp {margin-top: 5px;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_price > div > .qty_count_box.groupbuy_comp {color: #d75325; font-size: 40px; font-weight: bold;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_box {width: 490px; min-height: 100px; padding:60px 215px 93px 225px;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_box .prod_info_price {top:62px;}
+
+.m_cart_new .cart-layer .vol-row .qty_count_box.groupbuy_comp {border: none; font-size: 4.3vw; text-align: left;}
+.m_cart_new .cart-layer .vol-row .qty_count_box.groupbuy_comp > span {float: right; color: #d75325; font-size: 4.3vw; font-weight: bold;}
+
+.product_newdetail.groupbuy .prod_head_info .prod_info_txt p {color:#888888;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_desc.groupbuy,.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_desc.groupbuy span {color:#e15929; font-size: 17px;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy {margin-top: 40px; color:#888888; font-size: 16px;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy span {color: #d75325; font-size: 16px;}
+.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy strong {color:#222222; font-size: 18px;}
+
+.groupbuy_sharearea {position: absolute; width: 160px; top: 64px; left:0;}
+.groupbuy_sharearea .remind_date {color:#d75325; font-size: 40px; font-weight: 200;}
+.groupbuy_sharearea .groupbuy_sharebox {overflow: hidden; padding-top: 15px; margin-top: 21px; border-top: 1px solid #dadada;}
+.groupbuy_sharearea .groupbuy_sharebox:after {content:''; display:block; clear:both;}
+.groupbuy_sharearea .groupbuy_sharebox .share_tit {color:#222222; font-size: 14px;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share {overflow:hidden; margin-top:18px;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a {display:block; width:33px; height:33px; background:url(../images/ico/ico_itmview_share.png) no-repeat; background-size:100% auto; border-radius:50%; border:1px solid #2c2c2c; margin-left:10px; opacity:0.2;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a.btn_share {float:left;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a.btn_share.url {margin-left:0;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a.btn_share.kakao {background-image:url(../images/ico/ico_itmview_kakao.png);}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a.btn_share.face {background-image:url(../images/ico/ico_itmview_face.png);}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a:hover {opacity: 0.7;}
+.groupbuy_sharearea .groupbuy_sharebox .infobottom_share a:active {opacity: 1;}
+
+/*content*/
+.teaclass_table_pc .h {margin-bottom: 12px;}
+.teaclass_m_box .teaclass_m_cont.groupbuy,
+.teaclass_m_box .teaclass_m_cont.groupbuy > div {padding-left: 0; padding-right: 0;}
+.teaclass_m_box .teaclass_m_cont.groupbuy > div {padding-left: 20px; padding-right: 20px;}
+.teaclass_m_box .teaclass_m_cont.groupbuy > div > p:first-child {position: relative; top:auto; left: auto; width:auto;}
+.teaclass_m_box .teaclass_m_cont.groupbuy > div > p {color:#727272; font-size: 14px; font-weight: 200;}
+.teaclass_m_box .teaclass_m_cont.groupbuy > div > p strong:first-child {color:#444444; font-size: 13px; font-weight: normal;}
+.teaclass_m_box .teaclass_m_cont.groupbuy > div > p strong {color:#5b7005;}
+
+.groupbuy_share_detail {position: relative; display: inline-block; margin-top:30px; text-align: center;}
+.groupbuy_share_detail img.pc {display: block;}
+.groupbuy_share_detail img.m {display: none;}
+
+.groupbuy_share_detail .infobottom_share {overflow:hidden; position: absolute; top:44px; right: 107px;}
+.groupbuy_share_detail .infobottom_share a {display:block; height:33px; margin-left: 34px; color:#ffffff; font-size: 14px; font-weight:200; line-height: 33px; opacity:0.5;}
+.groupbuy_share_detail .infobottom_share a:first-child {margin-left: 0;}
+.groupbuy_share_detail .infobottom_share a > span {vertical-align: top; display:inline-block; width:31px; height:31px; margin-right:10px; background:url(../images/groupbuy/ico_itmview_share.png) no-repeat left 0; background-size:auto 100%; border-radius:50%; border:1px solid #ffffff;}
+.groupbuy_share_detail .infobottom_share a.btn_share {float:left;}
+.groupbuy_share_detail .infobottom_share a.btn_share.url > span {margin-left:0;}
+.groupbuy_share_detail .infobottom_share a.btn_share.kakao > span {background-image:url(../images/groupbuy/ico_itmview_kakao.png);}
+.groupbuy_share_detail .infobottom_share a.btn_share.face > span {background-image:url(../images/groupbuy/ico_itmview_face.png);}
+.groupbuy_share_detail .infobottom_share a:hover {opacity: 0.7;}
+.groupbuy_share_detail .infobottom_share a:active {opacity: 1;}
+
+.groupbuy_product {overflow: hidden; margin-top:60px; background: url(../images/groupbuy/bg_groupbuy_info.png) repeat 0 0;}
+.groupbuy_product .groupbuy_in {max-width: 930px; margin: 0 auto; padding: 70px 0 70px 0;}
+.groupbuy_product .tit {margin: 0; color:#444444; font-family: 'Buri', serif; font-size: 45px;}
+.groupbuy_product .txt {margin: 15px 0 0 0; color:#888888; font-size: 15px; line-height: 1.4;}
+.groupbuy_product .groupbuy_in > a {display: inline-block; padding-bottom: 5px; margin-top:20px; border-bottom: 1px solid #2c2c2c; color:#2c2c2c; font-size: 17px;}
+.groupbuy_product .prod_about_img {overflow: hidden; margin-top: 37px;}
+.groupbuy_product .prod_about_img > img {float: left; width:50%;}
+
+.groupbuy_infobuy {overflow: hidden; max-width: 930px; margin: 0 auto}
+.groupbuy_infobuy .tit {margin-top:65px; color:#222222; font-family: 'Buri', serif; font-size: 22px; text-align: center;}
+.groupbuy_infobuy .txt {margin-top:15px; color:#727272; font-size: 14px; line-height: 1.7; text-align: center;}
+.groupbuy_infobuy .infobox {overflow: hidden; margin-top:37px; background: url(../images/groupbuy/ico_groupbuy_arr.png) no-repeat center center; border: 7px solid #e5e5e5;}
+.groupbuy_infobuy .infobox div .num {position: relative; padding-top:84px; padding-bottom:13px; color:#222222; font-size: 14px; text-align: center;}
+.groupbuy_infobuy .infobox div .num:before {position: absolute; display: block; width: 16px; height: 1px; background-color: #e5e5e5; content: ''; bottom:0; left:50%; margin-left: -8px;}
+.groupbuy_infobuy .infobox div .txt {color:#727272; font-size: 14px; line-height: 1.4; text-align: center;}
+.groupbuy_infobuy .infobox div .txt strong {color:#222222; font-size: 14px;}
+.groupbuy_infobuy .infobox > div {float: left; width: calc(50% - 104px);}
+.groupbuy_infobuy .infobox .box_left {padding: 45px 34px 35px 70px;}
+.groupbuy_infobuy .infobox .box_left .num {background: url(../images/groupbuy/ico_groupbuy_info1.png) no-repeat center top;}
+.groupbuy_infobuy .infobox .box_right {padding: 45px 70px 35px 34px;}
+.groupbuy_infobuy .infobox .box_right .num {background: url(../images/groupbuy/ico_groupbuy_info2.png) no-repeat center top;}
+.groupbuy_infobuy .desc {margin:10px 0 0 0; color:#bb4b20; font-size: 14px;}
+
+.groupbuy_notice {overflow: hidden; max-width: 930px; margin: 0 auto; padding-bottom: 95px;}
+.groupbuy_notice .tit {padding-bottom: 15px; margin-top: 70px; margin-bottom: 15px; border-bottom: 1px solid #e5e5e5; color:#333333; font-size: 18px; font-weight: bold;}
+
+.product_newdetail .prod_head_info .prod_info_price .pridinfo_buy button.dim,
+.m_cart_new .cart-layer .btn-pay.dim,
+.m_cart_new.floating-cart a.dim {background-color: #ababab;}
+
+/* 190424 틀어짐 수정 */
+
+@media (max-width:29.99em) {
+    .groupbuy_lnb-infoBox li em { font-size:2.7vw; }
+    .groupbuy_lnb-infoBox li span { font-size:2.7vw; } }
+
+@media (min-width:30em) and (max-width:63.99em) {
+    .groupbuy_lnb-infoBox li em { font-size:13px; }
+    .groupbuy_lnb-infoBox li span { font-size:13px; } }
+
+@media (max-width:63.99em) {
+
+    .lnb-header.groupbuy_lnb .h { padding-top:0; }
+    /*.groupbuy_lnb-infoBox { min-height:57px; height:auto; }*/
+    .groupbuy_lnb-infoBox li { 
+        -webkit-flex:auto;
+        -moz-flex:auto;
+        -ms-flex:auto;
+        flex:auto; 
+        padding:0; }
+    .groupbuy_lnb-infoBox li:after { height:28px; margin-top:-14px; }
+    .groupbuy_lnb-infoBox li em { margin:0 5px; display:block; white-space:nowrap; }
+    .groupbuy_lnb-infoBox li span { display:block; white-space:nowrap; }
+/* //end 190424 틀어짐 수정 */
+
+    /*Detail*/
+    .l-wrap.grouypbuy {max-width: 100%; padding:0;}
+    /*Head*/
+    .product_newdetail .prodhead_area .prod_head_visual.groupbuy {height: 58vw;}
+    .product_newdetail .prodhead_area .prod_head_visual.groupbuy .prod_head_box .prod_visual_box {width: 39vw; height: 39vw;}
+
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_detailview {display: none;}
+
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target {position: absolute; top:41vw; left:0; right:0; margin:0;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number {font-size: 5.3vw; text-align: center;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number,.product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_number span {font-size: 5.3vw;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon {margin-top: 1.61vw; font-size: 2.7vw; text-align: center;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon,
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .groupbuy_target .groupbuy_coupon span {font-size: 2.7vw;}
+
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area {width: 100%; height: 1.56vw; left: 0; bottom: 0; margin-left: 0;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area > .flag_in {width: calc(100% - 6.72vw); height: 1.56vw; margin: 0 auto;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .groupbuy_member {bottom: 2.47vw; right: 4.3vw; font-size: 2.58vw;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box {height: 1.56vw; margin-left: 0.43vw;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_1st .flag_box {width: calc(100% - 0.43vw);}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_2nd .flag_box {width: calc(50% - 0.43vw);}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 0.43vw);}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_4th .flag_box {width: calc(25% - 0.43vw);}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area.box_5th .flag_box {width: calc(20% - 0.43vw);}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box img {display: none; position: absolute; width: 3.11vw; bottom:0; right:-3.11vw;}
+    .product_newdetail.groupbuy .prodhead_area .prod_head_visual .prod_head_box .flag_area .flag_box .flag_bar {width: calc(100% - 0.43vw); height: 1.56vw;}
+
+    /*Info*/
+    .product_newdetail.groupbuy .prod_head_info .prod_info_box {width: auto; min-height: auto; padding:6.45vw 3.22vw 2.7vw 3.22vw;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_box .prod_info_price {display: none;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_tit {padding-bottom:0; border-bottom: none;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_tit .infotit_tit {font-size: 4.3vw; line-height: 1.2;}
+
+    .product_newdetail.groupbuy .prod_head_info .prod_info_txt {max-width: 100%; padding-bottom: 2.7vw; margin-bottom: 2.7vw;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_desc.groupbuy,.product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_desc.groupbuy span {margin: 1.5vw 0 0 0; font-size: 3vw;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy {padding-top: 2.7vw; margin-top: 2.7vw; border-top: 1px solid rgba(196,196,196,.5); color:#888888; font-size: 2.5vw;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy span {font-size: 2.5vw;}
+    .product_newdetail.groupbuy .prod_head_info .prod_info_txt .infotxt_txt.groupbuy strong {color:#222222; font-size: 2.5vw;}
+
+    .groupbuy_sharearea {position:static; width: auto; top: auto; left:0;}
+    .groupbuy_sharearea .remind_date {position: absolute; top:6.45vw; right:3.22vw; font-size: 4.3vw;}
+    .groupbuy_sharearea .groupbuy_sharebox {padding-top:0; margin-top: 0; border-top:none;}
+    .groupbuy_sharearea .groupbuy_sharebox .share_tit {float: left; font-size: 2.5vw;}
+    .groupbuy_sharearea .groupbuy_sharebox .infobottom_share {float: right; overflow:hidden; margin-top:0;}
+    .groupbuy_sharearea .groupbuy_sharebox .infobottom_share a {width:5.6vw; height:5.6vw; margin-left:1.5vw;}
+
+    /*content*/
+    .grouypbuy .teaclass_table_m {margin-top:7.8vw; padding-top:0; border-top:none;}
+    .grouypbuy .teaclass_m_box > .teaclass_m_tit {height: 7.9vw; font-size: 3.2vw; line-height: 7.9vw;}
+
+    .teaclass_m_box .teaclass_m_cont.groupbuy > div {padding-left: 3.2vw; padding-right: 3.2vw;}
+    .teaclass_m_box .teaclass_m_cont.groupbuy > div > p {font-size: 3vw;}
+    .teaclass_m_box .teaclass_m_cont.groupbuy > div > p strong:first-child {font-size: 2.7vw;}
+    .teaclass_m_box .teaclass_m_cont.groupbuy > div > p img {display:block; width: 20vw; margin:0 auto;}
+    .teaclass_m_box .teaclass_m_cont.groupbuy > div > p button {width: 51vw; height: 8.6vw; padding:0; font-size: 3vw; line-height: 8.6vw;}
+
+    .groupbuy_share_detail {margin-top:4.3vw; text-align: center;}
+    .groupbuy_share_detail img.pc {display: none;}
+    .groupbuy_share_detail img.m {display: block;}
+
+    .groupbuy_share_detail .infobottom_share {top:22vw; right: 0; left: 12.5vw;}
+    .groupbuy_share_detail .infobottom_share a {width:25vw; height:6.8vw; margin-top:5.4vw; margin-right: calc(50% - 29.3vw); margin-left:0; font-size: 2.7vw; line-height: 6.8vw;}
+    .groupbuy_share_detail .infobottom_share a > span {vertical-align: top; display:inline-block; width: calc(6.8vw - 2px); height: calc(6.8vw - 2px); margin-right:3.2vw;}
+
+    .groupbuy_product {margin-top:6.45vw;}
+    .groupbuy_product .groupbuy_in {max-width: 100%; padding: 10.10vw 3.22vw 3.22vw 3.22vw;}
+    .groupbuy_product .tit {margin:0; font-size: 6.45vw;}
+    .groupbuy_product .txt {margin-top: 4.3vw; font-size: 2.5vw;}
+    .groupbuy_product .groupbuy_in > a {margin-top:4.6vw; font-size: 3.6vw;}
+    .groupbuy_product .prod_about_img {margin-top: 4.6vw;}
+    .groupbuy_product .prod_about_img > img {float: none; width: 100%;}
+
+    .groupbuy_infobuy {max-width: 100%; margin: 0 4.3vw;}
+    .groupbuy_infobuy .tit {margin-top:10.75vw; font-size: 4.3vw;}
+    .groupbuy_infobuy .txt {margin-top:3.22vw; font-size: 3.01vw;}
+    .groupbuy_infobuy .infobox {margin-top:5.05vw; background-image: url(../images/groupbuy/ico_groupbuy_arr_m.png); background-size: 7.84vw auto; border-width: 0.64vw;}
+    .groupbuy_infobuy .infobox div .num {padding-top:13.9vw; padding-bottom:2.6vw; font-size: 3.2vw; text-align: center;}
+    .groupbuy_infobuy .infobox div .num:before {display: none;}
+    .groupbuy_infobuy .infobox div .txt {font-size: 3.2vw;}
+    .groupbuy_infobuy .infobox div .txt strong {font-size: 3.2vw;}
+    .groupbuy_infobuy .infobox > div {float: none; width: auto;}
+    .groupbuy_infobuy .infobox .box_left {padding: 5.37vw 1vw 6.45vw 1vw;}
+    .groupbuy_infobuy .infobox .box_right {padding: 6.45vw 1vw 5.37vw 1vw;}
+    .groupbuy_infobuy .infobox .box_left .num,
+    .groupbuy_infobuy .infobox .box_right .num {background-size: auto 10.43vw;}
+    .groupbuy_infobuy .desc {margin:1.5vw 0 0 0; font-size: 2.5vw;}
+
+    .groupbuy_notice {max-width: 100%; margin: 0 4.3vw; padding-bottom: 10.75vw;}
+    .groupbuy_notice .tit {padding-bottom: 3.22vw; margin-top: 7.5vw; margin-bottom: 3.22vw; font-size: 3.22vw; line-height: 1;}
+    .groupbuy_notice li {font-size: 2.7vw; line-height: 1.5;}
+
+    .m_cart_new.floating-cart .cart-layer-pad {margin-bottom: 20px;}
+}
+@media (max-width:47.99em) {
+    /*Main*/
+    .groupbuy_area .groupbuy_box {float: none; width: 100%;}
+    .groupbuy_area .groupnow_box > .bg,
+    .groupbuy_area .groupnext_box > img {width: 100%;}
+
+    .groupbuy_area .groupbuy_top {top: 7.8vw; left: 4.6vw;}
+    .groupbuy_area .groupbuy_top .top_txt {font-size: 4.6vw;}
+    .groupbuy_area .groupbuy_top .btm_txt {padding: 0.78vw 1.5vw; margin-top: 1.8vww; font-size: 2.5vw;}
+    .groupbuy_area .groupbuy_btm {bottom:7.8vw; left: 4.6vw;}
+    .groupbuy_area .groupbuy_btm .top_txt {font-size: 3.75vw;}
+    .groupbuy_area .groupbuy_btm .btm_txt {margin-top: 1.5vw; font-size: 2.8vw;}
+    .groupbuy_area .groupbuy_itm .events-count {top:6vw; right: 6vw;}
+    .groupbuy_area .groupbuy_itm .events-count .count {width: 12vw; height: 12vw;}
+    .groupbuy_area .groupbuy_itm .events-count .count .icon-count {font-size: 3vw;}
+
+    .groupbuy_area .groupbuy_itm {width: 49.68vw; height: 49.68vw; margin-right: 4.68vw;}
+    .groupbuy_area .groupbuy_itm img {height:100%;}
+    
+    .groupbuy_area .groupnow_box .groupnow_top .top_txt {margin-top: 9.6vw; font-size: 4.06vw;}
+    .groupbuy_area .groupnow_box .groupnow_top .btm_txt {margin-top: 1.56vw; font-size: 2.5vw;}
+    .groupbuy_area .groupnow_box .groupnow_top img {width: 20vw; margin: 4.68vw auto 0 auto;}
+    .groupbuy_area .groupnow_box .groupnow_top .per_txt {margin-top: 0; font-size: 3.75vw;}
+
+    .groupbuy_area .groupnow_box .flag_area {bottom: 3.55vw;}
+    .groupbuy_area .groupnow_box .flag_area .flag_box img {width: 2.18vw; right: -2.18vw;}
+    .groupbuy_area .groupnow_box .flag_area .flag_box {width: calc(33.33% - 0.46vw); height: 0.78vw; margin-left: 0.46vw; background-color: #d8d8d8;}
+    .groupbuy_area .groupnow_box .flag_area.box_1st .flag_box {width: calc(100% - 0.46vw);}
+    .groupbuy_area .groupnow_box .flag_area.box_2nd .flag_box {width: calc(50% - 0.46vw);}
+    .groupbuy_area .groupnow_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 0.46vw);}
+    .groupbuy_area .groupnow_box .flag_area.box_4th .flag_box {width: calc(25% - 0.46vw);}
+    .groupbuy_area .groupnow_box .flag_area.box_5th .flag_box {width: calc(20% - 0.46vw);}
+    .groupbuy_area .groupnow_box .flag_area .flag_box .flag_bar {height: 0.78vw;}
+
+    .groupbuy_area .groupnext_box .groupnext_dim .next_tit {margin-top: 20.62vw; font-size: 3.75vw;}
+    .groupbuy_area .groupnext_box .groupnext_dim .next_txt {margin-top: 2.18vw; font-size: 2.34vw;}
+
+    /*List*/
+    .groupbuylist_area {margin:4.3vw;}
+    .groupbuylist_area .groupbuylist_box,
+    .groupbuylist_area .groupbuylist_box:nth-child(2n) {float: none; width:auto; margin-top:3.8vw;}
+    .groupbuylist_area .groupbuylist_box:first-child {margin:0;}
+
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count .count {width: 18vw; height: 18vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count .icon-count {font-size: 5.2vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.green .count .icon-count,
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .events-count.ready .count .icon-count {font-size: 3.8vw;}
+
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info {height: 50.6vw; padding-left: 4.8vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .tit {height: 27.2vw; margin-top: 6.6vw; font-size: 4vw; line-height: 5.2vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .tit strong {margin-top: 1.8vw; font-size: 7.2vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc {height: 15.6vw; font-size: 3.8vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc.desc_big {font-size: 6.6vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc span {margin-top: 1.4vw; font-size: 2.8vw; }
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info > a {width: 20.2vw; height: 9.2vw; bottom: 9.2vw; right: 3.5vw; font-size: 3vw; line-height: 9.2vw;}
+    
+    .groupbuylist_area .groupbuylist_box .flag_area {height: 0.78vw; right: 2.18vw;}
+    .groupbuylist_area .groupbuylist_box .flag_area .flag_box img {width: 2.18vw; right: -2.18vw;}
+    .groupbuylist_area .groupbuylist_box .flag_area .flag_box {width: calc(33.33% - 0.46vw); height: 0.78vw; margin-left: 0.46vw; background-color: #d8d8d8;}
+    .groupbuylist_area .groupbuylist_box .flag_area.box_1st .flag_box {width: calc(100% - 0.46vw);}
+    .groupbuylist_area .groupbuylist_box .flag_area.box_2nd .flag_box {width: calc(50% - 0.46vw);}
+    .groupbuylist_area .groupbuylist_box .flag_area.box_3rd .flag_box {width: calc(33.33% - 0.46vw);}
+    .groupbuylist_area .groupbuylist_box .flag_area.box_4th .flag_box {width: calc(25% - 0.46vw);}
+    .groupbuylist_area .groupbuylist_box .flag_area.box_5th .flag_box {width: calc(20% - 0.46vw);}
+    .groupbuylist_area .groupbuylist_box .flag_area .flag_box .flag_bar {height: 0.78vw;}
+    
+    /*Info*/
+    .groupbuy_sharearea .groupbuy_sharebox .infobottom_share {margin: 1.98px 0 0 0;}
+    .groupbuy_sharearea .groupbuy_sharebox .infobottom_share a {width: 34.98px; height: 34.98px;}
+    .groupbuy_sharearea .groupbuy_sharebox .infobottom_share a.btn_share.kakao {display: block;}
+}
+@media (min-width:48em) and (max-width:63.99em) {
+    /*Main*/
+    .groupbuy_area .groupbuy_box {float: none; width: 100%;}
+    .groupbuy_area .groupnow_box > .bg,
+    .groupbuy_area .groupnext_box > img {width: 100%;}
+
+    .groupbuy_area .groupbuy_itm .events-count {top:4vw; right: 4vw;}
+    .groupbuy_area .groupbuy_itm .events-count .count {width: 8vw; height: 8vw;}
+    .groupbuy_area .groupbuy_itm .events-count .count .icon-count {font-size: 2vw;}
+
+
+    .groupbuy_area .groupbuy_itm {width:auto;}
+    .groupbuy_area .groupnow_box .groupnow_top .top_txt {margin-top:12vw;}
+    .groupbuy_area .groupnext_box .groupnext_dim .next_tit {margin-top:22vw;}
+    
+    /*List*/
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info {height: 25.3vw; padding-left: 2.4vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .tit {height: 13.6vw; margin-top: 3.3vw; font-size: 2vw; line-height: 2.6vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .tit strong {margin-top: 0.9vw; font-size: 3.6vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc {height: 7.8vw; font-size: 1.9vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc.desc_big {font-size: 3.3vw;}
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info .desc span {margin-top: 0.7vw; font-size: 1.4vw; }
+    .groupbuylist_area .groupbuylist_box .groupbuylist_info > a {width: 10.6vw; height: 4.6vw; bottom: 4.6vw; right: 4.1vw; font-size: 1.3vw; line-height: 4.6vw;}
+
+    /*Detail*/
+    .groupbuy_share_detail .infobottom_share {top:150px; left: 70px;}
+    .groupbuy_share_detail .infobottom_share a {width:253px; height: 50px; margin-top:35px; font-size: 25px; line-height: 50px;}
+    .groupbuy_share_detail .infobottom_share a > span {width: 48px; height: 48px; margin-right:30px;}
+}
+@media (min-width: 48em) {
+    .grouypbuy .teaclass_table_pc.ms-items {padding-top: 7.376%;}
+    /* [190211] 수정 */
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .tit {margin-top: 11%;}
+}
+@media (min-width:64em) and (max-width:1279px) {
+    /*Main*/
+    .groupbuy_area .groupnow_box .groupnow_top .top_txt {margin-top:3vw;}
+    .groupbuy_area .groupnow_box .groupnow_top .btm_txt {margin-top: 0.5vw;}
+    .groupbuy_area .groupnow_box .groupnow_top img {margin-top:2.5vw;}
+    .groupbuy_area .groupnow_box .flag_area {bottom: 1.5vw;}
+}
+@media (min-width:1280px) {
+    /*Main*/
+    .groupbuy_area .groupbuy_itm {width: auto;}
+}
+
+
+/* [190207] 공동구매2차 상세 수정 */
+.groupbuy_notice.groupbuy_share_detail {padding-bottom:0;}
+
+/* [190211] 수정 */
+@media (max-width: 48em) {
+    .groupbuylist_area .groupbuylist_box .groupbuylist_thum .groupbuylist_hover .tit {margin-top: 11%;}
+}
+
+/* 190530 : 공동구매 페이지 헤더 고정 */
+.lnb-header.groupbuy_lnb {transition:top 0.2s;}
+.lnb-header.groupbuy_lnb.is-sticked {z-index:99; position:fixed; width:100%; border-bottom:1px solid #dbd6cf; top:-58px;}
+.lnb-header.groupbuy_lnb.is-sticked.up {top:-12px;}
+.product_newdetail .prodhead_area .prod_head_visual.groupbuy.add_mt {margin-top:158px;}
+
+@media (max-width:63.99em) {
+
+    .lnb-header.groupbuy_lnb .h {padding-top:10px;}
+
+    .lnb-header.groupbuy_lnb.is-sticked {top:-18px;}
+    .lnb-header.groupbuy_lnb.is-sticked.up {top:-18px;}
+
+    .product_newdetail .prodhead_area .prod_head_visual.groupbuy.add_mt {margin-top:108px;}
+
+}
+@media (max-width:47.99em) {
+
+    .lnb-header.groupbuy_lnb .h {padding-top:0;}
+
+    .lnb-header.groupbuy_lnb.is-sticked {top:8px;}
+    .lnb-header.groupbuy_lnb.is-sticked.up {top:8px;}
+
+    .product_newdetail .prodhead_area .prod_head_visual.groupbuy.add_mt {margin-top:108px;}
+
+}
+/* 190530 : //end 공동구매 페이지 헤더 고정 */

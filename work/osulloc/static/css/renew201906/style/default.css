@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/*********************** 폰트 *************************/
+/*본고딕 폰트*/
+@font-face {
+  font-family:Noto_M;
+ 	src:local('NotoSansCJKkr-Medium'), url('../../fonts/NotoSansCJKkr-Medium.otf')
+}
+@font-face {
+    font-family:KoPubDotum_M;
+    src:local('KoPubDotum-Medium'),
+        url('../../../images/font/KoPubDotumMedium.ttf') format('truetype'),
+        url('../../../images/font/KoPubDotumMedium.woff2') format('woff2'),
+        url('../../../images/font/KoPubDotumMedium.woff') format('woff'),
+        url('../../../images/font/KoPubDotumMedium.otf') format('opentype'),
+        url('../../../images/font/KoPubDotumMedium.eot') format('embedded-opentype');
+}
+
+/*폰트 적용 클래스*/
+#renew201906 .noto_m{font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; letter-spacing: -0.5px;}
+#renew201906 .buri{font-family: Buri;}
+#renew201906 .kopub_m{font-family: KoPubDotum_M, 'KoPubDotum_M', KoPub돋움체 Medium;}
+
+/*폰트간격*/
+#renew201906{letter-spacing: -1px;}
+
+/*********************** 초기화 *************************/
+#renew201906 *{box-sizing: border-box;}
+#renew201906 span,
+#renew201906 a{display: inline-block;}
+
+/*********************** 기능 *************************/
+/* skip navigation */
+.sknavi{z-index: 1000;top: -500px;position: absolute;}
+.sknavi:active, .sknavi:focus{top: 0;display: block;width: 100%;text-align: center;font-weight: 600;background-color: #f7f7f7;text-decoration: none;height: 40px;line-height: 40px;color: #000;font-size: 15px;border-bottom: 1px solid #ddd;z-index: 10000;}
+
+/*접근성 지키며 텍스트 숨기기*/
+.invisible, legend{border: 0; clip: rect(0 0 0 0); clip: rect(1px, 1px, 1px, 1px); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+caption{visibility:hidden; overflow:hidden; width:0;height:0;font-size:0;line-height:0} 
+
+/*아이폰 스크롤*/
+body, html{-webkit-overflow-scrolling:touch;}
+
+/*레이아웃 관련 클래스*/
+#renew201906 .hide{display: none;}
+
+/*clearfix*/
+#renew201906 .clearfix{zoom: 1;}
+#renew201906 .clearfix:before, #renew201906 .clearfix:after{content: " "; display: table;}
+#renew201906 .clearfix:after{clear: both;} 
+
+/*말줄임표 - 주의!! ie8에서 적용 안됨*/
+#renew201906 .ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis}
+
+/*커서*/
+#renew201906 .cursor{cursor: pointer;}
+
+/*placeholder*/
+::-webkit-input-placeholder{color: #888;}/* Edge */
+:-ms-input-placeholder{color: #888;}/* Internet Explorer 10-11 */
+::placeholder{color: #888;}
+
+
+/*********************** PC만 *************************/
+@media screen and (min-width:1024px){
+	/*레이아웃*/
+    body{overflow-x: hidden;}
+	#renew201906 .hide_pc{display: none;}
+}
+
+
+/*********************** 태블릿과 모바일 *************************/
+@media screen and (max-width:1023px){
+	
+	
+}
+
+
+/*********************** 태블릿만 *************************/
+@media screen and (min-width:600px) and (max-width:1023px){
+	/*레이아웃*/
+	#renew201906 .hide_tablet{display: none;}
+}
+
+
+/*********************** 모바일만 *************************/
+@media screen and (max-width:599px){
+	/*레이아웃*/
+	#renew201906 .hide_mobile{display: none;}
+}
+

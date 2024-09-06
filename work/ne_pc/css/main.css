@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/*body{position:relative; *overflow:hidden;}*/ /*좌측토글메뉴바 때문에 넣었던 것. 현재는 ne_common.css으로 옮김*/
+
+.main_top{ width:1000px; margin:0 auto; height:107px; overflow:hidden;}
+.main_top .logo{ float:left; margin-left:7px; margin-top:26px;}
+.main_top .notice_bubble{ float:left; overflow:hidden; margin-left:19px; margin-top:43px;}
+.main_top .notice_bubble p{ float:left; height:16px; padding-top:4px; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4;}
+.main_top .notice_bubble p a{font-size:11px; color:#929292;}
+.main_top .notice_bubble img{ float:left;}
+.main_top .right_area{ float:right;}
+.main_top .right_area .top_menu{ margin-top:18px; margin-bottom:13px; text-align:right;}
+.main_top .right_area .top_menu a{ margin-left:27px;}
+.main_top .right_area .login_area{overflow:hidden;}
+.main_top .right_area .login_area .logout{ float:right;}
+.main_top .right_area .login_area .info{ float:right; overflow:hidden;}
+.main_top .right_area .login_area .info a{ float:left; margin-left:13px;}
+.main_top .right_area .login_area .info .num_bubble{ float:left; overflow:hidden; margin-top:8px;}
+.main_top .right_area .login_area .info .num_bubble img{ float:left;}
+.main_top .right_area .login_area .info .num_bubble span{float:left; background:#ff7e00; height:14px; padding-top:3px; padding-right:3px; padding-left:2px; font-size:11px; color:#fff;}
+.main_top .right_area .login_area .user_wrap{ float:right; overflow:hidden;}
+.main_top .right_area .login_area .user_wrap > img{float:left;}
+.main_top .right_area .login_area .user_wrap .user{float:left; background:#eee; height:23px; padding-top:9px; color:#616161; font-size:11px; font-weight:bold;}
+.main_top .right_area .login_area .user_wrap .user span{ color:#ff7e00;}
+.main_top .right_area .login_area .user_wrap .user a{ color:#616161; font-weight:normal;}
+.main_top .right_area .login_area .user_wrap .user .edit{ position:relative; top:1px; margin-right:3px;}
+
+.gnb_wrap{ height:70px; background:#fdab01;}
+.gnb_wrap .gnb{width:1000px; margin:0 auto; position:relative;}
+.gnb_wrap .gnb .left_image1{ position:relative; top:10px;}
+.gnb_wrap .gnb .left_image2{ position:relative; bottom:5px;}
+.gnb_wrap .gnb .menu_area{display:inline; margin-left:43px;}
+.gnb_wrap .gnb .menu_area .gnb_menu{ position:relative; height:40px; display:inline-block; padding-left:25px; padding-right:25px; bottom:10px;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap{ display:none; position:absolute; left:-85px; top:34px; z-index:100;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .arrow{ position:absolute; top:-8px;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box{overflow:hidden; width:264px; height:152px; padding:5px 6px; background:#fff;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box .bnr{ float:left;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box ul{ float:left; padding-left:16px; padding-top:10px;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box ul li{ margin-bottom:10px;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box ul li a{ font-size:12px; color:#999;}
+.gnb_wrap .gnb .menu_area .gnb_menu .lnb_wrap .lnb_box ul li a:hover{color:#ff7e00; border-bottom:1px solid #ff7e00; font-weight:bold;}
+.gnb_wrap .gnb .btn_myclass{ position:absolute; right:0; top:18px;}
+
+.main_visual{ border-bottom:1px solid #ddd; position:relative;}
+.main_visual .slide_bg{ width:100%;}
+.main_visual .slide_bg .slide_img{ width:1000px; margin:0 auto;}
+#bx-pager{ overflow:hidden; position:absolute; left:50%; margin-left:-489px; bottom:0; z-index:500;}
+#bx-pager a{display:block; width:163px; height:40px; background:url(http://pic.neungyule.com/netoeic/nemiddle/banner/161226_pager_1.png) no-repeat center 26px; no-repeat; float:left; padding-top:26px;}
+#bx-pager a.active{height:66px; position:relative; padding-top:0; background-position:top;}
+#bx-pager .pager1{}
+#bx-pager .pager1.active{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/banner/161226_pager_1_on.png);}
+#bx-pager .pager2{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/banner/161226_pager_2.png);}
+#bx-pager .pager2.active{background-image:url(http://pic.neungyule.com/netoeic/nemiddle/banner/161226_pager_2_on.png);}
+#bx-pager .pager3{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager2.png);}
+#bx-pager .pager3.active{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager1_on.png);}
+#bx-pager .pager4{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager3.png);}
+#bx-pager .pager4.active{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager1_on.png);}
+#bx-pager .pager5{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager4.png);}
+#bx-pager .pager5.active{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager1_on.png);}
+#bx-pager .pager6{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager1.png);}
+#bx-pager .pager6.active{background-image:url(http://pic.neungyule.com/nemiddle/main/slide_pager1_on.png);}
+.text_rolling{ width:1000px; margin:10px auto 12px; background:url(http://pic.neungyule.com/nemiddle/main/text_rolling_bg.jpg); position:relative;}
+.text_rolling .rolling_wrap{width:820px; margin-left:70px;}
+.text_rolling .rolling_wrap ul{}
+.text_rolling .rolling_wrap ul li{}
+.text_rolling .rolling_wrap ul li p{height:46px; line-height:46px;}
+.text_rolling .rolling_wrap ul li p a{ font-size:13px; letter-spacing:-0.5px;}
+.text_rolling .rolling_wrap ul li p a b{ font-weight:bold;}
+.text_rolling .controls{ position:absolute; right:30px; top:10px;}
+
+.main_section1{ width:1000px; margin:0 auto 16px; position:relative;}
+.main_section1 table{ width:978px; margin:0 auto;}
+.main_section1 table tr{}
+.main_section1 table tr td{ border:1px solid #ddd;}
+.main_section1 table tr td.slide{}
+.main_section1 table tr td.slide li{ height:251px;}
+.main_section1 table tr td.slide .controls a{position:absolute;}
+.main_section1 table tr td.slide .controls a.left{ left:25px; top:138px;}
+.main_section1 table tr td.slide .controls a.right{ right:277px; top:138px;}
+.main_section1 .bx-pager{ overflow:hidden; position:absolute; right:290px; top:25px;}
+.main_section1 .bx-pager .bx-pager-item{ display:inline-block;}
+.main_section1 .bx-pager a.bx-pager-link{ display:block; width:11px; height:11px; background:url(http://pic.neungyule.com/nemiddle/main/section1_pager.png); text-indent:-9999px; overflow:hidden; float:left; margin-left:9px;}
+.main_section1 .bx-pager a.bx-pager-link.active{background-image:url(http://pic.neungyule.com/nemiddle/main/section1_pager_on.png);}
+.main_section1 .r_wing{ position:absolute; right:-103px; top:0;}
+
+.main_section2{ width:1000px; margin:0 auto 16px;}
+.main_section2 table{width:978px; margin:0 auto;}
+.main_section2 table tr{}
+.main_section2 table tr td{ border:1px solid #ddd;}
+.main_section2 table tr td.best_title{ width:319px; height:57px; border-bottom:none;}
+.main_section2 table tr td.review_title{ text-align:center;}
+.main_section2 table tr td.best_slide{border-top:none; height:240px;}
+.main_section2 table tr td.best_slide .slide_wrap {position:relative; }
+.main_section2 table tr td.best_slide .slide_wrap .bx-pager{ text-align:center; margin:14px 0;}
+.main_section2 table tr td.best_slide .slide_wrap .bx-pager .bx-pager-item{ display:inline-block;}
+.main_section2 table tr td.best_slide .slide_wrap .bx-pager .bx-pager-item a.bx-pager-link{ display:block; width:11px; height:11px; background:url(http://pic.neungyule.com/nemiddle/main/main_section2_pager.png); text-indent:-9999px; overflow:hidden; margin:0px 4.5px;}
+.main_section2 table tr td.best_slide .slide_wrap .bx-pager .bx-pager-item a.bx-pager-link.active{background-image:url(http://pic.neungyule.com/nemiddle/main/main_section2_pager_on.png);}
+.main_section2 table tr td.review_rolling{}
+.main_section2 table tr td.review_rolling .review_bbs{ width:617px; margin:0 auto;}
+.main_section2 table tr td.review_rolling .review_bbs ul{ width:100%;}
+.main_section2 table tr td.review_rolling .review_bbs ul li{ width:100%;}
+.main_section2 table tr td.review_rolling .review_bbs ul li a{ display:block; width:100%; padding-left:22px; height:39px; border-bottom:1px solid #dedede; background:url(http://pic.neungyule.com/nemiddle/main/review_bbs_icon.jpg) no-repeat 595px center;}
+.main_section2 table tr td.review_rolling .review_bbs ul li a span{ font-size:13px; color:#343434; letter-spacing:-0.5px; line-height:39px;}
+.main_section2 table tr td.review_rolling .notice{ text-align:center; padding-top:10px; padding-bottom:12px;}
+
+.main_section3{ text-align:center; background:#82c2d7;}
+
+.main_section4{ width:1000px; margin:0 auto; padding-bottom:30px;}
+.main_section4 h3{ margin:30px 0 12px 22px;}
+.main_section4 table{width:977px; margin:0 auto;}
+.main_section4 table tr{}
+.main_section4 table tr td{ border:1px solid #dfdfdf; height:279px;}
+.main_section4 table tr td.left_bnr{ width:487px;}
+.main_section4 table tr td.right_slide{ position:relative;}
+.main_section4 table tr td.right_slide .controls5{}
+.main_section4 table tr td.right_slide .controls5 a{ position:absolute;}
+.main_section4 table tr td.right_slide .controls5 a.btn_prev5{left:14px; top:128px;}
+.main_section4 table tr td.right_slide .controls5 a.btn_next5{right:14px; top:128px;}
+
+.main_section5{ width:977px; margin:0 auto; padding-bottom:41px;}
+.main_section5 h3{ margin-bottom:16px;}
+.main_section5 table{ width:100%;}
+.main_section5 table tr{}
+.main_section5 table tr td{ border:1px solid #ddd; height:266px;}
+.main_section5 table tr td.btn_box{ width:47px;}
+.main_section5 table tr td.btn_box a{ display:block; width:100%; height:100%; background:url(http://pic.neungyule.com/nemiddle/main/sec5_prev.png) no-repeat center center #f3f3f3; text-indent:-9999px; overflow:hidden;}
+.main_section5 table tr td.btn_box a.btn_next6{background-image:url(http://pic.neungyule.com/nemiddle/main/sec5_next.png);}
+.main_section5 table tr td.slide_box{}
+.main_section5 table tr td.slide_box ul{}
+.main_section5 table tr td.slide_box ul li{}
+.main_section5 table tr td.slide_box ul li a{ display:block; position:relative; border-right:1px solid #ddd;}
+.main_section5 table tr td.slide_box ul li a span{ position:absolute; left:10px; letter-spacing:-0.5px;}
+.main_section5 table tr td.slide_box ul li a span.name{ top:20px; font-size:17px; font-weight:bold; color:#ff7c1a;}
+.main_section5 table tr td.slide_box ul li a span.info{ top:44px; font-size:12px; font-weight:bold; color:#666;}
+.main_section5 table tr td.slide_box ul li a img{}
+
+.main_section6{ width:977px; margin:0 auto; overflow:hidden;}
+.main_section6 .bnr{ float:left;}
+.main_section6 .table_wrap{float:left; width:486px;}
+.main_section6 table{width:100%; border:1px solid #e0e0e0; border-left:none;}
+.main_section6 table tr{}
+.main_section6 table tr td{width:242px; height:236px; border-bottom:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+.main_section6 table tr td a{ display:block;}
+.main_section6 table tr td a dl{}
+.main_section6 table tr td a dl dt{ border-bottom:1px solid #e0e0e0;}
+.main_section6 table tr td a dl dd{ height:85px; padding:10px; background:#f7f7f7; letter-spacing:-1.5px;}
+.main_section6 table tr td a dl dd .title{ color:#343434; font-size:17px; font-weight:bold; margin-bottom:7px;}
+.main_section6 table tr td a dl dd .intro{ font-size:13px; color:#4d4a44; width:210px;}
+.main_section6 table tr td a dl dd .price{ overflow:hidden;}
+.main_section6 table tr td a dl dd .price s{ color:#666; font-size:17px; font-weight:bold; float:left; margin-top:17px;}
+.main_section6 table tr td a dl dd .price b{ color:#f75674; font-size:24px; float:right; margin-top:12px; line-height:30px;}
+
+.main_section7{ width:977px; margin:0 auto; overflow:hidden; padding-bottom:38px; padding-top:40px;}
+.main_section7 .bnr{ float:left;}
+.main_section7 ul{ float:left; width:731px; height:341px; padding:27px 24px 27px 0; border:1px solid #dedede; border-left:none; overflow:hidden; background:#f7f7f7;}
+.main_section7 ul li{ float:left; margin-right:5px; border:1px solid #e1e1e1;}
+.main_section7 ul li.last{margin-right:0px;}
+.main_section7 ul li a{ position:relative;}
+.main_section7 ul li a img{}
+.main_section7 ul li a .info{ position:absolute; bottom:1px; left:1px; width:177px; height:36px; line-height:36px; font-size:13px; color:#fff; letter-spacing:-1.3px; font-weight:bold; text-align:center; background:url(http://pic.neungyule.com/nemiddle/common/mask.png);}
+
+.main_section8{ width:977px; margin:0 auto; overflow:hidden; padding-bottom:40px;}
+.main_section8 .bnr{ float:left; border:1px solid #e0e0e0;}
+.main_section8 .bnr_r{ float:right;}
+
+.main_section9{ text-align:center; background:#ffc97b;}
+
+.main_notice_area{width:977px; margin:0 auto; padding-bottom:139px; overflow:hidden;}
+.main_notice_area .notice{ float:left;}
+.main_notice_area .notice h4{ margin-top:19px; margin-bottom:6px;}
+.main_notice_area .notice ul{ border-top:2px solid #3a3a3a; width:354px; height:160px;}
+.main_notice_area .notice ul li{ height:39px; border-bottom:1px solid #dedede;}
+.main_notice_area .notice ul li a{display:block; line-height:39px; font-size:13px; color:#343434; padding-left:9px; background:url(http://pic.neungyule.com/nemiddle/main/dot.jpg) no-repeat 3px 18px;}
+.main_notice_area .guide{ float:left; margin-left:31px; margin-top:68px;}
+.main_notice_area .guide ul{}
+.main_notice_area .guide ul li{ margin-bottom:5px;}
+.main_notice_area .guide ul li a{}
+.main_notice_area .call{ float:right; margin-top:68px;}
+
+.main_right_quick{ width:101px; position:fixed; right:0; top:0; z-index:1000;}
+.main_right_quick ul{ border-left:1px solid #ddd;}
+.main_right_quick ul li a{ display:block;}
+
+
+

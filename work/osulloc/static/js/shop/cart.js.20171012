@@ -1,0 +1,51 @@
+// @file shop/cart.js
+require(['ui'], function() {
+	'use strict';
+
+	$(function() {
+
+		require(['modal'], function() {
+			$.modal.defaults = IG.modal_defaults;
+
+			$('a[data-layer]').click(function(event) {
+			  $(this).modal(IG.modal_layer);
+			  return false;
+			});
+		});
+
+		$('#cart-tab').simpleTab({
+			scroll: true,
+			scrollOffset: (getMedia() < 3) ? -49 : -100
+		});
+
+		// 제품 수량 버튼
+		require(['utils/quantity'], function(qnt) {
+			qnt.init();
+		});
+
+		// select all
+		$('.tab-content').each(function(){
+
+			var $this = $(this),
+					$checks = $this.find('input[type=checkbox]'),
+					$all = $checks.eq(0);
+
+			$all.data('state', 0).on('click', function() {
+				if ( !$all.data('state') ) {
+					$checks.prop('checked', false).attr('checked', false);
+					$checks.click();
+					$all.prop('checked', true).attr('checked', true);
+					$all.data('state', 1);
+					$all.text('선택해제');
+				} else {
+					$checks.prop('checked', false).attr('checked', false);
+					$all.prop('checked', false).attr('checked', false);
+					$all.data('state', 0);
+					$all.text('전체선택');
+				}
+			});
+
+		});
+
+	});
+});

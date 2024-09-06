@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 서브페이지 공통 */
+.sub_upper{height: 131px; background: url(../images/sub/upper.jpg) no-repeat center #0ba0d9;}
+
+#qmenu{width: 100px; position:fixed; top:238px; left: 50%; margin-left: 558px;}
+#qmenu li img{display: block;}
+#qmenu.stop{bottom:120px; top:auto;}
+
+.sub{margin-bottom: 100px; min-width: 1400px;}
+.sub .wrap{width: 1080px; margin: 0 auto;}
+
+/*news pr*/
+.page0104{margin-bottom: 10px; margin-top: 30px;}
+.page0104 li{width: 227px; height: 272px; padding: 8px 9px 0; border: 1px solid #dedede; float: left; margin-right: 30px; margin-bottom: 40px;}
+.page0104 li.last{margin-right: 0;}
+.page0104 li a{display: block;}
+.page0104 li a img{}
+.page0104 li a span{display: block; text-align: center; font-size: 14px; color: #111;}
+.page0104 li a span.title{ width: 227px; height: 42px; margin-top: 6px; margin-bottom: 20px; line-height: 20px;}
+.page0104 li a span.date{ color: #a6a6a6;}
+
+.paging{font-size: 13px; text-align: center;}
+.paging a{color: #787980; margin: 0 6px;}
+.paging a img{position: relative; top:7px;}
+.paging span{color: #62608e; margin-right: 8px;}
+
+/*news pr 읽기*/
+.sub{}
+.sub .read{margin-top: 29px; border-top: 1px solid #cfcfcf;}
+.sub .read .tit_area{border-bottom: 1px solid #cfcfcf;}
+.sub .read .tit_area h4{padding-top: 15px; font-size: 18px; font-weight: bold; color: #333; margin-bottom: 15px;}
+.sub .read .tit_area .date{color: #999; font-size: 12px; padding-bottom: 17px;}
+.sub .read .cont_area{border-bottom: 1px solid #cfcfcf; padding: 30px 0;}
+.sub .read .cont_area .pic{text-align: center; margin-bottom: 24px;}
+.sub .read .cont_area .cont{color: #666; font-size: 13px; line-height: 24px;}
+.sub .read .file{border-bottom: 1px solid #cfcfcf; padding: 12px 0; color: #666; font-size: 13px; margin-bottom: 30px;}
+.sub .read .file span{}
+.sub .read .file a{color: #1a1669;}
+.sub .read .btn{text-align: center;}
+
+.main_box2 {}
+.main_box2 .t1 {text-align:center; font-size:60px; color:#0ca4db; font-weight:500; margin-bottom:32px;}
+
+.main_box2 .inp {width:1080px; margin:0 auto;}
+.main_box2 .inp .t2 {font-size:16px; color:#0ca4db; font-weight:600; margin-bottom:10px;}
+.main_box2 .inp .agree { height:262px; padding:20px; box-sizing:border-box; border:1px solid #9f9f9f; overflow-y:scroll; font-size:13px; color:#666; line-height:20px; margin-bottom:12px;}
+.main_box2 .inp .agree2 {text-align:center; margin-bottom:24px;}
+.main_box2 .inp .agree2 input {width:19px; height:19px; position: relative; top: 4px;}
+.main_box2 .inp .agree2 label {font-size:14px; color:#666; padding-left:8px; line-height:19px;}
+.main_box2 .inp .agree2 span {display:inline-block; vertical-align:top; margin:0 12px;}
+.main_box2 .inp .inp2 {padding:5px 0 10px; border-top:2px solid #333; border-bottom:2px solid #333; margin-bottom:13px;}
+.table1 {}
+.table1 tbody th, .table1 tbody td {vertical-align:middle; box-sizing:border-box; padding:4px 0; height:40px;}
+.table1 tbody th {font-size:14px; color:#666;}
+.table1 tbody td {}
+.table1 tbody td input[type=text] {box-sizing:border-box; padding-left:10px; height:30px; border:1px solid #cfcfcf;}
+.table1 tbody td input[type=radio] {position: relative; top:2px; margin-right: 3px;}
+.table1 tbody td select {box-sizing:border-box; height:30px; border:1px solid #cfcfcf;}
+.table1 tbody td span.s1 {display:inline-block; line-height:30px; width:15px; text-align:center; font-family:"Dotum","돋움"; color:#666;}
+
+.main_box2 .btn {text-align:center;}
+.main_box2 .btn button {background:none; border:0;}
+
+.w209 {width:209px;}
+.w88 {width:88px;}
+.w201 {width:201px;}
+.w180 {width:180px;}
+
+

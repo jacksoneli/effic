@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+/*********************** PC 및 모든 기기 *************************/
+.new_main{}
+.new_main .upper_ad{height: 88px; border-bottom: 1px solid #e1e0e1; position: relative;}
+.new_main .upper_ad .intro{}
+.new_main .upper_ad .intro img{position: absolute; top: -49px; left: 30px;}
+.new_main .upper_ad .intro .note{margin-left: 110px; font-size: 20px; color: #757575; display: inline-block; margin-top: 30px;}
+.new_main .upper_ad .intro .note span{color: #6c801a; margin-right: 13px;}
+.new_main .upper_ad .more{position: absolute; right: 30px; top: 30px; padding-right: 20px; background: url(../../../images_renew201906/arr_r_8x12.png) no-repeat right 50%; font-size: 20px; color: #565656;}
+
+.new_main .cont1{margin-top: 104px;}
+.new_main .cont1 .main_tit{}
+.new_main .cont1 .choose{margin-top: 26px;}
+.new_main .cont1 .choose span{cursor: pointer; font-size: 22px; margin-right: 30px; padding-right: 35px; background: url(../../../images_renew201906/border_2x17.png) no-repeat right 50%;}
+.new_main .cont1 .choose span:last-of-type{background: none;}
+.new_main .cont1 .choose span.on{color: #6c801a;}
+.new_main .cont1 .choose span:hover{color: #000;}
+.new_main .cont1 .pc_slider{margin-top: 36px; position: relative;}
+.new_main .cont1 .pc_slider .swiper-container2{overflow: hidden;}
+
+.new_main .swiper-wrapper{}
+.new_main .swiper-button-prev,
+.new_main .swiper-button-next{width: 12px; height: 21px; background: url(../../../images_renew201906/arr_l_12x21.png); position: absolute; right: 30px; top: -40px; left: auto;}
+.new_main .swiper-button-prev{right: 93px;}
+.new_main .swiper-button-next{background: url(../../../images_renew201906/arr_r_12x21.png);}
+.new_main .swiper-scrollbar{background: #efefef; height: 3px; position: absolute; top: -43px; right: 180px; left: auto; width: 534px; overflow: hidden;}
+.new_main .swiper-scrollbar .swiper-scrollbar-drag{background: #000;}
+
+.new_main .cont2{margin-top: 140px; background: #f7f7f7;}
+.new_main .cont2 .inner1600{padding-top: 70px; padding-bottom: 464px;}
+.new_main .cont2 h3{}
+.new_main .cont2 .bnr{width: 38.64%; position: absolute; bottom: 95px; right: 30px; overflow: hidden;}
+.new_main .cont2 .bnr img{width: 100%; max-width: 568px; transition: .5s;}
+.new_main .cont2 .bnr:hover img{transform: scale(1.1);}
+.new_main .cont2 .txt_wrap{margin-top: 38px; color: #000; font-family:Noto_M, "본고딕", 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium; }
+.new_main .cont2 .txt_wrap .top{font-size: 30px;}
+.new_main .cont2 .txt_wrap .tit{font-size: 44px; margin-top: -2px;}
+.new_main .cont2 .txt_wrap .txt{color: #757575; font-size: 20px; line-height: 37px; margin-top: 12px;}
+.new_main .cont2 .new_more{margin-top: 40px;}
+.new_main .cont2 .goods{width: 61.36%; position: absolute; bottom: 95px; left: 30px;}
+.new_main .cont2 .goods article{float: left; width: 20.4%; margin-right: 3.075%;}
+.new_main .cont2 .goods article:last-of-type{margin-right: 0;}
+.new_main .cont2 .goods article a{background: #ededed; width: 100%; position: relative;}
+.new_main .cont2 .goods article a:hover::after{content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.2);}
+.new_main .cont2 .goods article a img{width: 100%;}
+.new_main .cont2 .more2{}
+
+.new_main .cont3{margin-top: 170px;}
+.new_main .cont3 .part1{float: left;}
+.new_main .cont3 .part1 h3{}
+.new_main .cont3 .part1 h3 .main_tit{}
+.new_main .cont3 .part1 .subtit{margin-top: 15px; font-size: 18px; color: #6c6c6c; font-family:Noto_M, "본고딕", 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium;}
+.new_main .cont3 .part1 .new_more{margin-top: 46px;}
+
+.new_main .cont3 .part2{float: right; width: 78%;}
+.new_main .cont3 .part2 .pc_slider{}
+.new_main .cont3 .part2 .pc_slider .swiper-container4{overflow: hidden;}
+.new_main .cont3 .part2 .pc_slider .store_box{}
+.new_main .cont3 .part2 .pc_slider .store_box img{width: 100%;}
+
+.new_main .cont4{margin-top: 130px;}
+.new_main .cont4 h3{}
+.new_main .cont4 .bg_wrap{margin-top: 30px; height: 485px; background: url(../../../images_renew201906/bg.png) no-repeat 50% top #ededed; text-align: center; padding-top: 66px;  color: #fff;}
+.new_main .cont4 .bg_wrap .time{font-size: 55px;}
+.new_main .cont4 .bg_wrap .time span{margin: 0 8px;}
+.new_main .cont4 .bg_wrap .tit{font-size: 22px; font-weight: bold; color: #fff; margin-top: 10px;}
+.new_main .cont4 .bg_wrap .goods{margin-top: 37px; display: inline-block; margin-left: 225px;}
+.new_main .cont4 .bg_wrap .goods .left{float: left;}
+.new_main .cont4 .bg_wrap .goods .right{float: right; font-family:Noto_M, "본고딕", 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium; letter-spacing: -0.5px; text-align: left; position: relative; right: 40px;}
+.new_main .cont4 .bg_wrap .goods .right .discont{font-size: 22px; padding-top: 10px;}
+.new_main .cont4 .bg_wrap .goods .right .origin{font-size: 20px; color: #a9a9a9;}
+.new_main .cont4 .bg_wrap .goods .right .price{font-size: 38px; font-weight: bold; margin-top: -8px;}
+.new_main .cont4 .bg_wrap .goods .right .btn_area{}
+.new_main .cont4 .bg_wrap .goods .right .btn_area a{width: 133px; height: 45px; line-height: 45px; text-align: center; font-size: 16px; color: #363535; background: #e1e1e1; margin-top: 50px;}
+.new_main .cont4 .bg_wrap .goods .right .btn_area a:hover{color: #fff; background: #a1af1b;}
+
+.new_main .cont4 .banner_wrap{margin-top: 80px;}
+.new_main .cont4 .banner_wrap article{float: left; width: 49%;}
+#renew201906 .new_main .cont4 .banner_wrap a{display: block;}
+#renew201906 .new_main .cont4 .banner_wrap a span{display: block;}
+.new_main .cont4 .banner_wrap a .pc img{width: 100%;}
+.new_main .cont4 .banner_wrap .bnr2{float: right;}
+
+.new_main .con5.cont3{margin-top: 150px;}
+.new_main .cont3 .part2 .top{font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; letter-spacing: -0.5px; cursor: pointer;}
+.new_main .cont3 .part2 .top .left{float: left; width: 31.25%; min-width: 230px; overflow: hidden;}
+.new_main .cont3 .part2 .top .left img{width: 100%; transition: .5s;}
+.new_main .cont3 .part2 .top .left:hover img{transform: scale(1.1);}
+.new_main .cont3 .part2 .top .right{float: left; margin-left: 2.5%; width: 55%;}
+.new_main .cont3 .part2 .top .right .tit1{color: #6c801a; font-size: 1.05vw; line-height: 20px;}
+.new_main .cont3 .part2 .top .right .tit2{color: #000; font-size: 1.7vw;}
+.new_main .cont3 .part2 .top .right .txt1{color: #757575; font-size: 1.05vw; margin-top: 10px; line-height: 1.8; height: 7.5vw;}
+.new_main .cont3 .part2 .top .right .user{font-size: 18px; color: #9e9e9e;}
+.new_main .cont3 .part2 .top .right .user .img_area{display: inline-block; width: 11%;}
+.new_main .cont3 .part2 .top .right .user .img_area img{width: 100%;}
+.new_main .cont3 .part2 .top .right .user .info{margin-left: 5px; display: inline-block; vertical-align: bottom; font-size: 0.95vw;}
+.new_main .cont3 .part2 .top .right .user .info span{margin-left: 15px; padding-left: 15px; background: url(../../../images_renew201906/border_3x15.png) no-repeat left 50%;}
+.new_main .cont3 .part2 .bottom{font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; letter-spacing: -0.5px;}
+.new_main .cont3 .part2 .bottom .pc{margin-top: 30px;}
+.new_main .cont3 .part2 .bottom .pc article{width: 15.5%; float: left; margin-left: 1.4%;}
+.new_main .cont3 .part2 .bottom .pc article:first-of-type{margin-left: 0;}
+.new_main .cont3 .part2 .bottom .pc article a{width: 100%; position: relative;}
+.new_main .cont3 .part2 .bottom .pc article a .bg{width: 100%;}
+.new_main .cont3 .part2 .bottom .pc article a .bottom_area{position: absolute; bottom: -28%; width: 100%; text-align: center; left: 0;}
+.new_main .cont3 .part2 .bottom .pc article a .bottom_area .user_area{border: 2px solid #fff; border-radius: 50%; width: 41%;}
+.new_main .cont3 .part2 .bottom .pc article a .bottom_area .user_area img{}
+.new_main .cont3 .part2 .bottom .pc article a .bottom_area .name{display: block; width: 100%; font-size: 0.92vw; color: #9e9e9e; margin-top: 4px;}
+
+#renew201906 .new_main .cont6{margin-top: 170px; font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; letter-spacing: -0.5px;}
+#renew201906 .new_main .cont6 .conts{margin-top: 30px;}
+#renew201906 .new_main .cont6 .conts .left{float: left; width: 62.53%;}
+#renew201906 .new_main .cont6 .conts .left a{position: relative; color: #fff;}
+#renew201906 .new_main .cont6 .conts .left a .bg{}
+#renew201906 .new_main .cont6 .conts .left a .bottom{position: absolute; width: 100%; left: 0; bottom: 0; height: 123px; background: rgba(0,0,0,.6); padding: 0 30px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .l_part{float: left;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .l_part .tit{margin-top: 20px; font-size: 26px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .l_part .date{display: block; margin-top: 10px; font-size: 20px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part{float: right;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area{float: left; text-align: right; margin-right: 25px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area s{display: block; font-size: 20px; color: #959595; margin-top: 30px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area .price{font-size: 20px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area .price .total{color: #ffc000; font-size: 26px; margin-left: 10px;}
+#renew201906 .new_main .cont6 .conts .left a .bottom .r_part .r_area{float: right; font-size: 40px; line-height: 123px;}
+#renew201906 .new_main .cont6 .conts .right{float: right; width: 36.29%;}
+#renew201906 .new_main .cont6 .conts .right a{width: 100%;}
+#renew201906 .new_main .cont6 .conts .right a img{width: 100%;}
+#renew201906 .new_main .cont6 .bnr{margin-top: 18px;}
+#renew201906 .new_main .cont6 .bnr a{display: block; background: #f4f4f4; text-align: center; position: relative; height: 144px; }
+#renew201906 .new_main .cont6 .bnr a .tit{color: #000; font-size: 24px; margin-top: 35px;}
+#renew201906 .new_main .cont6 .bnr a .next{display: block; margin-top: 6px; font-size: 20px; color: #161616;}
+#renew201906 .new_main .cont6 .bnr a .next span{color: #e85d42;}
+#renew201906 .new_main .cont6 .bnr a .goods_area{position: absolute; left: 0; top: 0;}
+#renew201906 .new_main .cont6 .bnr a .goods_area img{}
+
+#renew201906 .new_main .cont8{background: #f4f4f4; height: 295px; padding-top: 66px; text-align: center;}
+#renew201906 .new_main .cont8 .tit{font-size: 31px; color: #1a1a19;}
+#renew201906 .new_main .cont8 .txt{font-size: 20px; color: #616161; margin-top: 4px;}
+#renew201906 .new_main .cont8 a{width: 133px; height: 45px; background: #ececec; color: #363535; line-height: 45px; font-size: 16px; margin-top: 16px;}
+
+#renew201906 .new_main .cont9{padding-top: 75px;}
+#renew201906 .new_main .cont9 .tit{}
+#renew201906 .new_main .cont9 .tit .txt1{color: #757575; font-size: 20px; vertical-align: 6px;}
+#renew201906 .new_main .cont9 .tit b{font-size: 36px; color: #505051; margin-left: 15px;}
+#renew201906 .new_main .cont9 .pc_pics{}
+#renew201906 .new_main .cont9 .pc_pics article{width: 16.66%; float: left;}
+#renew201906 .new_main .cont9 .pc_pics article a{width: 100%;}
+#renew201906 .new_main .cont9 .pc_pics article a img{width: 100%;}
+
+/*********************** PC만 *************************/
+@media screen and (min-width:1024px){
+    #renew201906 .new_main .cont4 .banner_wrap .hide_pc,
+    #renew201906 .new_main .cont4 .banner_wrap a .hide_pc{display: none;}
+ 
+    #renew201906 .pc_visual{position: relative;}
+    #renew201906 .pc_visual .sliderContainer {position: relative;}
+    #renew201906 .pc_visual .slider {width: 100%;}
+    #renew201906 .pc_visual .slick-slide {background: url(../../../images_renew201906/visual.jpg) no-repeat center top; height: 694px; padding-top: 606px;}
+    #renew201906 .pc_visual .slick-dots {bottom: -30px;}
+    #renew201906 .pc_visual .progressBarContainer {position: absolute;bottom: 96px;width:100%; text-align: center; padding-right: 33px;}
+    #renew201906 .pc_visual .progressBarContainer > div {display: inline-block;width: 117px;padding: 0;cursor: pointer;margin: 0 3px; vertical-align: top;}
+    #renew201906 .pc_visual .progressBarContainer div:last-child {margin-right: 0;}
+    #renew201906 .pc_visual .progressBarContainer div span.progressBar {width: 100%;height: 29px;background-color: #fff;display: block; position: relative;}
+    #renew201906 .pc_visual .progressBarContainer div span.progressBar.on {background: #616161;}
+    #renew201906 .pc_visual p {color: #000; font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; letter-spacing: -0.5px; font-size: 15px; margin: 0; position: relative; bottom: 26px;}
+    #renew201906 .pc_visual .progressBarContainer div span.progressBar.on ~ p{color: #fff;}
+    #renew201906 .pc_visual .progressBarContainer div span.progressBar .inProgress {background-color: #a1af1b;width: 0%;height: 100%;}    
+    #renew201906 .pc_visual .btns_area{position: absolute; left: 50%; margin-left: 298px; bottom: 118px; cursor: pointer;}
+    #renew201906 .pc_visual .btns_area span{cursor: pointer;}
+    #renew201906 .pc_visual .btns_area .play{display: none;}
+}
+
+
+/*********************** 1300이하의 PC만 *************************/
+    @media screen and (min-width:1024px) and (max-width:1300px){
+    .new_main .cont3 .part1 .subtit{font-size: 1.3vw;}
+    .new_main .cont3 .part2{width: 75%;}
+    
+}
+
+/*********************** 1300이하의 PC와 태블릿 *************************/
+@media screen and (min-width:600px) and (max-width:1300px){
+    .new_main .cont2 .inner1600{padding-bottom: 370px;}
+
+    .new_main .cont2 .txt_wrap{margin-top: 4vw;}
+    .new_main .cont2 .txt_wrap .top{font-size: 2.2vw;}
+    .new_main .cont2 .txt_wrap .tit{font-size: 3.2vw;}
+    .new_main .cont2 .txt_wrap .txt{font-size: 1.5vw; margin-top: 1vw; line-height: 3vw;}
+    .new_main .cont2 .goods article{width: 19.5%; margin-right: 3%;}
+}
+
+
+
+/*********************** 태블릿과 모바일 *************************/
+@media screen and (max-width:1023px){
+    .new_main .upper_ad{height: 110px; border-bottom: 0; text-align: center;}
+    .new_main .upper_ad .intro img{position: absolute; top: -15px; left: 50%; margin-left: -24px; z-index: 1;}
+    .new_main .upper_ad .intro .note{margin-left: 0; font-size: 11px; margin-top: 20px;}
+    .new_main .upper_ad .intro .note span{font-size: 10px;  color: #6c801a; margin-right: 0; display: inline-block; margin-bottom: 3px;}
+
+    .new_main .cont1{margin-top: 30px;}
+    .new_main .cont1 .choose{margin-top: 7px;}
+    .new_main .cont1 .choose span{font-size: 12px; margin-right: 17px; padding-right: 17px; background-image: url(../../../images_renew201906/border_2x9.png);}
+    
+    .new_main .mob_slider{overflow: hidden; padding-left: 15px; margin-top: 15px;}
+    .new_main .mob_slider .swiper-slide{width: 144px;}
+    .new_main .swiper-scrollbar{height: 2px; top: 52px; right: 15px; left: auto; width: 100px;}
+
+    .new_main .cont2 .inner1600{padding-bottom: 230px;}
+    .new_main .cont2 .bnr{width: 35%;}
+    
+    .new_main .cont3{margin-top: 56px;}
+    .new_main .cont3 .part1{float: none; position: relative;}
+    .new_main .cont3 .part1 .subtit{margin-top: 6px; font-size: 10px;}
+    .new_main .cont3 .part1 .new_more{margin-top: 0; position: absolute; right: 15px; bottom: 0;}
+
+    .new_main .cont3 .part2{float: none; width: 100%; margin-top: 20px;}
+    .new_main .cont3 .part2 .mob_slider{}
+
+    .new_main .cont4 .bg_wrap{margin-top: 8px;}
+    .new_main .cont4 .bg_wrap .goods .left img{width: 210px;}
+    .new_main .cont4 .bg_wrap .goods .right .price{font-size: 35px;}
+    .new_main .cont4 .bg_wrap .goods .right .btn_area a{margin-top: 40px;}
+
+    .new_main .con5.cont3{margin-top: 50px;}
+    .new_main .cont3 .part2 .top .left{width: 100%; min-width: 230px;}
+    .new_main .cont3 .part2 .top .right{margin-left: 0; width: 100%;}
+    .new_main .cont3 .part2 .top .right .tit1{font-size: 10px; margin-top: 8px;}
+    .new_main .cont3 .part2 .top .right .tit2{font-size: 15px;}
+    .new_main .cont3 .part2 .top .right .txt1{font-size: 12px; margin-top: 2px; height: 85px;}
+    .new_main .cont3 .part2 .top .right .user{margin-top: -15px;}
+    .new_main .cont3 .part2 .top .right .user .img_area{width: 29px;}
+    .new_main .cont3 .part2 .top .right .user .info{margin-left: 2px; font-size: 10px;}
+    .new_main .cont3 .part2 .top .right .user .info span{font-size: 9px; margin-left: 0; padding-left: 0; background: none;}
+    .new_main .cont3 .part2 .bottom .mob{margin-top: 15px; padding-left: 15px; overflow: hidden; padding-bottom: 9px;}
+    .new_main .cont3 .part2 .bottom .mob .swiper-slide{width: 120px;}
+    .new_main .cont3 .part2 .bottom .mob article{position: relative;}
+    .new_main .cont3 .part2 .bottom .mob article a{width: 100%;}
+    .new_main .cont3 .part2 .bottom .mob article a .bg{width: 100%;}
+    .new_main .cont3 .part2 .bottom .mob article a .bottom{height: 46px; background: rgba(0,0,0,0.6); position: absolute; width: 100%; left: 0; bottom: 0; padding: 2px 6px; text-align: center;}
+    .new_main .cont3 .part2 .bottom .mob article a .bottom .tit_area{font-size: 11px; color: #fff; width: 100%; text-align: right; height: 17px; overflow: hidden;}
+    .new_main .cont3 .part2 .bottom .mob article a .bottom .user_area{width: 30px; height: 30px; border: 1px solid #fff; border-radius: 50%; position: absolute; bottom: -9px; left: 6px;}
+    .new_main .cont3 .part2 .bottom .mob article a .bottom .user_area img{width: 100%;}
+    .new_main .cont3 .part2 .bottom .mob article a .bottom .name{position: absolute; right: 6px; bottom: 5px; color: #ccc;}
+    
+    #renew201906 .new_main .cont6{margin-top: 50px;}
+    #renew201906 .new_main .cont6 .conts{margin-top: 7px;}
+    #renew201906 .new_main .cont6 .conts .left{width: 100%;}
+    #renew201906 .new_main .cont6 .conts .left a{width: 100%;}
+    #renew201906 .new_main .cont6 .conts .left a .bg{width: 100%;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom{height: 43px; padding: 0 15px;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .l_part .tit{margin-top: 4px; font-size: 26px; font-size: 12px;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .l_part .date{margin-top: 0; font-size: 10px;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area{margin-right: 10px;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area s{font-size: 10px; margin-top: 3px;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .r_part .l_area .price .total{font-size: 13px; margin-left: 0;}
+    #renew201906 .new_main .cont6 .conts .left a .bottom .r_part .r_area{font-size: 15px; line-height: 43px;}
+    #renew201906 .new_main .cont6 .conts .right{width: 100%;}
+    #renew201906 .new_main .cont6 .bnr{margin-top: 10px;}
+    #renew201906 .new_main .cont6 .bnr a{height: 59px;}
+    #renew201906 .new_main .cont6 .bnr a .tit{font-size: 10px; margin-top: 15px;}
+    #renew201906 .new_main .cont6 .bnr a .next{margin-top: 0px; font-size: 10px;}
+    
+    #renew201906 .new_main .cont8{height: 79px; padding-top: 15px;}
+    #renew201906 .new_main .cont8 .tit{font-size: 9px;}
+    #renew201906 .new_main .cont8 .txt{font-size: 7.5px; margin-top: 0px;}
+    #renew201906 .new_main .cont8 a{width: 58px; height: 18px; line-height: 18px; font-size: 10px; margin-top: 4px;}
+    
+    #renew201906 .new_main .cont9{padding-top: 30px;}
+    #renew201906 .new_main .cont9 .tit .txt1{font-size: 10px; vertical-align: 4px;}
+    #renew201906 .new_main .cont9 .tit b{font-size: 18px; color: #505051; margin-left: 8px;}
+    #renew201906 .new_main .cont9 .m_pics{overflow: hidden;}
+    #renew201906 .new_main .cont9 .m_pics .swiper-slide{width: 97px;}
+    #renew201906 .new_main .cont9 .m_pics .swiper-slide img{width: 100%;}
+    
+    #renew201906 .mobile_visual{overflow: hidden; position: relative;}
+    #renew201906 .mobile_visual .bg{height: 361px; padding-top: 286px; background: url(../../../images_renew201906/visual_m.jpg) no-repeat 50% top;}
+    #renew201906 .mobile_visual .bg .upper_ad{}
+    #renew201906 .mobile_visual .swiper-pagination{bottom: 90px; left: auto; right: 0; width: 75px; height: 23px; background: rgba(0,0,0,0.5); border-radius: 10px 0 0 10px; color: #a0a0a0; font-size: 12px; text-align: left; padding-left: 12px; padding-top: 2px;}
+    #renew201906 .mobile_visual .swiper-pagination span{margin: 0 2px;}
+    #renew201906 .mobile_visual .swiper-pagination .swiper-pagination-current{color: #fff;}
+    #renew201906 .mobile_visual .swiper-pagination .swiper-pagination-total{}
+    
+    #renew201906 .mobile_visual .btns_area{position: absolute; right: 10px; bottom: 95px; cursor: pointer; z-index: 10;}
+    #renew201906 .mobile_visual .btns_area span{cursor: pointer;}
+    #renew201906 .mobile_visual .btns_area .play{display: none;}
+}
+
+
+/*********************** 태블릿만 *************************/
+@media screen and (min-width:600px) and (max-width:1023px){
+    #renew201906 .new_main .cont4 .banner_wrap .hide_tablet,
+    #renew201906 .new_main .cont4 .banner_wrap a .hide_tablet{display: none;}
+}
+
+
+/*********************** 모바일만 *************************/
+@media screen and (max-width:599px){
+    .new_main .cont2{margin-top: 44px;}
+    .new_main .cont2 .inner1600{padding-top: 20px; padding-bottom: 0; text-align: center;}
+    .new_main .cont2 h3{text-align: left;}
+    .new_main .cont2 .bnr{width: 53.33%; position: relative; bottom: 0; right: 0; margin-top: 15px;}
+    .new_main .cont2 .txt_wrap{margin-top: 8px;}
+    .new_main .cont2 .txt_wrap .top{font-size: 10px;}
+    .new_main .cont2 .txt_wrap .tit{font-size: 15px; margin-top: 2px;}
+    .new_main .cont2 .txt_wrap .txt{font-size: 12px; line-height: 20px; margin-top: 4px; width: 65%; margin: 0 auto;}
+    .new_main .cont2 .more{text-align: right;}
+    .new_main .cont2 .new_more{margin-top: 10px;}
+    .new_main .cont2 .goods{width: 100%; position: relative; bottom: 0; left: 0; margin-top: 2px;}
+    .new_main .cont2 .goods article{float: left; width: 48%; margin-right: 4%; margin-top: 3.4vw;}
+    .new_main .cont2 .goods article:nth-of-type(2n){margin-right: 0;}
+    .new_main .cont2 .goods article a{}
+    .new_main .cont2 .goods article a img{width: 157px;}
+    .new_main .cont2 .more2{width: 100%; height: 38px; line-height: 38px; margin-top: 8px;}    
+    .new_main .cont2 .more2::after{content: ""; background: url(../../../images_renew201906/arr_6x4.png) no-repeat right 60%; padding-right: 12px;}
+    
+    .new_main .cont4{margin-top: 56px;}
+    .new_main .cont4 .bg_wrap{margin-top: 8px; height: 255px; background-size: auto 182px; padding-top: 30px;}
+    .new_main .cont4 .bg_wrap .time{font-size: 24px;}
+    .new_main .cont4 .bg_wrap .time span{margin: 0 3px;}
+    .new_main .cont4 .bg_wrap .tit{font-size: 13px; margin-top: 5px;}
+    .new_main .cont4 .bg_wrap .goods{margin-top: 36px; margin-left: 105px;}
+    .new_main .cont4 .bg_wrap .goods .left img{width: auto;}
+    .new_main .cont4 .bg_wrap .goods .right{right: 18px;}
+    .new_main .cont4 .bg_wrap .goods .right .discont{font-size: 11px; padding-top: 0; margin-top: -2px;}
+    .new_main .cont4 .bg_wrap .goods .right .origin{font-size: 11px;}
+    .new_main .cont4 .bg_wrap .goods .right .price{font-size: 15px; margin-top: 0;}
+    .new_main .cont4 .bg_wrap .goods .right .btn_area a{width: 67px; height: 23px; line-height: 23px; font-size: 10px; margin-top: 25px;}
+        
+    .new_main .cont4 .banner_wrap{margin-top: 30px;}
+    .new_main .cont4 .banner_wrap article{width: 100%; height: 114px; padding: 15px 15px 0; background: url(../../../images_renew201906/dada1.png) no-repeat right bottom #f7ddb6;}
+    .new_main .cont4 .banner_wrap .bnr1{}
+    .new_main .cont4 .banner_wrap a .mobile .tit{color: #8c4b2f; font-size: 14px; font-weight: 700;}
+    .new_main .cont4 .banner_wrap a .mobile .txt{font-size: 10px; color: #000; margin-top: 5px; font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕";}
+    .new_main .cont4 .banner_wrap .bnr2 a .mobile .txt{color: #fff;}
+    #renew201906 .new_main .cont4 .banner_wrap a .mobile .more{font-size: 10px; color: #000; margin-top: 5px; font-family:Noto_M, 'Noto Sans CJK kR Medium', Noto Sans CJK kR Medium, "본고딕"; padding-right: 26px; background: url(../../../images_renew201906/arr_22x6.png) no-repeat right 50%; display: inline-block;}
+    #renew201906 .new_main .cont4 .banner_wrap .bnr2 a .mobile .more{background-image: url(../../../images_renew201906/arr_w_22x6.png); color: #fff;}
+    .new_main .cont4 .banner_wrap .bnr2{margin-top: 8px; background-color: #97abba; background-image: url(../../../images_renew201906/dada2.png);}
+    #renew201906 .new_main .cont4 .banner_wrap .bnr2 .mobile .tit{color: #fff;}
+    #renew201906 .new_main .cont4 .banner_wrap .hide_mobile,
+    #renew201906 .new_main .cont4 .banner_wrap a .hide_mobile{display: none;}
+}

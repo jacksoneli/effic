@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>두산 위브 더 제니스</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-custom.js"></script>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		//hover
+		(function($){
+			$(document).ready(function(){
+				$(".jpg_over").mouseenter(function() {
+					$(this).attr("src",$(this).attr("src").replace(/.jpg/,'_on.jpg'));
+				});
+
+				$(".jpg_over").mouseleave(function() {
+					$(this).attr("src",$(this).attr("src").replace(/_on.jpg/,'.jpg'));
+				});
+				$(".png_over").mouseenter(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(".png_over").attr("src",function(i,val){
+							if(!$(this).parent().hasClass('On')){
+								return val.replace(/_on.png/,'.png');
+							}
+						});
+						$(this).attr("src",$(this).attr("src").replace(/.png/,'_on.png'));
+					}
+				});
+
+				$(".png_over").mouseleave(function() {
+					if(!$(this).parent().hasClass('On')){
+						$(this).attr("src",$(this).attr("src").replace(/_on.png/,'.png'));
+					}
+				});
+			});
+		})(jQuery)
+	</script>
+</head>
+<body>
+
+
+
+<div style="font-size:50px; text-align:center; margin-top: 100px;">준비 중입니다</div>
+
+
+
+
+</body>
+</html>

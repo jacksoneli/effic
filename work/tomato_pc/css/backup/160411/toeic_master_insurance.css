@@ -1,0 +1,285 @@
+/************************* new_book_content.css (content 부분만)*************************/
+@charset "utf-8";
+
+#content_wrap{
+	width:100%;
+	min-width:1348px;
+	position:relative;
+}
+
+/************ 퀵메뉴 ****************/
+.qmenu {
+	width:157px;
+	height:328px;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:520px;
+	z-index:9999;
+}
+
+/************ con1 토익 Master 보험 소개 ****************/
+#con1_intro{
+	width:100%;
+	height:754px;
+	background:#0c1f78;
+	overflow:hidden;
+	position:relative;
+}
+	#con1_intro > img{
+		position:absolute;
+		left:50%;
+		margin-left:-960px;
+		top:0;
+	}
+
+/************ con2 토익보험 완판신화 ****************/
+#con2_sold_out{
+	width:100%;
+	height:947px;
+	background:#202020;
+	position:relative;
+}
+	#con2_sold_out > img{
+		position:absolute;
+		left:50%;
+		margin-left:-502px;
+		top:0;
+	}
+
+/************ con3 이벤트 시간과 남은 수량 ****************/
+#con3_time{
+	width:100%;
+	background:#eee;
+	overflow:hidden;
+}
+	#con3_wrap{
+		margin:0 auto;
+		width:1004px;
+		height:1557px;
+		position:relative;
+	}
+		#con3_wrap > img{
+			position:absolute;
+			left:50%;
+			margin-left:-502px;
+			top:0;
+		}
+		#con3_wrap > .time{
+			width:650px;
+			height:71px;
+			position:absolute;
+			left:160px;
+			top:234px;
+		}
+			#con3_wrap > div > p{
+				color:#fff;
+				font-size:49px;
+				position:absolute;
+				font-weight:bold;
+			}
+		#term_num{
+			position:absolute;
+			left:762px;
+			top:126px;
+			color:#fff;
+			font-size:32px;
+			font-weight:bold;
+		}
+		#con3_wrap > .num{
+			width:48px;
+			height:450px;
+			position:absolute;
+			left:689px;
+			top:236px;
+			/*border:1px solid red;*/
+		}
+			#con3_wrap > .num > p{
+				color:#fff;
+				font-size:23px;
+				font-weight:bold;
+				letter-spacing:11px;
+			}
+	
+/************ con4 이벤트 시간과 남은 수량 ****************/
+#con4_curriculum{
+	width:100%;
+	height:3785px;
+	background:#323232;
+	position:relative;
+}
+	#con4_curriculum > img{
+		position:absolute;
+		left:50%;
+		margin-left:-502px;
+		top:0;
+	}
+	
+/************ con5 수강신청 3개월,6개월 ****************/
+#con5_register{
+	width:100%;
+	height:640px;
+	background:#eee;
+	position:relative;
+}
+	#con5_register > img{
+		position:absolute;
+		left:50%;
+		margin-left:-502px;
+		top:0;
+	}
+	
+/************ con6 Q & A ****************/
+#con6_qna{
+	width:100%;
+	height:2352px;
+	background:#b8b8b8;
+	position:relative;
+}
+	#con6_qna > img{
+		position:absolute;
+		left:50%;
+		margin-left:-502px;
+		top:0;
+	}
+	#con6_qna > img#con6_bg_2{
+		top:1720px;
+	}
+
+/************ con7 토익보험 자세히보기, 수강신청 ****************/
+#con7_detail{
+	width:100%;
+	height:817px;
+	background:#b8b8b8;
+	position:relative;
+}
+	#con7_detail > img{
+		position:absolute;
+		left:50%;
+		margin-left:-502px;
+		top:0;
+	}
+
+/************ con8 수강후기 ****************/
+#con8_review{
+	width:100%;
+	background:#1a4594;
+}
+	#con8_review > div.wrap{}
+		#con8_review > div.wrap > #high_grade{
+			text-align:center;
+		}
+		
+		/*고득점자 탭 콘텐츠*/		
+		#high_grade_tab{
+			margin-top:60px;
+		}
+		
+		#high_grade_tab > ul.tabs
+		{
+			text-align:center; /*set to left, center, or right to align the tabs as desired*/
+			margin-bottom:16px;
+		}
+				
+		#high_grade_tab > ul.tabs > li
+		{
+			display: inline;
+			margin-right:20px;
+		}
+		#high_grade_tab > ul.tabs > li > img{padding-top:15px;}
+		#high_grade_tab > ul.tabs > li > a
+		{
+			display:inline-block;
+			width:58px;
+			height:48px;
+			color:#323131;
+			font-size:18px;
+			font-family:Arial, Helvetica, sans-serif;
+			line-height:23px;
+			text-align:center;
+			font-weight:bold;
+		}
+		#high_grade_tab > ul.tabs > li > a:visited
+		{
+			color: #000;
+			font-weight:bold;
+		}
+				
+		#high_grade_tab > ul.tabs > li > a:hover
+		{
+			color:#fff;
+			font-weight:bold;
+		}
+				
+		#high_grade_tab > ul.tabs > li.selected a, 
+		#high_grade > ul.tabs > li.selected a:hover
+		{
+			font-weight:bold;
+			color:#fff;
+		}
+				
+		#high_grade_tab > div.tabcontents
+		{
+			margin:0 auto;
+			width:855px;
+			height:395px;
+			margin-bottom:80px;
+		}
+		
+		
+	/*수강후기 탭게시판*/
+	#nav_target_3{
+			padding-bottom:100px;
+		}
+		#nav_target_3 > div.wrap{/*수강후기 게시판*/
+			text-align:center;
+			width:880px;
+			padding:20px 0;
+			background:#e3e3e3;
+		}
+			
+/************ con9 유의사항 ****************/
+#con9_notice{}
+	#con9_wrap{
+		width:100%;
+		height:auto;
+		margin:0 auto;
+		background:#fff url('http://pic.neungyule.com/netoeic/todanbi/20160216/con9_bg_line.jpg') repeat-x left top;
+		text-align:center;
+	}
+		#con9_wrap > div.wrap{}
+			#con9_wrap > div.wrap > a.nBtn{}
+
+.toeicBohum_notice {width:100%;min-width:1000px;height:auto;margin:0 auto;background:#fff url('http://pic.neungyule.com/netoeic/todanbi/20151211/bohum_bg_notice.gif') repeat-x left top;}
+.toeicBohum_notice .wrap {position:relative;width:1000px;margin:0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

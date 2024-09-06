@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* base styles test */
+html {
+  font-size: 5em; }
+
+body {
+  min-width: 320px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #727272; }
