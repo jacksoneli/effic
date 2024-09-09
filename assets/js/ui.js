@@ -1,22 +1,8 @@
 
 $(function () {
 
-  //미디어쿼리
-  if(matchMedia("screen and (max-width:767px)").matches){
-    $('.whoel_wrap').addClass('mobile');
-  }else{
-    $('.whoel_wrap').removeClass('mobile');
-  }
-  $(window).resize(function() {
-    if(matchMedia("screen and (max-width:767px)").matches){
-      $('.whoel_wrap').addClass('mobile');
-    }else{
-      $('.whoel_wrap').removeClass('mobile');
-    }
-  });
-
   // 메인페이지 hero의 ticker
-  $('.js_ticker').slick({
+  $('.js_ticker_01').slick({
     pauseOnFocus: false,
     pauseOnHover: false,
     arrows: false,
@@ -30,6 +16,27 @@ $(function () {
       breakpoint: 767,
       settings: {
         slidesToShow: 3,
+        speed: 2000,
+      }
+    }]
+  });
+
+  // 메인페이지 About us의 하단 ticker
+  $('.js_ticker_02').slick({
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 2000,
+    cssEase: 'linear',
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2.5,
+        speed: 1500,
       }
     }]
   });
@@ -52,7 +59,7 @@ $(function () {
     });
   })
 
-  //모달 팝업
+  //모달 팝업 열고 닫기
   $(document).on("click",".js_open_modal",function(){
     let this_class = $(this).attr('open_pop_class');
     $('.' + this_class).show();
@@ -68,12 +75,17 @@ $(function () {
     $('body').removeClass('freeze');
   });
 
-
-
-
-
-
-
-
+  //review 페이지의 슬라이더
+  $('.js_slider_01').slick({
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next')
+  });
 
 });
