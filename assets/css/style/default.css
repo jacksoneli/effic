@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* Pretendard Font */
+/* IBMPlexSans Font */
 @font-face {
    font-family: 'IBMPlexSans';
    font-style: normal;
@@ -20,9 +20,18 @@
    src: url("../../fonts/IBMPlexSansKR-Bold.woff") format("woff");
 }
 
+/* SUIT Font : 한글에만 적용*/
+@font-face {
+   font-family: 'SUIT-Light';
+   font-style: normal;
+   font-weight: 100;
+   src: url("../../fonts/SUIT-Light.woff2") format("woff");
+   unicode-range: U+AC00-D7A3
+}
+
 
 body {
-   font-family: 'IBMPlexSans', IBMPlexSans, "나눔고딕", 'Nanum Gothic', Nanum Gothic, dotum, '돋움', gulim, '굴림', Tahoma, sans-serif;
+   font-family: 'SUIT-Light','IBMPlexSans', IBMPlexSans, sans-serif;
    font-size: 16px;
    font-weight: 100;
    color: #363636;

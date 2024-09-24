@@ -75,6 +75,14 @@ $(function () {
     $('body').removeClass('freeze');
   });
 
+  //탭 기능(페이드)
+  $(".js_fade_tabs .tabs button").bind('click',function(){
+    var index = $(this).index();
+    $(".js_fade_tabs .conts_wrap").hide().eq(index).fadeIn(200);
+    $(this).parent().find('button').removeClass('on');
+    $(this).addClass('on');
+  });
+
   //review 페이지의 슬라이더
   $('.js_slider_01').slick({
     pauseOnFocus: false,
